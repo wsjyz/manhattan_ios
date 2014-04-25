@@ -6,3 +6,9 @@
 #
 # Pods/
 
+
+*.xcworkspacedata
+
+ManhattanEnglish.xcodeproj/project.xcworkspace/xcuserdata/Tanty.xcuserdatad/UserInterfaceState.xcuserstate
+
+ManhattanEnglish.xcodeproj/xcuserdata/Tanty.xcuserdatad/xcschemes/ManhattanEnglish.xcscheme
