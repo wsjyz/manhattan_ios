@@ -7,13 +7,28 @@
 //
 
 #import "AppDelegate.h"
+#import "HelpViewController.h"
+#import "CommonService.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    CommonService *cmnService = [[CommonService  alloc] init];
+    if ([cmnService isFirstLauch])
+    {
+        HelpViewController *helpVC = [ViewUtil viewControllerFromNibOfClass:[HelpViewController class]];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:helpVC];
+    self.window.rootViewController = nav;
+    }
+    else
+    {
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        self.window.rootViewController = [storyBoard instantiateInitialViewController];
+    }
     return YES;
 }
 							
