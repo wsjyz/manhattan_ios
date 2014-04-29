@@ -50,6 +50,10 @@
     if (cell == nil)
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+        UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(280, 9, 22, 22)];
+        img.image = [UIImage imageNamed:@"arrow.png"];
+        img.backgroundColor = [UIColor clearColor];
+        [cell addSubview:img];
     }
     switch (indexPath.row) {
         case 0:
