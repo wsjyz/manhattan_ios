@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F739C97190FF4C000FE2608 /* Backup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F739C96190FF4C000FE2608 /* Backup.storyboard */; };
 		2FAB689B190A26D40081D6B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAB689A190A26D40081D6B6 /* Foundation.framework */; };
 		2FAB689D190A26D40081D6B6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAB689C190A26D40081D6B6 /* CoreGraphics.framework */; };
 		2FAB689F190A26D40081D6B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAB689E190A26D40081D6B6 /* UIKit.framework */; };
@@ -63,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F739C96190FF4C000FE2608 /* Backup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Backup.storyboard; sourceTree = "<group>"; };
 		2FAB6897190A26D40081D6B6 /* ManhattanEnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManhattanEnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FAB689A190A26D40081D6B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2FAB689C190A26D40081D6B6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -189,6 +191,7 @@
 				2FAB68A9190A26D40081D6B6 /* AppDelegate.h */,
 				2FAB68AA190A26D40081D6B6 /* AppDelegate.m */,
 				37348C44190CF10E007605DA /* Main.storyboard */,
+				2F739C96190FF4C000FE2608 /* Backup.storyboard */,
 				37348C27190CE691007605DA /* Define */,
 				37348C28190CE691007605DA /* Model */,
 				37348C2D190CE691007605DA /* ViewController */,
@@ -464,6 +467,7 @@
 				37348C5B190CFD5E007605DA /* mm.png in Resources */,
 				37348C5A190CFD5E007605DA /* logo.png in Resources */,
 				37348C5D190CFD5E007605DA /* ok.png in Resources */,
+				2F739C97190FF4C000FE2608 /* Backup.storyboard in Resources */,
 				37348C5C190CFD5E007605DA /* no.png in Resources */,
 				37348C70190D0307007605DA /* Navigation-Bar.png in Resources */,
 				37348C6E190D0307007605DA /* button.png in Resources */,
