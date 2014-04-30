@@ -34,7 +34,7 @@
         className = [NSString stringWithFormat:@"%@_ipad",className];
     }
 
-    NSString *nibName;
+    NSString *nibName = className;
     if (IPHONE5)
     {
         nibName = [NSString stringWithFormat:@"%@_p5",nibName];

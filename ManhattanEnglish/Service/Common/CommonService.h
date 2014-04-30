@@ -12,4 +12,8 @@
 
 - (BOOL)isFirstLauch;
 
+- (void)updateCurrentPersonalID:(PERSONAL_ID)personalID;
+
+- (PERSONAL_ID)getCurrentPersonalID;
+
 @end

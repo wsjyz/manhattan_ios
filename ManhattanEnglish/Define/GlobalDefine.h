@@ -22,6 +22,11 @@
 #define DebugLog(...)
 #endif
 
-
+typedef enum
+{
+    PERSONAL_STUDENT = 0,           //学生
+    PERSONAL_TEACHER = 1,           //教师
+    PERSONAL_VIP                    //VIP
+}PERSONAL_ID;
 
 #endif

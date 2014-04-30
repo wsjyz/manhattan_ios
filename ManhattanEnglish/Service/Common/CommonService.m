@@ -9,6 +9,7 @@
 #import "CommonService.h"
 
 #define KEY_FIRST_LAUCH                     @"firstLauch"
+#define KEY_PERSONALE_ID                    @"personalID"
 
 @implementation CommonService
 
@@ -32,6 +33,27 @@
     }
     
     return isFirstlauch;
+}
+
+- (void)updateCurrentPersonalID:(PERSONAL_ID)personalID
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setValue:@(personalID) forKey:KEY_PERSONALE_ID];
+}
+
+- (PERSONAL_ID)getCurrentPersonalID
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    id object = [defaults objectForKey:KEY_PERSONALE_ID];
+    if (object == nil)
+    {
+        return PERSONAL_STUDENT;
+    }
+    else
+    {
+        PERSONAL_ID personalID = (PERSONAL_ID)object;
+        return personalID;
+    }
 }
 
 @end

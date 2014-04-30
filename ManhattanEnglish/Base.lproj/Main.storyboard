@@ -28,6 +28,55 @@
                     <view key="view" contentMode="scaleToFill" id="mxq-pW-o1w">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RL0-7l-f99">
+                                <rect key="frame" x="119" y="172" width="82" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="个人资料">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8es-uW-CYq" kind="push" id="oe9-tp-ljw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HyD-vH-djN">
+                                <rect key="frame" x="119" y="201" width="82" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="钱包">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="HUN-Ie-vEt" kind="push" id="oz8-nm-IOL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8mM-GP-W8V">
+                                <rect key="frame" x="119" y="239" width="82" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="我的问题">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dMy-O9-4sf" kind="push" id="AJP-hk-qrV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="k7T-C8-oaM">
+                                <rect key="frame" x="119" y="282" width="82" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="我的认证">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UQr-hp-xar" kind="push" id="rfF-y5-bpn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QqC-ZX-Sdm">
+                                <rect key="frame" x="119" y="329" width="82" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="注销">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="9SO-XD-GEz">
@@ -41,6 +90,97 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqD-va-wpf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1143" y="-1283"/>
+        </scene>
+        <!--Personal Info View Controller - 个人资料-->
+        <scene sceneID="dLK-K7-rJ2">
+            <objects>
+                <viewController id="8es-uW-CYq" customClass="PersonalInfoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KJp-zp-c2R">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personal_head.png" id="lux-mz-D0i">
+                                <rect key="frame" x="120" y="15" width="81" height="83"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GeassCC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1yB-pa-Txl">
+                                <rect key="frame" x="90" y="106" width="78" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personal_girl.png" id="F8Q-36-DU8">
+                                <rect key="frame" x="176" y="107" width="33" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="1Hr-5c-JQI">
+                                <rect key="frame" x="10" y="141" width="300" height="427"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8es-uW-CYq" id="rNU-pn-w3G"/>
+                                    <outlet property="delegate" destination="8es-uW-CYq" id="AwG-Pc-pDA"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="个人资料" id="cVl-al-XTo"/>
+                    <connections>
+                        <outlet property="_tableView" destination="1Hr-5c-JQI" id="kRo-rF-7Xi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zqN-FW-OI4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1609" y="-1523"/>
+        </scene>
+        <!--Wallet View Controller - 钱包-->
+        <scene sceneID="KuJ-K9-o1T">
+            <objects>
+                <viewController id="HUN-Ie-vEt" customClass="WalletViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="axn-NC-Cd4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="钱包" id="RCh-JF-gT0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iqq-pU-Of3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2363" y="-1523"/>
+        </scene>
+        <!--Question View Controller - 我的问题-->
+        <scene sceneID="DxO-Hy-VCj">
+            <objects>
+                <viewController id="dMy-O9-4sf" customClass="QuestionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2BY-Yh-iih">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="我的问题" id="PEf-XW-MJA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LAU-IN-uNS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1609" y="-837"/>
+        </scene>
+        <!--Identify View Controller - 我的认证-->
+        <scene sceneID="8h1-Em-f0R">
+            <objects>
+                <viewController id="UQr-hp-xar" customClass="IdentifyViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CTy-Og-GaG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="我的认证" id="gZD-aQ-cyw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pcs-GW-yO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1991" y="-1523"/>
         </scene>
         <!--Login View Controller - 登录-->
         <scene sceneID="jRZ-lx-LBk">
@@ -169,7 +309,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="42N-fx-Eas" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1629" y="-1737"/>
+            <point key="canvasLocation" x="1609" y="-2189"/>
         </scene>
         <!--FindPW View Controller - 找回密码-->
         <scene sceneID="tQd-jB-rMB">
@@ -263,7 +403,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CRW-V8-zkB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2083" y="-1522"/>
+            <point key="canvasLocation" x="2167" y="-2348"/>
         </scene>
         <!--Register View Controller - 注册-->
         <scene sceneID="3fx-X2-A17">
@@ -399,7 +539,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="62A-Dq-IAA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2083" y="-2202"/>
+            <point key="canvasLocation" x="2167" y="-3028"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="93L-Wl-m4t">
@@ -496,6 +636,8 @@
         <image name="logo.png" width="238" height="166"/>
         <image name="mm.png" width="50" height="50"/>
         <image name="ok.png" width="40" height="40"/>
+        <image name="personal_girl.png" width="66" height="40"/>
+        <image name="personal_head.png" width="162" height="166"/>
         <image name="register_btn_n.png" width="185" height="45"/>
         <image name="sj.png" width="50" height="50"/>
         <image name="tx.png" width="194" height="194"/>
