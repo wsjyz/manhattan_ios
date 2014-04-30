@@ -34,8 +34,29 @@
 		2FAB68BC190A26D40081D6B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAB689E190A26D40081D6B6 /* UIKit.framework */; };
 		2FAB68C4190A26D40081D6B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2FAB68C2190A26D40081D6B6 /* InfoPlist.strings */; };
 		2FAB68C6190A26D50081D6B6 /* ManhattanEnglishTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAB68C5190A26D50081D6B6 /* ManhattanEnglishTests.m */; };
+		370C49401910971200C63063 /* IdentifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370C49361910971200C63063 /* IdentifyViewController.m */; };
+		370C49411910971200C63063 /* InfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 370C49381910971200C63063 /* InfoTableViewCell.m */; };
+		370C49421910971200C63063 /* InfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370C49391910971200C63063 /* InfoTableViewCell.xib */; };
+		370C49431910971200C63063 /* PersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370C493B1910971200C63063 /* PersonalInfoViewController.m */; };
+		370C49441910971200C63063 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370C493D1910971200C63063 /* QuestionViewController.m */; };
+		370C49451910971200C63063 /* WalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370C493F1910971200C63063 /* WalletViewController.m */; };
+		370C494A1910971F00C63063 /* personal_boy.png in Resources */ = {isa = PBXBuildFile; fileRef = 370C49471910971F00C63063 /* personal_boy.png */; };
+		370C494B1910971F00C63063 /* personal_girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 370C49481910971F00C63063 /* personal_girl.png */; };
+		370C494C1910971F00C63063 /* personal_head.png in Resources */ = {isa = PBXBuildFile; fileRef = 370C49491910971F00C63063 /* personal_head.png */; };
+		370C49501910982200C63063 /* personal_identify.png in Resources */ = {isa = PBXBuildFile; fileRef = 370C494D1910982200C63063 /* personal_identify.png */; };
+		370C49511910982200C63063 /* wallet_money.png in Resources */ = {isa = PBXBuildFile; fileRef = 370C494E1910982200C63063 /* wallet_money.png */; };
+		370C49521910982200C63063 /* wallet_record.png in Resources */ = {isa = PBXBuildFile; fileRef = 370C494F1910982200C63063 /* wallet_record.png */; };
+		370C49561910984400C63063 /* WalletTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 370C49541910984400C63063 /* WalletTableViewCell.m */; };
+		370C49571910984400C63063 /* WalletTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370C49551910984400C63063 /* WalletTableViewCell.xib */; };
+		370C495B1910A3B000C63063 /* QuesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 370C49591910A3B000C63063 /* QuesTableViewCell.m */; };
+		370C495C1910A3B000C63063 /* QuesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370C495A1910A3B000C63063 /* QuesTableViewCell.xib */; };
+		370C49601910A3BF00C63063 /* QuesDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 370C495E1910A3BF00C63063 /* QuesDetailTableViewCell.m */; };
+		370C49611910A3BF00C63063 /* QuesDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370C495F1910A3BF00C63063 /* QuesDetailTableViewCell.xib */; };
+		370C49631910A41B00C63063 /* ques_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 370C49621910A41B00C63063 /* ques_arrow.png */; };
 		37348C36190CE79E007605DA /* ViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 37348C35190CE79E007605DA /* ViewUtil.m */; };
 		37348C4A190CF1AA007605DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37348C44190CF10E007605DA /* Main.storyboard */; };
+		376FC7DE191139010089C3B8 /* QuesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 376FC7DD191139010089C3B8 /* QuesDetailViewController.m */; };
+		376FC7E219113DBC0089C3B8 /* QuesDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 376FC7E119113DBC0089C3B8 /* QuesDetailViewController.xib */; };
 		37A6D66D190FF43400B7C8B0 /* CommonService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A6D66C190FF43400B7C8B0 /* CommonService.m */; };
 		37A6D683190FF44700B7C8B0 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A6D66F190FF44700B7C8B0 /* back.png */; };
 		37A6D684190FF44700B7C8B0 /* button-ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A6D670190FF44700B7C8B0 /* button-ok.png */; };
@@ -66,15 +87,6 @@
 		37A6D6B3190FF45400B7C8B0 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A6D6A7190FF45400B7C8B0 /* ContactUsViewController.m */; };
 		37A6D6B4190FF45400B7C8B0 /* ContactUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A6D6A8190FF45400B7C8B0 /* ContactUsViewController.xib */; };
 		37A6D6B5190FF45400B7C8B0 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A6D6AA190FF45400B7C8B0 /* MoreViewController.m */; };
-		37A6D6BB1910023800B7C8B0 /* PersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A6D6BA1910023800B7C8B0 /* PersonalInfoViewController.m */; };
-		37A6D6BE191005A200B7C8B0 /* WalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A6D6BD191005A200B7C8B0 /* WalletViewController.m */; };
-		37A6D6C1191005E300B7C8B0 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A6D6C0191005E300B7C8B0 /* QuestionViewController.m */; };
-		37A6D6C41910063000B7C8B0 /* IdentifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A6D6C31910063000B7C8B0 /* IdentifyViewController.m */; };
-		37A6D6C91910088B00B7C8B0 /* personal_boy.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A6D6C61910088B00B7C8B0 /* personal_boy.png */; };
-		37A6D6CA1910088B00B7C8B0 /* personal_girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A6D6C71910088B00B7C8B0 /* personal_girl.png */; };
-		37A6D6CB1910088B00B7C8B0 /* personal_head.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A6D6C81910088B00B7C8B0 /* personal_head.png */; };
-		37A6D6CF19100C1700B7C8B0 /* InfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A6D6CD19100C1700B7C8B0 /* InfoTableViewCell.m */; };
-		37A6D6D019100C1700B7C8B0 /* InfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A6D6CE19100C1700B7C8B0 /* InfoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +131,33 @@
 		2FAB68C1190A26D40081D6B6 /* ManhattanEnglishTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ManhattanEnglishTests-Info.plist"; sourceTree = "<group>"; };
 		2FAB68C3190A26D40081D6B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2FAB68C5190A26D50081D6B6 /* ManhattanEnglishTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManhattanEnglishTests.m; sourceTree = "<group>"; };
+		370C49351910971200C63063 /* IdentifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdentifyViewController.h; sourceTree = "<group>"; };
+		370C49361910971200C63063 /* IdentifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdentifyViewController.m; sourceTree = "<group>"; };
+		370C49371910971200C63063 /* InfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTableViewCell.h; sourceTree = "<group>"; };
+		370C49381910971200C63063 /* InfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoTableViewCell.m; sourceTree = "<group>"; };
+		370C49391910971200C63063 /* InfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoTableViewCell.xib; sourceTree = "<group>"; };
+		370C493A1910971200C63063 /* PersonalInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalInfoViewController.h; sourceTree = "<group>"; };
+		370C493B1910971200C63063 /* PersonalInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalInfoViewController.m; sourceTree = "<group>"; };
+		370C493C1910971200C63063 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
+		370C493D1910971200C63063 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
+		370C493E1910971200C63063 /* WalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalletViewController.h; sourceTree = "<group>"; };
+		370C493F1910971200C63063 /* WalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalletViewController.m; sourceTree = "<group>"; };
+		370C49471910971F00C63063 /* personal_boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = personal_boy.png; sourceTree = "<group>"; };
+		370C49481910971F00C63063 /* personal_girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = personal_girl.png; sourceTree = "<group>"; };
+		370C49491910971F00C63063 /* personal_head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = personal_head.png; sourceTree = "<group>"; };
+		370C494D1910982200C63063 /* personal_identify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = personal_identify.png; sourceTree = "<group>"; };
+		370C494E1910982200C63063 /* wallet_money.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wallet_money.png; sourceTree = "<group>"; };
+		370C494F1910982200C63063 /* wallet_record.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wallet_record.png; sourceTree = "<group>"; };
+		370C49531910984400C63063 /* WalletTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalletTableViewCell.h; sourceTree = "<group>"; };
+		370C49541910984400C63063 /* WalletTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalletTableViewCell.m; sourceTree = "<group>"; };
+		370C49551910984400C63063 /* WalletTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WalletTableViewCell.xib; sourceTree = "<group>"; };
+		370C49581910A3B000C63063 /* QuesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuesTableViewCell.h; sourceTree = "<group>"; };
+		370C49591910A3B000C63063 /* QuesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuesTableViewCell.m; sourceTree = "<group>"; };
+		370C495A1910A3B000C63063 /* QuesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuesTableViewCell.xib; sourceTree = "<group>"; };
+		370C495D1910A3BF00C63063 /* QuesDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuesDetailTableViewCell.h; sourceTree = "<group>"; };
+		370C495E1910A3BF00C63063 /* QuesDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuesDetailTableViewCell.m; sourceTree = "<group>"; };
+		370C495F1910A3BF00C63063 /* QuesDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuesDetailTableViewCell.xib; sourceTree = "<group>"; };
+		370C49621910A41B00C63063 /* ques_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ques_arrow.png; sourceTree = "<group>"; };
 		37348C34190CE79E007605DA /* ViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewUtil.h; sourceTree = "<group>"; };
 		37348C35190CE79E007605DA /* ViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewUtil.m; sourceTree = "<group>"; };
 		37348C3D190CEA5B007605DA /* GlobalDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDefine.h; sourceTree = "<group>"; };
@@ -129,6 +168,9 @@
 		37348C42190CEA5B007605DA /* GlobalErrorDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalErrorDefine.h; sourceTree = "<group>"; };
 		37348C45190CF10E007605DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37348C49190CF189007605DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		376FC7DC191139010089C3B8 /* QuesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuesDetailViewController.h; sourceTree = "<group>"; };
+		376FC7DD191139010089C3B8 /* QuesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuesDetailViewController.m; sourceTree = "<group>"; };
+		376FC7E119113DBC0089C3B8 /* QuesDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuesDetailViewController.xib; sourceTree = "<group>"; };
 		37A6D66B190FF43400B7C8B0 /* CommonService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonService.h; sourceTree = "<group>"; };
 		37A6D66C190FF43400B7C8B0 /* CommonService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonService.m; sourceTree = "<group>"; };
 		37A6D66F190FF44700B7C8B0 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
@@ -168,20 +210,6 @@
 		37A6D6A8190FF45400B7C8B0 /* ContactUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactUsViewController.xib; sourceTree = "<group>"; };
 		37A6D6A9190FF45400B7C8B0 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		37A6D6AA190FF45400B7C8B0 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
-		37A6D6B91910023800B7C8B0 /* PersonalInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalInfoViewController.h; sourceTree = "<group>"; };
-		37A6D6BA1910023800B7C8B0 /* PersonalInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalInfoViewController.m; sourceTree = "<group>"; };
-		37A6D6BC191005A200B7C8B0 /* WalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalletViewController.h; sourceTree = "<group>"; };
-		37A6D6BD191005A200B7C8B0 /* WalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalletViewController.m; sourceTree = "<group>"; };
-		37A6D6BF191005E300B7C8B0 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
-		37A6D6C0191005E300B7C8B0 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
-		37A6D6C21910063000B7C8B0 /* IdentifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdentifyViewController.h; sourceTree = "<group>"; };
-		37A6D6C31910063000B7C8B0 /* IdentifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdentifyViewController.m; sourceTree = "<group>"; };
-		37A6D6C61910088B00B7C8B0 /* personal_boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = personal_boy.png; sourceTree = "<group>"; };
-		37A6D6C71910088B00B7C8B0 /* personal_girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = personal_girl.png; sourceTree = "<group>"; };
-		37A6D6C81910088B00B7C8B0 /* personal_head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = personal_head.png; sourceTree = "<group>"; };
-		37A6D6CC19100C1700B7C8B0 /* InfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTableViewCell.h; sourceTree = "<group>"; };
-		37A6D6CD19100C1700B7C8B0 /* InfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoTableViewCell.m; sourceTree = "<group>"; };
-		37A6D6CE19100C1700B7C8B0 /* InfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +343,50 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		370C49341910971200C63063 /* PersonalCenter */ = {
+			isa = PBXGroup;
+			children = (
+				370C49351910971200C63063 /* IdentifyViewController.h */,
+				370C49361910971200C63063 /* IdentifyViewController.m */,
+				370C49371910971200C63063 /* InfoTableViewCell.h */,
+				370C49381910971200C63063 /* InfoTableViewCell.m */,
+				370C49391910971200C63063 /* InfoTableViewCell.xib */,
+				370C493A1910971200C63063 /* PersonalInfoViewController.h */,
+				370C493B1910971200C63063 /* PersonalInfoViewController.m */,
+				370C493E1910971200C63063 /* WalletViewController.h */,
+				370C493F1910971200C63063 /* WalletViewController.m */,
+				370C49531910984400C63063 /* WalletTableViewCell.h */,
+				370C49541910984400C63063 /* WalletTableViewCell.m */,
+				370C49551910984400C63063 /* WalletTableViewCell.xib */,
+				370C493C1910971200C63063 /* QuestionViewController.h */,
+				370C493D1910971200C63063 /* QuestionViewController.m */,
+				370C49581910A3B000C63063 /* QuesTableViewCell.h */,
+				370C49591910A3B000C63063 /* QuesTableViewCell.m */,
+				370C495A1910A3B000C63063 /* QuesTableViewCell.xib */,
+				376FC7DC191139010089C3B8 /* QuesDetailViewController.h */,
+				376FC7DD191139010089C3B8 /* QuesDetailViewController.m */,
+				376FC7E119113DBC0089C3B8 /* QuesDetailViewController.xib */,
+				370C495D1910A3BF00C63063 /* QuesDetailTableViewCell.h */,
+				370C495E1910A3BF00C63063 /* QuesDetailTableViewCell.m */,
+				370C495F1910A3BF00C63063 /* QuesDetailTableViewCell.xib */,
+			);
+			path = PersonalCenter;
+			sourceTree = "<group>";
+		};
+		370C49461910971F00C63063 /* PersonalCenter */ = {
+			isa = PBXGroup;
+			children = (
+				370C49621910A41B00C63063 /* ques_arrow.png */,
+				370C494D1910982200C63063 /* personal_identify.png */,
+				370C494E1910982200C63063 /* wallet_money.png */,
+				370C494F1910982200C63063 /* wallet_record.png */,
+				370C49471910971F00C63063 /* personal_boy.png */,
+				370C49481910971F00C63063 /* personal_girl.png */,
+				370C49491910971F00C63063 /* personal_head.png */,
+			);
+			path = PersonalCenter;
+			sourceTree = "<group>";
+		};
 		37348C27190CE691007605DA /* Define */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,7 +442,7 @@
 		37348C2D190CE691007605DA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				37A6D6B81910021600B7C8B0 /* Personal Center */,
+				370C49341910971200C63063 /* PersonalCenter */,
 				37A6D695190FF45400B7C8B0 /* Common */,
 				37A6D698190FF45400B7C8B0 /* Login */,
 				37A6D6A2190FF45400B7C8B0 /* More */,
@@ -381,12 +453,9 @@
 		37348C51190CFD5E007605DA /* Images */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-				37A6D6C51910088B00B7C8B0 /* Personal Center */,
-=======
+				370C49461910971F00C63063 /* PersonalCenter */,
 				2F739CAA1910045F00FE2608 /* Navigation */,
 				2F739C98190FFA9B00FE2608 /* Main */,
->>>>>>> FETCH_HEAD
 				37A6D66E190FF44700B7C8B0 /* Common */,
 				37A6D675190FF44700B7C8B0 /* Login */,
 				37A6D681190FF44700B7C8B0 /* More */,
@@ -482,34 +551,6 @@
 			path = More;
 			sourceTree = "<group>";
 		};
-		37A6D6B81910021600B7C8B0 /* Personal Center */ = {
-			isa = PBXGroup;
-			children = (
-				37A6D6B91910023800B7C8B0 /* PersonalInfoViewController.h */,
-				37A6D6BA1910023800B7C8B0 /* PersonalInfoViewController.m */,
-				37A6D6CC19100C1700B7C8B0 /* InfoTableViewCell.h */,
-				37A6D6CD19100C1700B7C8B0 /* InfoTableViewCell.m */,
-				37A6D6CE19100C1700B7C8B0 /* InfoTableViewCell.xib */,
-				37A6D6BC191005A200B7C8B0 /* WalletViewController.h */,
-				37A6D6BD191005A200B7C8B0 /* WalletViewController.m */,
-				37A6D6BF191005E300B7C8B0 /* QuestionViewController.h */,
-				37A6D6C0191005E300B7C8B0 /* QuestionViewController.m */,
-				37A6D6C21910063000B7C8B0 /* IdentifyViewController.h */,
-				37A6D6C31910063000B7C8B0 /* IdentifyViewController.m */,
-			);
-			path = "Personal Center";
-			sourceTree = "<group>";
-		};
-		37A6D6C51910088B00B7C8B0 /* Personal Center */ = {
-			isa = PBXGroup;
-			children = (
-				37A6D6C61910088B00B7C8B0 /* personal_boy.png */,
-				37A6D6C71910088B00B7C8B0 /* personal_girl.png */,
-				37A6D6C81910088B00B7C8B0 /* personal_head.png */,
-			);
-			path = "Personal Center";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -586,31 +627,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				370C494C1910971F00C63063 /* personal_head.png in Resources */,
 				2F739CA2190FFA9B00FE2608 /* main_fbkc.png in Resources */,
 				2F739CB31910045F00FE2608 /* nav_bar_del_btn_n.png in Resources */,
 				37A6D68C190FF44700B7C8B0 /* no.png in Resources */,
 				2F739CA6190FFA9B00FE2608 /* main_wyhd.png in Resources */,
+				370C49511910982200C63063 /* wallet_money.png in Resources */,
 				2F739CB41910045F00FE2608 /* nav_bar_person_btn_n.png in Resources */,
 				2F739CA4190FFA9B00FE2608 /* main_msjx.png in Resources */,
+				370C49501910982200C63063 /* personal_identify.png in Resources */,
 				2F739CB61910045F00FE2608 /* nav_bar_red_btn_p.png in Resources */,
+				370C49611910A3BF00C63063 /* QuesDetailTableViewCell.xib in Resources */,
 				37A6D689190FF44700B7C8B0 /* hq.png in Resources */,
 				37A6D683190FF44700B7C8B0 /* back.png in Resources */,
 				2F739CA8190FFA9B00FE2608 /* main_wyyy.png in Resources */,
 				37A6D68A190FF44700B7C8B0 /* logo.png in Resources */,
 				2F739CA7190FFA9B00FE2608 /* main_wytw.png in Resources */,
 				37A6D691190FF44700B7C8B0 /* sj.png in Resources */,
+				376FC7E219113DBC0089C3B8 /* QuesDetailViewController.xib in Resources */,
 				2F739CB11910045F00FE2608 /* nav_bar_back_btn_n.png in Resources */,
 				37A6D685190FF44700B7C8B0 /* button.png in Resources */,
+				370C494A1910971F00C63063 /* personal_boy.png in Resources */,
 				37A6D686190FF44700B7C8B0 /* my.png in Resources */,
 				2F739CA91910004700FE2608 /* Backup.storyboard in Resources */,
 				37348C4A190CF1AA007605DA /* Main.storyboard in Resources */,
 				37A6D692190FF44700B7C8B0 /* tx.png in Resources */,
-				37A6D6D019100C1700B7C8B0 /* InfoTableViewCell.xib in Resources */,
-				37A6D6C91910088B00B7C8B0 /* personal_boy.png in Resources */,
 				37A6D68D190FF44700B7C8B0 /* ok.png in Resources */,
+				370C494B1910971F00C63063 /* personal_girl.png in Resources */,
+				370C49521910982200C63063 /* wallet_record.png in Resources */,
 				2FAB68B3190A26D40081D6B6 /* Images.xcassets in Resources */,
 				37A6D68B190FF44700B7C8B0 /* mm.png in Resources */,
-				37A6D6CA1910088B00B7C8B0 /* personal_girl.png in Resources */,
 				37A6D68F190FF44700B7C8B0 /* register_btn_n.png in Resources */,
 				37A6D6AE190FF45400B7C8B0 /* HelpViewController.xib in Resources */,
 				37A6D688190FF44700B7C8B0 /* Navigation-Bar_6.png in Resources */,
@@ -622,15 +668,15 @@
 				37A6D684190FF44700B7C8B0 /* button-ok.png in Resources */,
 				2FAB68A5190A26D40081D6B6 /* InfoPlist.strings in Resources */,
 				2F739CB21910045F00FE2608 /* nav_bar_bg.png in Resources */,
+				370C495C1910A3B000C63063 /* QuesTableViewCell.xib in Resources */,
+				370C49631910A41B00C63063 /* ques_arrow.png in Resources */,
 				2F739CA5190FFA9B00FE2608 /* main_wdzy.png in Resources */,
 				37A6D694190FF44700B7C8B0 /* arrow.png in Resources */,
 				37A6D6B2190FF45400B7C8B0 /* AboutViewController.xib in Resources */,
-<<<<<<< HEAD
-				37A6D6CB1910088B00B7C8B0 /* personal_head.png in Resources */,
-=======
 				2F739CB51910045F00FE2608 /* nav_bar_red_btn_n.png in Resources */,
->>>>>>> FETCH_HEAD
+				370C49571910984400C63063 /* WalletTableViewCell.xib in Resources */,
 				37A6D687190FF44700B7C8B0 /* Navigation-Bar.png in Resources */,
+				370C49421910971200C63063 /* InfoTableViewCell.xib in Resources */,
 				2F739CA3190FFA9B00FE2608 /* main_jpkc.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,23 +696,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				370C49601910A3BF00C63063 /* QuesDetailTableViewCell.m in Sources */,
 				37A6D6AF190FF45400B7C8B0 /* LoginViewController.m in Sources */,
 				37A6D6B5190FF45400B7C8B0 /* MoreViewController.m in Sources */,
 				37A6D6AC190FF45400B7C8B0 /* FindPWViewController.m in Sources */,
-				37A6D6CF19100C1700B7C8B0 /* InfoTableViewCell.m in Sources */,
+				370C49431910971200C63063 /* PersonalInfoViewController.m in Sources */,
+				376FC7DE191139010089C3B8 /* QuesDetailViewController.m in Sources */,
+				370C49451910971200C63063 /* WalletViewController.m in Sources */,
 				37A6D66D190FF43400B7C8B0 /* CommonService.m in Sources */,
+				370C495B1910A3B000C63063 /* QuesTableViewCell.m in Sources */,
 				37A6D6AB190FF45400B7C8B0 /* BaseViewController.m in Sources */,
 				37A6D6B0190FF45400B7C8B0 /* RegisterViewController.m in Sources */,
+				370C49401910971200C63063 /* IdentifyViewController.m in Sources */,
 				37348C36190CE79E007605DA /* ViewUtil.m in Sources */,
-				37A6D6BE191005A200B7C8B0 /* WalletViewController.m in Sources */,
 				37A6D6B1190FF45400B7C8B0 /* AboutViewController.m in Sources */,
+				370C49441910971200C63063 /* QuestionViewController.m in Sources */,
 				37A6D6B3190FF45400B7C8B0 /* ContactUsViewController.m in Sources */,
 				37A6D6AD190FF45400B7C8B0 /* HelpViewController.m in Sources */,
-				37A6D6C1191005E300B7C8B0 /* QuestionViewController.m in Sources */,
-				37A6D6BB1910023800B7C8B0 /* PersonalInfoViewController.m in Sources */,
+				370C49561910984400C63063 /* WalletTableViewCell.m in Sources */,
 				2FAB68AB190A26D40081D6B6 /* AppDelegate.m in Sources */,
-				37A6D6C41910063000B7C8B0 /* IdentifyViewController.m in Sources */,
 				2FAB68A7190A26D40081D6B6 /* main.m in Sources */,
+				370C49411910971200C63063 /* InfoTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
