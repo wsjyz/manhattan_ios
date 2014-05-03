@@ -35,6 +35,15 @@
 		2FAB68BC190A26D40081D6B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAB689E190A26D40081D6B6 /* UIKit.framework */; };
 		2FAB68C4190A26D40081D6B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2FAB68C2190A26D40081D6B6 /* InfoPlist.strings */; };
 		2FAB68C6190A26D50081D6B6 /* ManhattanEnglishTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAB68C5190A26D50081D6B6 /* ManhattanEnglishTests.m */; };
+		2FBC69D21915399C00990DD1 /* NewAppointmentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBC69D11915399C00990DD1 /* NewAppointmentTableViewController.m */; };
+		2FBC69DB19153D0E00990DD1 /* appoint_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBC69D419153D0E00990DD1 /* appoint_search.png */; };
+		2FBC69DC19153D0E00990DD1 /* appoint_indicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBC69D519153D0E00990DD1 /* appoint_indicator.png */; };
+		2FBC69DD19153D0E00990DD1 /* appoint_jsxb.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBC69D619153D0E00990DD1 /* appoint_jsxb.png */; };
+		2FBC69DE19153D0E00990DD1 /* appoint_jxdd.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBC69D719153D0E00990DD1 /* appoint_jxdd.png */; };
+		2FBC69DF19153D0E00990DD1 /* appoint_jxfs.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBC69D819153D0E00990DD1 /* appoint_jxfs.png */; };
+		2FBC69E019153D0E00990DD1 /* appoint_kcfl.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBC69D919153D0E00990DD1 /* appoint_kcfl.png */; };
+		2FBC69E119153D0E00990DD1 /* appoint_yyrq.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBC69DA19153D0E00990DD1 /* appoint_yyrq.png */; };
+		2FBC69E4191541ED00990DD1 /* NewAppointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBC69E3191541ED00990DD1 /* NewAppointViewController.m */; };
 		370C49401910971200C63063 /* IdentifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370C49361910971200C63063 /* IdentifyViewController.m */; };
 		370C49411910971200C63063 /* InfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 370C49381910971200C63063 /* InfoTableViewCell.m */; };
 		370C49421910971200C63063 /* InfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370C49391910971200C63063 /* InfoTableViewCell.xib */; };
@@ -134,6 +143,17 @@
 		2FAB68C1190A26D40081D6B6 /* ManhattanEnglishTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ManhattanEnglishTests-Info.plist"; sourceTree = "<group>"; };
 		2FAB68C3190A26D40081D6B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2FAB68C5190A26D50081D6B6 /* ManhattanEnglishTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManhattanEnglishTests.m; sourceTree = "<group>"; };
+		2FBC69D01915399C00990DD1 /* NewAppointmentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewAppointmentTableViewController.h; sourceTree = "<group>"; };
+		2FBC69D11915399C00990DD1 /* NewAppointmentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewAppointmentTableViewController.m; sourceTree = "<group>"; };
+		2FBC69D419153D0E00990DD1 /* appoint_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appoint_search.png; sourceTree = "<group>"; };
+		2FBC69D519153D0E00990DD1 /* appoint_indicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appoint_indicator.png; sourceTree = "<group>"; };
+		2FBC69D619153D0E00990DD1 /* appoint_jsxb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appoint_jsxb.png; sourceTree = "<group>"; };
+		2FBC69D719153D0E00990DD1 /* appoint_jxdd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appoint_jxdd.png; sourceTree = "<group>"; };
+		2FBC69D819153D0E00990DD1 /* appoint_jxfs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appoint_jxfs.png; sourceTree = "<group>"; };
+		2FBC69D919153D0E00990DD1 /* appoint_kcfl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appoint_kcfl.png; sourceTree = "<group>"; };
+		2FBC69DA19153D0E00990DD1 /* appoint_yyrq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appoint_yyrq.png; sourceTree = "<group>"; };
+		2FBC69E2191541ED00990DD1 /* NewAppointViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewAppointViewController.h; sourceTree = "<group>"; };
+		2FBC69E3191541ED00990DD1 /* NewAppointViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewAppointViewController.m; sourceTree = "<group>"; };
 		370C49351910971200C63063 /* IdentifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdentifyViewController.h; sourceTree = "<group>"; };
 		370C49361910971200C63063 /* IdentifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdentifyViewController.m; sourceTree = "<group>"; };
 		370C49371910971200C63063 /* InfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTableViewCell.h; sourceTree = "<group>"; };
@@ -355,6 +375,31 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		2FBC69CF1915392500990DD1 /* Appoint */ = {
+			isa = PBXGroup;
+			children = (
+				2FBC69D01915399C00990DD1 /* NewAppointmentTableViewController.h */,
+				2FBC69D11915399C00990DD1 /* NewAppointmentTableViewController.m */,
+				2FBC69E2191541ED00990DD1 /* NewAppointViewController.h */,
+				2FBC69E3191541ED00990DD1 /* NewAppointViewController.m */,
+			);
+			path = Appoint;
+			sourceTree = "<group>";
+		};
+		2FBC69D319153D0E00990DD1 /* Appoint */ = {
+			isa = PBXGroup;
+			children = (
+				2FBC69D419153D0E00990DD1 /* appoint_search.png */,
+				2FBC69D519153D0E00990DD1 /* appoint_indicator.png */,
+				2FBC69D619153D0E00990DD1 /* appoint_jsxb.png */,
+				2FBC69D719153D0E00990DD1 /* appoint_jxdd.png */,
+				2FBC69D819153D0E00990DD1 /* appoint_jxfs.png */,
+				2FBC69D919153D0E00990DD1 /* appoint_kcfl.png */,
+				2FBC69DA19153D0E00990DD1 /* appoint_yyrq.png */,
+			);
+			path = Appoint;
+			sourceTree = "<group>";
+		};
 		370C49341910971200C63063 /* PersonalCenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -454,6 +499,7 @@
 		37348C2D190CE691007605DA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2FBC69CF1915392500990DD1 /* Appoint */,
 				2F6D6A9D1913F9130097617E /* Index */,
 				370C49341910971200C63063 /* PersonalCenter */,
 				37A6D695190FF45400B7C8B0 /* Common */,
@@ -466,6 +512,7 @@
 		37348C51190CFD5E007605DA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2FBC69D319153D0E00990DD1 /* Appoint */,
 				2F6D6A8C1913F8EC0097617E /* Index */,
 				370C49461910971F00C63063 /* PersonalCenter */,
 				2F739CAA1910045F00FE2608 /* Navigation */,
@@ -642,6 +689,7 @@
 			files = (
 				2F6D6A9A1913F8EC0097617E /* index_wyhd.png in Resources */,
 				370C494C1910971F00C63063 /* personal_head.png in Resources */,
+				2FBC69E119153D0E00990DD1 /* appoint_yyrq.png in Resources */,
 				2F739CB31910045F00FE2608 /* nav_bar_del_btn_n.png in Resources */,
 				37A6D68C190FF44700B7C8B0 /* no.png in Resources */,
 				370C49511910982200C63063 /* wallet_money.png in Resources */,
@@ -656,13 +704,16 @@
 				376FC7E219113DBC0089C3B8 /* QuesDetailViewController.xib in Resources */,
 				2F739CB11910045F00FE2608 /* nav_bar_back_btn_n.png in Resources */,
 				37A6D685190FF44700B7C8B0 /* button.png in Resources */,
+				2FBC69E019153D0E00990DD1 /* appoint_kcfl.png in Resources */,
 				370C494A1910971F00C63063 /* personal_boy.png in Resources */,
+				2FBC69DB19153D0E00990DD1 /* appoint_search.png in Resources */,
 				37A6D686190FF44700B7C8B0 /* my.png in Resources */,
 				2F739CA91910004700FE2608 /* Backup.storyboard in Resources */,
 				2F6D6A971913F8EC0097617E /* index_jpkc.png in Resources */,
 				37348C4A190CF1AA007605DA /* Main.storyboard in Resources */,
 				37A6D692190FF44700B7C8B0 /* tx.png in Resources */,
 				37A6D68D190FF44700B7C8B0 /* ok.png in Resources */,
+				2FBC69DF19153D0E00990DD1 /* appoint_jxfs.png in Resources */,
 				370C494B1910971F00C63063 /* personal_girl.png in Resources */,
 				2F6D6A951913F8EC0097617E /* index_dtzx.png in Resources */,
 				2F6D6A961913F8EC0097617E /* index_fbkc.png in Resources */,
@@ -677,6 +728,8 @@
 				2F6D6A9C1913F8EC0097617E /* index_wyyy.png in Resources */,
 				37A6D690190FF44700B7C8B0 /* register_btn_p.png in Resources */,
 				37A6D693190FF44700B7C8B0 /* xz.png in Resources */,
+				2FBC69DE19153D0E00990DD1 /* appoint_jxdd.png in Resources */,
+				2FBC69DD19153D0E00990DD1 /* appoint_jsxb.png in Resources */,
 				37A6D68E190FF44700B7C8B0 /* Push-button.png in Resources */,
 				37A6D684190FF44700B7C8B0 /* button-ok.png in Resources */,
 				2FAB68A5190A26D40081D6B6 /* InfoPlist.strings in Resources */,
@@ -690,6 +743,7 @@
 				2F739CB51910045F00FE2608 /* nav_bar_red_btn_n.png in Resources */,
 				370C49571910984400C63063 /* WalletTableViewCell.xib in Resources */,
 				37A6D687190FF44700B7C8B0 /* Navigation-Bar.png in Resources */,
+				2FBC69DC19153D0E00990DD1 /* appoint_indicator.png in Resources */,
 				370C49421910971200C63063 /* InfoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -718,11 +772,13 @@
 				370C49451910971200C63063 /* WalletViewController.m in Sources */,
 				37A6D66D190FF43400B7C8B0 /* CommonService.m in Sources */,
 				370C495B1910A3B000C63063 /* QuesTableViewCell.m in Sources */,
+				2FBC69E4191541ED00990DD1 /* NewAppointViewController.m in Sources */,
 				37A6D6AB190FF45400B7C8B0 /* BaseViewController.m in Sources */,
 				37A6D6B0190FF45400B7C8B0 /* RegisterViewController.m in Sources */,
 				370C49401910971200C63063 /* IdentifyViewController.m in Sources */,
 				37348C36190CE79E007605DA /* ViewUtil.m in Sources */,
 				37A6D6B1190FF45400B7C8B0 /* AboutViewController.m in Sources */,
+				2FBC69D21915399C00990DD1 /* NewAppointmentTableViewController.m in Sources */,
 				370C49441910971200C63063 /* QuestionViewController.m in Sources */,
 				37A6D6B3190FF45400B7C8B0 /* ContactUsViewController.m in Sources */,
 				37A6D6AD190FF45400B7C8B0 /* HelpViewController.m in Sources */,

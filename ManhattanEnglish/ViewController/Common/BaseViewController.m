@@ -8,17 +8,42 @@
 
 #import "BaseViewController.h"
 
+#define DEFAULT_HIDES_BOTTOM_BAR        NO
+
 @interface BaseViewController ()
+
+- (void)customInitLayout;
 
 @end
 
 @implementation BaseViewController
+
+- (void)customInitLayout
+{
+    self.hidesBottomBarWhenPushed = [self hidesBottomBar];
+}
+
+- (BOOL)hidesBottomBar
+{
+    return DEFAULT_HIDES_BOTTOM_BAR;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        [self customInitLayout];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        // Custom initialization
+        [self customInitLayout];
     }
     return self;
 }

@@ -10,6 +10,8 @@
 
 @interface BaseViewController : UIViewController
 
+- (BOOL)hidesBottomBar;
+
 - (void)setNavgationItemTitle:(NSString *)title;
 
 - (void)showErrorInfoWithMessage:(NSString *)message delegate:(id)delegate;
