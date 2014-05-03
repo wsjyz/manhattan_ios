@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ht9-kY-qTc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ht9-kY-qTc">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -339,6 +339,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginBtnPressed:" destination="6ek-oq-1Gg" eventType="touchUpInside" id="XgT-p7-08Q"/>
+                                    <segue destination="YvI-0i-9co" kind="push" id="8vL-8l-6gX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -464,7 +465,98 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CRW-V8-zkB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2167" y="-2348"/>
+            <point key="canvasLocation" x="2167" y="-3000"/>
+        </scene>
+        <!--Index View Controller - 曼哈顿英语-->
+        <scene sceneID="oWp-qd-l9o">
+            <objects>
+                <viewController id="YvI-0i-9co" customClass="IndexViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oir-Gx-Dti">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="Tai-eO-SpK">
+                                <rect key="frame" x="0.0" y="66" width="320" height="160"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IGo-tZ-Djk">
+                                <rect key="frame" x="8" y="381" width="148" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="index_wdzy.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="C4W-Lo-2KZ">
+                                <rect key="frame" x="164" y="240" width="148" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="index_jpkc.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Naz-dm-8iP">
+                                <rect key="frame" x="164" y="308" width="148" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="index_msjx.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0Rc-tQ-OBb">
+                                <rect key="frame" x="8" y="240" width="148" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="index_wyyy.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g0F-Ou-cSq">
+                                <rect key="frame" x="164" y="381" width="148" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="index_wytw.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pat-gE-ftr">
+                                <rect key="frame" x="8" y="449" width="148" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="index_dtzx.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="曼哈顿英语" id="D0W-iV-bqF">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="vfg-H1-WrE">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dE9-fb-Vv1">
+                                <rect key="frame" x="253" y="-2" width="51" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" image="nav_bar_person_btn_n.png" backgroundImage="nav_bar_red_btn_n.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="button-ok.png"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cQS-HK-dMb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2167" y="-2333"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dKe-cC-fCQ">
+            <objects>
+                <viewController id="1Zw-0s-8q1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vm9-SP-Ce4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NNr-3N-8Hx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2562" y="-2161"/>
         </scene>
         <!--Register View Controller - 注册-->
         <scene sceneID="3fx-X2-A17">
@@ -600,7 +692,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="62A-Dq-IAA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2167" y="-3028"/>
+            <point key="canvasLocation" x="2167" y="-3684"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="93L-Wl-m4t">
@@ -694,8 +786,16 @@
         <image name="button-ok.png" width="102" height="96"/>
         <image name="button.png" width="102" height="96"/>
         <image name="hq.png" width="207" height="90"/>
+        <image name="index_dtzx.png" width="328" height="125"/>
+        <image name="index_jpkc.png" width="328" height="125"/>
+        <image name="index_msjx.png" width="328" height="125"/>
+        <image name="index_wdzy.png" width="328" height="125"/>
+        <image name="index_wytw.png" width="328" height="274"/>
+        <image name="index_wyyy.png" width="328" height="275"/>
         <image name="logo.png" width="238" height="166"/>
         <image name="mm.png" width="50" height="50"/>
+        <image name="nav_bar_person_btn_n.png" width="50" height="50"/>
+        <image name="nav_bar_red_btn_n.png" width="102" height="96"/>
         <image name="ok.png" width="40" height="40"/>
         <image name="personal_girl.png" width="66" height="40"/>
         <image name="personal_head.png" width="162" height="166"/>
