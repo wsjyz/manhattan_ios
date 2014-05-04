@@ -48,7 +48,6 @@
 		370C49411910971200C63063 /* InfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 370C49381910971200C63063 /* InfoTableViewCell.m */; };
 		370C49421910971200C63063 /* InfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370C49391910971200C63063 /* InfoTableViewCell.xib */; };
 		370C49431910971200C63063 /* PersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370C493B1910971200C63063 /* PersonalInfoViewController.m */; };
-		370C49441910971200C63063 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370C493D1910971200C63063 /* QuestionViewController.m */; };
 		370C49451910971200C63063 /* WalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370C493F1910971200C63063 /* WalletViewController.m */; };
 		370C494A1910971F00C63063 /* personal_boy.png in Resources */ = {isa = PBXBuildFile; fileRef = 370C49471910971F00C63063 /* personal_boy.png */; };
 		370C494B1910971F00C63063 /* personal_girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 370C49481910971F00C63063 /* personal_girl.png */; };
@@ -58,15 +57,16 @@
 		370C49521910982200C63063 /* wallet_record.png in Resources */ = {isa = PBXBuildFile; fileRef = 370C494F1910982200C63063 /* wallet_record.png */; };
 		370C49561910984400C63063 /* WalletTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 370C49541910984400C63063 /* WalletTableViewCell.m */; };
 		370C49571910984400C63063 /* WalletTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370C49551910984400C63063 /* WalletTableViewCell.xib */; };
-		370C495B1910A3B000C63063 /* QuesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 370C49591910A3B000C63063 /* QuesTableViewCell.m */; };
-		370C495C1910A3B000C63063 /* QuesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370C495A1910A3B000C63063 /* QuesTableViewCell.xib */; };
-		370C49601910A3BF00C63063 /* QuesDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 370C495E1910A3BF00C63063 /* QuesDetailTableViewCell.m */; };
-		370C49611910A3BF00C63063 /* QuesDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370C495F1910A3BF00C63063 /* QuesDetailTableViewCell.xib */; };
 		370C49631910A41B00C63063 /* ques_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 370C49621910A41B00C63063 /* ques_arrow.png */; };
+		371BEE4C19167A2D000595D1 /* QuesDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 371BEE4119167A2D000595D1 /* QuesDetailTableViewCell.m */; };
+		371BEE4D19167A2D000595D1 /* QuesDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 371BEE4219167A2D000595D1 /* QuesDetailTableViewCell.xib */; };
+		371BEE4E19167A2D000595D1 /* QuesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 371BEE4419167A2D000595D1 /* QuesDetailViewController.m */; };
+		371BEE4F19167A2D000595D1 /* QuesDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 371BEE4519167A2D000595D1 /* QuesDetailViewController.xib */; };
+		371BEE5019167A2D000595D1 /* QuesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 371BEE4719167A2D000595D1 /* QuesTableViewCell.m */; };
+		371BEE5119167A2D000595D1 /* QuesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 371BEE4819167A2D000595D1 /* QuesTableViewCell.xib */; };
+		371BEE5219167A2D000595D1 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 371BEE4A19167A2D000595D1 /* QuestionViewController.m */; };
 		37348C36190CE79E007605DA /* ViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 37348C35190CE79E007605DA /* ViewUtil.m */; };
 		37348C4A190CF1AA007605DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37348C44190CF10E007605DA /* Main.storyboard */; };
-		376FC7DE191139010089C3B8 /* QuesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 376FC7DD191139010089C3B8 /* QuesDetailViewController.m */; };
-		376FC7E219113DBC0089C3B8 /* QuesDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 376FC7E119113DBC0089C3B8 /* QuesDetailViewController.xib */; };
 		37A6D66D190FF43400B7C8B0 /* CommonService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A6D66C190FF43400B7C8B0 /* CommonService.m */; };
 		37A6D683190FF44700B7C8B0 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A6D66F190FF44700B7C8B0 /* back.png */; };
 		37A6D684190FF44700B7C8B0 /* button-ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A6D670190FF44700B7C8B0 /* button-ok.png */; };
@@ -161,8 +161,6 @@
 		370C49391910971200C63063 /* InfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoTableViewCell.xib; sourceTree = "<group>"; };
 		370C493A1910971200C63063 /* PersonalInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalInfoViewController.h; sourceTree = "<group>"; };
 		370C493B1910971200C63063 /* PersonalInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalInfoViewController.m; sourceTree = "<group>"; };
-		370C493C1910971200C63063 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
-		370C493D1910971200C63063 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
 		370C493E1910971200C63063 /* WalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalletViewController.h; sourceTree = "<group>"; };
 		370C493F1910971200C63063 /* WalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalletViewController.m; sourceTree = "<group>"; };
 		370C49471910971F00C63063 /* personal_boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = personal_boy.png; sourceTree = "<group>"; };
@@ -174,13 +172,18 @@
 		370C49531910984400C63063 /* WalletTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalletTableViewCell.h; sourceTree = "<group>"; };
 		370C49541910984400C63063 /* WalletTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalletTableViewCell.m; sourceTree = "<group>"; };
 		370C49551910984400C63063 /* WalletTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WalletTableViewCell.xib; sourceTree = "<group>"; };
-		370C49581910A3B000C63063 /* QuesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuesTableViewCell.h; sourceTree = "<group>"; };
-		370C49591910A3B000C63063 /* QuesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuesTableViewCell.m; sourceTree = "<group>"; };
-		370C495A1910A3B000C63063 /* QuesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuesTableViewCell.xib; sourceTree = "<group>"; };
-		370C495D1910A3BF00C63063 /* QuesDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuesDetailTableViewCell.h; sourceTree = "<group>"; };
-		370C495E1910A3BF00C63063 /* QuesDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuesDetailTableViewCell.m; sourceTree = "<group>"; };
-		370C495F1910A3BF00C63063 /* QuesDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuesDetailTableViewCell.xib; sourceTree = "<group>"; };
 		370C49621910A41B00C63063 /* ques_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ques_arrow.png; sourceTree = "<group>"; };
+		371BEE4019167A2D000595D1 /* QuesDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuesDetailTableViewCell.h; sourceTree = "<group>"; };
+		371BEE4119167A2D000595D1 /* QuesDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuesDetailTableViewCell.m; sourceTree = "<group>"; };
+		371BEE4219167A2D000595D1 /* QuesDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuesDetailTableViewCell.xib; sourceTree = "<group>"; };
+		371BEE4319167A2D000595D1 /* QuesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuesDetailViewController.h; sourceTree = "<group>"; };
+		371BEE4419167A2D000595D1 /* QuesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuesDetailViewController.m; sourceTree = "<group>"; };
+		371BEE4519167A2D000595D1 /* QuesDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuesDetailViewController.xib; sourceTree = "<group>"; };
+		371BEE4619167A2D000595D1 /* QuesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuesTableViewCell.h; sourceTree = "<group>"; };
+		371BEE4719167A2D000595D1 /* QuesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuesTableViewCell.m; sourceTree = "<group>"; };
+		371BEE4819167A2D000595D1 /* QuesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuesTableViewCell.xib; sourceTree = "<group>"; };
+		371BEE4919167A2D000595D1 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
+		371BEE4A19167A2D000595D1 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
 		37348C34190CE79E007605DA /* ViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewUtil.h; sourceTree = "<group>"; };
 		37348C35190CE79E007605DA /* ViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewUtil.m; sourceTree = "<group>"; };
 		37348C3D190CEA5B007605DA /* GlobalDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDefine.h; sourceTree = "<group>"; };
@@ -191,9 +194,6 @@
 		37348C42190CEA5B007605DA /* GlobalErrorDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalErrorDefine.h; sourceTree = "<group>"; };
 		37348C45190CF10E007605DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37348C49190CF189007605DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		376FC7DC191139010089C3B8 /* QuesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuesDetailViewController.h; sourceTree = "<group>"; };
-		376FC7DD191139010089C3B8 /* QuesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuesDetailViewController.m; sourceTree = "<group>"; };
-		376FC7E119113DBC0089C3B8 /* QuesDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuesDetailViewController.xib; sourceTree = "<group>"; };
 		37A6D66B190FF43400B7C8B0 /* CommonService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonService.h; sourceTree = "<group>"; };
 		37A6D66C190FF43400B7C8B0 /* CommonService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonService.m; sourceTree = "<group>"; };
 		37A6D66F190FF44700B7C8B0 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
@@ -415,17 +415,6 @@
 				370C49531910984400C63063 /* WalletTableViewCell.h */,
 				370C49541910984400C63063 /* WalletTableViewCell.m */,
 				370C49551910984400C63063 /* WalletTableViewCell.xib */,
-				370C493C1910971200C63063 /* QuestionViewController.h */,
-				370C493D1910971200C63063 /* QuestionViewController.m */,
-				370C49581910A3B000C63063 /* QuesTableViewCell.h */,
-				370C49591910A3B000C63063 /* QuesTableViewCell.m */,
-				370C495A1910A3B000C63063 /* QuesTableViewCell.xib */,
-				376FC7DC191139010089C3B8 /* QuesDetailViewController.h */,
-				376FC7DD191139010089C3B8 /* QuesDetailViewController.m */,
-				376FC7E119113DBC0089C3B8 /* QuesDetailViewController.xib */,
-				370C495D1910A3BF00C63063 /* QuesDetailTableViewCell.h */,
-				370C495E1910A3BF00C63063 /* QuesDetailTableViewCell.m */,
-				370C495F1910A3BF00C63063 /* QuesDetailTableViewCell.xib */,
 			);
 			path = PersonalCenter;
 			sourceTree = "<group>";
@@ -442,6 +431,31 @@
 				370C49491910971F00C63063 /* personal_head.png */,
 			);
 			path = PersonalCenter;
+			sourceTree = "<group>";
+		};
+		371BEE3F19167A2D000595D1 /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				371BEE4019167A2D000595D1 /* QuesDetailTableViewCell.h */,
+				371BEE4119167A2D000595D1 /* QuesDetailTableViewCell.m */,
+				371BEE4219167A2D000595D1 /* QuesDetailTableViewCell.xib */,
+				371BEE4319167A2D000595D1 /* QuesDetailViewController.h */,
+				371BEE4419167A2D000595D1 /* QuesDetailViewController.m */,
+				371BEE4519167A2D000595D1 /* QuesDetailViewController.xib */,
+				371BEE4619167A2D000595D1 /* QuesTableViewCell.h */,
+				371BEE4719167A2D000595D1 /* QuesTableViewCell.m */,
+				371BEE4819167A2D000595D1 /* QuesTableViewCell.xib */,
+				371BEE4919167A2D000595D1 /* QuestionViewController.h */,
+				371BEE4A19167A2D000595D1 /* QuestionViewController.m */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
+		371BEE4B19167A2D000595D1 /* Teacher */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Teacher;
 			sourceTree = "<group>";
 		};
 		37348C27190CE691007605DA /* Define */ = {
@@ -499,6 +513,8 @@
 		37348C2D190CE691007605DA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				371BEE3F19167A2D000595D1 /* Question */,
+				371BEE4B19167A2D000595D1 /* Teacher */,
 				2FBC69CF1915392500990DD1 /* Appoint */,
 				2F6D6A9D1913F9130097617E /* Index */,
 				370C49341910971200C63063 /* PersonalCenter */,
@@ -696,12 +712,10 @@
 				2F739CB41910045F00FE2608 /* nav_bar_person_btn_n.png in Resources */,
 				370C49501910982200C63063 /* personal_identify.png in Resources */,
 				2F739CB61910045F00FE2608 /* nav_bar_red_btn_p.png in Resources */,
-				370C49611910A3BF00C63063 /* QuesDetailTableViewCell.xib in Resources */,
 				37A6D689190FF44700B7C8B0 /* hq.png in Resources */,
 				37A6D683190FF44700B7C8B0 /* back.png in Resources */,
 				37A6D68A190FF44700B7C8B0 /* logo.png in Resources */,
 				37A6D691190FF44700B7C8B0 /* sj.png in Resources */,
-				376FC7E219113DBC0089C3B8 /* QuesDetailViewController.xib in Resources */,
 				2F739CB11910045F00FE2608 /* nav_bar_back_btn_n.png in Resources */,
 				37A6D685190FF44700B7C8B0 /* button.png in Resources */,
 				2FBC69E019153D0E00990DD1 /* appoint_kcfl.png in Resources */,
@@ -712,7 +726,9 @@
 				2F6D6A971913F8EC0097617E /* index_jpkc.png in Resources */,
 				37348C4A190CF1AA007605DA /* Main.storyboard in Resources */,
 				37A6D692190FF44700B7C8B0 /* tx.png in Resources */,
+				371BEE5119167A2D000595D1 /* QuesTableViewCell.xib in Resources */,
 				37A6D68D190FF44700B7C8B0 /* ok.png in Resources */,
+				371BEE4D19167A2D000595D1 /* QuesDetailTableViewCell.xib in Resources */,
 				2FBC69DF19153D0E00990DD1 /* appoint_jxfs.png in Resources */,
 				370C494B1910971F00C63063 /* personal_girl.png in Resources */,
 				2F6D6A951913F8EC0097617E /* index_dtzx.png in Resources */,
@@ -736,9 +752,9 @@
 				2F6D6A991913F8EC0097617E /* index_wdzy.png in Resources */,
 				2F739CB21910045F00FE2608 /* nav_bar_bg.png in Resources */,
 				2F6D6A9B1913F8EC0097617E /* index_wytw.png in Resources */,
-				370C495C1910A3B000C63063 /* QuesTableViewCell.xib in Resources */,
 				370C49631910A41B00C63063 /* ques_arrow.png in Resources */,
 				37A6D694190FF44700B7C8B0 /* arrow.png in Resources */,
+				371BEE4F19167A2D000595D1 /* QuesDetailViewController.xib in Resources */,
 				37A6D6B2190FF45400B7C8B0 /* AboutViewController.xib in Resources */,
 				2F739CB51910045F00FE2608 /* nav_bar_red_btn_n.png in Resources */,
 				370C49571910984400C63063 /* WalletTableViewCell.xib in Resources */,
@@ -763,15 +779,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				370C49601910A3BF00C63063 /* QuesDetailTableViewCell.m in Sources */,
 				37A6D6AF190FF45400B7C8B0 /* LoginViewController.m in Sources */,
 				37A6D6B5190FF45400B7C8B0 /* MoreViewController.m in Sources */,
+				371BEE5219167A2D000595D1 /* QuestionViewController.m in Sources */,
 				37A6D6AC190FF45400B7C8B0 /* FindPWViewController.m in Sources */,
 				370C49431910971200C63063 /* PersonalInfoViewController.m in Sources */,
-				376FC7DE191139010089C3B8 /* QuesDetailViewController.m in Sources */,
 				370C49451910971200C63063 /* WalletViewController.m in Sources */,
 				37A6D66D190FF43400B7C8B0 /* CommonService.m in Sources */,
-				370C495B1910A3B000C63063 /* QuesTableViewCell.m in Sources */,
 				2FBC69E4191541ED00990DD1 /* NewAppointViewController.m in Sources */,
 				37A6D6AB190FF45400B7C8B0 /* BaseViewController.m in Sources */,
 				37A6D6B0190FF45400B7C8B0 /* RegisterViewController.m in Sources */,
@@ -779,11 +793,13 @@
 				37348C36190CE79E007605DA /* ViewUtil.m in Sources */,
 				37A6D6B1190FF45400B7C8B0 /* AboutViewController.m in Sources */,
 				2FBC69D21915399C00990DD1 /* NewAppointmentTableViewController.m in Sources */,
-				370C49441910971200C63063 /* QuestionViewController.m in Sources */,
+				371BEE4E19167A2D000595D1 /* QuesDetailViewController.m in Sources */,
 				37A6D6B3190FF45400B7C8B0 /* ContactUsViewController.m in Sources */,
 				37A6D6AD190FF45400B7C8B0 /* HelpViewController.m in Sources */,
 				2F6D6AA01913F9440097617E /* IndexViewController.m in Sources */,
 				370C49561910984400C63063 /* WalletTableViewCell.m in Sources */,
+				371BEE4C19167A2D000595D1 /* QuesDetailTableViewCell.m in Sources */,
+				371BEE5019167A2D000595D1 /* QuesTableViewCell.m in Sources */,
 				2FAB68AB190A26D40081D6B6 /* AppDelegate.m in Sources */,
 				2FAB68A7190A26D40081D6B6 /* main.m in Sources */,
 				370C49411910971200C63063 /* InfoTableViewCell.m in Sources */,
