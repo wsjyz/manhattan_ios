@@ -82,6 +82,8 @@
 		3721C3F5191A850700D63FBE /* TeacherChargeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3721C3F3191A850700D63FBE /* TeacherChargeTableViewCell.xib */; };
 		3721C3F9191A853700D63FBE /* TeacherPersonInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3721C3F7191A853700D63FBE /* TeacherPersonInfoTableViewCell.m */; };
 		3721C3FA191A853700D63FBE /* TeacherPersonInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3721C3F8191A853700D63FBE /* TeacherPersonInfoTableViewCell.xib */; };
+		372A796C191B817700B698CB /* teacher_schedule.png in Resources */ = {isa = PBXBuildFile; fileRef = 372A796B191B817700B698CB /* teacher_schedule.png */; };
+		372A796E191B850800B698CB /* teacher_schedule_select.png in Resources */ = {isa = PBXBuildFile; fileRef = 372A796D191B850800B698CB /* teacher_schedule_select.png */; };
 		37348C36190CE79E007605DA /* ViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 37348C35190CE79E007605DA /* ViewUtil.m */; };
 		37348C4A190CF1AA007605DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37348C44190CF10E007605DA /* Main.storyboard */; };
 		37A6D66D190FF43400B7C8B0 /* CommonService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A6D66C190FF43400B7C8B0 /* CommonService.m */; };
@@ -233,6 +235,8 @@
 		3721C3F6191A853700D63FBE /* TeacherPersonInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherPersonInfoTableViewCell.h; sourceTree = "<group>"; };
 		3721C3F7191A853700D63FBE /* TeacherPersonInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherPersonInfoTableViewCell.m; sourceTree = "<group>"; };
 		3721C3F8191A853700D63FBE /* TeacherPersonInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeacherPersonInfoTableViewCell.xib; sourceTree = "<group>"; };
+		372A796B191B817700B698CB /* teacher_schedule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacher_schedule.png; sourceTree = "<group>"; };
+		372A796D191B850800B698CB /* teacher_schedule_select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacher_schedule_select.png; sourceTree = "<group>"; };
 		37348C34190CE79E007605DA /* ViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewUtil.h; sourceTree = "<group>"; };
 		37348C35190CE79E007605DA /* ViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewUtil.m; sourceTree = "<group>"; };
 		37348C3D190CEA5B007605DA /* GlobalDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDefine.h; sourceTree = "<group>"; };
@@ -726,6 +730,8 @@
 		37CC3F771917E74800023E76 /* Teacher */ = {
 			isa = PBXGroup;
 			children = (
+				372A796D191B850800B698CB /* teacher_schedule_select.png */,
+				372A796B191B817700B698CB /* teacher_schedule.png */,
 				3721C3D9191A847700D63FBE /* teacher_collect_btn.png */,
 				3721C3DA191A847700D63FBE /* teacher_collect.png */,
 				3721C3DB191A847700D63FBE /* teacher_comment.png */,
@@ -855,6 +861,7 @@
 				2F6D6A961913F8EC0097617E /* index_fbkc.png in Resources */,
 				370C49521910982200C63063 /* wallet_record.png in Resources */,
 				2FAB68B3190A26D40081D6B6 /* Images.xcassets in Resources */,
+				372A796C191B817700B698CB /* teacher_schedule.png in Resources */,
 				37A6D68B190FF44700B7C8B0 /* mm.png in Resources */,
 				37A6D68F190FF44700B7C8B0 /* register_btn_n.png in Resources */,
 				3721C3D8191A81EC00D63FBE /* TeacherDetailViewController.xib in Resources */,
@@ -876,6 +883,7 @@
 				3721C3F5191A850700D63FBE /* TeacherChargeTableViewCell.xib in Resources */,
 				2F739CB21910045F00FE2608 /* nav_bar_bg.png in Resources */,
 				37CC3F7B1917E74800023E76 /* teacher_arrow.png in Resources */,
+				372A796E191B850800B698CB /* teacher_schedule_select.png in Resources */,
 				37CC3F6E1917E29200023E76 /* ques_vip.png in Resources */,
 				3721C3F0191A84DF00D63FBE /* TeacherScheduleTableViewCell.xib in Resources */,
 				2F6D6A9B1913F8EC0097617E /* index_wytw.png in Resources */,

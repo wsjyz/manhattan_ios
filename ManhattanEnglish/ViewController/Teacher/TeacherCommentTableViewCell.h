@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol TeaCommentCellDelegate <NSObject>
+
+- (void)selectListenBtn;
+- (void)selectOrderBtn;
+- (void)selectCollectBtn;
+
+@end
+
 @interface TeacherCommentTableViewCell : UITableViewCell
 
 @property (nonatomic, weak) IBOutlet UIButton *commentTitle;
@@ -24,5 +32,14 @@
 @property (nonatomic, weak) IBOutlet UILabel *concernNum;
 @property (nonatomic, weak) IBOutlet UILabel *commentNum;
 @property (nonatomic, weak) IBOutlet UILabel *collectNum;
+
+@property (nonatomic, weak) id<TeaCommentCellDelegate> delegate;
+
+//试听
+- (IBAction)listenBtnPressed:(id)sender;
+//预约
+- (IBAction)orderBtnPressed:(id)sender;
+//收藏
+- (IBAction)collectBtnPressed:(id)sender;
 
 @end

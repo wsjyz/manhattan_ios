@@ -22,4 +22,11 @@
     // Configure the view for the selected state
 }
 
+- (void)setFrame:(CGRect)frame
+{
+    CGSize size = [_content.text sizeWithFont:_content.font constrainedToSize:CGSizeMake(CGRectGetWidth(_content.frame), MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
+    _content.frame = CGRectMake(CGRectGetMinX(_content.frame), CGRectGetMinY(_content.frame), CGRectGetWidth(_content.frame), size.height);
+    [super setFrame:CGRectMake(CGRectGetMinX(frame), CGRectGetMinY(frame), CGRectGetWidth(frame), CGRectGetMaxY(_content.frame)+5)];
+}
+
 @end
