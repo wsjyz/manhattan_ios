@@ -833,6 +833,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37CC3F6D1917E29200023E76 /* ques_month.png in Resources */,
 				2F41607C19194DA800156EDB /* nav_back_btn_p.png in Resources */,
 				2F6D6A9A1913F8EC0097617E /* index_wyhd.png in Resources */,
 				3721C3EB191A84A400D63FBE /* TeacherCommentTableViewCell.xib in Resources */,
