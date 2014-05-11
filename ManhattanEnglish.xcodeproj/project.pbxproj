@@ -68,6 +68,25 @@
 		371BEE5019167A2D000595D1 /* QuesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 371BEE4719167A2D000595D1 /* QuesTableViewCell.m */; };
 		371BEE5119167A2D000595D1 /* QuesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 371BEE4819167A2D000595D1 /* QuesTableViewCell.xib */; };
 		371BEE5219167A2D000595D1 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 371BEE4A19167A2D000595D1 /* QuestionViewController.m */; };
+		3721C3D6191A802800D63FBE /* TeacherDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3721C3D5191A802800D63FBE /* TeacherDetailViewController.m */; };
+		3721C3D8191A81EC00D63FBE /* TeacherDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3721C3D7191A81EC00D63FBE /* TeacherDetailViewController.xib */; };
+		3721C3E0191A847700D63FBE /* teacher_collect_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 3721C3D9191A847700D63FBE /* teacher_collect_btn.png */; };
+		3721C3E1191A847700D63FBE /* teacher_collect.png in Resources */ = {isa = PBXBuildFile; fileRef = 3721C3DA191A847700D63FBE /* teacher_collect.png */; };
+		3721C3E2191A847700D63FBE /* teacher_comment.png in Resources */ = {isa = PBXBuildFile; fileRef = 3721C3DB191A847700D63FBE /* teacher_comment.png */; };
+		3721C3E3191A847700D63FBE /* teacher_concern.png in Resources */ = {isa = PBXBuildFile; fileRef = 3721C3DC191A847700D63FBE /* teacher_concern.png */; };
+		3721C3E4191A847700D63FBE /* teacher_listen_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 3721C3DD191A847700D63FBE /* teacher_listen_btn.png */; };
+		3721C3E5191A847700D63FBE /* teacher_order_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 3721C3DE191A847700D63FBE /* teacher_order_btn.png */; };
+		3721C3E6191A847700D63FBE /* tearcher_btn_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3721C3DF191A847700D63FBE /* tearcher_btn_bg.png */; };
+		3721C3EA191A84A400D63FBE /* TeacherCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3721C3E8191A84A400D63FBE /* TeacherCommentTableViewCell.m */; };
+		3721C3EB191A84A400D63FBE /* TeacherCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3721C3E9191A84A400D63FBE /* TeacherCommentTableViewCell.xib */; };
+		3721C3EF191A84DF00D63FBE /* TeacherScheduleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3721C3ED191A84DF00D63FBE /* TeacherScheduleTableViewCell.m */; };
+		3721C3F0191A84DF00D63FBE /* TeacherScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3721C3EE191A84DF00D63FBE /* TeacherScheduleTableViewCell.xib */; };
+		3721C3F4191A850700D63FBE /* TeacherChargeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3721C3F2191A850700D63FBE /* TeacherChargeTableViewCell.m */; };
+		3721C3F5191A850700D63FBE /* TeacherChargeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3721C3F3191A850700D63FBE /* TeacherChargeTableViewCell.xib */; };
+		3721C3F9191A853700D63FBE /* TeacherPersonInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3721C3F7191A853700D63FBE /* TeacherPersonInfoTableViewCell.m */; };
+		3721C3FA191A853700D63FBE /* TeacherPersonInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3721C3F8191A853700D63FBE /* TeacherPersonInfoTableViewCell.xib */; };
+		372A796C191B817700B698CB /* teacher_schedule.png in Resources */ = {isa = PBXBuildFile; fileRef = 372A796B191B817700B698CB /* teacher_schedule.png */; };
+		372A796E191B850800B698CB /* teacher_schedule_select.png in Resources */ = {isa = PBXBuildFile; fileRef = 372A796D191B850800B698CB /* teacher_schedule_select.png */; };
 		37348C36190CE79E007605DA /* ViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 37348C35190CE79E007605DA /* ViewUtil.m */; };
 		37348C4A190CF1AA007605DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37348C44190CF10E007605DA /* Main.storyboard */; };
 		37A6D66D190FF43400B7C8B0 /* CommonService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A6D66C190FF43400B7C8B0 /* CommonService.m */; };
@@ -100,6 +119,16 @@
 		37A6D6B3190FF45400B7C8B0 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A6D6A7190FF45400B7C8B0 /* ContactUsViewController.m */; };
 		37A6D6B4190FF45400B7C8B0 /* ContactUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A6D6A8190FF45400B7C8B0 /* ContactUsViewController.xib */; };
 		37A6D6B5190FF45400B7C8B0 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A6D6AA190FF45400B7C8B0 /* MoreViewController.m */; };
+		37CC3F671917D56600023E76 /* AskQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CC3F661917D56600023E76 /* AskQuestionViewController.m */; };
+		37CC3F6C1917E29200023E76 /* ques_btn_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CC3F691917E29200023E76 /* ques_btn_bg.png */; };
+		37CC3F6D1917E29200023E76 /* ques_month.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CC3F6A1917E29200023E76 /* ques_month.png */; };
+		37CC3F6E1917E29200023E76 /* ques_vip.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CC3F6B1917E29200023E76 /* ques_vip.png */; };
+		37CC3F711917E4B300023E76 /* TeacherListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CC3F701917E4B300023E76 /* TeacherListViewController.m */; };
+		37CC3F751917E4F700023E76 /* TeacherMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CC3F731917E4F700023E76 /* TeacherMainCell.m */; };
+		37CC3F761917E4F700023E76 /* TeacherMainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37CC3F741917E4F700023E76 /* TeacherMainCell.xib */; };
+		37CC3F7B1917E74800023E76 /* teacher_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CC3F781917E74800023E76 /* teacher_arrow.png */; };
+		37CC3F7C1917E74800023E76 /* teacher_boy.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CC3F791917E74800023E76 /* teacher_boy.png */; };
+		37CC3F7D1917E74800023E76 /* teacher_girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CC3F7A1917E74800023E76 /* teacher_girl.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,6 +220,30 @@
 		371BEE4819167A2D000595D1 /* QuesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuesTableViewCell.xib; sourceTree = "<group>"; };
 		371BEE4919167A2D000595D1 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
 		371BEE4A19167A2D000595D1 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
+		3721C3D4191A802800D63FBE /* TeacherDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherDetailViewController.h; sourceTree = "<group>"; };
+		3721C3D5191A802800D63FBE /* TeacherDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherDetailViewController.m; sourceTree = "<group>"; };
+		3721C3D7191A81EC00D63FBE /* TeacherDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeacherDetailViewController.xib; sourceTree = "<group>"; };
+		3721C3D9191A847700D63FBE /* teacher_collect_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacher_collect_btn.png; sourceTree = "<group>"; };
+		3721C3DA191A847700D63FBE /* teacher_collect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacher_collect.png; sourceTree = "<group>"; };
+		3721C3DB191A847700D63FBE /* teacher_comment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacher_comment.png; sourceTree = "<group>"; };
+		3721C3DC191A847700D63FBE /* teacher_concern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacher_concern.png; sourceTree = "<group>"; };
+		3721C3DD191A847700D63FBE /* teacher_listen_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacher_listen_btn.png; sourceTree = "<group>"; };
+		3721C3DE191A847700D63FBE /* teacher_order_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacher_order_btn.png; sourceTree = "<group>"; };
+		3721C3DF191A847700D63FBE /* tearcher_btn_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tearcher_btn_bg.png; sourceTree = "<group>"; };
+		3721C3E7191A84A400D63FBE /* TeacherCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherCommentTableViewCell.h; sourceTree = "<group>"; };
+		3721C3E8191A84A400D63FBE /* TeacherCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherCommentTableViewCell.m; sourceTree = "<group>"; };
+		3721C3E9191A84A400D63FBE /* TeacherCommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeacherCommentTableViewCell.xib; sourceTree = "<group>"; };
+		3721C3EC191A84DF00D63FBE /* TeacherScheduleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherScheduleTableViewCell.h; sourceTree = "<group>"; };
+		3721C3ED191A84DF00D63FBE /* TeacherScheduleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherScheduleTableViewCell.m; sourceTree = "<group>"; };
+		3721C3EE191A84DF00D63FBE /* TeacherScheduleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeacherScheduleTableViewCell.xib; sourceTree = "<group>"; };
+		3721C3F1191A850700D63FBE /* TeacherChargeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherChargeTableViewCell.h; sourceTree = "<group>"; };
+		3721C3F2191A850700D63FBE /* TeacherChargeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherChargeTableViewCell.m; sourceTree = "<group>"; };
+		3721C3F3191A850700D63FBE /* TeacherChargeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeacherChargeTableViewCell.xib; sourceTree = "<group>"; };
+		3721C3F6191A853700D63FBE /* TeacherPersonInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherPersonInfoTableViewCell.h; sourceTree = "<group>"; };
+		3721C3F7191A853700D63FBE /* TeacherPersonInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherPersonInfoTableViewCell.m; sourceTree = "<group>"; };
+		3721C3F8191A853700D63FBE /* TeacherPersonInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeacherPersonInfoTableViewCell.xib; sourceTree = "<group>"; };
+		372A796B191B817700B698CB /* teacher_schedule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacher_schedule.png; sourceTree = "<group>"; };
+		372A796D191B850800B698CB /* teacher_schedule_select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacher_schedule_select.png; sourceTree = "<group>"; };
 		37348C34190CE79E007605DA /* ViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewUtil.h; sourceTree = "<group>"; };
 		37348C35190CE79E007605DA /* ViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewUtil.m; sourceTree = "<group>"; };
 		37348C3D190CEA5B007605DA /* GlobalDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDefine.h; sourceTree = "<group>"; };
@@ -240,6 +293,19 @@
 		37A6D6A8190FF45400B7C8B0 /* ContactUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactUsViewController.xib; sourceTree = "<group>"; };
 		37A6D6A9190FF45400B7C8B0 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		37A6D6AA190FF45400B7C8B0 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		37CC3F651917D56600023E76 /* AskQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskQuestionViewController.h; sourceTree = "<group>"; };
+		37CC3F661917D56600023E76 /* AskQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskQuestionViewController.m; sourceTree = "<group>"; };
+		37CC3F691917E29200023E76 /* ques_btn_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ques_btn_bg.png; sourceTree = "<group>"; };
+		37CC3F6A1917E29200023E76 /* ques_month.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ques_month.png; sourceTree = "<group>"; };
+		37CC3F6B1917E29200023E76 /* ques_vip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ques_vip.png; sourceTree = "<group>"; };
+		37CC3F6F1917E4B300023E76 /* TeacherListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherListViewController.h; sourceTree = "<group>"; };
+		37CC3F701917E4B300023E76 /* TeacherListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherListViewController.m; sourceTree = "<group>"; };
+		37CC3F721917E4F700023E76 /* TeacherMainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherMainCell.h; sourceTree = "<group>"; };
+		37CC3F731917E4F700023E76 /* TeacherMainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherMainCell.m; sourceTree = "<group>"; };
+		37CC3F741917E4F700023E76 /* TeacherMainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeacherMainCell.xib; sourceTree = "<group>"; };
+		37CC3F781917E74800023E76 /* teacher_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacher_arrow.png; sourceTree = "<group>"; };
+		37CC3F791917E74800023E76 /* teacher_boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacher_boy.png; sourceTree = "<group>"; };
+		37CC3F7A1917E74800023E76 /* teacher_girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacher_girl.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -447,17 +513,19 @@
 		371BEE3F19167A2D000595D1 /* Question */ = {
 			isa = PBXGroup;
 			children = (
+				371BEE4619167A2D000595D1 /* QuesTableViewCell.h */,
+				371BEE4719167A2D000595D1 /* QuesTableViewCell.m */,
+				371BEE4819167A2D000595D1 /* QuesTableViewCell.xib */,
+				371BEE4919167A2D000595D1 /* QuestionViewController.h */,
+				371BEE4A19167A2D000595D1 /* QuestionViewController.m */,
 				371BEE4019167A2D000595D1 /* QuesDetailTableViewCell.h */,
 				371BEE4119167A2D000595D1 /* QuesDetailTableViewCell.m */,
 				371BEE4219167A2D000595D1 /* QuesDetailTableViewCell.xib */,
 				371BEE4319167A2D000595D1 /* QuesDetailViewController.h */,
 				371BEE4419167A2D000595D1 /* QuesDetailViewController.m */,
 				371BEE4519167A2D000595D1 /* QuesDetailViewController.xib */,
-				371BEE4619167A2D000595D1 /* QuesTableViewCell.h */,
-				371BEE4719167A2D000595D1 /* QuesTableViewCell.m */,
-				371BEE4819167A2D000595D1 /* QuesTableViewCell.xib */,
-				371BEE4919167A2D000595D1 /* QuestionViewController.h */,
-				371BEE4A19167A2D000595D1 /* QuestionViewController.m */,
+				37CC3F651917D56600023E76 /* AskQuestionViewController.h */,
+				37CC3F661917D56600023E76 /* AskQuestionViewController.m */,
 			);
 			path = Question;
 			sourceTree = "<group>";
@@ -465,6 +533,26 @@
 		371BEE4B19167A2D000595D1 /* Teacher */ = {
 			isa = PBXGroup;
 			children = (
+				37CC3F6F1917E4B300023E76 /* TeacherListViewController.h */,
+				37CC3F701917E4B300023E76 /* TeacherListViewController.m */,
+				37CC3F721917E4F700023E76 /* TeacherMainCell.h */,
+				37CC3F731917E4F700023E76 /* TeacherMainCell.m */,
+				37CC3F741917E4F700023E76 /* TeacherMainCell.xib */,
+				3721C3D4191A802800D63FBE /* TeacherDetailViewController.h */,
+				3721C3D5191A802800D63FBE /* TeacherDetailViewController.m */,
+				3721C3D7191A81EC00D63FBE /* TeacherDetailViewController.xib */,
+				3721C3E7191A84A400D63FBE /* TeacherCommentTableViewCell.h */,
+				3721C3E8191A84A400D63FBE /* TeacherCommentTableViewCell.m */,
+				3721C3E9191A84A400D63FBE /* TeacherCommentTableViewCell.xib */,
+				3721C3EC191A84DF00D63FBE /* TeacherScheduleTableViewCell.h */,
+				3721C3ED191A84DF00D63FBE /* TeacherScheduleTableViewCell.m */,
+				3721C3EE191A84DF00D63FBE /* TeacherScheduleTableViewCell.xib */,
+				3721C3F1191A850700D63FBE /* TeacherChargeTableViewCell.h */,
+				3721C3F2191A850700D63FBE /* TeacherChargeTableViewCell.m */,
+				3721C3F3191A850700D63FBE /* TeacherChargeTableViewCell.xib */,
+				3721C3F6191A853700D63FBE /* TeacherPersonInfoTableViewCell.h */,
+				3721C3F7191A853700D63FBE /* TeacherPersonInfoTableViewCell.m */,
+				3721C3F8191A853700D63FBE /* TeacherPersonInfoTableViewCell.xib */,
 			);
 			path = Teacher;
 			sourceTree = "<group>";
@@ -539,6 +627,8 @@
 		37348C51190CFD5E007605DA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				37CC3F771917E74800023E76 /* Teacher */,
+				37CC3F681917E29200023E76 /* Question */,
 				2FBC69D319153D0E00990DD1 /* Appoint */,
 				2F6D6A8C1913F8EC0097617E /* Index */,
 				370C49461910971F00C63063 /* PersonalCenter */,
@@ -638,6 +728,35 @@
 			path = More;
 			sourceTree = "<group>";
 		};
+		37CC3F681917E29200023E76 /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				37CC3F691917E29200023E76 /* ques_btn_bg.png */,
+				37CC3F6A1917E29200023E76 /* ques_month.png */,
+				37CC3F6B1917E29200023E76 /* ques_vip.png */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
+		37CC3F771917E74800023E76 /* Teacher */ = {
+			isa = PBXGroup;
+			children = (
+				372A796D191B850800B698CB /* teacher_schedule_select.png */,
+				372A796B191B817700B698CB /* teacher_schedule.png */,
+				3721C3D9191A847700D63FBE /* teacher_collect_btn.png */,
+				3721C3DA191A847700D63FBE /* teacher_collect.png */,
+				3721C3DB191A847700D63FBE /* teacher_comment.png */,
+				3721C3DC191A847700D63FBE /* teacher_concern.png */,
+				3721C3DD191A847700D63FBE /* teacher_listen_btn.png */,
+				3721C3DE191A847700D63FBE /* teacher_order_btn.png */,
+				3721C3DF191A847700D63FBE /* tearcher_btn_bg.png */,
+				37CC3F781917E74800023E76 /* teacher_arrow.png */,
+				37CC3F791917E74800023E76 /* teacher_boy.png */,
+				37CC3F7A1917E74800023E76 /* teacher_girl.png */,
+			);
+			path = Teacher;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -716,11 +835,15 @@
 			files = (
 				2F41607C19194DA800156EDB /* nav_back_btn_p.png in Resources */,
 				2F6D6A9A1913F8EC0097617E /* index_wyhd.png in Resources */,
+				3721C3EB191A84A400D63FBE /* TeacherCommentTableViewCell.xib in Resources */,
+				37CC3F7D1917E74800023E76 /* teacher_girl.png in Resources */,
 				370C494C1910971F00C63063 /* personal_head.png in Resources */,
 				2FBC69E119153D0E00990DD1 /* appoint_yyrq.png in Resources */,
+				3721C3E3191A847700D63FBE /* teacher_concern.png in Resources */,
 				2F739CB31910045F00FE2608 /* nav_bar_del_btn_n.png in Resources */,
 				37A6D68C190FF44700B7C8B0 /* no.png in Resources */,
 				370C49511910982200C63063 /* wallet_money.png in Resources */,
+				37CC3F7C1917E74800023E76 /* teacher_boy.png in Resources */,
 				2F739CB41910045F00FE2608 /* nav_bar_person_btn_n.png in Resources */,
 				370C49501910982200C63063 /* personal_identify.png in Resources */,
 				2F739CB61910045F00FE2608 /* nav_bar_red_btn_p.png in Resources */,
@@ -729,10 +852,12 @@
 				37A6D68A190FF44700B7C8B0 /* logo.png in Resources */,
 				37A6D691190FF44700B7C8B0 /* sj.png in Resources */,
 				2F739CB11910045F00FE2608 /* nav_bar_back_btn_n.png in Resources */,
+				37CC3F761917E4F700023E76 /* TeacherMainCell.xib in Resources */,
 				37A6D685190FF44700B7C8B0 /* button.png in Resources */,
 				2FBC69E019153D0E00990DD1 /* appoint_kcfl.png in Resources */,
 				370C494A1910971F00C63063 /* personal_boy.png in Resources */,
 				2FBC69DB19153D0E00990DD1 /* appoint_search.png in Resources */,
+				3721C3FA191A853700D63FBE /* TeacherPersonInfoTableViewCell.xib in Resources */,
 				37A6D686190FF44700B7C8B0 /* my.png in Resources */,
 				2F739CA91910004700FE2608 /* Backup.storyboard in Resources */,
 				2F6D6A971913F8EC0097617E /* index_jpkc.png in Resources */,
@@ -747,9 +872,12 @@
 				2F6D6A961913F8EC0097617E /* index_fbkc.png in Resources */,
 				370C49521910982200C63063 /* wallet_record.png in Resources */,
 				2FAB68B3190A26D40081D6B6 /* Images.xcassets in Resources */,
+				372A796C191B817700B698CB /* teacher_schedule.png in Resources */,
 				37A6D68B190FF44700B7C8B0 /* mm.png in Resources */,
 				37A6D68F190FF44700B7C8B0 /* register_btn_n.png in Resources */,
+				3721C3D8191A81EC00D63FBE /* TeacherDetailViewController.xib in Resources */,
 				37A6D6AE190FF45400B7C8B0 /* HelpViewController.xib in Resources */,
+				3721C3E0191A847700D63FBE /* teacher_collect_btn.png in Resources */,
 				37A6D688190FF44700B7C8B0 /* Navigation-Bar_6.png in Resources */,
 				2F6D6A981913F8EC0097617E /* index_msjx.png in Resources */,
 				37A6D6B4190FF45400B7C8B0 /* ContactUsViewController.xib in Resources */,
@@ -758,20 +886,31 @@
 				2F41607B19194DA800156EDB /* nav_back_btn_n.png in Resources */,
 				37A6D693190FF44700B7C8B0 /* xz.png in Resources */,
 				2FBC69DE19153D0E00990DD1 /* appoint_jxdd.png in Resources */,
+				3721C3E6191A847700D63FBE /* tearcher_btn_bg.png in Resources */,
 				2FBC69DD19153D0E00990DD1 /* appoint_jsxb.png in Resources */,
 				37A6D68E190FF44700B7C8B0 /* Push-button.png in Resources */,
 				37A6D684190FF44700B7C8B0 /* button-ok.png in Resources */,
 				2FAB68A5190A26D40081D6B6 /* InfoPlist.strings in Resources */,
 				2F6D6A991913F8EC0097617E /* index_wdzy.png in Resources */,
+				3721C3F5191A850700D63FBE /* TeacherChargeTableViewCell.xib in Resources */,
 				2F739CB21910045F00FE2608 /* nav_bar_bg.png in Resources */,
+				37CC3F7B1917E74800023E76 /* teacher_arrow.png in Resources */,
+				372A796E191B850800B698CB /* teacher_schedule_select.png in Resources */,
+				37CC3F6E1917E29200023E76 /* ques_vip.png in Resources */,
+				3721C3F0191A84DF00D63FBE /* TeacherScheduleTableViewCell.xib in Resources */,
 				2F6D6A9B1913F8EC0097617E /* index_wytw.png in Resources */,
 				370C49631910A41B00C63063 /* ques_arrow.png in Resources */,
+				37CC3F6C1917E29200023E76 /* ques_btn_bg.png in Resources */,
+				3721C3E1191A847700D63FBE /* teacher_collect.png in Resources */,
 				37A6D694190FF44700B7C8B0 /* arrow.png in Resources */,
+				3721C3E2191A847700D63FBE /* teacher_comment.png in Resources */,
 				371BEE4F19167A2D000595D1 /* QuesDetailViewController.xib in Resources */,
 				37A6D6B2190FF45400B7C8B0 /* AboutViewController.xib in Resources */,
 				2F739CB51910045F00FE2608 /* nav_bar_red_btn_n.png in Resources */,
+				3721C3E5191A847700D63FBE /* teacher_order_btn.png in Resources */,
 				370C49571910984400C63063 /* WalletTableViewCell.xib in Resources */,
 				37A6D687190FF44700B7C8B0 /* Navigation-Bar.png in Resources */,
+				3721C3E4191A847700D63FBE /* teacher_listen_btn.png in Resources */,
 				2FBC69DC19153D0E00990DD1 /* appoint_indicator.png in Resources */,
 				370C49421910971200C63063 /* InfoTableViewCell.xib in Resources */,
 			);
@@ -799,24 +938,32 @@
 				37A6D6AC190FF45400B7C8B0 /* FindPWViewController.m in Sources */,
 				370C49431910971200C63063 /* PersonalInfoViewController.m in Sources */,
 				370C49451910971200C63063 /* WalletViewController.m in Sources */,
+				3721C3D6191A802800D63FBE /* TeacherDetailViewController.m in Sources */,
 				37A6D66D190FF43400B7C8B0 /* CommonService.m in Sources */,
 				2FBC69E4191541ED00990DD1 /* NewAppointViewController.m in Sources */,
 				37A6D6AB190FF45400B7C8B0 /* BaseViewController.m in Sources */,
+				3721C3F4191A850700D63FBE /* TeacherChargeTableViewCell.m in Sources */,
 				37A6D6B0190FF45400B7C8B0 /* RegisterViewController.m in Sources */,
 				370C49401910971200C63063 /* IdentifyViewController.m in Sources */,
+				3721C3EA191A84A400D63FBE /* TeacherCommentTableViewCell.m in Sources */,
+				37CC3F751917E4F700023E76 /* TeacherMainCell.m in Sources */,
 				37348C36190CE79E007605DA /* ViewUtil.m in Sources */,
 				37A6D6B1190FF45400B7C8B0 /* AboutViewController.m in Sources */,
 				2FBC69D21915399C00990DD1 /* NewAppointmentTableViewController.m in Sources */,
 				371BEE4E19167A2D000595D1 /* QuesDetailViewController.m in Sources */,
+				37CC3F711917E4B300023E76 /* TeacherListViewController.m in Sources */,
 				37A6D6B3190FF45400B7C8B0 /* ContactUsViewController.m in Sources */,
 				37A6D6AD190FF45400B7C8B0 /* HelpViewController.m in Sources */,
 				2F6D6AA01913F9440097617E /* IndexViewController.m in Sources */,
 				370C49561910984400C63063 /* WalletTableViewCell.m in Sources */,
 				371BEE4C19167A2D000595D1 /* QuesDetailTableViewCell.m in Sources */,
 				371BEE5019167A2D000595D1 /* QuesTableViewCell.m in Sources */,
+				3721C3F9191A853700D63FBE /* TeacherPersonInfoTableViewCell.m in Sources */,
 				2FAB68AB190A26D40081D6B6 /* AppDelegate.m in Sources */,
+				37CC3F671917D56600023E76 /* AskQuestionViewController.m in Sources */,
 				2FAB68A7190A26D40081D6B6 /* main.m in Sources */,
 				370C49411910971200C63063 /* InfoTableViewCell.m in Sources */,
+				3721C3EF191A84DF00D63FBE /* TeacherScheduleTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
