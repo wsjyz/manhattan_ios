@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F4160781919496300156EDB /* PrepareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4160771919496300156EDB /* PrepareViewController.m */; };
+		2F41607B19194DA800156EDB /* nav_back_btn_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F41607919194DA800156EDB /* nav_back_btn_n.png */; };
+		2F41607C19194DA800156EDB /* nav_back_btn_p.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F41607A19194DA800156EDB /* nav_back_btn_p.png */; };
 		2F6D6A951913F8EC0097617E /* index_dtzx.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6D6A8D1913F8EC0097617E /* index_dtzx.png */; };
 		2F6D6A961913F8EC0097617E /* index_fbkc.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6D6A8E1913F8EC0097617E /* index_fbkc.png */; };
 		2F6D6A971913F8EC0097617E /* index_jpkc.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6D6A8F1913F8EC0097617E /* index_jpkc.png */; };
@@ -110,6 +113,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F4160761919496300156EDB /* PrepareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrepareViewController.h; sourceTree = "<group>"; };
+		2F4160771919496300156EDB /* PrepareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrepareViewController.m; sourceTree = "<group>"; };
+		2F41607919194DA800156EDB /* nav_back_btn_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_back_btn_n.png; sourceTree = "<group>"; };
+		2F41607A19194DA800156EDB /* nav_back_btn_p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_back_btn_p.png; sourceTree = "<group>"; };
 		2F6D6A8D1913F8EC0097617E /* index_dtzx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = index_dtzx.png; sourceTree = "<group>"; };
 		2F6D6A8E1913F8EC0097617E /* index_fbkc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = index_fbkc.png; sourceTree = "<group>"; };
 		2F6D6A8F1913F8EC0097617E /* index_jpkc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = index_jpkc.png; sourceTree = "<group>"; };
@@ -279,6 +286,8 @@
 			children = (
 				2F6D6A9E1913F9440097617E /* IndexViewController.h */,
 				2F6D6A9F1913F9440097617E /* IndexViewController.m */,
+				2F4160761919496300156EDB /* PrepareViewController.h */,
+				2F4160771919496300156EDB /* PrepareViewController.m */,
 			);
 			path = Index;
 			sourceTree = "<group>";
@@ -286,6 +295,8 @@
 		2F739CAA1910045F00FE2608 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				2F41607919194DA800156EDB /* nav_back_btn_n.png */,
+				2F41607A19194DA800156EDB /* nav_back_btn_p.png */,
 				2F739CAB1910045F00FE2608 /* nav_bar_back_btn_n.png */,
 				2F739CAC1910045F00FE2608 /* nav_bar_bg.png */,
 				2F739CAD1910045F00FE2608 /* nav_bar_del_btn_n.png */,
@@ -703,6 +714,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F41607C19194DA800156EDB /* nav_back_btn_p.png in Resources */,
 				2F6D6A9A1913F8EC0097617E /* index_wyhd.png in Resources */,
 				370C494C1910971F00C63063 /* personal_head.png in Resources */,
 				2FBC69E119153D0E00990DD1 /* appoint_yyrq.png in Resources */,
@@ -743,6 +755,7 @@
 				37A6D6B4190FF45400B7C8B0 /* ContactUsViewController.xib in Resources */,
 				2F6D6A9C1913F8EC0097617E /* index_wyyy.png in Resources */,
 				37A6D690190FF44700B7C8B0 /* register_btn_p.png in Resources */,
+				2F41607B19194DA800156EDB /* nav_back_btn_n.png in Resources */,
 				37A6D693190FF44700B7C8B0 /* xz.png in Resources */,
 				2FBC69DE19153D0E00990DD1 /* appoint_jxdd.png in Resources */,
 				2FBC69DD19153D0E00990DD1 /* appoint_jsxb.png in Resources */,
@@ -780,6 +793,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37A6D6AF190FF45400B7C8B0 /* LoginViewController.m in Sources */,
+				2F4160781919496300156EDB /* PrepareViewController.m in Sources */,
 				37A6D6B5190FF45400B7C8B0 /* MoreViewController.m in Sources */,
 				371BEE5219167A2D000595D1 /* QuestionViewController.m in Sources */,
 				37A6D6AC190FF45400B7C8B0 /* FindPWViewController.m in Sources */,

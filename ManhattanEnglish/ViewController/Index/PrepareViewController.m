@@ -1,18 +1,18 @@
 //
-//  IndexViewController.m
+//  PrepareViewController.m
 //  ManhattanEnglish
 //
-//  Created by Tianyu Tan on 14-5-3.
+//  Created by Tianyu Tan on 14-5-7.
 //  Copyright (c) 2014年 8hinfo. All rights reserved.
 //
 
-#import "IndexViewController.h"
+#import "PrepareViewController.h"
 
-@interface IndexViewController ()
+@interface PrepareViewController ()
 
 @end
 
-@implementation IndexViewController
+@implementation PrepareViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,27 +23,21 @@
     return self;
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.navigationItem.hidesBackButton = YES;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)loginBtnClick:(id)sender
+{
+    [self performSegueWithIdentifier:@"index" sender:self];
 }
 
 /*
