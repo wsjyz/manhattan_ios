@@ -1,18 +1,19 @@
 //
-//  NewAppointmentTableViewController.m
+//  AppointConditionTableViewController.m
 //  ManhattanEnglish
 //
-//  Created by Tianyu Tan on 14-5-3.
+//  Created by Tianyu Tan on 14-5-19.
 //  Copyright (c) 2014年 8hinfo. All rights reserved.
 //
 
-#import "NewAppointmentTableViewController.h"
+#import "AppointConditionTableViewController.h"
+#import "AppointConditionTableViewCell.h"
 
-@interface NewAppointmentTableViewController ()
+@interface AppointConditionTableViewController ()
 
 @end
 
-@implementation NewAppointmentTableViewController
+@implementation AppointConditionTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -40,32 +41,40 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Table view delegates
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"abcdefg");
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"select");
+}
+
 #pragma mark - Table view data source
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-//{
-//#warning Potentially incomplete method implementation.
-//    // Return the number of sections.
-//    return 0;
-//}
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-//{
-//#warning Incomplete method implementation.
-//    // Return the number of rows in the section.
-//    return 0;
-//}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return 1;
+}
 
-/*
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+    return 5;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    AppointConditionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell...
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.

@@ -11,6 +11,8 @@
 		2F41607B19194DA800156EDB /* nav_back_btn_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F41607919194DA800156EDB /* nav_back_btn_n.png */; };
 		2F41607C19194DA800156EDB /* nav_back_btn_p.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F41607A19194DA800156EDB /* nav_back_btn_p.png */; };
 		2F58AD561928E3D200A03F88 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58AD551928E3D200A03F88 /* PageViewController.m */; };
+		2F58AD5919291C3200A03F88 /* AppointConditionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58AD5819291C3200A03F88 /* AppointConditionTableViewController.m */; };
+		2F58AD5C192929D300A03F88 /* AppointConditionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58AD5B192929D300A03F88 /* AppointConditionTableViewCell.m */; };
 		2F6D6A951913F8EC0097617E /* index_dtzx.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6D6A8D1913F8EC0097617E /* index_dtzx.png */; };
 		2F6D6A961913F8EC0097617E /* index_fbkc.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6D6A8E1913F8EC0097617E /* index_fbkc.png */; };
 		2F6D6A971913F8EC0097617E /* index_jpkc.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6D6A8F1913F8EC0097617E /* index_jpkc.png */; };
@@ -40,7 +42,6 @@
 		2FAB68BC190A26D40081D6B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAB689E190A26D40081D6B6 /* UIKit.framework */; };
 		2FAB68C4190A26D40081D6B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2FAB68C2190A26D40081D6B6 /* InfoPlist.strings */; };
 		2FAB68C6190A26D50081D6B6 /* ManhattanEnglishTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAB68C5190A26D50081D6B6 /* ManhattanEnglishTests.m */; };
-		2FBC69D21915399C00990DD1 /* NewAppointmentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBC69D11915399C00990DD1 /* NewAppointmentTableViewController.m */; };
 		2FBC69DB19153D0E00990DD1 /* appoint_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBC69D419153D0E00990DD1 /* appoint_search.png */; };
 		2FBC69DC19153D0E00990DD1 /* appoint_indicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBC69D519153D0E00990DD1 /* appoint_indicator.png */; };
 		2FBC69DD19153D0E00990DD1 /* appoint_jsxb.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBC69D619153D0E00990DD1 /* appoint_jsxb.png */; };
@@ -150,6 +151,10 @@
 		2F41607A19194DA800156EDB /* nav_back_btn_p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_back_btn_p.png; sourceTree = "<group>"; };
 		2F58AD541928E3D200A03F88 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		2F58AD551928E3D200A03F88 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		2F58AD5719291C3200A03F88 /* AppointConditionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointConditionTableViewController.h; sourceTree = "<group>"; };
+		2F58AD5819291C3200A03F88 /* AppointConditionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointConditionTableViewController.m; sourceTree = "<group>"; };
+		2F58AD5A192929D300A03F88 /* AppointConditionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointConditionTableViewCell.h; sourceTree = "<group>"; };
+		2F58AD5B192929D300A03F88 /* AppointConditionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointConditionTableViewCell.m; sourceTree = "<group>"; };
 		2F6D6A8D1913F8EC0097617E /* index_dtzx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = index_dtzx.png; sourceTree = "<group>"; };
 		2F6D6A8E1913F8EC0097617E /* index_fbkc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = index_fbkc.png; sourceTree = "<group>"; };
 		2F6D6A8F1913F8EC0097617E /* index_jpkc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = index_jpkc.png; sourceTree = "<group>"; };
@@ -185,8 +190,6 @@
 		2FAB68C1190A26D40081D6B6 /* ManhattanEnglishTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ManhattanEnglishTests-Info.plist"; sourceTree = "<group>"; };
 		2FAB68C3190A26D40081D6B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2FAB68C5190A26D50081D6B6 /* ManhattanEnglishTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManhattanEnglishTests.m; sourceTree = "<group>"; };
-		2FBC69D01915399C00990DD1 /* NewAppointmentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewAppointmentTableViewController.h; sourceTree = "<group>"; };
-		2FBC69D11915399C00990DD1 /* NewAppointmentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewAppointmentTableViewController.m; sourceTree = "<group>"; };
 		2FBC69D419153D0E00990DD1 /* appoint_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appoint_search.png; sourceTree = "<group>"; };
 		2FBC69D519153D0E00990DD1 /* appoint_indicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appoint_indicator.png; sourceTree = "<group>"; };
 		2FBC69D619153D0E00990DD1 /* appoint_jsxb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appoint_jsxb.png; sourceTree = "<group>"; };
@@ -465,10 +468,12 @@
 		2FBC69CF1915392500990DD1 /* Appoint */ = {
 			isa = PBXGroup;
 			children = (
-				2FBC69D01915399C00990DD1 /* NewAppointmentTableViewController.h */,
-				2FBC69D11915399C00990DD1 /* NewAppointmentTableViewController.m */,
 				2FBC69E2191541ED00990DD1 /* NewAppointViewController.h */,
 				2FBC69E3191541ED00990DD1 /* NewAppointViewController.m */,
+				2F58AD5719291C3200A03F88 /* AppointConditionTableViewController.h */,
+				2F58AD5819291C3200A03F88 /* AppointConditionTableViewController.m */,
+				2F58AD5A192929D300A03F88 /* AppointConditionTableViewCell.h */,
+				2F58AD5B192929D300A03F88 /* AppointConditionTableViewCell.m */,
 			);
 			path = Appoint;
 			sourceTree = "<group>";
@@ -961,8 +966,8 @@
 				2FA5478E1927C4B300726D3E /* PageContentViewController.m in Sources */,
 				37CC3F751917E4F700023E76 /* TeacherMainCell.m in Sources */,
 				37348C36190CE79E007605DA /* ViewUtil.m in Sources */,
+				2F58AD5C192929D300A03F88 /* AppointConditionTableViewCell.m in Sources */,
 				37A6D6B1190FF45400B7C8B0 /* AboutViewController.m in Sources */,
-				2FBC69D21915399C00990DD1 /* NewAppointmentTableViewController.m in Sources */,
 				371BEE4E19167A2D000595D1 /* QuesDetailViewController.m in Sources */,
 				37CC3F711917E4B300023E76 /* TeacherListViewController.m in Sources */,
 				37A6D6B3190FF45400B7C8B0 /* ContactUsViewController.m in Sources */,
@@ -972,6 +977,7 @@
 				371BEE4C19167A2D000595D1 /* QuesDetailTableViewCell.m in Sources */,
 				371BEE5019167A2D000595D1 /* QuesTableViewCell.m in Sources */,
 				3721C3F9191A853700D63FBE /* TeacherPersonInfoTableViewCell.m in Sources */,
+				2F58AD5919291C3200A03F88 /* AppointConditionTableViewController.m in Sources */,
 				2FAB68AB190A26D40081D6B6 /* AppDelegate.m in Sources */,
 				37CC3F671917D56600023E76 /* AskQuestionViewController.m in Sources */,
 				2FAB68A7190A26D40081D6B6 /* main.m in Sources */,

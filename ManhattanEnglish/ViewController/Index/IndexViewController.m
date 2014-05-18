@@ -76,6 +76,11 @@
 */
 
 - (IBAction)appointBtnClick:(id)sender {
+    
+    PERSONAL_ID personId = [self.commonService getCurrentPersonalID];
+    if (personId == PERSONAL_STUDENT) {
+        [self performSegueWithIdentifier:@"appointment" sender:self];
+    }
 }
 
 - (IBAction)goodCourseBtnClick:(id)sender {
