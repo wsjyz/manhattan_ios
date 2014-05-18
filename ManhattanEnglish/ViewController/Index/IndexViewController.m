@@ -7,8 +7,12 @@
 //
 
 #import "IndexViewController.h"
+#import "PageContentViewController.h"
+#import "CommonService.h"
 
 @interface IndexViewController ()
+
+@property(strong, nonatomic) CommonService *commonService;
 
 @end
 
@@ -37,7 +41,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.navigationItem.hidesBackButton = YES;
+    if (IPHONE5) {
+        self.mainScrollView.scrollEnabled = NO;
+    }
+    
+    self.commonService = [[CommonService alloc] init];
+    PERSONAL_ID personId = [self.commonService getCurrentPersonalID];
+    if (personId == PERSONAL_STUDENT || personId == PERSONAL_GUEST) {
+        [self.appoinBtn setBackgroundImage:[UIImage imageNamed:@"index_wyyy.png"] forState:UIControlStateNormal];
+        [self.qaBtn setBackgroundImage:[UIImage imageNamed:@"index_wytw.png"] forState:UIControlStateNormal];
+    }else if (personId == PERSONAL_TEACHER){
+        [self.appoinBtn setBackgroundImage:[UIImage imageNamed:@"index_fbkc.png"] forState:UIControlStateNormal];
+        [self.qaBtn setBackgroundImage:[UIImage imageNamed:@"index_wyhd.png"] forState:UIControlStateNormal];
+    }else{
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,4 +75,21 @@
 }
 */
 
+- (IBAction)appointBtnClick:(id)sender {
+}
+
+- (IBAction)goodCourseBtnClick:(id)sender {
+}
+
+- (IBAction)newsBtnClick:(id)sender {
+}
+
+- (IBAction)goodTeacherBtnClick:(id)sender {
+}
+
+- (IBAction)homeworkBtnClick:(id)sender {
+}
+
+- (IBAction)qaBtnClick:(id)sender {
+}
 @end

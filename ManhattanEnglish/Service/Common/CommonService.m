@@ -39,6 +39,7 @@
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setValue:@(personalID) forKey:KEY_PERSONALE_ID];
+//    [defaults synchronize];
 }
 
 - (PERSONAL_ID)getCurrentPersonalID
@@ -51,7 +52,7 @@
     }
     else
     {
-        PERSONAL_ID personalID = (PERSONAL_ID)object;
+        PERSONAL_ID personalID = (PERSONAL_ID)[object integerValue];
         return personalID;
     }
 }

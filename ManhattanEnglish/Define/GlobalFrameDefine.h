@@ -14,6 +14,7 @@
 #define ISPAD         (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #define IPHONE5  ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
 #define ISiOS7      ([[[UIDevice currentDevice] systemVersion] doubleValue]>=7.0)
+//#define isiPhone5  ([[UIScreen mainScreen] bounds].size.height == 568)?TRUE:FALSE
 
 #define DEVICE_WIDTH  ([[UIScreen mainScreen] bounds].size.width)
 #define DEVICE_HEIGHT ([[UIScreen mainScreen] bounds].size.height)

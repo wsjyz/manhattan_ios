@@ -12,5 +12,6 @@
 
 - (IBAction)loginBtnClick:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *personIdSegControl;
 
 @end

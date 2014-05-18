@@ -10,6 +10,7 @@
 		2F4160781919496300156EDB /* PrepareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4160771919496300156EDB /* PrepareViewController.m */; };
 		2F41607B19194DA800156EDB /* nav_back_btn_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F41607919194DA800156EDB /* nav_back_btn_n.png */; };
 		2F41607C19194DA800156EDB /* nav_back_btn_p.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F41607A19194DA800156EDB /* nav_back_btn_p.png */; };
+		2F58AD561928E3D200A03F88 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58AD551928E3D200A03F88 /* PageViewController.m */; };
 		2F6D6A951913F8EC0097617E /* index_dtzx.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6D6A8D1913F8EC0097617E /* index_dtzx.png */; };
 		2F6D6A961913F8EC0097617E /* index_fbkc.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6D6A8E1913F8EC0097617E /* index_fbkc.png */; };
 		2F6D6A971913F8EC0097617E /* index_jpkc.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6D6A8F1913F8EC0097617E /* index_jpkc.png */; };
@@ -26,6 +27,7 @@
 		2F739CB41910045F00FE2608 /* nav_bar_person_btn_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F739CAE1910045F00FE2608 /* nav_bar_person_btn_n.png */; };
 		2F739CB51910045F00FE2608 /* nav_bar_red_btn_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F739CAF1910045F00FE2608 /* nav_bar_red_btn_n.png */; };
 		2F739CB61910045F00FE2608 /* nav_bar_red_btn_p.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F739CB01910045F00FE2608 /* nav_bar_red_btn_p.png */; };
+		2FA5478E1927C4B300726D3E /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA5478D1927C4B300726D3E /* PageContentViewController.m */; };
 		2FAB689B190A26D40081D6B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAB689A190A26D40081D6B6 /* Foundation.framework */; };
 		2FAB689D190A26D40081D6B6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAB689C190A26D40081D6B6 /* CoreGraphics.framework */; };
 		2FAB689F190A26D40081D6B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAB689E190A26D40081D6B6 /* UIKit.framework */; };
@@ -146,6 +148,8 @@
 		2F4160771919496300156EDB /* PrepareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrepareViewController.m; sourceTree = "<group>"; };
 		2F41607919194DA800156EDB /* nav_back_btn_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_back_btn_n.png; sourceTree = "<group>"; };
 		2F41607A19194DA800156EDB /* nav_back_btn_p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_back_btn_p.png; sourceTree = "<group>"; };
+		2F58AD541928E3D200A03F88 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
+		2F58AD551928E3D200A03F88 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 		2F6D6A8D1913F8EC0097617E /* index_dtzx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = index_dtzx.png; sourceTree = "<group>"; };
 		2F6D6A8E1913F8EC0097617E /* index_fbkc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = index_fbkc.png; sourceTree = "<group>"; };
 		2F6D6A8F1913F8EC0097617E /* index_jpkc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = index_jpkc.png; sourceTree = "<group>"; };
@@ -163,6 +167,8 @@
 		2F739CAE1910045F00FE2608 /* nav_bar_person_btn_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_bar_person_btn_n.png; sourceTree = "<group>"; };
 		2F739CAF1910045F00FE2608 /* nav_bar_red_btn_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_bar_red_btn_n.png; sourceTree = "<group>"; };
 		2F739CB01910045F00FE2608 /* nav_bar_red_btn_p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_bar_red_btn_p.png; sourceTree = "<group>"; };
+		2FA5478C1927C4B300726D3E /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
+		2FA5478D1927C4B300726D3E /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
 		2FAB6897190A26D40081D6B6 /* ManhattanEnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManhattanEnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FAB689A190A26D40081D6B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2FAB689C190A26D40081D6B6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -350,10 +356,14 @@
 		2F6D6A9D1913F9130097617E /* Index */ = {
 			isa = PBXGroup;
 			children = (
+				2FA5478C1927C4B300726D3E /* PageContentViewController.h */,
+				2FA5478D1927C4B300726D3E /* PageContentViewController.m */,
 				2F6D6A9E1913F9440097617E /* IndexViewController.h */,
 				2F6D6A9F1913F9440097617E /* IndexViewController.m */,
 				2F4160761919496300156EDB /* PrepareViewController.h */,
 				2F4160771919496300156EDB /* PrepareViewController.m */,
+				2F58AD541928E3D200A03F88 /* PageViewController.h */,
+				2F58AD551928E3D200A03F88 /* PageViewController.m */,
 			);
 			path = Index;
 			sourceTree = "<group>";
@@ -945,8 +955,10 @@
 				37A6D6AB190FF45400B7C8B0 /* BaseViewController.m in Sources */,
 				3721C3F4191A850700D63FBE /* TeacherChargeTableViewCell.m in Sources */,
 				37A6D6B0190FF45400B7C8B0 /* RegisterViewController.m in Sources */,
+				2F58AD561928E3D200A03F88 /* PageViewController.m in Sources */,
 				370C49401910971200C63063 /* IdentifyViewController.m in Sources */,
 				3721C3EA191A84A400D63FBE /* TeacherCommentTableViewCell.m in Sources */,
+				2FA5478E1927C4B300726D3E /* PageContentViewController.m in Sources */,
 				37CC3F751917E4F700023E76 /* TeacherMainCell.m in Sources */,
 				37348C36190CE79E007605DA /* ViewUtil.m in Sources */,
 				37A6D6B1190FF45400B7C8B0 /* AboutViewController.m in Sources */,
