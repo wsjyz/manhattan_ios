@@ -11,7 +11,6 @@
 		2F41607B19194DA800156EDB /* nav_back_btn_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F41607919194DA800156EDB /* nav_back_btn_n.png */; };
 		2F41607C19194DA800156EDB /* nav_back_btn_p.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F41607A19194DA800156EDB /* nav_back_btn_p.png */; };
 		2F58AD561928E3D200A03F88 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58AD551928E3D200A03F88 /* PageViewController.m */; };
-		2F58AD5919291C3200A03F88 /* AppointConditionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58AD5819291C3200A03F88 /* AppointConditionTableViewController.m */; };
 		2F58AD5C192929D300A03F88 /* AppointConditionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58AD5B192929D300A03F88 /* AppointConditionTableViewCell.m */; };
 		2F6D6A951913F8EC0097617E /* index_dtzx.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6D6A8D1913F8EC0097617E /* index_dtzx.png */; };
 		2F6D6A961913F8EC0097617E /* index_fbkc.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6D6A8E1913F8EC0097617E /* index_fbkc.png */; };
@@ -151,8 +150,6 @@
 		2F41607A19194DA800156EDB /* nav_back_btn_p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_back_btn_p.png; sourceTree = "<group>"; };
 		2F58AD541928E3D200A03F88 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		2F58AD551928E3D200A03F88 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
-		2F58AD5719291C3200A03F88 /* AppointConditionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointConditionTableViewController.h; sourceTree = "<group>"; };
-		2F58AD5819291C3200A03F88 /* AppointConditionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointConditionTableViewController.m; sourceTree = "<group>"; };
 		2F58AD5A192929D300A03F88 /* AppointConditionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointConditionTableViewCell.h; sourceTree = "<group>"; };
 		2F58AD5B192929D300A03F88 /* AppointConditionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointConditionTableViewCell.m; sourceTree = "<group>"; };
 		2F6D6A8D1913F8EC0097617E /* index_dtzx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = index_dtzx.png; sourceTree = "<group>"; };
@@ -470,8 +467,6 @@
 			children = (
 				2FBC69E2191541ED00990DD1 /* NewAppointViewController.h */,
 				2FBC69E3191541ED00990DD1 /* NewAppointViewController.m */,
-				2F58AD5719291C3200A03F88 /* AppointConditionTableViewController.h */,
-				2F58AD5819291C3200A03F88 /* AppointConditionTableViewController.m */,
 				2F58AD5A192929D300A03F88 /* AppointConditionTableViewCell.h */,
 				2F58AD5B192929D300A03F88 /* AppointConditionTableViewCell.m */,
 			);
@@ -977,7 +972,6 @@
 				371BEE4C19167A2D000595D1 /* QuesDetailTableViewCell.m in Sources */,
 				371BEE5019167A2D000595D1 /* QuesTableViewCell.m in Sources */,
 				3721C3F9191A853700D63FBE /* TeacherPersonInfoTableViewCell.m in Sources */,
-				2F58AD5919291C3200A03F88 /* AppointConditionTableViewController.m in Sources */,
 				2FAB68AB190A26D40081D6B6 /* AppDelegate.m in Sources */,
 				37CC3F671917D56600023E76 /* AskQuestionViewController.m in Sources */,
 				2FAB68A7190A26D40081D6B6 /* main.m in Sources */,

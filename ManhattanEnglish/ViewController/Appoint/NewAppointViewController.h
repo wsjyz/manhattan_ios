@@ -10,4 +10,6 @@
 
 @interface NewAppointViewController : BaseViewController
 
+@property (weak, nonatomic) IBOutlet UIView *containerView;
+
 @end
