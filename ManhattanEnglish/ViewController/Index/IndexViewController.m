@@ -84,9 +84,13 @@
 }
 
 - (IBAction)goodCourseBtnClick:(id)sender {
+    
+    [self performSegueWithIdentifier:@"goodCourse" sender:self];
 }
 
 - (IBAction)newsBtnClick:(id)sender {
+    
+    [self performSegueWithIdentifier:@"news" sender:self];
 }
 
 - (IBAction)goodTeacherBtnClick:(id)sender {
