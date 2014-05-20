@@ -12,6 +12,12 @@
 		2F2024D5192A778D00272AAB /* good_course_bh.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F2024D2192A778D00272AAB /* good_course_bh.png */; };
 		2F2024D6192A778D00272AAB /* good_course_fy.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F2024D3192A778D00272AAB /* good_course_fy.png */; };
 		2F2024D7192A778D00272AAB /* good_course_skdd.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F2024D4192A778D00272AAB /* good_course_skdd.png */; };
+		2F31488B192BBE9D0021C40B /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F31488A192BBE9D0021C40B /* NewsTableViewCell.m */; };
+		2F31488E192BBEAF0021C40B /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F31488D192BBEAF0021C40B /* NewsDetailViewController.m */; };
+		2F314892192BC38C0021C40B /* good_course_st_btn_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F31488F192BC38C0021C40B /* good_course_st_btn_n.png */; };
+		2F314893192BC38C0021C40B /* good_course_wave_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F314890192BC38C0021C40B /* good_course_wave_line.png */; };
+		2F314894192BC38C0021C40B /* good_course_yy_btn_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F314891192BC38C0021C40B /* good_course_yy_btn_n.png */; };
+		2F314897192BC5850021C40B /* CourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F314896192BC5850021C40B /* CourseDetailViewController.m */; };
 		2F4160781919496300156EDB /* PrepareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4160771919496300156EDB /* PrepareViewController.m */; };
 		2F41607B19194DA800156EDB /* nav_back_btn_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F41607919194DA800156EDB /* nav_back_btn_n.png */; };
 		2F41607C19194DA800156EDB /* nav_back_btn_p.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F41607A19194DA800156EDB /* nav_back_btn_p.png */; };
@@ -156,6 +162,15 @@
 		2F2024D2192A778D00272AAB /* good_course_bh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = good_course_bh.png; sourceTree = "<group>"; };
 		2F2024D3192A778D00272AAB /* good_course_fy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = good_course_fy.png; sourceTree = "<group>"; };
 		2F2024D4192A778D00272AAB /* good_course_skdd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = good_course_skdd.png; sourceTree = "<group>"; };
+		2F314889192BBE9D0021C40B /* NewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
+		2F31488A192BBE9D0021C40B /* NewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
+		2F31488C192BBEAF0021C40B /* NewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
+		2F31488D192BBEAF0021C40B /* NewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
+		2F31488F192BC38C0021C40B /* good_course_st_btn_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = good_course_st_btn_n.png; sourceTree = "<group>"; };
+		2F314890192BC38C0021C40B /* good_course_wave_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = good_course_wave_line.png; sourceTree = "<group>"; };
+		2F314891192BC38C0021C40B /* good_course_yy_btn_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = good_course_yy_btn_n.png; sourceTree = "<group>"; };
+		2F314895192BC5850021C40B /* CourseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseDetailViewController.h; sourceTree = "<group>"; };
+		2F314896192BC5850021C40B /* CourseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseDetailViewController.m; sourceTree = "<group>"; };
 		2F4160761919496300156EDB /* PrepareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrepareViewController.h; sourceTree = "<group>"; };
 		2F4160771919496300156EDB /* PrepareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrepareViewController.m; sourceTree = "<group>"; };
 		2F41607919194DA800156EDB /* nav_back_btn_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_back_btn_n.png; sourceTree = "<group>"; };
@@ -355,6 +370,8 @@
 			children = (
 				2F2024CE192A736400272AAB /* GoodCourseTableViewController.h */,
 				2F2024CF192A736400272AAB /* GoodCourseTableViewController.m */,
+				2F314895192BC5850021C40B /* CourseDetailViewController.h */,
+				2F314896192BC5850021C40B /* CourseDetailViewController.m */,
 			);
 			path = GoodCourse;
 			sourceTree = "<group>";
@@ -371,6 +388,10 @@
 			children = (
 				2F2024CB192A734500272AAB /* NewsTableViewController.h */,
 				2F2024CC192A734500272AAB /* NewsTableViewController.m */,
+				2F314889192BBE9D0021C40B /* NewsTableViewCell.h */,
+				2F31488A192BBE9D0021C40B /* NewsTableViewCell.m */,
+				2F31488C192BBEAF0021C40B /* NewsDetailViewController.h */,
+				2F31488D192BBEAF0021C40B /* NewsDetailViewController.m */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -378,6 +399,9 @@
 		2F2024D1192A778D00272AAB /* GoodCourse */ = {
 			isa = PBXGroup;
 			children = (
+				2F31488F192BC38C0021C40B /* good_course_st_btn_n.png */,
+				2F314890192BC38C0021C40B /* good_course_wave_line.png */,
+				2F314891192BC38C0021C40B /* good_course_yy_btn_n.png */,
 				2F2024D2192A778D00272AAB /* good_course_bh.png */,
 				2F2024D3192A778D00272AAB /* good_course_fy.png */,
 				2F2024D4192A778D00272AAB /* good_course_skdd.png */,
@@ -915,6 +939,7 @@
 				37A6D691190FF44700B7C8B0 /* sj.png in Resources */,
 				2F739CB11910045F00FE2608 /* nav_bar_back_btn_n.png in Resources */,
 				37CC3F761917E4F700023E76 /* TeacherMainCell.xib in Resources */,
+				2F314892192BC38C0021C40B /* good_course_st_btn_n.png in Resources */,
 				37A6D685190FF44700B7C8B0 /* button.png in Resources */,
 				2FBC69E019153D0E00990DD1 /* appoint_kcfl.png in Resources */,
 				370C494A1910971F00C63063 /* personal_boy.png in Resources */,
@@ -923,6 +948,7 @@
 				37A6D686190FF44700B7C8B0 /* my.png in Resources */,
 				2F739CA91910004700FE2608 /* Backup.storyboard in Resources */,
 				2F6D6A971913F8EC0097617E /* index_jpkc.png in Resources */,
+				2F314893192BC38C0021C40B /* good_course_wave_line.png in Resources */,
 				37348C4A190CF1AA007605DA /* Main.storyboard in Resources */,
 				37A6D692190FF44700B7C8B0 /* tx.png in Resources */,
 				371BEE5119167A2D000595D1 /* QuesTableViewCell.xib in Resources */,
@@ -943,6 +969,7 @@
 				3721C3E0191A847700D63FBE /* teacher_collect_btn.png in Resources */,
 				37A6D688190FF44700B7C8B0 /* Navigation-Bar_6.png in Resources */,
 				2F6D6A981913F8EC0097617E /* index_msjx.png in Resources */,
+				2F314894192BC38C0021C40B /* good_course_yy_btn_n.png in Resources */,
 				37A6D6B4190FF45400B7C8B0 /* ContactUsViewController.xib in Resources */,
 				2F6D6A9C1913F8EC0097617E /* index_wyyy.png in Resources */,
 				37A6D690190FF44700B7C8B0 /* register_btn_p.png in Resources */,
@@ -1014,6 +1041,7 @@
 				2F58AD561928E3D200A03F88 /* PageViewController.m in Sources */,
 				370C49401910971200C63063 /* IdentifyViewController.m in Sources */,
 				3721C3EA191A84A400D63FBE /* TeacherCommentTableViewCell.m in Sources */,
+				2F314897192BC5850021C40B /* CourseDetailViewController.m in Sources */,
 				2FA5478E1927C4B300726D3E /* PageContentViewController.m in Sources */,
 				37CC3F751917E4F700023E76 /* TeacherMainCell.m in Sources */,
 				37348C36190CE79E007605DA /* ViewUtil.m in Sources */,
@@ -1021,9 +1049,11 @@
 				37A6D6B1190FF45400B7C8B0 /* AboutViewController.m in Sources */,
 				371BEE4E19167A2D000595D1 /* QuesDetailViewController.m in Sources */,
 				37CC3F711917E4B300023E76 /* TeacherListViewController.m in Sources */,
+				2F31488E192BBEAF0021C40B /* NewsDetailViewController.m in Sources */,
 				37A6D6B3190FF45400B7C8B0 /* ContactUsViewController.m in Sources */,
 				37A6D6AD190FF45400B7C8B0 /* HelpViewController.m in Sources */,
 				2F6D6AA01913F9440097617E /* IndexViewController.m in Sources */,
+				2F31488B192BBE9D0021C40B /* NewsTableViewCell.m in Sources */,
 				370C49561910984400C63063 /* WalletTableViewCell.m in Sources */,
 				371BEE4C19167A2D000595D1 /* QuesDetailTableViewCell.m in Sources */,
 				371BEE5019167A2D000595D1 /* QuesTableViewCell.m in Sources */,
