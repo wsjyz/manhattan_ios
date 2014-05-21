@@ -52,7 +52,8 @@
     }
     else
     {
-        PERSONAL_ID personalID = (PERSONAL_ID)[object integerValue];
+        NSNumber *objNumber =object;
+        PERSONAL_ID personalID = (PERSONAL_ID)[objNumber integerValue];
         return personalID;
     }
 }
