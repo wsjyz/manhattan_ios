@@ -21,6 +21,21 @@
 		2F4160781919496300156EDB /* PrepareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4160771919496300156EDB /* PrepareViewController.m */; };
 		2F41607B19194DA800156EDB /* nav_back_btn_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F41607919194DA800156EDB /* nav_back_btn_n.png */; };
 		2F41607C19194DA800156EDB /* nav_back_btn_p.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F41607A19194DA800156EDB /* nav_back_btn_p.png */; };
+		2F53C22B19324A4B0099FCD7 /* tab_home_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F53C22919324A4B0099FCD7 /* tab_home_n.png */; };
+		2F53C22C19324A4B0099FCD7 /* tab_home_p.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F53C22A19324A4B0099FCD7 /* tab_home_p.png */; };
+		2F53C272193269420099FCD7 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F53C271193269420099FCD7 /* CoreText.framework */; };
+		2F53C28B193269E70099FCD7 /* Kal.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2F53C274193269E70099FCD7 /* Kal.bundle */; };
+		2F53C28C193269E70099FCD7 /* KalDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53C277193269E70099FCD7 /* KalDataSource.m */; };
+		2F53C28D193269E70099FCD7 /* KalGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53C279193269E70099FCD7 /* KalGridView.m */; };
+		2F53C28E193269E70099FCD7 /* KalLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53C27B193269E70099FCD7 /* KalLogic.m */; };
+		2F53C28F193269E70099FCD7 /* KalMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53C27D193269E70099FCD7 /* KalMonthView.m */; };
+		2F53C290193269E70099FCD7 /* KalTileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53C280193269E70099FCD7 /* KalTileView.m */; };
+		2F53C291193269E70099FCD7 /* KalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53C282193269E70099FCD7 /* KalView.m */; };
+		2F53C292193269E70099FCD7 /* KalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53C284193269E70099FCD7 /* KalViewController.m */; };
+		2F53C293193269E70099FCD7 /* NSDate+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53C286193269E70099FCD7 /* NSDate+Convenience.m */; };
+		2F53C294193269E70099FCD7 /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53C288193269E70099FCD7 /* NSDateAdditions.m */; };
+		2F53C295193269E70099FCD7 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53C28A193269E70099FCD7 /* UIViewAdditions.m */; };
+		2F53C29819326C6D0099FCD7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F53C29719326C6D0099FCD7 /* Localizable.strings */; };
 		2F58AD561928E3D200A03F88 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58AD551928E3D200A03F88 /* PageViewController.m */; };
 		2F58AD5C192929D300A03F88 /* AppointConditionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58AD5B192929D300A03F88 /* AppointConditionTableViewCell.m */; };
 		2F6D6A951913F8EC0097617E /* index_dtzx.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6D6A8D1913F8EC0097617E /* index_dtzx.png */; };
@@ -175,6 +190,35 @@
 		2F4160771919496300156EDB /* PrepareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrepareViewController.m; sourceTree = "<group>"; };
 		2F41607919194DA800156EDB /* nav_back_btn_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_back_btn_n.png; sourceTree = "<group>"; };
 		2F41607A19194DA800156EDB /* nav_back_btn_p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_back_btn_p.png; sourceTree = "<group>"; };
+		2F53C22919324A4B0099FCD7 /* tab_home_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_home_n.png; sourceTree = "<group>"; };
+		2F53C22A19324A4B0099FCD7 /* tab_home_p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_home_p.png; sourceTree = "<group>"; };
+		2F53C24919325EE00099FCD7 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		2F53C24A19325EE00099FCD7 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		2F53C271193269420099FCD7 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		2F53C274193269E70099FCD7 /* Kal.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Kal.bundle; sourceTree = "<group>"; };
+		2F53C275193269E70099FCD7 /* Kal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kal.h; sourceTree = "<group>"; };
+		2F53C276193269E70099FCD7 /* KalDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalDataSource.h; sourceTree = "<group>"; };
+		2F53C277193269E70099FCD7 /* KalDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalDataSource.m; sourceTree = "<group>"; };
+		2F53C278193269E70099FCD7 /* KalGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalGridView.h; sourceTree = "<group>"; };
+		2F53C279193269E70099FCD7 /* KalGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalGridView.m; sourceTree = "<group>"; };
+		2F53C27A193269E70099FCD7 /* KalLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalLogic.h; sourceTree = "<group>"; };
+		2F53C27B193269E70099FCD7 /* KalLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalLogic.m; sourceTree = "<group>"; };
+		2F53C27C193269E70099FCD7 /* KalMonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalMonthView.h; sourceTree = "<group>"; };
+		2F53C27D193269E70099FCD7 /* KalMonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalMonthView.m; sourceTree = "<group>"; };
+		2F53C27E193269E70099FCD7 /* KalPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalPrivate.h; sourceTree = "<group>"; };
+		2F53C27F193269E70099FCD7 /* KalTileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalTileView.h; sourceTree = "<group>"; };
+		2F53C280193269E70099FCD7 /* KalTileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalTileView.m; sourceTree = "<group>"; };
+		2F53C281193269E70099FCD7 /* KalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalView.h; sourceTree = "<group>"; };
+		2F53C282193269E70099FCD7 /* KalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalView.m; sourceTree = "<group>"; };
+		2F53C283193269E70099FCD7 /* KalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalViewController.h; sourceTree = "<group>"; };
+		2F53C284193269E70099FCD7 /* KalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalViewController.m; sourceTree = "<group>"; };
+		2F53C285193269E70099FCD7 /* NSDate+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Convenience.h"; sourceTree = "<group>"; };
+		2F53C286193269E70099FCD7 /* NSDate+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Convenience.m"; sourceTree = "<group>"; };
+		2F53C287193269E70099FCD7 /* NSDateAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDateAdditions.h; sourceTree = "<group>"; };
+		2F53C288193269E70099FCD7 /* NSDateAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateAdditions.m; sourceTree = "<group>"; };
+		2F53C289193269E70099FCD7 /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
+		2F53C28A193269E70099FCD7 /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
+		2F53C29719326C6D0099FCD7 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		2F58AD541928E3D200A03F88 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		2F58AD551928E3D200A03F88 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 		2F58AD5A192929D300A03F88 /* AppointConditionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointConditionTableViewCell.h; sourceTree = "<group>"; };
@@ -346,6 +390,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F53C272193269420099FCD7 /* CoreText.framework in Frameworks */,
 				2FAB689D190A26D40081D6B6 /* CoreGraphics.framework in Frameworks */,
 				2FAB689F190A26D40081D6B6 /* UIKit.framework in Frameworks */,
 				2FAB689B190A26D40081D6B6 /* Foundation.framework in Frameworks */,
@@ -407,6 +452,45 @@
 				2F2024D4192A778D00272AAB /* good_course_skdd.png */,
 			);
 			path = GoodCourse;
+			sourceTree = "<group>";
+		};
+		2F53C22819324A4B0099FCD7 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				2F53C22919324A4B0099FCD7 /* tab_home_n.png */,
+				2F53C22A19324A4B0099FCD7 /* tab_home_p.png */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		2F53C273193269E70099FCD7 /* Kal */ = {
+			isa = PBXGroup;
+			children = (
+				2F53C274193269E70099FCD7 /* Kal.bundle */,
+				2F53C275193269E70099FCD7 /* Kal.h */,
+				2F53C276193269E70099FCD7 /* KalDataSource.h */,
+				2F53C277193269E70099FCD7 /* KalDataSource.m */,
+				2F53C278193269E70099FCD7 /* KalGridView.h */,
+				2F53C279193269E70099FCD7 /* KalGridView.m */,
+				2F53C27A193269E70099FCD7 /* KalLogic.h */,
+				2F53C27B193269E70099FCD7 /* KalLogic.m */,
+				2F53C27C193269E70099FCD7 /* KalMonthView.h */,
+				2F53C27D193269E70099FCD7 /* KalMonthView.m */,
+				2F53C27E193269E70099FCD7 /* KalPrivate.h */,
+				2F53C27F193269E70099FCD7 /* KalTileView.h */,
+				2F53C280193269E70099FCD7 /* KalTileView.m */,
+				2F53C281193269E70099FCD7 /* KalView.h */,
+				2F53C282193269E70099FCD7 /* KalView.m */,
+				2F53C283193269E70099FCD7 /* KalViewController.h */,
+				2F53C284193269E70099FCD7 /* KalViewController.m */,
+				2F53C285193269E70099FCD7 /* NSDate+Convenience.h */,
+				2F53C286193269E70099FCD7 /* NSDate+Convenience.m */,
+				2F53C287193269E70099FCD7 /* NSDateAdditions.h */,
+				2F53C288193269E70099FCD7 /* NSDateAdditions.m */,
+				2F53C289193269E70099FCD7 /* UIViewAdditions.h */,
+				2F53C28A193269E70099FCD7 /* UIViewAdditions.m */,
+			);
+			path = Kal;
 			sourceTree = "<group>";
 		};
 		2F6D6A8C1913F8EC0097617E /* Index */ = {
@@ -476,6 +560,9 @@
 		2FAB6899190A26D40081D6B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2F53C271193269420099FCD7 /* CoreText.framework */,
+				2F53C24919325EE00099FCD7 /* EventKit.framework */,
+				2F53C24A19325EE00099FCD7 /* EventKitUI.framework */,
 				2FAB689A190A26D40081D6B6 /* Foundation.framework */,
 				2FAB689C190A26D40081D6B6 /* CoreGraphics.framework */,
 				2FAB689E190A26D40081D6B6 /* UIKit.framework */,
@@ -507,6 +594,7 @@
 		2FAB68A1190A26D40081D6B6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2F53C29719326C6D0099FCD7 /* Localizable.strings */,
 				2FAB68A2190A26D40081D6B6 /* ManhattanEnglish-Info.plist */,
 				2FAB68A3190A26D40081D6B6 /* InfoPlist.strings */,
 				2FAB68A6190A26D40081D6B6 /* main.m */,
@@ -661,6 +749,7 @@
 		37348C29190CE691007605DA /* OtherSource */ = {
 			isa = PBXGroup;
 			children = (
+				2F53C273193269E70099FCD7 /* Kal */,
 			);
 			path = OtherSource;
 			sourceTree = "<group>";
@@ -711,6 +800,7 @@
 		37348C51190CFD5E007605DA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2F53C22819324A4B0099FCD7 /* TabBar */,
 				2F2024D1192A778D00272AAB /* GoodCourse */,
 				37CC3F771917E74800023E76 /* Teacher */,
 				37CC3F681917E29200023E76 /* Question */,
@@ -955,6 +1045,7 @@
 				37A6D68D190FF44700B7C8B0 /* ok.png in Resources */,
 				371BEE4D19167A2D000595D1 /* QuesDetailTableViewCell.xib in Resources */,
 				2FBC69DF19153D0E00990DD1 /* appoint_jxfs.png in Resources */,
+				2F53C22C19324A4B0099FCD7 /* tab_home_p.png in Resources */,
 				370C494B1910971F00C63063 /* personal_girl.png in Resources */,
 				2F6D6A951913F8EC0097617E /* index_dtzx.png in Resources */,
 				2F6D6A961913F8EC0097617E /* index_fbkc.png in Resources */,
@@ -997,12 +1088,15 @@
 				2F2024D7192A778D00272AAB /* good_course_skdd.png in Resources */,
 				3721C3E2191A847700D63FBE /* teacher_comment.png in Resources */,
 				371BEE4F19167A2D000595D1 /* QuesDetailViewController.xib in Resources */,
+				2F53C28B193269E70099FCD7 /* Kal.bundle in Resources */,
 				37A6D6B2190FF45400B7C8B0 /* AboutViewController.xib in Resources */,
 				2F739CB51910045F00FE2608 /* nav_bar_red_btn_n.png in Resources */,
 				3721C3E5191A847700D63FBE /* teacher_order_btn.png in Resources */,
 				370C49571910984400C63063 /* WalletTableViewCell.xib in Resources */,
 				37A6D687190FF44700B7C8B0 /* Navigation-Bar.png in Resources */,
 				3721C3E4191A847700D63FBE /* teacher_listen_btn.png in Resources */,
+				2F53C29819326C6D0099FCD7 /* Localizable.strings in Resources */,
+				2F53C22B19324A4B0099FCD7 /* tab_home_n.png in Resources */,
 				2FBC69DC19153D0E00990DD1 /* appoint_indicator.png in Resources */,
 				370C49421910971200C63063 /* InfoTableViewCell.xib in Resources */,
 			);
@@ -1025,13 +1119,17 @@
 			files = (
 				37A6D6AF190FF45400B7C8B0 /* LoginViewController.m in Sources */,
 				2F4160781919496300156EDB /* PrepareViewController.m in Sources */,
+				2F53C28F193269E70099FCD7 /* KalMonthView.m in Sources */,
 				37A6D6B5190FF45400B7C8B0 /* MoreViewController.m in Sources */,
 				371BEE5219167A2D000595D1 /* QuestionViewController.m in Sources */,
 				37A6D6AC190FF45400B7C8B0 /* FindPWViewController.m in Sources */,
 				370C49431910971200C63063 /* PersonalInfoViewController.m in Sources */,
 				370C49451910971200C63063 /* WalletViewController.m in Sources */,
+				2F53C294193269E70099FCD7 /* NSDateAdditions.m in Sources */,
 				3721C3D6191A802800D63FBE /* TeacherDetailViewController.m in Sources */,
+				2F53C28E193269E70099FCD7 /* KalLogic.m in Sources */,
 				37A6D66D190FF43400B7C8B0 /* CommonService.m in Sources */,
+				2F53C28D193269E70099FCD7 /* KalGridView.m in Sources */,
 				2FBC69E4191541ED00990DD1 /* NewAppointViewController.m in Sources */,
 				37A6D6AB190FF45400B7C8B0 /* BaseViewController.m in Sources */,
 				2F2024D0192A736400272AAB /* GoodCourseTableViewController.m in Sources */,
@@ -1042,23 +1140,29 @@
 				370C49401910971200C63063 /* IdentifyViewController.m in Sources */,
 				3721C3EA191A84A400D63FBE /* TeacherCommentTableViewCell.m in Sources */,
 				2F314897192BC5850021C40B /* CourseDetailViewController.m in Sources */,
+				2F53C293193269E70099FCD7 /* NSDate+Convenience.m in Sources */,
 				2FA5478E1927C4B300726D3E /* PageContentViewController.m in Sources */,
 				37CC3F751917E4F700023E76 /* TeacherMainCell.m in Sources */,
 				37348C36190CE79E007605DA /* ViewUtil.m in Sources */,
 				2F58AD5C192929D300A03F88 /* AppointConditionTableViewCell.m in Sources */,
 				37A6D6B1190FF45400B7C8B0 /* AboutViewController.m in Sources */,
 				371BEE4E19167A2D000595D1 /* QuesDetailViewController.m in Sources */,
+				2F53C28C193269E70099FCD7 /* KalDataSource.m in Sources */,
 				37CC3F711917E4B300023E76 /* TeacherListViewController.m in Sources */,
 				2F31488E192BBEAF0021C40B /* NewsDetailViewController.m in Sources */,
 				37A6D6B3190FF45400B7C8B0 /* ContactUsViewController.m in Sources */,
 				37A6D6AD190FF45400B7C8B0 /* HelpViewController.m in Sources */,
 				2F6D6AA01913F9440097617E /* IndexViewController.m in Sources */,
+				2F53C295193269E70099FCD7 /* UIViewAdditions.m in Sources */,
 				2F31488B192BBE9D0021C40B /* NewsTableViewCell.m in Sources */,
 				370C49561910984400C63063 /* WalletTableViewCell.m in Sources */,
 				371BEE4C19167A2D000595D1 /* QuesDetailTableViewCell.m in Sources */,
+				2F53C291193269E70099FCD7 /* KalView.m in Sources */,
 				371BEE5019167A2D000595D1 /* QuesTableViewCell.m in Sources */,
 				3721C3F9191A853700D63FBE /* TeacherPersonInfoTableViewCell.m in Sources */,
+				2F53C290193269E70099FCD7 /* KalTileView.m in Sources */,
 				2FAB68AB190A26D40081D6B6 /* AppDelegate.m in Sources */,
+				2F53C292193269E70099FCD7 /* KalViewController.m in Sources */,
 				37CC3F671917D56600023E76 /* AskQuestionViewController.m in Sources */,
 				2FAB68A7190A26D40081D6B6 /* main.m in Sources */,
 				370C49411910971200C63063 /* InfoTableViewCell.m in Sources */,
@@ -1190,6 +1294,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ManhattanEnglish/ManhattanEnglish-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					ManhattanEnglish/OtherSource/Kal,
+				);
 				INFOPLIST_FILE = "ManhattanEnglish/ManhattanEnglish-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1204,6 +1313,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ManhattanEnglish/ManhattanEnglish-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					ManhattanEnglish/OtherSource/Kal,
+				);
 				INFOPLIST_FILE = "ManhattanEnglish/ManhattanEnglish-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -9,10 +9,13 @@
 #import "IndexViewController.h"
 #import "PageContentViewController.h"
 #import "CommonService.h"
+#import "Kal.h"
+#import "NSDate+Convenience.h"
 
 @interface IndexViewController ()
 
 @property(strong, nonatomic) CommonService *commonService;
+@property(strong, nonatomic) KalViewController *kalController;
 
 @end
 
@@ -34,6 +37,19 @@
         // Custom initialization
     }
     return self;
+}
+
+- (void)initKalController
+{
+    self.kalController = [[KalViewController alloc] initWithSelectionMode:KalSelectionModeSingle];
+    self.kalController.selectedDate = [NSDate date];
+    
+    self.kalController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Today", @"") style:UIBarButtonItemStyleBordered target:self action:@selector(showAndSelectToday)];
+}
+
+- (void)showAndSelectToday
+{
+    [self.kalController showAndSelectDate:[NSDate date]];
 }
 
 - (void)viewDidLoad
@@ -100,5 +116,14 @@
 }
 
 - (IBAction)qaBtnClick:(id)sender {
+}
+
+- (void)calendarBtnClick:(id)sender
+{
+    if (self.kalController == nil) {
+        [self initKalController];
+    }
+    
+    [self.navigationController pushViewController:self.kalController animated:YES];
 }
 @end
