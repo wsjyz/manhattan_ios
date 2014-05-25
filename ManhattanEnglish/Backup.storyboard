@@ -647,7 +647,7 @@
                                 <rect key="frame" x="0.0" y="168" width="320" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">《新概念英语》（New Concept English）作为享誉全球的最为经典地道的英语教材，以其严密的体系性、严谨的科学性、精湛的实用性、浓郁的趣味性深受英语学习者的青睐，新概念英语一册(英语初阶)基础班---- 学习英语的敲门砖（First Things First）讲练基本语音、语调（包括所有的音标、连读、同化）及英语中的基本语法、词法、句法及句型结构知识。学好第一册，是练好英语基本功的关键，适合于英语基础差，欲在短期内掌握英语基础的学习者。掌握后，可以参加中考一类考试。tingroom不仅为网友提供新概念英语第一册在线收听，还汇总了自学导读、课堂笔记、语法以及单词学习。 </mutableString>
+                                <string key="text">《新概念英语》（New Concept English）作为享誉全球的最为经典地道的英语教材，以其严密的体系性、严谨的科学性、精湛的实用性、浓郁的趣味性深受英语学习者的青睐，新概念英语一册(英语初阶)基础班---- 学习英语的敲门砖（First Things First）讲练基本语音、语调（包括所有的音标、连读、同化）及英语中的基本语法、词法、句法及句型结构知识。学好第一册，是练好英语基本功的关键，适合于英语基础差，欲在短期内掌握英语基础的学习者。掌握后，可以参加中考一类考试。tingroom不仅为网友提供新概念英语第一册在线收听，还汇总了自学导读、课堂笔记、语法以及单词学习。 </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
