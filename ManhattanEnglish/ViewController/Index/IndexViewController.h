@@ -8,7 +8,7 @@
 
 #import "BaseViewController.h"
 
-@interface IndexViewController : BaseViewController
+@interface IndexViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIScrollView *mainScrollView;
 @property (weak, nonatomic) IBOutlet UIButton *appoinBtn;
@@ -20,5 +20,5 @@
 - (IBAction)goodTeacherBtnClick:(id)sender;
 - (IBAction)homeworkBtnClick:(id)sender;
 - (IBAction)qaBtnClick:(id)sender;
-
+- (IBAction)calendarBtnClick:(id)sender;
 @end
