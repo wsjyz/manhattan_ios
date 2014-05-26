@@ -7,7 +7,6 @@
 //
 
 #import "OpenLoginService.h"
-#import <TbcLibCore/RestServiceManager.h>
 #import <TbcLibCore/OpenExtension.h>
 
 @implementation OpenLoginService

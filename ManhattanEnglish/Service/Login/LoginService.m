@@ -17,7 +17,7 @@
 
 @implementation LoginService
 
-- (id)initWithDelegate:(id<ServiceDelegate>)delegate
+- (id)initWithDelegate:(id<RestServiceDelegate>)delegate
 {
     self = [super initWithDelegate:delegate];
     if (self)

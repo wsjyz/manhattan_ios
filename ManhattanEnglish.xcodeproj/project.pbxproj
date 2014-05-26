@@ -171,6 +171,7 @@
 		37FEB82D19332EAD00D3E047 /* NSDate+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FEB82019332EAD00D3E047 /* NSDate+Convenience.m */; };
 		37FEB82E19332EAD00D3E047 /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FEB82219332EAD00D3E047 /* NSDateAdditions.m */; };
 		37FEB82F19332EAD00D3E047 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FEB82419332EAD00D3E047 /* UIViewAdditions.m */; };
+		37FEB83619334C0D00D3E047 /* BaseRestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FEB83519334C0D00D3E047 /* BaseRestService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -446,6 +447,8 @@
 		37FEB82219332EAD00D3E047 /* NSDateAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateAdditions.m; sourceTree = "<group>"; };
 		37FEB82319332EAD00D3E047 /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
 		37FEB82419332EAD00D3E047 /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
+		37FEB83419334C0D00D3E047 /* BaseRestService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRestService.h; sourceTree = "<group>"; };
+		37FEB83519334C0D00D3E047 /* BaseRestService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRestService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -886,6 +889,8 @@
 				37B40CC21931B7C300D90923 /* InitService.m */,
 				37A6D66B190FF43400B7C8B0 /* CommonService.h */,
 				37A6D66C190FF43400B7C8B0 /* CommonService.m */,
+				37FEB83419334C0D00D3E047 /* BaseRestService.h */,
+				37FEB83519334C0D00D3E047 /* BaseRestService.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1342,6 +1347,7 @@
 				37FEB82A19332EAD00D3E047 /* KalTileView.m in Sources */,
 				2FAB68AB190A26D40081D6B6 /* AppDelegate.m in Sources */,
 				37CC3F671917D56600023E76 /* AskQuestionViewController.m in Sources */,
+				37FEB83619334C0D00D3E047 /* BaseRestService.m in Sources */,
 				37B40CCE1931B8B200D90923 /* iVersion.m in Sources */,
 				2FAB68A7190A26D40081D6B6 /* main.m in Sources */,
 				3726A6351931CA9700E91B36 /* OpenLoginService.m in Sources */,

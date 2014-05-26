@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <TbcLibCore/OpenService.h>
+#import "BaseRestService.h"
 #import "User.h"
 
-@interface OpenLoginService : OpenService
+@interface OpenLoginService : BaseRestService
 
 /**
  * 登录

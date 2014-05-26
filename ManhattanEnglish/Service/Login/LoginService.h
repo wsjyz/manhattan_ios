@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "OpenLoginService.h"
 
-@interface LoginService : OpenService
+@interface LoginService : BaseRestService
 
 //登录
 - (NSString *)remoteLoginWithMobile:(NSString *)mobile andPassword:(NSString *)password;
