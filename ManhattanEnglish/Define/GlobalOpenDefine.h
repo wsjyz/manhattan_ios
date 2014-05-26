@@ -9,4 +9,11 @@
 #ifndef WorkFlow_GlobalOpenDefine_h
 #define WorkFlow_GlobalOpenDefine_h
 
+#pragma mark OpenLoginService
+#define OpenLoginService_login                          @"/user/login"
+#define OpenLoginService_register                       @"/user/register"
+#define OpenLoginService_authCode                       @"/user/getAuthCode"
+#define OpenLoginService_resetPW                        @"/user/resetPassword"
+#define OpenLoginService_getUser                        @"/user/getUser"
+
 #endif

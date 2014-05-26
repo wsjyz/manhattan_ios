@@ -9,26 +9,34 @@
 #import "AppDelegate.h"
 #import "HelpViewController.h"
 #import "CommonService.h"
+#import "InitService.h"
+#import "iVersion.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 //    // Override point for customization after application launch.
-//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    
-//    CommonService *cmnService = [[CommonService  alloc] init];
-//    if ([cmnService isFirstLauch])
-//    {
-//        HelpViewController *helpVC = [ViewUtil viewControllerFromNibOfClass:[HelpViewController class]];
-//        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:helpVC];
-//    self.window.rootViewController = nav;
-//    }
-//    else
-//    {
-//        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//        self.window.rootViewController = [storyBoard instantiateInitialViewController];
-//    }
+    
+    //启动检测版本号
+    [iVersion sharedInstance].checkAtLaunch = YES;
+    // application init
+    [[[InitService alloc] init] initAll];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    CommonService *cmnService = [[CommonService  alloc] init];
+    if ([cmnService isFirstLauch])
+    {
+        HelpViewController *helpVC = [ViewUtil viewControllerFromNibOfClass:[HelpViewController class]];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:helpVC];
+    self.window.rootViewController = nav;
+    }
+    else
+    {
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        self.window.rootViewController = [storyBoard instantiateInitialViewController];
+    }
     return YES;
 }
 							

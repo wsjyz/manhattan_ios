@@ -48,6 +48,11 @@
     return self;
 }
 
+- (void)initService
+{
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -61,6 +66,9 @@
     {
         self.edgesForExtendedLayout= UIRectEdgeNone;
     }
+    
+    // init service
+    [self initService];
     
     NSString *navImg = ISiOS7? @"Navigation-Bar.png":@"Navigation-Bar_6.png";
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:navImg] forBarMetrics:UIBarMetricsDefault];

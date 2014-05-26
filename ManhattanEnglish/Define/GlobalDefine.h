@@ -30,4 +30,9 @@ typedef enum
     PERSONAL_VIP = 3                //VIP
 }PERSONAL_ID;
 
+//（TEACHER;STUDENT;VIPSTUDENT）
+#define TYPE_TEACHER                    @"TEACHER"
+#define TYPE_STUDENT                    @"STUDENT"
+#define TYPE_VIPSTUDENT                 @"VIPSTUDENT"
+
 #endif

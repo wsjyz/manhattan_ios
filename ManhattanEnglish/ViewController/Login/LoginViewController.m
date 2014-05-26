@@ -7,10 +7,12 @@
 //
 
 #import "LoginViewController.h"
+#import "LoginService.h"
 
 @interface LoginViewController ()
 {
     BOOL _checked;
+    LoginService *_loginService;
 }
 
 @end
@@ -26,6 +28,11 @@
     return self;
 }
 
+- (void)initService
+{
+    _loginService = [[LoginService alloc] initWithDelegate:self];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -37,6 +44,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setNavgationItemTitle:@"登录"];
+    NSString *userID = [_loginService remoteLoginWithMobile:@"19286499" andPassword:@"qihnownc"];
+    NSLog(@"userID = %@",userID);
 }
 
 - (void)didReceiveMemoryWarning
