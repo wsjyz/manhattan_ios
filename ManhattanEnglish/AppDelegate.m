@@ -23,20 +23,20 @@
     // application init
     [[[InitService alloc] init] initAll];
     
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    CommonService *cmnService = [[CommonService  alloc] init];
-    if ([cmnService isFirstLauch])
-    {
-        HelpViewController *helpVC = [ViewUtil viewControllerFromNibOfClass:[HelpViewController class]];
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:helpVC];
-    self.window.rootViewController = nav;
-    }
-    else
-    {
-        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        self.window.rootViewController = [storyBoard instantiateInitialViewController];
-    }
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    
+//    CommonService *cmnService = [[CommonService  alloc] init];
+//    if ([cmnService isFirstLauch])
+//    {
+//        HelpViewController *helpVC = [ViewUtil viewControllerFromNibOfClass:[HelpViewController class]];
+//        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:helpVC];
+//    self.window.rootViewController = nav;
+//    }
+//    else
+//    {
+//        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//        self.window.rootViewController = [storyBoard instantiateInitialViewController];
+//    }
     return YES;
 }
 							
