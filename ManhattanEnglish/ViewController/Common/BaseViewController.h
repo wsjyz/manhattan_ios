@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <TbcLibCore/ErrorInfo.h>
 #import <TbcLibCore/RestServiceManager.h>
-#import <TbcLibUI/MBProgressHUD.h>
 
 @interface BaseViewController : UIViewController<RestServiceDelegate,MBProgressHUDDelegate>
 

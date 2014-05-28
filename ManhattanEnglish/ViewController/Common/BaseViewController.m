@@ -127,9 +127,9 @@
 
 - (void)showErrorInfoWithMessage:(NSString *)message delegate:(id)delegate
 {
-//    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view.window animated:YES];
-//    hud.delegate = delegate;
-//    [hud showAndDismissWithMessage:message];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view.window animated:YES];
+    hud.delegate = delegate;
+    [hud showAndDismissWithMessage:message];
 }
 
 /*
