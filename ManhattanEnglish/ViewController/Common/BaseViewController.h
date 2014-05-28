@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <TbcLibCore/ErrorInfo.h>
-#import <TbcLibCore/OpenService.h>
+#import <TbcLibCore/RestServiceManager.h>
 #import <TbcLibUI/MBProgressHUD.h>
 
-@interface BaseViewController : UIViewController<ServiceDelegate,MBProgressHUDDelegate>
+@interface BaseViewController : UIViewController<RestServiceDelegate,MBProgressHUDDelegate>
 
 - (void)initService;
 

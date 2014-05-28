@@ -7,8 +7,14 @@
 //
 
 #import "RegisterViewController.h"
+#import "LoginService.h"
 
 @interface RegisterViewController ()
+{
+    LoginService *_loginService;
+    NSString *_type;
+    NSString *_authCode;
+}
 
 @end
 
@@ -21,6 +27,11 @@
         // Custom initialization
     }
     return self;
+}
+
+- (void)initService
+{
+    _loginService = [[LoginService alloc] initWithDelegate:self];
 }
 
 - (void)viewDidLoad
@@ -46,6 +57,7 @@
             [_stuBtn setBackgroundImage:[UIImage imageNamed:@"register_btn_p.png"] forState:UIControlStateNormal];
             [_teacherBtn setBackgroundImage:[UIImage imageNamed:@"register_btn_n.png"] forState:UIControlStateNormal];
             _VIPBtn.hidden = NO;
+            _type = TYPE_STUDENT;
             break;
         }
         default:
@@ -53,6 +65,7 @@
             [_stuBtn setBackgroundImage:[UIImage imageNamed:@"register_btn_n.png"] forState:UIControlStateNormal];
             [_teacherBtn setBackgroundImage:[UIImage imageNamed:@"register_btn_p.png"] forState:UIControlStateNormal];
             _VIPBtn.hidden = YES;
+            _type = TYPE_TEACHER;
             break;
         }
     }
@@ -70,22 +83,45 @@
 
 - (IBAction)codeBtnPressed:(id)sender
 {
-    
+    if (_userName.text == nil || _userName.text.length == 0)
+    {
+        [self showErrorInfoWithMessage:@"请输入手机号" delegate:nil];
+        return;
+    }
+    _authCode = [_loginService getAuthCodeWithTel:_userName.text];
 }
 
 - (IBAction)registerBtnPressed:(id)sender
 {
-    if (_userName.text == nil || _userName.text.length == 0)
+    NSString *mobile = _userName.text;
+    NSString *pw = _password.text;
+    NSString *authCode = _code.text;
+    
+    if (mobile == nil || mobile.length == 0)
     {
         [self showErrorInfoWithMessage:@"请输入手机号" delegate:nil];
+        return;
     }
-    else if (_password.text == nil || _password.text.length == 0)
+    else if (pw == nil || pw.length == 0)
     {
         [self showErrorInfoWithMessage:@"请输入密码" delegate:nil];
+        return;
     }
-    else if (_code.text == nil || _code.text.length == 0)
+    else if (authCode == nil || authCode.length == 0)
     {
-        [self showErrorInfoWithMessage:@"验证码" delegate:nil];
+        [self showErrorInfoWithMessage:@"请输入验证码" delegate:nil];
+        return;
+    }
+    else if (![authCode isEqualToString:_authCode])
+    {
+        [self showErrorInfoWithMessage:@"验证码输入错误" delegate:nil];
+        return;
+    }
+    
+   BOOL result = [_loginService registerWithMobile:mobile Password:pw AuthCode:authCode andType:_type];
+    if (result)
+    {
+        [self.navigationController popViewControllerAnimated:YES];
     }
 }
 
