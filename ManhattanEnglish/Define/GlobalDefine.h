@@ -25,8 +25,8 @@
 typedef enum
 {
     PERSONAL_GUEST = 0,
-    PERSONAL_STUDENT = 1,           //学生
-    PERSONAL_TEACHER = 2,           //教师
+    PERSONAL_TEACHER = 1,           //教师
+    PERSONAL_STUDENT = 2,           //学生
     PERSONAL_VIP = 3                //VIP
 }PERSONAL_ID;
 

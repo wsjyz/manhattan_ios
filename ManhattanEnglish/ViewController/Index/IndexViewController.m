@@ -12,6 +12,17 @@
 #import "Kal.h"
 #import "NSDate+Convenience.h"
 
+#define MANUAL_SEGUE_LOGIN                  @"login"
+#define MANUAL_SEGUE_GOOD_COURSE            @"goodCourse"
+#define MANUAL_SEGUE_ASK_QUESTION           @"askQuestion"
+#define MANUAL_SEGUE_ANSWER_QUESTION        @"answerQuestion"
+#define MANUAL_SEGUE_MAKE_APPOINTMENT       @"makeAppointment"
+#define MANUAL_SEGUE_PUBLISH_COURSE         @"publishCourse"
+#define MANUAL_SEGUE_TEACHER_HOMEWORK       @"teacherHomework"
+#define MANUAL_SEGUE_STUDENT_HOMEWORK       @"studentHomework"
+#define MANUAL_SEGUE_NEWS                   @"news"
+#define MANUAL_SEGUE_GOOD_TEACHER           @"goodTeacher"
+
 @interface IndexViewController ()
 
 @property(strong, nonatomic) CommonService *commonService;
@@ -94,29 +105,76 @@
 - (IBAction)appointBtnClick:(id)sender {
     
     PERSONAL_ID personId = [self.commonService getCurrentPersonalID];
-    if (personId == PERSONAL_STUDENT) {
-        [self performSegueWithIdentifier:@"appointment" sender:self];
+    NSString *performSegueId = nil;
+    switch (personId) {
+        case PERSONAL_GUEST:
+            performSegueId = MANUAL_SEGUE_LOGIN;
+            break;
+        case PERSONAL_STUDENT:
+        case PERSONAL_VIP:
+            performSegueId = MANUAL_SEGUE_MAKE_APPOINTMENT;
+            break;
+        case PERSONAL_TEACHER:
+            performSegueId = MANUAL_SEGUE_PUBLISH_COURSE;
+            break;
     }
+    
+    [self performSegueWithIdentifier:performSegueId sender:self];
 }
 
 - (IBAction)goodCourseBtnClick:(id)sender {
     
-    [self performSegueWithIdentifier:@"goodCourse" sender:self];
+    [self performSegueWithIdentifier:MANUAL_SEGUE_GOOD_COURSE sender:self];
 }
 
 - (IBAction)newsBtnClick:(id)sender {
     
-    [self performSegueWithIdentifier:@"news" sender:self];
+    [self performSegueWithIdentifier:MANUAL_SEGUE_NEWS sender:self];
 }
 
 - (IBAction)goodTeacherBtnClick:(id)sender {
+    
+    [self performSegueWithIdentifier:MANUAL_SEGUE_GOOD_TEACHER sender:self];
 }
 
 - (IBAction)homeworkBtnClick:(id)sender {
+    
+    PERSONAL_ID personId = [self.commonService getCurrentPersonalID];
+    NSString *performSegueId = nil;
+    switch (personId) {
+        case PERSONAL_GUEST:
+            performSegueId = MANUAL_SEGUE_LOGIN;
+            break;
+        case PERSONAL_STUDENT:
+        case PERSONAL_VIP:
+            performSegueId = MANUAL_SEGUE_STUDENT_HOMEWORK;
+            break;
+        case PERSONAL_TEACHER:
+            performSegueId = MANUAL_SEGUE_TEACHER_HOMEWORK;
+            break;
+    }
+    
+    [self performSegueWithIdentifier:performSegueId sender:self];
 }
 
 - (IBAction)qaBtnClick:(id)sender {
-}
+    
+    PERSONAL_ID personId = [self.commonService getCurrentPersonalID];
+    NSString *performSegueId = nil;
+    switch (personId) {
+        case PERSONAL_GUEST:
+            performSegueId = MANUAL_SEGUE_LOGIN;
+            break;
+        case PERSONAL_STUDENT:
+        case PERSONAL_VIP:
+            performSegueId = MANUAL_SEGUE_ASK_QUESTION;
+            break;
+        case PERSONAL_TEACHER:
+            performSegueId = MANUAL_SEGUE_ANSWER_QUESTION;
+            break;
+    }
+    
+    [self performSegueWithIdentifier:performSegueId sender:self];}
 
 - (void)calendarBtnClick:(id)sender
 {
