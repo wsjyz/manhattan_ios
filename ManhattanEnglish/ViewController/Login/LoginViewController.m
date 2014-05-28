@@ -8,11 +8,13 @@
 
 #import "LoginViewController.h"
 #import "LoginService.h"
+#import "CommonService.h"
 
 @interface LoginViewController ()
 {
     BOOL _checked;
     LoginService *_loginService;
+    CommonService *_commonService;
 }
 
 @end
@@ -31,12 +33,30 @@
 - (void)initService
 {
     _loginService = [[LoginService alloc] initWithDelegate:self];
+    _commonService = [[CommonService alloc] initWithDelegate:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
+    _autoLogin = NO;
+    NSString *lastLoginMobile = [_commonService getLastLoginMobile];
+    if (lastLoginMobile == nil)
+    {
+        return;
+    }
+    
+    _checked = [_commonService getLoginCheckBox];
+    [self updateCheckImageView];
+    self.userName.text = lastLoginMobile;
+
+    if (_checked)
+    {
+        self.password.text = [_commonService getLastLoginUserPassword];
+        _autoLogin = YES;
+    }
+
 }
 
 - (void)viewDidLoad
@@ -44,8 +64,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setNavgationItemTitle:@"登录"];
-    NSString *userID = [_loginService remoteLoginWithMobile:@"19286499" andPassword:@"qihnownc"];
-    NSLog(@"userID = %@",userID);
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    if (_autoLogin && !_isLogout)
+    {
+        [self loginWithMobile:self.userName.text Password:self.password.text];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,12 +86,39 @@
     if (_userName.text == nil || _userName.text.length == 0)
     {
         [self showErrorInfoWithMessage:@"请输入手机号" delegate:nil];
+        return;
     }
     else if (_password.text == nil || _password.text.length == 0)
     {
         [self showErrorInfoWithMessage:@"请输入密码" delegate:nil];
+        return;
+    }
+    else
+    {
+        [self loginWithMobile:_userName.text Password:_password.text];
     }
     
+}
+
+//登录
+- (void)loginWithMobile:(NSString *)mobile Password:(NSString *)password
+{
+    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    [self.navigationController.view addSubview:hud];
+    hud.labelText = @"登录中...";
+    
+    __block NSString *userID;
+    [hud showAnimated:YES whileExecutingBlock:^{
+        userID = [_loginService remoteLoginWithMobile:mobile andPassword:password];
+    } completionBlock:^{
+        if (userID != nil && userID.length != 0)
+        {
+            //登录成功
+            [_commonService saveAndUpdateLastLoginMobile:mobile Password:password];
+            [_commonService saveAndUpdateLastLoginCheckBox:_checked];
+        }
+        [hud removeFromSuperview];
+    }];
 }
 
 - (IBAction)autoLoginCheckbtnPressed:(id)sender

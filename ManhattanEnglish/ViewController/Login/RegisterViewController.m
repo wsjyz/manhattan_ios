@@ -8,10 +8,12 @@
 
 #import "RegisterViewController.h"
 #import "LoginService.h"
+#import "CommonService.h"
 
 @interface RegisterViewController ()
 {
     LoginService *_loginService;
+    CommonService *_commonService;
     NSString *_type;
     NSString *_authCode;
 }
@@ -32,6 +34,7 @@
 - (void)initService
 {
     _loginService = [[LoginService alloc] initWithDelegate:self];
+    _commonService = [[CommonService alloc] initWithDelegate:nil];
 }
 
 - (void)viewDidLoad
@@ -121,7 +124,30 @@
    BOOL result = [_loginService registerWithMobile:mobile Password:pw AuthCode:authCode andType:_type];
     if (result)
     {
-        [self.navigationController popViewControllerAnimated:YES];
+        //注册成功
+        [self registerSuccessDone];
+    }
+}
+
+- (void)registerSuccessDone
+{
+    switch (self.peopleType) {
+        case STUDENT_TYPE:
+        {
+            [_commonService saveAndUpdateLastLoginMobile:_userName.text Password:_password.text];
+            [_commonService saveAndUpdateLastLoginCheckBox:YES];
+            [self.navigationController popViewControllerAnimated:YES];
+            break;
+        }
+        case TEACHER_TYPE:
+        {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"请前往网站继续完成认证" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            [alertView show];
+            break;
+        }
+            
+        default:
+            break;
     }
 }
 
