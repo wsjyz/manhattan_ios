@@ -23,7 +23,5 @@
 //重置密码
 - (BOOL)resetPasswordWithTel:(NSString *)tel NewPassword:(NSString *)newPassword andaAuthCode:(NSString *)authCode;
 
-//获取人员信息
-- (User *)getUserWithUserID:(NSString *)userId;
 
 @end

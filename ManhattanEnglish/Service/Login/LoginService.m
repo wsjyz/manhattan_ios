@@ -51,10 +51,5 @@
     return [_loginService resetPasswordWithTel:tel NewPassword:newPassword andaAuthCode:authCode];
 }
 
-//获取人员信息
-- (User *)getUserWithUserID:(NSString *)userId
-{
-    return [_loginService getUserWithUserID:userId];
-}
 
 @end

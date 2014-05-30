@@ -46,11 +46,5 @@
  */
 - (BOOL)resetPasswordWithTel:(NSString *)tel NewPassword:(NSString *)newPassword andaAuthCode:(NSString *)authCode;
 
-/**
- * 获取人员信息
- * @param userId
- * @return
- */
-- (User *)getUserWithUserID:(NSString *)userId;
 
 @end

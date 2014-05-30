@@ -8,12 +8,11 @@
 
 #import "RegisterViewController.h"
 #import "LoginService.h"
-#import "CommonService.h"
+#import "LoginViewController.h"
 
 @interface RegisterViewController ()
 {
     LoginService *_loginService;
-    CommonService *_commonService;
     NSString *_type;
     NSString *_authCode;
 }
@@ -34,7 +33,6 @@
 - (void)initService
 {
     _loginService = [[LoginService alloc] initWithDelegate:self];
-    _commonService = [[CommonService alloc] initWithDelegate:nil];
 }
 
 - (void)viewDidLoad
@@ -134,8 +132,13 @@
     switch (self.peopleType) {
         case STUDENT_TYPE:
         {
-            [_commonService saveAndUpdateLastLoginMobile:_userName.text Password:_password.text];
-            [_commonService saveAndUpdateLastLoginCheckBox:YES];
+            NSArray *viewCons = self.navigationController.viewControllers;
+            if ([[viewCons lastObject] isKindOfClass:[LoginViewController class]])
+            {
+                LoginViewController *loginVC = [viewCons lastObject];
+                loginVC.userName.text = _userName.text;
+                loginVC.password.text = _password.text;
+            }
             [self.navigationController popViewControllerAnimated:YES];
             break;
         }

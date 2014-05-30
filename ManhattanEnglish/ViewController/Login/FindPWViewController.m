@@ -7,8 +7,13 @@
 //
 
 #import "FindPWViewController.h"
+#import "LoginService.h"
 
 @interface FindPWViewController ()
+{
+    LoginService *_loginService;
+    NSString *_authCode;
+}
 
 @end
 
@@ -21,6 +26,11 @@
         // Custom initialization
     }
     return self;
+}
+
+- (void)initService
+{
+    _loginService = [[LoginService alloc] initWithDelegate:self];
 }
 
 - (void)viewDidLoad
@@ -38,7 +48,12 @@
 
 - (IBAction)codeBtnPressed:(id)sender
 {
-    
+    if (_userName.text == nil || _userName.text.length == 0)
+    {
+        [self showErrorInfoWithMessage:@"请输入手机号" delegate:nil];
+        return;
+    }
+    _authCode = [_loginService getAuthCodeWithTel:_userName.text];
 }
 
 - (IBAction)findBtnPressed:(id)sender
@@ -46,14 +61,28 @@
     if (_userName.text == nil || _userName.text.length == 0)
     {
         [self showErrorInfoWithMessage:@"请输入手机号" delegate:nil];
+        return;
     }
     else if (_pw.text == nil || _pw.text.length == 0)
     {
         [self showErrorInfoWithMessage:@"请输入密码" delegate:nil];
+        return;
     }
     else if (_code.text == nil || _code.text.length == 0)
     {
         [self showErrorInfoWithMessage:@"验证码" delegate:nil];
+        return;
+    }
+    else if (![_authCode isEqualToString:_authCode])
+    {
+        [self showErrorInfoWithMessage:@"验证码输入错误" delegate:nil];
+        return;
+    }
+    
+    BOOL result = [_loginService resetPasswordWithTel:_userName.text NewPassword:_pw.text andaAuthCode:_authCode];
+    if (result)
+    {
+        [self.navigationController popViewControllerAnimated:YES];
     }
 }
 

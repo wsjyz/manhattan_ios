@@ -40,6 +40,14 @@
 {
     [super viewWillAppear:animated];
     
+    if (_isFirstLogin)
+    {
+        _checked = YES;
+        [self updateCheckImageView];
+        _autoLogin = YES;
+        return;
+    }
+    
     _autoLogin = NO;
     NSString *lastLoginMobile = [_commonService getLastLoginMobile];
     if (lastLoginMobile == nil)
@@ -69,7 +77,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    if (_autoLogin && !_isLogout)
+    if ((_autoLogin && !_isLogout) || (_autoLogin && _isFirstLogin))
     {
         [self loginWithMobile:self.userName.text Password:self.password.text];
     }

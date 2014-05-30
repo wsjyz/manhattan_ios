@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *checkImg;
 
 @property (nonatomic, assign) BOOL isLogout;
+@property (nonatomic, assign) BOOL isFirstLogin;//注册完第一次自动登录
 
 - (IBAction)autoLoginCheckbtnPressed:(id)sender;
 - (IBAction)loginBtnPressed:(id)sender;

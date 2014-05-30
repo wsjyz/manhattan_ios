@@ -14,6 +14,17 @@
 #define OpenLoginService_register                       @"/user/register"
 #define OpenLoginService_authCode                       @"/user/getAuthCode"
 #define OpenLoginService_resetPW                        @"/user/resetPassword"
-#define OpenLoginService_getUser                        @"/user/getUser"
+
+#pragma mark OpenUserService
+#define OpenUserService_getUser                         @"/user/getUser"
+#define OpenUserService_updateUser                      @"/user/updateUser"
+
+#pragma mark OpenWalletService
+#define OpenWalletService_getBalances                   @"/wallet/getBalances"
+
+#pragma mark OpenTeacherService                        
+#define OpenTeacherSerice_getAuthData                   @"/teacher/getAuthData"
+#define OpenTeacherService_listPage                     @"/teacher/listPage"
+#define OpenTeacherService_listByName                   @"/teacher/listByName"
 
 #endif

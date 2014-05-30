@@ -150,6 +150,14 @@
 		37A6D6B3190FF45400B7C8B0 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A6D6A7190FF45400B7C8B0 /* ContactUsViewController.m */; };
 		37A6D6B4190FF45400B7C8B0 /* ContactUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A6D6A8190FF45400B7C8B0 /* ContactUsViewController.xib */; };
 		37A6D6B5190FF45400B7C8B0 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A6D6AA190FF45400B7C8B0 /* MoreViewController.m */; };
+		37AF51BC1938807000853E10 /* OpenUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF51BB1938807000853E10 /* OpenUserService.m */; };
+		37AF51BF1938808700853E10 /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF51BE1938808700853E10 /* UserService.m */; };
+		37AF51C21938827E00853E10 /* OpenWalletService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF51C11938827E00853E10 /* OpenWalletService.m */; };
+		37AF51C51938828D00853E10 /* WalletService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF51C41938828D00853E10 /* WalletService.m */; };
+		37AF51C8193882A300853E10 /* OpenTeacherService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF51C7193882A300853E10 /* OpenTeacherService.m */; };
+		37AF51CB193882B000853E10 /* TeacherService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF51CA193882B000853E10 /* TeacherService.m */; };
+		37AF51CE1938850000853E10 /* Wallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF51CD1938850000853E10 /* Wallet.m */; };
+		37AF51D11938877A00853E10 /* Page.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF51D01938877A00853E10 /* Page.m */; };
 		37B40CB019303A0700D90923 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B40CAF19303A0700D90923 /* User.m */; };
 		37B40CC31931B7C300D90923 /* InitService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B40CC21931B7C300D90923 /* InitService.m */; };
 		37B40CCD1931B8B200D90923 /* iVersion.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 37B40CCA1931B8B200D90923 /* iVersion.bundle */; };
@@ -412,6 +420,22 @@
 		37A6D6A8190FF45400B7C8B0 /* ContactUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactUsViewController.xib; sourceTree = "<group>"; };
 		37A6D6A9190FF45400B7C8B0 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		37A6D6AA190FF45400B7C8B0 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		37AF51BA1938806F00853E10 /* OpenUserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUserService.h; sourceTree = "<group>"; };
+		37AF51BB1938807000853E10 /* OpenUserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUserService.m; sourceTree = "<group>"; };
+		37AF51BD1938808700853E10 /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
+		37AF51BE1938808700853E10 /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
+		37AF51C01938827E00853E10 /* OpenWalletService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenWalletService.h; sourceTree = "<group>"; };
+		37AF51C11938827E00853E10 /* OpenWalletService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenWalletService.m; sourceTree = "<group>"; };
+		37AF51C31938828D00853E10 /* WalletService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalletService.h; sourceTree = "<group>"; };
+		37AF51C41938828D00853E10 /* WalletService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalletService.m; sourceTree = "<group>"; };
+		37AF51C6193882A300853E10 /* OpenTeacherService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenTeacherService.h; sourceTree = "<group>"; };
+		37AF51C7193882A300853E10 /* OpenTeacherService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenTeacherService.m; sourceTree = "<group>"; };
+		37AF51C9193882B000853E10 /* TeacherService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherService.h; sourceTree = "<group>"; };
+		37AF51CA193882B000853E10 /* TeacherService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherService.m; sourceTree = "<group>"; };
+		37AF51CC1938850000853E10 /* Wallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wallet.h; sourceTree = "<group>"; };
+		37AF51CD1938850000853E10 /* Wallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wallet.m; sourceTree = "<group>"; };
+		37AF51CF1938877A00853E10 /* Page.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page.h; sourceTree = "<group>"; };
+		37AF51D01938877A00853E10 /* Page.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page.m; sourceTree = "<group>"; };
 		37B40CAE19303A0700D90923 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		37B40CAF19303A0700D90923 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		37B40CC11931B7C300D90923 /* InitService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitService.h; sourceTree = "<group>"; };
@@ -816,6 +840,18 @@
 				3726A6341931CA9700E91B36 /* OpenLoginService.m */,
 				3726A6471931E8A300E91B36 /* LoginService.h */,
 				3726A6481931E8A300E91B36 /* LoginService.m */,
+				37AF51BA1938806F00853E10 /* OpenUserService.h */,
+				37AF51BB1938807000853E10 /* OpenUserService.m */,
+				37AF51BD1938808700853E10 /* UserService.h */,
+				37AF51BE1938808700853E10 /* UserService.m */,
+				37AF51C01938827E00853E10 /* OpenWalletService.h */,
+				37AF51C11938827E00853E10 /* OpenWalletService.m */,
+				37AF51C31938828D00853E10 /* WalletService.h */,
+				37AF51C41938828D00853E10 /* WalletService.m */,
+				37AF51C6193882A300853E10 /* OpenTeacherService.h */,
+				37AF51C7193882A300853E10 /* OpenTeacherService.m */,
+				37AF51C9193882B000853E10 /* TeacherService.h */,
+				37AF51CA193882B000853E10 /* TeacherService.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -840,6 +876,8 @@
 				37B40CAF19303A0700D90923 /* User.m */,
 				37FEB7D519331F3500D3E047 /* Question.h */,
 				37FEB7D619331F3500D3E047 /* Question.m */,
+				37AF51CC1938850000853E10 /* Wallet.h */,
+				37AF51CD1938850000853E10 /* Wallet.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -915,6 +953,8 @@
 				37A6D66C190FF43400B7C8B0 /* CommonService.m */,
 				37FEB83419334C0D00D3E047 /* BaseRestService.h */,
 				37FEB83519334C0D00D3E047 /* BaseRestService.m */,
+				37AF51CF1938877A00853E10 /* Page.h */,
+				37AF51D01938877A00853E10 /* Page.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1317,6 +1357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37AF51D11938877A00853E10 /* Page.m in Sources */,
 				37A6D6AF190FF45400B7C8B0 /* LoginViewController.m in Sources */,
 				37FEB7D719331F3500D3E047 /* Question.m in Sources */,
 				37FEB82919332EAD00D3E047 /* KalMonthView.m in Sources */,
@@ -1329,6 +1370,8 @@
 				370C49431910971200C63063 /* PersonalInfoViewController.m in Sources */,
 				370C49451910971200C63063 /* WalletViewController.m in Sources */,
 				3721C3D6191A802800D63FBE /* TeacherDetailViewController.m in Sources */,
+				37AF51CE1938850000853E10 /* Wallet.m in Sources */,
+				37AF51BC1938807000853E10 /* OpenUserService.m in Sources */,
 				37FEB82F19332EAD00D3E047 /* UIViewAdditions.m in Sources */,
 				37B40CB019303A0700D90923 /* User.m in Sources */,
 				37A6D66D190FF43400B7C8B0 /* CommonService.m in Sources */,
@@ -1344,19 +1387,24 @@
 				3721C3EA191A84A400D63FBE /* TeacherCommentTableViewCell.m in Sources */,
 				2F314897192BC5850021C40B /* CourseDetailViewController.m in Sources */,
 				37FEB82719332EAD00D3E047 /* KalGridView.m in Sources */,
+				37AF51BF1938808700853E10 /* UserService.m in Sources */,
 				2FA5478E1927C4B300726D3E /* PageContentViewController.m in Sources */,
 				3726A6491931E8A300E91B36 /* LoginService.m in Sources */,
 				37FEB82619332EAD00D3E047 /* KalDataSource.m in Sources */,
 				37CC3F751917E4F700023E76 /* TeacherMainCell.m in Sources */,
 				37348C36190CE79E007605DA /* ViewUtil.m in Sources */,
 				2F58AD5C192929D300A03F88 /* AppointConditionTableViewCell.m in Sources */,
+				37AF51CB193882B000853E10 /* TeacherService.m in Sources */,
 				37A6D6B1190FF45400B7C8B0 /* AboutViewController.m in Sources */,
 				37FEB82D19332EAD00D3E047 /* NSDate+Convenience.m in Sources */,
 				371BEE4E19167A2D000595D1 /* QuesDetailViewController.m in Sources */,
 				37CC3F711917E4B300023E76 /* TeacherListViewController.m in Sources */,
 				2F31488E192BBEAF0021C40B /* NewsDetailViewController.m in Sources */,
+				37AF51C8193882A300853E10 /* OpenTeacherService.m in Sources */,
+				37AF51C51938828D00853E10 /* WalletService.m in Sources */,
 				37A6D6B3190FF45400B7C8B0 /* ContactUsViewController.m in Sources */,
 				37FEB82E19332EAD00D3E047 /* NSDateAdditions.m in Sources */,
+				37AF51C21938827E00853E10 /* OpenWalletService.m in Sources */,
 				37A6D6AD190FF45400B7C8B0 /* HelpViewController.m in Sources */,
 				2F6D6AA01913F9440097617E /* IndexViewController.m in Sources */,
 				2F31488B192BBE9D0021C40B /* NewsTableViewCell.m in Sources */,
