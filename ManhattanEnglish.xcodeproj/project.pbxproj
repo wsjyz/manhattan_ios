@@ -158,6 +158,12 @@
 		37AF51CB193882B000853E10 /* TeacherService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF51CA193882B000853E10 /* TeacherService.m */; };
 		37AF51CE1938850000853E10 /* Wallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF51CD1938850000853E10 /* Wallet.m */; };
 		37AF51D11938877A00853E10 /* Page.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF51D01938877A00853E10 /* Page.m */; };
+		37AF51D41938939E00853E10 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF51D31938939E00853E10 /* BaseTableViewController.m */; };
+		37AF51D7193893D200853E10 /* NodataBgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF51D6193893D200853E10 /* NodataBgView.m */; };
+		37AF51DA193893E900853E10 /* TableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF51D9193893E900853E10 /* TableFooterView.m */; };
+		37AF51E21938945E00853E10 /* CKParagraphStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF51DD1938945E00853E10 /* CKParagraphStyle.m */; };
+		37AF51E31938945E00853E10 /* CKRefreshArrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF51DF1938945E00853E10 /* CKRefreshArrowView.m */; };
+		37AF51E41938945E00853E10 /* CKRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF51E11938945E00853E10 /* CKRefreshControl.m */; };
 		37B40CB019303A0700D90923 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B40CAF19303A0700D90923 /* User.m */; };
 		37B40CC31931B7C300D90923 /* InitService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B40CC21931B7C300D90923 /* InitService.m */; };
 		37B40CCD1931B8B200D90923 /* iVersion.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 37B40CCA1931B8B200D90923 /* iVersion.bundle */; };
@@ -436,6 +442,18 @@
 		37AF51CD1938850000853E10 /* Wallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wallet.m; sourceTree = "<group>"; };
 		37AF51CF1938877A00853E10 /* Page.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page.h; sourceTree = "<group>"; };
 		37AF51D01938877A00853E10 /* Page.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page.m; sourceTree = "<group>"; };
+		37AF51D21938939E00853E10 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		37AF51D31938939E00853E10 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		37AF51D5193893D200853E10 /* NodataBgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodataBgView.h; sourceTree = "<group>"; };
+		37AF51D6193893D200853E10 /* NodataBgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodataBgView.m; sourceTree = "<group>"; };
+		37AF51D8193893E900853E10 /* TableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableFooterView.h; sourceTree = "<group>"; };
+		37AF51D9193893E900853E10 /* TableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableFooterView.m; sourceTree = "<group>"; };
+		37AF51DC1938945E00853E10 /* CKParagraphStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKParagraphStyle.h; sourceTree = "<group>"; };
+		37AF51DD1938945E00853E10 /* CKParagraphStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKParagraphStyle.m; sourceTree = "<group>"; };
+		37AF51DE1938945E00853E10 /* CKRefreshArrowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKRefreshArrowView.h; sourceTree = "<group>"; };
+		37AF51DF1938945E00853E10 /* CKRefreshArrowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKRefreshArrowView.m; sourceTree = "<group>"; };
+		37AF51E01938945E00853E10 /* CKRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKRefreshControl.h; sourceTree = "<group>"; };
+		37AF51E11938945E00853E10 /* CKRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKRefreshControl.m; sourceTree = "<group>"; };
 		37B40CAE19303A0700D90923 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		37B40CAF19303A0700D90923 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		37B40CC11931B7C300D90923 /* InitService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitService.h; sourceTree = "<group>"; };
@@ -1001,8 +1019,14 @@
 		37A6D695190FF45400B7C8B0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				37AF51D21938939E00853E10 /* BaseTableViewController.h */,
+				37AF51D31938939E00853E10 /* BaseTableViewController.m */,
 				37A6D696190FF45400B7C8B0 /* BaseViewController.h */,
 				37A6D697190FF45400B7C8B0 /* BaseViewController.m */,
+				37AF51D8193893E900853E10 /* TableFooterView.h */,
+				37AF51D9193893E900853E10 /* TableFooterView.m */,
+				37AF51D5193893D200853E10 /* NodataBgView.h */,
+				37AF51D6193893D200853E10 /* NodataBgView.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1038,6 +1062,19 @@
 			path = More;
 			sourceTree = "<group>";
 		};
+		37AF51DB1938945E00853E10 /* CKRefreshControl */ = {
+			isa = PBXGroup;
+			children = (
+				37AF51DC1938945E00853E10 /* CKParagraphStyle.h */,
+				37AF51DD1938945E00853E10 /* CKParagraphStyle.m */,
+				37AF51DE1938945E00853E10 /* CKRefreshArrowView.h */,
+				37AF51DF1938945E00853E10 /* CKRefreshArrowView.m */,
+				37AF51E01938945E00853E10 /* CKRefreshControl.h */,
+				37AF51E11938945E00853E10 /* CKRefreshControl.m */,
+			);
+			path = CKRefreshControl;
+			sourceTree = "<group>";
+		};
 		37B40CB41931B2FB00D90923 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
@@ -1050,6 +1087,7 @@
 		37B40CC81931B8B200D90923 /* OtherSource */ = {
 			isa = PBXGroup;
 			children = (
+				37AF51DB1938945E00853E10 /* CKRefreshControl */,
 				37FEB80D19332EAD00D3E047 /* Kal */,
 				37B40CC91931B8B200D90923 /* iVersion */,
 			);
@@ -1357,6 +1395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37AF51E21938945E00853E10 /* CKParagraphStyle.m in Sources */,
 				37AF51D11938877A00853E10 /* Page.m in Sources */,
 				37A6D6AF190FF45400B7C8B0 /* LoginViewController.m in Sources */,
 				37FEB7D719331F3500D3E047 /* Question.m in Sources */,
@@ -1365,6 +1404,7 @@
 				37A6D6B5190FF45400B7C8B0 /* MoreViewController.m in Sources */,
 				37B40CC31931B7C300D90923 /* InitService.m in Sources */,
 				371BEE5219167A2D000595D1 /* QuestionViewController.m in Sources */,
+				37AF51D7193893D200853E10 /* NodataBgView.m in Sources */,
 				37FEB82819332EAD00D3E047 /* KalLogic.m in Sources */,
 				37A6D6AC190FF45400B7C8B0 /* FindPWViewController.m in Sources */,
 				370C49431910971200C63063 /* PersonalInfoViewController.m in Sources */,
@@ -1385,6 +1425,7 @@
 				2F58AD561928E3D200A03F88 /* PageViewController.m in Sources */,
 				370C49401910971200C63063 /* IdentifyViewController.m in Sources */,
 				3721C3EA191A84A400D63FBE /* TeacherCommentTableViewCell.m in Sources */,
+				37AF51D41938939E00853E10 /* BaseTableViewController.m in Sources */,
 				2F314897192BC5850021C40B /* CourseDetailViewController.m in Sources */,
 				37FEB82719332EAD00D3E047 /* KalGridView.m in Sources */,
 				37AF51BF1938808700853E10 /* UserService.m in Sources */,
@@ -1408,6 +1449,7 @@
 				37A6D6AD190FF45400B7C8B0 /* HelpViewController.m in Sources */,
 				2F6D6AA01913F9440097617E /* IndexViewController.m in Sources */,
 				2F31488B192BBE9D0021C40B /* NewsTableViewCell.m in Sources */,
+				37AF51E41938945E00853E10 /* CKRefreshControl.m in Sources */,
 				370C49561910984400C63063 /* WalletTableViewCell.m in Sources */,
 				371BEE4C19167A2D000595D1 /* QuesDetailTableViewCell.m in Sources */,
 				371BEE5019167A2D000595D1 /* QuesTableViewCell.m in Sources */,
@@ -1416,7 +1458,9 @@
 				2FAB68AB190A26D40081D6B6 /* AppDelegate.m in Sources */,
 				37CC3F671917D56600023E76 /* AskQuestionViewController.m in Sources */,
 				37FEB83619334C0D00D3E047 /* BaseRestService.m in Sources */,
+				37AF51E31938945E00853E10 /* CKRefreshArrowView.m in Sources */,
 				37B40CCE1931B8B200D90923 /* iVersion.m in Sources */,
+				37AF51DA193893E900853E10 /* TableFooterView.m in Sources */,
 				2FAB68A7190A26D40081D6B6 /* main.m in Sources */,
 				3726A6351931CA9700E91B36 /* OpenLoginService.m in Sources */,
 				37FEB82B19332EAD00D3E047 /* KalView.m in Sources */,
