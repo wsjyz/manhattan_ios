@@ -40,25 +40,19 @@
 
 - (void)updateCurrentPersonalID:(PERSONAL_ID)personalID
 {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setValue:@(personalID) forKey:KEY_PERSONALE_ID];
-    [defaults synchronize];
+    // TODO:
+}
+
+- (User *)currentLoginUser
+{
+    // TODO:
+    return nil;
 }
 
 - (PERSONAL_ID)getCurrentPersonalID
 {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    id object = [defaults objectForKey:KEY_PERSONALE_ID];
-    if (object == nil)
-    {
-        return PERSONAL_STUDENT;
-    }
-    else
-    {
-        NSNumber *objNumber =object;
-        PERSONAL_ID personalID = (PERSONAL_ID)[objNumber integerValue];
-        return personalID;
-    }
+    // TODO:
+    return PERSONAL_GUEST;
 }
 
 - (NSString *)getLastLoginMobile

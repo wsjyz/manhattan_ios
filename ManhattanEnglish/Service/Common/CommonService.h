@@ -9,11 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "BaseRestService.h"
 
+@class User;
+
 @interface CommonService : BaseRestService
 
 - (BOOL)isFirstLauch;
 
 - (void)updateCurrentPersonalID:(PERSONAL_ID)personalID;
+
+- (User *)currentLoginUser;
 
 - (PERSONAL_ID)getCurrentPersonalID;
 

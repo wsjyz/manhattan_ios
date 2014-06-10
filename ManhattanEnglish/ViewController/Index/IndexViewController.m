@@ -63,16 +63,8 @@
     [self.kalController showAndSelectDate:[NSDate date]];
 }
 
-- (void)viewDidLoad
+- (void)initViewsByCurrentPersionID
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    if (IPHONE5) {
-        self.mainScrollView.scrollEnabled = NO;
-    }
-    
-    self.commonService = [[CommonService alloc] init];
     PERSONAL_ID personId = [self.commonService getCurrentPersonalID];
     if (personId == PERSONAL_STUDENT || personId == PERSONAL_GUEST) {
         [self.appoinBtn setBackgroundImage:[UIImage imageNamed:@"index_wyyy.png"] forState:UIControlStateNormal];
@@ -82,6 +74,29 @@
         [self.qaBtn setBackgroundImage:[UIImage imageNamed:@"index_wyhd.png"] forState:UIControlStateNormal];
     }else{
         
+    }
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    if (IPHONE5) {
+        self.mainScrollView.scrollEnabled = NO;
+    }
+    
+    [self initViewsByCurrentPersionID];
+    
+    self.commonService = [[CommonService alloc] init];
+    User *loginUser = [self.commonService currentLoginUser];
+    if (loginUser != nil) {
+        return;
+    }
+    
+    if ([self.commonService getLoginCheckBox] && [self.commonService getLastLoginMobile] != nil) {
+        [self performSegueWithIdentifier:MANUAL_SEGUE_LOGIN sender:self];
+        return;
     }
 }
 
