@@ -17,7 +17,7 @@
 @property (nonatomic, strong) NSString *authCode; //验证码
 @property (nonatomic, strong) NSString *type; //人员类型（TEACHER;STUDENT;VIPSTUDENT）
 @property (nonatomic, strong) NSString * avatar; //头像url
-@property (nonatomic, strong) NSString * sex; //性别
+@property (nonatomic, strong) NSString * sex; //性别(MALE;FEMALE)
 @property (nonatomic, strong) NSString * email; //邮箱
 @property (nonatomic, strong) NSString * address; //地址
 @property (nonatomic, assign) NSInteger credits; //积分
