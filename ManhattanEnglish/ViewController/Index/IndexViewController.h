@@ -10,6 +10,7 @@
 
 @interface IndexViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *loginBtnItem;
 @property (weak, nonatomic) IBOutlet UIScrollView *mainScrollView;
 @property (weak, nonatomic) IBOutlet UIButton *appoinBtn;
 @property (weak, nonatomic) IBOutlet UIButton *qaBtn;

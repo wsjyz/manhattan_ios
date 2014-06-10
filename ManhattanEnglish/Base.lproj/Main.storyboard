@@ -1207,7 +1207,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Oa-Sn-65m">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Oa-Sn-65m">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
@@ -1335,6 +1335,7 @@
                             <constraint firstItem="rOR-u2-jyU" firstAttribute="top" secondItem="8Oa-Sn-65m" secondAttribute="bottom" id="ZE4-Oh-JhB"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="曼哈顿英语" id="fzc-Se-4ER">
                         <barButtonItem key="leftBarButtonItem" title="日程" id="mEh-bm-lMU">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1342,9 +1343,26 @@
                                 <action selector="calendarBtnClick:" destination="otA-w0-NjZ" id="egy-Pk-TLN"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="TBt-hN-JZQ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Po9-Uf-b29">
+                                <rect key="frame" x="253" y="-2" width="51" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="登录" backgroundImage="button.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="button-ok.png"/>
+                                <connections>
+                                    <segue destination="6ek-oq-1Gg" kind="push" id="YVr-p5-r2R"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="appoinBtn" destination="Gvp-le-NrW" id="wQu-lP-3JU"/>
+                        <outlet property="loginBtnItem" destination="TBt-hN-JZQ" id="VuL-C1-bPD"/>
                         <outlet property="mainScrollView" destination="8Oa-Sn-65m" id="bpH-Xz-bPa"/>
                         <outlet property="qaBtn" destination="05m-cz-7jc" id="eEl-Uc-kqs"/>
                         <segue destination="PfS-2f-tUA" kind="push" identifier="makeAppointment" id="eVw-G3-xWi"/>
@@ -1425,7 +1443,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="1Cu-12-b2j">
-                                <rect key="frame" x="0.0" y="86" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Cu-12-b2j" id="EFn-CO-KyT">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="99"/>
@@ -1961,6 +1979,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="L76-bc-hX3"/>
+        <segue reference="YVr-p5-r2R"/>
+        <segue reference="M2x-Fv-T0R"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -90,7 +90,9 @@
     
     self.commonService = [[CommonService alloc] init];
     User *loginUser = [self.commonService currentLoginUser];
+    
     if (loginUser != nil) {
+        self.navigationItem.rightBarButtonItem = nil;
         return;
     }
     
