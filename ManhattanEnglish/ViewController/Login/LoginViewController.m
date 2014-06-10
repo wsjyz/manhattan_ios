@@ -127,6 +127,10 @@
         }
         [hud removeFromSuperview];
     }];
+    if (userID != nil && userID.length != 0)
+    {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 - (IBAction)autoLoginCheckbtnPressed:(id)sender

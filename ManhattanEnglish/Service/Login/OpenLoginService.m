@@ -16,11 +16,11 @@
  * @param password
  * @return userId
  */
-- (NSString *)remoteLoginWithMobile:(NSString *)mobile andPassword:(NSString *)password
+- (User *)remoteLoginWithMobile:(NSString *)mobile andPassword:(NSString *)password
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                     [mobile openValue], @"mobile",
-                                     [password openValue], @"password",nil];
+                                     mobile, @"mobile",
+                                     password, @"password",nil];
     return [RestServiceManager performRequestWithPath:OpenLoginService_login paramDic:paramDic returnType:NSStringFromClass([NSString class]) delegate:self.delegate];
 }
 
@@ -35,10 +35,10 @@
 - (BOOL)registerWithMobile:(NSString *)mobile Password:(NSString *)password AuthCode:(NSString *)autoCode andType:(NSString *)type
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                     [mobile openValue], @"mobile",
-                                     [password openValue], @"password",
-                                     [autoCode openValue], @"autoCode",
-                                     [type openValue], @"type",nil];
+                                     mobile, @"mobile",
+                                     password, @"password",
+                                     autoCode, @"autoCode",
+                                     type, @"type",nil];
     return [[RestServiceManager performRequestWithPath:OpenLoginService_register paramDic:paramDic returnType:@(@encode(BOOL)) delegate:self.delegate] boolValue];
 }
 
@@ -50,7 +50,7 @@
 - (NSString *)getAuthCodeWithTel:(NSString *)tel;
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                     [tel openValue], @"tel",nil];
+                                     tel, @"tel",nil];
     return [RestServiceManager performRequestWithPath:OpenLoginService_authCode paramDic:paramDic returnType:NSStringFromClass([NSString class]) delegate:self.delegate];
 }
 
@@ -64,9 +64,9 @@
 - (BOOL)resetPasswordWithTel:(NSString *)tel NewPassword:(NSString *)newPassword andaAuthCode:(NSString *)authCode
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                     [tel openValue], @"tel",
-                                     [newPassword openValue], @"newPassword",
-                                     [authCode openValue], @"authCode",nil];
+                                     tel, @"tel",
+                                     newPassword, @"newPassword",
+                                     authCode, @"authCode",nil];
     return [[RestServiceManager performRequestWithPath:OpenLoginService_resetPW paramDic:paramDic returnType:@(@encode(BOOL)) delegate:self.delegate] boolValue];
 }
 

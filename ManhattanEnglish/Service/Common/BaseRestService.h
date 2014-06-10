@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <TbcLibCore/RestServiceManager.h>
 #import <TbcLibCore/OpenExtension.h>
+#import <TbcLibCore/ReflectionUtil.h>
 
 @interface BaseRestService : NSObject
 

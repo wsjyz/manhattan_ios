@@ -18,7 +18,7 @@
  * @param password
  * @return userId
  */
-- (NSString *)remoteLoginWithMobile:(NSString *)mobile andPassword:(NSString *)password;
+- (User *)remoteLoginWithMobile:(NSString *)mobile andPassword:(NSString *)password;
 
 /**
  * 注册

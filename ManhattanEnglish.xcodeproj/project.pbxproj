@@ -179,6 +179,8 @@
 		37E87EEE194700310019E9AC /* OpenWalletService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E87EE6194700310019E9AC /* OpenWalletService.m */; };
 		37E87EEF194700310019E9AC /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E87EE8194700310019E9AC /* UserService.m */; };
 		37E87EF0194700310019E9AC /* WalletService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E87EEA194700310019E9AC /* WalletService.m */; };
+		37E87EFA194748CB0019E9AC /* OpenQuestionService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E87EF9194748CB0019E9AC /* OpenQuestionService.m */; };
+		37E87EFD194749020019E9AC /* QuestionService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E87EFC194749020019E9AC /* QuestionService.m */; };
 		37FEB7D719331F3500D3E047 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FEB7D619331F3500D3E047 /* Question.m */; };
 		37FEB82519332EAD00D3E047 /* Kal.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 37FEB80E19332EAD00D3E047 /* Kal.bundle */; };
 		37FEB82619332EAD00D3E047 /* KalDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FEB81119332EAD00D3E047 /* KalDataSource.m */; };
@@ -477,6 +479,10 @@
 		37E87EE8194700310019E9AC /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
 		37E87EE9194700310019E9AC /* WalletService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalletService.h; sourceTree = "<group>"; };
 		37E87EEA194700310019E9AC /* WalletService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalletService.m; sourceTree = "<group>"; };
+		37E87EF8194748CB0019E9AC /* OpenQuestionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenQuestionService.h; sourceTree = "<group>"; };
+		37E87EF9194748CB0019E9AC /* OpenQuestionService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenQuestionService.m; sourceTree = "<group>"; };
+		37E87EFB194749020019E9AC /* QuestionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionService.h; sourceTree = "<group>"; };
+		37E87EFC194749020019E9AC /* QuestionService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionService.m; sourceTree = "<group>"; };
 		37FEB7D519331F3500D3E047 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
 		37FEB7D619331F3500D3E047 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		37FEB80E19332EAD00D3E047 /* Kal.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Kal.bundle; sourceTree = "<group>"; };
@@ -904,6 +910,7 @@
 		37348C2B190CE691007605DA /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				37E87EF7194748930019E9AC /* Question */,
 				37E87EDD194700310019E9AC /* Teacher */,
 				37E87EE2194700310019E9AC /* User */,
 				3726A6321931CA8600E91B36 /* Login */,
@@ -1144,14 +1151,25 @@
 			children = (
 				37E87EE3194700310019E9AC /* OpenUserService.h */,
 				37E87EE4194700310019E9AC /* OpenUserService.m */,
-				37E87EE5194700310019E9AC /* OpenWalletService.h */,
-				37E87EE6194700310019E9AC /* OpenWalletService.m */,
 				37E87EE7194700310019E9AC /* UserService.h */,
 				37E87EE8194700310019E9AC /* UserService.m */,
+				37E87EE5194700310019E9AC /* OpenWalletService.h */,
+				37E87EE6194700310019E9AC /* OpenWalletService.m */,
 				37E87EE9194700310019E9AC /* WalletService.h */,
 				37E87EEA194700310019E9AC /* WalletService.m */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		37E87EF7194748930019E9AC /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				37E87EF8194748CB0019E9AC /* OpenQuestionService.h */,
+				37E87EF9194748CB0019E9AC /* OpenQuestionService.m */,
+				37E87EFB194749020019E9AC /* QuestionService.h */,
+				37E87EFC194749020019E9AC /* QuestionService.m */,
+			);
+			path = Question;
 			sourceTree = "<group>";
 		};
 		37FEB80D19332EAD00D3E047 /* Kal */ = {
@@ -1441,6 +1459,7 @@
 				37A6D66D190FF43400B7C8B0 /* CommonService.m in Sources */,
 				2FBC69E4191541ED00990DD1 /* NewAppointViewController.m in Sources */,
 				37FEB82C19332EAD00D3E047 /* KalViewController.m in Sources */,
+				37E87EFD194749020019E9AC /* QuestionService.m in Sources */,
 				37A6D6AB190FF45400B7C8B0 /* BaseViewController.m in Sources */,
 				2F2024D0192A736400272AAB /* GoodCourseTableViewController.m in Sources */,
 				3721C3F4191A850700D63FBE /* TeacherChargeTableViewCell.m in Sources */,
@@ -1467,6 +1486,7 @@
 				37A6D6B3190FF45400B7C8B0 /* ContactUsViewController.m in Sources */,
 				37FEB82E19332EAD00D3E047 /* NSDateAdditions.m in Sources */,
 				37A6D6AD190FF45400B7C8B0 /* HelpViewController.m in Sources */,
+				37E87EFA194748CB0019E9AC /* OpenQuestionService.m in Sources */,
 				2F6D6AA01913F9440097617E /* IndexViewController.m in Sources */,
 				37E87EF0194700310019E9AC /* WalletService.m in Sources */,
 				2F31488B192BBE9D0021C40B /* NewsTableViewCell.m in Sources */,

@@ -18,7 +18,7 @@
 - (User *)getUserWithUserID:(NSString *)userId
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                     [userId openValue], @"userId",nil];
+                                     userId, @"userId",nil];
     return [RestServiceManager performRequestWithPath:OpenUserService_getUser paramDic:paramDic returnType:NSStringFromClass([User class]) delegate:self.delegate];
 }
 
@@ -30,7 +30,7 @@
 - (BOOL)updateUser:(User *)user
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                     [user openValue], @"user",nil];
+                                     OPENVALUE(user), @"user",nil];
     return [[RestServiceManager performRequestWithPath:OpenUserService_updateUser paramDic:paramDic returnType:@(@encode(BOOL)) delegate:self.delegate] boolValue];
 }
 

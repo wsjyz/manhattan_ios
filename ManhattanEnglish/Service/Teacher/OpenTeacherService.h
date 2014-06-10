@@ -8,6 +8,7 @@
 
 #import "BaseRestService.h"
 #import "Page.h"
+#import "TeacherDetail.h"
 
 @interface OpenTeacherService : BaseRestService
 
@@ -19,5 +20,35 @@
  */
 - (NSArray *)getAuthDataWithUserID:(NSString *)userID;
 
+/**
+ * 获取教师列表
+ *
+ * @param page
+ * @return Page<TeacherDetail>
+ */
+- (Page *)listPageWithPage:(Page *)page;
+
+/**
+ * 搜索教师列表
+ *
+ * @param searchKey
+ * @return array<TeacherDetail>
+ */
+- (NSArray *)listByNameWithSearchKey:(NSString *)searchKey;
+
+/**
+ * 收藏教师
+ *
+ * @param userId
+ * @param teacherId
+ */
+- (BOOL)collectWithUserId:(NSString *)userId;
+
+/**
+ * 取消收藏教师
+ * @param userId
+ * @param teacherId
+ */
+- (BOOL)cancelCollectWithUserId:(NSString *)userId;
 
 @end

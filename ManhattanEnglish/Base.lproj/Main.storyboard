@@ -519,7 +519,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginBtnPressed:" destination="6ek-oq-1Gg" eventType="touchUpInside" id="XgT-p7-08Q"/>
-                                    <segue destination="otA-w0-NjZ" kind="push" identifier="index" id="M2x-Fv-T0R"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1443,7 +1442,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="1Cu-12-b2j">
-                                <rect key="frame" x="0.0" y="22" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Cu-12-b2j" id="EFn-CO-KyT">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="99"/>
@@ -1980,6 +1979,5 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="YVr-p5-r2R"/>
-        <segue reference="M2x-Fv-T0R"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -26,5 +26,14 @@
 #define OpenTeacherSerice_getAuthData                   @"/teacher/getAuthData"
 #define OpenTeacherService_listPage                     @"/teacher/listPage"
 #define OpenTeacherService_listByName                   @"/teacher/listByName"
+#define OpenTeacherService_collect                      @"/user/collect"
+#define OpenTeacherService_cancelCollect                @"/user/cancelCollect"
+
+#pragma mark OpenQuestionService
+#define OpenQuestionService_askQuestion                 @"/question/askQuestion"
+#define OpenQuestionService_answerQuestion              @"/question/answerQuestion"
+#define OpenQuestionService_deleteQuestion              @"/question/deleteQuestion"
+#define OpenQuestionService_myQuestions                 @"/question/myQuestions"
+#define OpenQuestionService_needAnswerList              @"/question/needAnswerList"
 
 #endif
