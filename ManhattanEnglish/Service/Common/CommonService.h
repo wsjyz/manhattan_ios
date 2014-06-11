@@ -15,9 +15,13 @@
 
 - (BOOL)isFirstLauch;
 
-- (void)updateCurrentPersonalID:(PERSONAL_ID)personalID;
+- (void)updateCurrentPersonalIDWithUserType:(NSString *)userType;
+
+- (void)updateCurrentUser:(User *)user;
 
 - (User *)currentLoginUser;
+
+- (NSString *)getCurrentUserID;
 
 - (PERSONAL_ID)getCurrentPersonalID;
 

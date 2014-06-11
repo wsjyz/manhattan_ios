@@ -28,7 +28,7 @@
 }
 
 //登录
-- (NSString *)remoteLoginWithMobile:(NSString *)mobile andPassword:(NSString *)password
+- (User *)remoteLoginWithMobile:(NSString *)mobile andPassword:(NSString *)password
 {
     return [_loginService remoteLoginWithMobile:mobile andPassword:password];
 }

@@ -8,6 +8,7 @@
 
 #import "AskQuestionViewController.h"
 #import <MobileCoreServices/UTCoreTypes.h>
+#import "QuestionService.h"
 
 #define SMALL_WIDTH                         150    //小图片宽度
 
@@ -15,6 +16,7 @@
 {
     UIImageView *_sendImage;
     NSString *_sendImageName;
+    QuestionService *_quesService;
 }
 
 @property (nonatomic, retain) UIPopoverController *popover;
@@ -30,6 +32,11 @@
         // Custom initialization
     }
     return self;
+}
+
+- (void)initService
+{
+    _quesService = [[QuestionService alloc] initWithDelegate:self];
 }
 
 - (void)viewDidLoad
@@ -104,7 +111,7 @@
 
 - (void)sendQuestion:(id)sender
 {
-    
+    Question *ques = [[Question alloc] init];
 }
 
 /*

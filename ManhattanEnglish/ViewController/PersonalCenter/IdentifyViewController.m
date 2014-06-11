@@ -7,11 +7,15 @@
 //
 
 #import "IdentifyViewController.h"
+#import "TeacherService.h"
+#import "CommonService.h"
 
 @interface IdentifyViewController ()
 {
     IBOutlet UIScrollView *_scrollView;
-    NSMutableArray *_imgArr;
+    NSArray *_imgArr;
+    TeacherService *_teacherService;
+    CommonService *_commonService;
 }
 
 @end
@@ -27,13 +31,19 @@
     return self;
 }
 
+- (void)initService
+{
+    _teacherService = [[TeacherService alloc] initWithDelegate:self];
+    _commonService = [[CommonService alloc] initWithDelegate:nil];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setNavgationItemTitle:@"我的认证"];
     
-    _imgArr = [[NSMutableArray alloc] init];
+    _imgArr = [_teacherService getAuthDataWithUserID:[_commonService getCurrentUserID]];
     int totalNum = 4;
     _scrollView.contentSize = CGSizeMake(VIEW_WIDTH, 210*(totalNum/2 + totalNum%2));
     
@@ -43,7 +53,6 @@
         UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(10 + 150*(i % 2), 10+210*rowNum, 140, 200)];
         imgView.backgroundColor = [UIColor yellowColor];
         [_scrollView addSubview:imgView];
-        [_imgArr addObject:imgView];
     }
 }
 

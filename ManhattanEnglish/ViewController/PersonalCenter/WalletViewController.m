@@ -8,11 +8,17 @@
 
 #import "WalletViewController.h"
 #import "WalletTableViewCell.h"
+#import "WalletService.h"
+#import "CommonService.h"
 
 @interface WalletViewController ()
 {
     IBOutlet UITableView *_tableView;
     IBOutlet UILabel *_totalMoney;
+    WalletService *_walletService;
+    CommonService *_commonService;
+    NSUInteger _Money;
+    NSArray *_resourceArr;
 }
 
 @end
@@ -28,11 +34,37 @@
     return self;
 }
 
+- (void)initService
+{
+    _walletService = [[WalletService alloc] initWithDelegate:self];
+    _commonService = [[CommonService alloc] initWithDelegate:nil];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setNavgationItemTitle:@"钱包"];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    [self.navigationController.view addSubview:hud];
+    
+    [hud showAnimated:YES whileExecutingBlock:^{
+        _Money = [_walletService getBalancesWithUserID:[_commonService getCurrentUserID]];
+        _resourceArr = [_walletService getMoneyRecordsWithUserID:[_commonService getCurrentUserID]];
+    } completionBlock:^{
+        _totalMoney.text = [NSString stringWithFormat:@"%ui",_Money];
+        if (_resourceArr)
+        {
+            [_tableView reloadData];
+        }
+        [hud removeFromSuperview];
+    }];
 }
 
 - (void)didReceiveMemoryWarning

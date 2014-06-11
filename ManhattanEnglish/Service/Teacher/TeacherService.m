@@ -34,4 +34,28 @@
     return [_teacherService getAuthDataWithUserID:userID];
 }
 
+//获取教师列表
+- (Page *)listPageWithPage:(Page *)page
+{
+    return [_teacherService listPageWithPage:page];
+}
+
+//搜索教师列表
+- (NSArray *)listByNameWithSearchKey:(NSString *)searchKey
+{
+    return [_teacherService listByNameWithSearchKey:searchKey];
+}
+
+//收藏教师
+- (BOOL)collectWithUserId:(NSString *)userId
+{
+    return [_teacherService collectWithUserId:userId];
+}
+
+//取消收藏教师
+- (BOOL)cancelCollectWithUserId:(NSString *)userId
+{
+    return [_teacherService cancelCollectWithUserId:userId];
+}
+
 @end

@@ -13,4 +13,7 @@
 //获取钱包余额
 - (NSUInteger)getBalancesWithUserID:(NSString *)userID;
 
+//消费记录
+- (NSArray *)getMoneyRecordsWithUserID:(NSString *)userID;
+
 @end

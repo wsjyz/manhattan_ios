@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "LoginService.h"
 #import "CommonService.h"
+#import "User.h"
 
 @interface LoginViewController ()
 {
@@ -115,19 +116,20 @@
     [self.navigationController.view addSubview:hud];
     hud.labelText = @"登录中...";
     
-    __block NSString *userID;
+    __block User *user;
     [hud showAnimated:YES whileExecutingBlock:^{
-        userID = [_loginService remoteLoginWithMobile:mobile andPassword:password];
+        user = [_loginService remoteLoginWithMobile:mobile andPassword:password];
     } completionBlock:^{
-        if (userID != nil && userID.length != 0)
+        if (user)
         {
             //登录成功
             [_commonService saveAndUpdateLastLoginMobile:mobile Password:password];
             [_commonService saveAndUpdateLastLoginCheckBox:_checked];
+            [_commonService updateCurrentUser:user];
         }
         [hud removeFromSuperview];
     }];
-    if (userID != nil && userID.length != 0)
+    if (user)
     {
         [self.navigationController popViewControllerAnimated:YES];
     }

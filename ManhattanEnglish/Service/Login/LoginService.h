@@ -12,7 +12,7 @@
 @interface LoginService : BaseRestService
 
 //登录
-- (NSString *)remoteLoginWithMobile:(NSString *)mobile andPassword:(NSString *)password;
+- (User *)remoteLoginWithMobile:(NSString *)mobile andPassword:(NSString *)password;
 
 //注册
 - (BOOL)registerWithMobile:(NSString *)mobile Password:(NSString *)password AuthCode:(NSString *)autoCode andType:(NSString *)type;

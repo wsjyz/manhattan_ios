@@ -7,7 +7,26 @@
 //
 
 #import "BaseRestService.h"
+#import "Question.h"
+#import "Page.h"
+#import "OpenQuestionService.h"
 
 @interface QuestionService : BaseRestService
+
+//提问
+- (Question *)askQuestionWithQuestion:(Question *)ques;
+
+//回答问题
+- (BOOL)answerQuestionWithQuestion:(Question *)ques;
+
+//删除问答
+- (BOOL)deleteQuestionWithQuestionId:(NSString *)questionId;
+
+//获取我的问题
+- (NSArray *)myQuestionsWithUserId:(NSString *)userId;
+
+//获取需要回答列表
+- (NSArray *)needAnswerListWithUserId:(NSString *)userId Type:(NSString *)type Page:(Page *)page;
+
 
 @end

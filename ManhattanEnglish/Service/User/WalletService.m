@@ -34,4 +34,11 @@
     return [_walletService getBalancesWithUserID:userID];
 }
 
+//消费记录
+- (NSArray *)getMoneyRecordsWithUserID:(NSString *)userID
+{
+    //TODO:
+    return nil;
+}
+
 @end

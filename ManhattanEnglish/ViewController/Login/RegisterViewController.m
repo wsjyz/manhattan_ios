@@ -113,13 +113,13 @@
         [self showErrorInfoWithMessage:@"请输入验证码" delegate:nil];
         return;
     }
-    else if (![authCode isEqualToString:_authCode])
-    {
-        [self showErrorInfoWithMessage:@"验证码输入错误" delegate:nil];
-        return;
-    }
+//    else if (![authCode isEqualToString:_authCode])
+//    {
+//        [self showErrorInfoWithMessage:@"验证码输入错误" delegate:nil];
+//        return;
+//    }
     
-   BOOL result = [_loginService registerWithMobile:mobile Password:pw AuthCode:authCode andType:_type];
+   BOOL result = YES;
     if (result)
     {
         //注册成功
@@ -133,12 +133,16 @@
         case STUDENT_TYPE:
         {
             NSArray *viewCons = self.navigationController.viewControllers;
-            if ([[viewCons lastObject] isKindOfClass:[LoginViewController class]])
-            {
-                LoginViewController *loginVC = [viewCons lastObject];
-                loginVC.userName.text = _userName.text;
-                loginVC.password.text = _password.text;
-            }
+            [viewCons enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                UIViewController *vc = obj;
+                if ([vc isKindOfClass:[LoginViewController class]])
+                {
+                    LoginViewController *loginVC = (LoginViewController *)vc;
+                    loginVC.userName.text = _userName.text;
+                    loginVC.password.text = _password.text;
+                    loginVC.isFirstLogin = YES;
+                }
+            }];
             [self.navigationController popViewControllerAnimated:YES];
             break;
         }

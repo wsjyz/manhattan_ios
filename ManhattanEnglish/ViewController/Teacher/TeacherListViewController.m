@@ -7,10 +7,12 @@
 //
 
 #import "TeacherListViewController.h"
-#import "TeacherMainCell.h"
-#import "TeacherDetailViewController.h"
+#import "TeacherListTableViewController.h"
 
 @interface TeacherListViewController ()
+{
+    TeacherListTableViewController *_listTVC;
+}
 
 @end
 
@@ -30,37 +32,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setNavgationItemTitle:@"名师列表"];
+    _listTVC = [self.childViewControllers objectAtIndex:0];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark UITableViewDataSource
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 3;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    TeacherMainCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TeacherMainCell"];
-    if (cell == nil)
-    {
-        cell = [ViewUtil viewFromNibOfClass:[TeacherMainCell class] owner:self];
-    }
-    cell.name.text = @"cafei";
-    
-    return cell;
-}
-
-#pragma mark UITableViewDelegate
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    TeacherDetailViewController *teacherDetailVC = [ViewUtil viewControllerFromNibOfClass:[TeacherDetailViewController class]];
-    [self.navigationController pushViewController:teacherDetailVC animated:YES];
 }
 
 #pragma mark UISearchBarDelegate
@@ -74,10 +52,14 @@
 {
     [searchBar resignFirstResponder];
     searchBar.showsCancelButton = NO;
+    _listTVC.searchKey = searchBar.text;
+    [_listTVC willBeginRefreshData];
+    [_listTVC refreshData];
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *) searchBar
 {
+    _listTVC.searchKey = nil;
     [searchBar resignFirstResponder];
 }
 

@@ -53,12 +53,11 @@
  * @param page
  * @return Page<Question>
  */
-- (Page *)myQuestionsWithUserId:(NSString *)userId
+- (NSArray *)myQuestionsWithUserId:(NSString *)userId
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                      userId, @"userId",nil];
-    [ReflectionUtil setArrayType:NSStringFromClass([Question class]) forPropName:@"rows" ofClassName:NSStringFromClass([Page class])];
-    return [RestServiceManager performRequestWithPath:OpenQuestionService_myQuestions paramDic:paramDic returnType:NSStringFromClass([NSString class]) delegate:self.delegate];
+    return [RestServiceManager performRequestWithPath:OpenQuestionService_myQuestions paramDic:paramDic returnType:NSStringFromClass([Question class]) delegate:self.delegate];
 }
 
 /**
@@ -69,14 +68,13 @@
  * @param type （指定回答(ASSIGN)；已回答(ANSWER)；未回答(UNANSWER)）
  * @return Page<Question>（rows 是包含question 对象的数组）
  */
-- (Page *)needAnswerListWithUserId:(NSString *)userId Type:(NSString *)type Page:(Page *)page
+- (NSArray *)needAnswerListWithUserId:(NSString *)userId Type:(NSString *)type Page:(Page *)page
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                      userId, @"userId",
                                      type, @"type",
                                      OPENVALUE(page), @"page",nil];
-    [ReflectionUtil setArrayType:NSStringFromClass([Question class]) forPropName:@"rows" ofClassName:NSStringFromClass([Page class])];
-    return [RestServiceManager performRequestWithPath:OpenQuestionService_needAnswerList paramDic:paramDic returnType:NSStringFromClass([NSString class]) delegate:self.delegate];
+    return [RestServiceManager performRequestWithPath:OpenQuestionService_needAnswerList paramDic:paramDic returnType:NSStringFromClass([Question class]) delegate:self.delegate];
 }
 
 @end

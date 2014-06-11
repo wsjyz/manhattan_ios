@@ -41,7 +41,6 @@
     CommonService *commonService = [[CommonService alloc] init];
     
     PERSONAL_ID personId = self.personIdSegControl.selectedSegmentIndex;
-    [commonService updateCurrentPersonalID:personId];
     
     [self performSegueWithIdentifier:@"index" sender:self];
 }

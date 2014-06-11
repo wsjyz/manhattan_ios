@@ -8,6 +8,54 @@
 
 #import "QuestionService.h"
 
+@interface QuestionService ()
+{
+    OpenQuestionService *_quesService;
+}
+
+@end
+
 @implementation QuestionService
+
+- (id)initWithDelegate:(id<RestServiceDelegate>)delegate
+{
+    self = [super initWithDelegate:delegate];
+    if (self)
+    {
+        _quesService = [[OpenQuestionService alloc] initWithDelegate:delegate];
+    }
+    return self;
+}
+
+//提问
+- (Question *)askQuestionWithQuestion:(Question *)ques
+{
+    return [_quesService askQuestionWithQuestion:ques];
+}
+
+//回答问题
+- (BOOL)answerQuestionWithQuestion:(Question *)ques
+{
+    return [_quesService answerQuestionWithQuestion:ques];
+}
+
+//删除问答
+- (BOOL)deleteQuestionWithQuestionId:(NSString *)questionId
+{
+    return [_quesService deleteQuestionWithQuestionId:questionId];
+}
+
+//获取我的问题
+- (NSArray *)myQuestionsWithUserId:(NSString *)userId
+{
+    return [_quesService myQuestionsWithUserId:userId];
+}
+
+//获取我的问题
+- (NSArray *)needAnswerListWithUserId:(NSString *)userId Type:(NSString *)type Page:(Page *)page
+{
+    return [_quesService needAnswerListWithUserId:userId Type:type Page:page];
+}
+
 
 @end

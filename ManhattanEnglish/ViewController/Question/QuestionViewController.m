@@ -9,10 +9,15 @@
 #import "QuestionViewController.h"
 #import "QuesTableViewCell.h"
 #import "QuesDetailViewController.h"
+#import "QuestionService.h"
+#import "CommonService.h"
 
 @interface QuestionViewController ()
 {
     IBOutlet UITableView *_tableView;
+    NSArray *_resourceArr;
+    QuestionService *_quesService;
+    CommonService *_commonService;
 }
 
 @end
@@ -28,11 +33,37 @@
     return self;
 }
 
+- (void)initService
+{
+    _commonService = [[CommonService alloc] initWithDelegate:nil];
+    _quesService = [[QuestionService alloc] initWithDelegate:self];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setNavgationItemTitle:@"我的问题"];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    [self.navigationController.view addSubview:hud];
+    
+    [hud showAnimated:YES whileExecutingBlock:^{
+        _resourceArr = [_quesService myQuestionsWithUserId:[_commonService getCurrentUserID]];
+    } completionBlock:^{
+        if (_resourceArr)
+        {
+            [_tableView reloadData];
+        }
+        [hud removeFromSuperview];
+    }];
+
 }
 
 - (void)didReceiveMemoryWarning

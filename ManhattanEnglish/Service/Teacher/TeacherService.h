@@ -7,10 +7,23 @@
 //
 
 #import "BaseRestService.h"
+#import "Page.h"
 
 @interface TeacherService : BaseRestService
 
 //教师认证数据
 - (NSArray *)getAuthDataWithUserID:(NSString *)userID;
+
+//获取教师列表
+- (Page *)listPageWithPage:(Page *)page;
+
+//搜索教师列表
+- (NSArray *)listByNameWithSearchKey:(NSString *)searchKey;
+
+//收藏教师
+- (BOOL)collectWithUserId:(NSString *)userId;
+
+//取消收藏教师
+- (BOOL)cancelCollectWithUserId:(NSString *)userId;
 
 @end

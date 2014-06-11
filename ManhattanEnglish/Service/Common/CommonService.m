@@ -7,12 +7,16 @@
 //
 
 #import "CommonService.h"
+#import "User.h"
 
 #define KEY_FIRST_LAUCH                     @"firstLauch"
 #define KEY_PERSONALE_ID                    @"personalID"
 #define KEY_LAST_LOGIN_MOBILE               @"lastLoginMobile"
 #define KEY_LAST_LOGIN_PASSWORD             @"lastLoginPassword"
 #define KEY_LAST_LOGIN_CHECK_BOX            @"lastLoginCheckBox"
+
+static User *currentUser;
+static PERSONAL_ID currentPersonalID = PERSONAL_GUEST;
 
 @implementation CommonService
 
@@ -38,21 +42,45 @@
     return isFirstlauch;
 }
 
-- (void)updateCurrentPersonalID:(PERSONAL_ID)personalID
+- (void)updateCurrentUser:(User *)user
 {
-    // TODO:
+    currentUser = user;
+    [self updateCurrentPersonalIDWithUserType:currentUser.type];
 }
 
 - (User *)currentLoginUser
 {
-    // TODO:
-    return nil;
+    return currentUser;
+}
+
+- (NSString *)getCurrentUserID
+{
+    return currentUser == nil ?  nil :currentUser.userId;
+}
+
+- (void)updateCurrentPersonalIDWithUserType:(NSString *)userType;
+{
+    if ([userType isEqualToString:TYPE_TEACHER])
+    {
+        currentPersonalID = PERSONAL_TEACHER;
+    }
+    else if ([userType isEqualToString:TYPE_STUDENT])
+    {
+        currentPersonalID = PERSONAL_STUDENT;
+    }
+    else if ([userType isEqualToString:TYPE_VIPSTUDENT])
+    {
+        currentPersonalID = PERSONAL_VIP;
+    }
+    else
+    {
+        currentPersonalID = PERSONAL_GUEST;
+    }
 }
 
 - (PERSONAL_ID)getCurrentPersonalID
 {
-    // TODO:
-    return PERSONAL_GUEST;
+    return currentPersonalID;
 }
 
 - (NSString *)getLastLoginMobile

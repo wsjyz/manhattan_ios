@@ -30,12 +30,17 @@
     return self;
 }
 
+- (void)initService
+{
+    _commonService = [[CommonService alloc] init];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setNavgationItemTitle:@"个人资料"];
-    _commonService = [[CommonService alloc] init];
+    
     _personalID = [_commonService getCurrentPersonalID];
 }
 
@@ -155,11 +160,6 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 30;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
 }
 
 /*

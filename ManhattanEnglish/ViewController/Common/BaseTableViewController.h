@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <TbcLibCore/OpenService.h>
+#import "BaseRestService.h"
 
 @protocol BaseTableViewControllerdelegate <NSObject>
 
@@ -16,7 +16,7 @@
 
 @end
 
-@interface BaseTableViewController : UITableViewController<ServiceDelegate>
+@interface BaseTableViewController : UITableViewController<RestServiceDelegate>
 
 @property (nonatomic, weak) id<BaseTableViewControllerdelegate> baseTableViewDelegate;
 
