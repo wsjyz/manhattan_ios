@@ -12,10 +12,10 @@
 #import "QuestionService.h"
 #import "CommonService.h"
 
-@interface QuestionViewController ()
+@interface QuestionViewController ()<QuesDetailDelegate>
 {
     IBOutlet UITableView *_tableView;
-    NSArray *_resourceArr;
+    NSMutableArray *_resourceArr;
     QuestionService *_quesService;
     CommonService *_commonService;
 }
@@ -55,9 +55,9 @@
     [self.navigationController.view addSubview:hud];
     
     [hud showAnimated:YES whileExecutingBlock:^{
-        _resourceArr = [_quesService myQuestionsWithUserId:[_commonService getCurrentUserID]];
+        _resourceArr = [NSMutableArray arrayWithArray:[_quesService myQuestionsWithUserId:[_commonService getCurrentUserID]]];
     } completionBlock:^{
-        if (_resourceArr)
+        if (_resourceArr && _resourceArr.count != 0)
         {
             [_tableView reloadData];
         }
@@ -75,17 +75,19 @@
 #pragma mark UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return _resourceArr == nil ? 0:_resourceArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    Question *ques = _resourceArr[indexPath.row];
+    
     QuesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QuesTableViewCell"];
     if (cell == nil)
     {
         cell = [ViewUtil viewFromNibOfClass:[QuesTableViewCell class] owner:self];
     }
-    cell.content.text = @"uasho iqwhcosudchowcp uos oashuco doqu usocwf[0fi[e0f eu[ehcnv ue[0urcv0[ e0[wuh";
+    cell.content.text = ques.questionTitle;
     [cell setFrame:CGRectMake(0, 0, CGRectGetWidth(_tableView.frame), MAXFLOAT)];
     
     return cell;
@@ -101,9 +103,17 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     QuesDetailViewController *quesDetailVC = [ViewUtil viewControllerFromNibOfClass:[QuesDetailViewController class]];
+    quesDetailVC.delegate = self;
+    quesDetailVC.ques = _resourceArr[indexPath.row];
     [self.navigationController pushViewController:quesDetailVC animated:YES];
 }
 
+#pragma mark QuesDetailDelegate
+- (void)deleteQuestion:(Question *)ques
+{
+    [_resourceArr removeObject:ques];
+    [_tableView reloadData];
+}
 
 /*
 #pragma mark - Navigation

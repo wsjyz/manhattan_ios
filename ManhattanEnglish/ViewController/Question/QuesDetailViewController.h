@@ -7,7 +7,17 @@
 //
 
 #import "BaseViewController.h"
+#import "Question.h"
+
+@protocol QuesDetailDelegate <NSObject>
+
+- (void)deleteQuestion:(Question *)ques;
+
+@end
 
 @interface QuesDetailViewController : BaseViewController
+
+@property (nonatomic, strong) Question *ques;
+@property (nonatomic, weak) id<QuesDetailDelegate> delegate;
 
 @end

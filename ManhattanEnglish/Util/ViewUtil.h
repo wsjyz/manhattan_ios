@@ -18,6 +18,7 @@
 
 //将date转换成string 
 + (NSString *)timeStrWithDate:(NSDate *)date;
++ (NSString *)timeAllStrWithDate:(NSDate *)date;
 
 
 @end

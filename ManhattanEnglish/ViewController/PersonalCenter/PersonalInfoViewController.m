@@ -9,12 +9,19 @@
 #import "PersonalInfoViewController.h"
 #import "CommonService.h"
 #import "InfoTableViewCell.h"
+#import "User.h"
+
+#define VALUE(value)        value == nil ? @"" : value
 
 @interface PersonalInfoViewController ()
 {
     IBOutlet UITableView *_tableView;
+    IBOutlet UIImageView *_faceImg;
+    IBOutlet UILabel *_name;
+    IBOutlet UIImageView *_sexImg;
     CommonService *_commonService;
     PERSONAL_ID _personalID;
+    User *_user;
 }
 
 @end
@@ -42,6 +49,25 @@
     [self setNavgationItemTitle:@"个人资料"];
     
     _personalID = [_commonService getCurrentPersonalID];
+    _user = [_commonService currentLoginUser];
+    
+    _name.text = VALUE(_user.userName);
+    if (_user.avatar)
+    {
+        _faceImg.image = [UIImage imageNamed:[NSURL URLWithString:_user.avatar]];
+    }
+    if (_user.sex && [_user.sex isEqualToString:@"MALE"])
+    {
+        _sexImg.image = [UIImage imageNamed:@"personal_boy.png"];
+    }
+    else if (_user.sex && [_user.sex isEqualToString:@"FEMALE"])
+    {
+        _sexImg.image = [UIImage imageNamed:@"personal_girl.png"];
+    }
+    else
+    {
+        _sexImg.hidden = YES;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -110,14 +136,17 @@
             if (row == 0)
             {
                 cell.titleLabel.text = @"手机号:";
+                cell.content.text = _user.mobile;
             }
             else if (row == 1)
             {
                 cell.titleLabel.text = @"邮箱:";
+                cell.content.text = VALUE(_user.email);
             }
             else
             {
                 cell.titleLabel.text = @"地址:";
+                cell.content.text = VALUE(_user.address);
             }
             break;
         }
@@ -126,18 +155,22 @@
             if (row == 0)
             {
                 cell.titleLabel.text = @"积分:";
+                cell.content.text = [NSString stringWithFormat:@"%i",_user.credits];
             }
             else if (row == 1 && _personalID != PERSONAL_TEACHER)
             {
                 cell.titleLabel.text = @"VIP到期时间:";
+                cell.content.text = [ViewUtil timeStrWithDate:_user.vipExpiredTime];
             }
             else if (row == 1 && _personalID == PERSONAL_TEACHER)
             {
                 cell.titleLabel.text = @"评分:";
+                cell.content.text = [NSString stringWithFormat:@"%i",_user.score];
             }
             else
             {
                 cell.titleLabel.text = @"评价:";
+                cell.content.text = VALUE(_user.evaluation);
             }
             break;
         }

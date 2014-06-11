@@ -113,13 +113,13 @@
         [self showErrorInfoWithMessage:@"请输入验证码" delegate:nil];
         return;
     }
-//    else if (![authCode isEqualToString:_authCode])
-//    {
-//        [self showErrorInfoWithMessage:@"验证码输入错误" delegate:nil];
-//        return;
-//    }
+    else if (![authCode isEqualToString:_authCode])
+    {
+        [self showErrorInfoWithMessage:@"验证码输入错误" delegate:nil];
+        return;
+    }
     
-   BOOL result = YES;
+   BOOL result = [_loginService registerWithMobile:mobile Password:pw AuthCode:authCode andType:_type];
     if (result)
     {
         //注册成功

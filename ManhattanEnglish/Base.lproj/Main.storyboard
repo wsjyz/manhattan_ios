@@ -102,8 +102,8 @@
                                 <rect key="frame" x="120" y="15" width="81" height="83"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GeassCC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yB-pa-Txl">
-                                <rect key="frame" x="90" y="106" width="78" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GeassCC" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yB-pa-Txl">
+                                <rect key="frame" x="30" y="106" width="138" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -129,6 +129,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="个人资料" id="cVl-al-XTo"/>
                     <connections>
+                        <outlet property="_faceImg" destination="lux-mz-D0i" id="1r3-k8-D3R"/>
+                        <outlet property="_name" destination="1yB-pa-Txl" id="WR9-l1-Hqu"/>
+                        <outlet property="_sexImg" destination="F8Q-36-DU8" id="O3p-ir-eVB"/>
                         <outlet property="_tableView" destination="1Hr-5c-JQI" id="kRo-rF-7Xi"/>
                     </connections>
                 </viewController>

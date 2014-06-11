@@ -81,4 +81,12 @@
     return timeStr;
 }
 
++ (NSString *)timeAllStrWithDate:(NSDate *)date
+{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString *timeStr = [formatter stringFromDate:date];
+    return timeStr;
+}
+
 @end

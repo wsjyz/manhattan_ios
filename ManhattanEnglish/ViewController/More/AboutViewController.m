@@ -42,7 +42,8 @@
     label.frame = CGRectMake(10, 10, 280, size.height);
     [_scrollView addSubview:label];
     
-    _scrollView.contentSize = CGSizeMake(300, size.height + 20);
+    _scrollView.frame = CGRectMake(CGRectGetMinX(_scrollView.frame), CGRectGetMinY(_scrollView.frame), CGRectGetWidth(_scrollView.frame), size.height + 20);
+    _scrollView.contentSize = CGSizeMake(300, size.height + 10);
 
 }
 

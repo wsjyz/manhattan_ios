@@ -10,6 +10,4 @@
 
 @interface QuestionViewController : BaseViewController
 
-@property (nonatomic, strong) NSString *assignTeacher;
-
 @end

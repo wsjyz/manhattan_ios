@@ -24,5 +24,6 @@
 @property (nonatomic, assign) NSUInteger wallet; //钱包余额
 @property (nonatomic, strong) NSDate *vipExpiredTime; //vip到期时间
 @property (nonatomic, strong) NSString *evaluation;   //评价
+@property (nonatomic, assign) NSInteger score;      //评分
 
 @end
