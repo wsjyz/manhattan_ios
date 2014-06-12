@@ -3,15 +3,21 @@
 //  ManhattanEnglish
 //
 //  Created by Tianyu Tan on 14-5-3.
-//  Copyright (c) 2014年 8hinfo. All rights reserved.
+//  Copyright (c) 2014年 ;. All rights reserved.
 //
 
 #import "NewAppointViewController.h"
 #import "AppointConditionTableViewCell.h"
+#import "TimespanPickerViewController.h"
+#import "ViewUtil.h"
+#import <TbcLibCore/CommonUtil.h>
 
-@interface NewAppointViewController () <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate>
+#define APPOINT_DATE_FORMAT         @"%@~%@"
+
+@interface NewAppointViewController () <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, TimespanPickerDelegate>
 
 @property (strong, nonatomic) NSDictionary *cellPropValues;
+@property (weak, nonatomic) UITableView *tableView;
 
 @end
 
@@ -52,22 +58,26 @@
 
 #pragma mark - Table view delegates
 
+- (void)complete:(TimespanPickerViewController *)viewController
+{
+    AppointConditionTableViewCell *cell = self.tableView.visibleCells[4];
+    NSString *startDateStr = [CommonUtil stringWithDate:viewController.startDate andFormatStr:yyyy_MM_dd];
+    NSString *endDateStr = [CommonUtil stringWithDate:viewController.endDate andFormatStr:yyyy_MM_dd];
+    cell.contentLabel.text = [NSString stringWithFormat:APPOINT_DATE_FORMAT, startDateStr, endDateStr];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"select");
+    NSInteger row = indexPath.row;
+    if (row == 4) {
+        TimespanPickerViewController *pickerView = [ViewUtil viewControllerFromNibOfClass:[TimespanPickerViewController class]];
+        pickerView.delegate = self;
+        [self presentViewController:pickerView animated:YES completion:nil];
+    }
     
-//    UIPickerView *pickerView = [[UIPickerView alloc] init];
-    UIActionSheet *menu = [[UIActionSheet alloc] initWithTitle:nil
-                                                      delegate:self
-                                             cancelButtonTitle:@"Done"
-                                        destructiveButtonTitle:@"Cancel"
-                                             otherButtonTitles:nil];
-    UIDatePicker *dataPicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 135, 320, 150)];
-    dataPicker.datePickerMode = UIDatePickerModeDate;
-    dataPicker.backgroundColor = [UIColor lightGrayColor];
-    [menu addSubview:dataPicker];
-    [menu showInView:self.view];
-    [menu setBounds:CGRectMake(0,0,320, 400)];
+//    UIDatePicker *dataPicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 135, 320, 150)];
+//    dataPicker.datePickerMode = UIDatePickerModeDate;
+//    dataPicker.backgroundColor = [UIColor lightGrayColor];
 }
 
 #pragma mark - Table view data source
@@ -110,6 +120,7 @@
         UITableViewController *innerTableViewController = segue.destinationViewController;
         innerTableViewController.tableView.delegate = self;
         innerTableViewController.tableView.dataSource = self;
+        self.tableView = innerTableViewController.tableView;
     }
     
     // Get the new view controller using [segue destinationViewController].
