@@ -11,6 +11,10 @@
 #import "CommonService.h"
 #import "Kal.h"
 #import "NSDate+Convenience.h"
+#import "CourseService.h"
+#import "NewsService.h"
+#import "GoodCourseTableViewController.h"
+#import "NewsTableViewController.h"
 
 #define MANUAL_SEGUE_LOGIN                  @"login"
 #define MANUAL_SEGUE_GOOD_COURSE            @"goodCourse"
@@ -25,6 +29,8 @@
 
 @interface IndexViewController ()
 
+@property(strong, nonatomic) CourseService *courseService;
+@property(strong, nonatomic) NewsService *newsService;
 @property(strong, nonatomic) CommonService *commonService;
 @property(strong, nonatomic) KalViewController *kalController;
 
@@ -77,6 +83,12 @@
     }
 }
 
+- (void)initService
+{
+    self.courseService = [[CourseService alloc] init];
+    self.newsService = [[NewsService alloc] init];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -108,16 +120,22 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    if ([segue.identifier isEqualToString:MANUAL_SEGUE_GOOD_COURSE]) {
+        GoodCourseTableViewController *goodCourseViewCon = segue.destinationViewController;
+        goodCourseViewCon.courses = [self.courseService listAllGoodCourses];
+    }else if ([segue.identifier isEqualToString:MANUAL_SEGUE_NEWS]){
+        NewsTableViewController *newsTableViewCon = segue.destinationViewController;
+        newsTableViewCon.allNews = [self.newsService listAllNews];
+    }
+    
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
 
 - (IBAction)appointBtnClick:(id)sender {
     
@@ -140,7 +158,7 @@
 }
 
 - (IBAction)goodCourseBtnClick:(id)sender {
-    
+
     [self performSegueWithIdentifier:MANUAL_SEGUE_GOOD_COURSE sender:self];
 }
 

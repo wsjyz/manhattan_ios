@@ -7,6 +7,8 @@
 //
 
 #import "NewsDetailViewController.h"
+#import "News.h"
+#import <TbcLibCore/CommonUtil.h>
 
 @interface NewsDetailViewController ()
 
@@ -27,6 +29,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.titleLabel.text = self.news.title;
+    self.contentTextView.text = self.news.content;
+    self.createTimeLabel.text = [CommonUtil stringWithDate:self.news.createTime andFormatStr:@"yyyy-MM-dd HH:mm"];
 }
 
 - (void)didReceiveMemoryWarning

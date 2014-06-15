@@ -7,6 +7,10 @@
 //
 
 #import "NewsTableViewController.h"
+#import "NewsTableViewCell.h"
+#import "News.h"
+#import <TbcLibCore/CommonUtil.h>
+#import "NewsDetailViewController.h"
 
 @interface NewsTableViewController ()
 
@@ -56,14 +60,19 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 5;
+    return self.allNews.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    NewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell...
+    News *news = self.allNews[indexPath.row];
+    
+    cell.titleLabel.text = news.title;
+    cell.contentLabel.text = news.content;
+    cell.createTimeLabel.text = [CommonUtil stringWithDate:news.createTime andFormatStr:@"yyyy-MM-dd HH:mm"];
     
     return cell;
 }
@@ -106,15 +115,20 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+    
+    if ([segue.identifier isEqualToString:@"detail"]) {
+        NewsDetailViewController *detailViewCon = segue.destinationViewController;
+        detailViewCon.news = self.allNews[indexPath.row];
+    }
+    
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
 
 @end

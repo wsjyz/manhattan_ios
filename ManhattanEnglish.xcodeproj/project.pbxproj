@@ -29,6 +29,9 @@
 		2F58845C194D8CB1004ACD71 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58845B194D8CB1004ACD71 /* Course.m */; };
 		2F588460194DD09F004ACD71 /* good_course_cover_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F58845F194DD09F004ACD71 /* good_course_cover_bg.png */; };
 		2F588463194DD104004ACD71 /* CourseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F588462194DD104004ACD71 /* CourseTableViewCell.m */; };
+		2F588467194DD7E6004ACD71 /* CourseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F588466194DD7E6004ACD71 /* CourseService.m */; };
+		2F58846A194DDF78004ACD71 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F588469194DDF78004ACD71 /* News.m */; };
+		2F58846E194DE03B004ACD71 /* NewsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58846D194DE03B004ACD71 /* NewsService.m */; };
 		2F58AD561928E3D200A03F88 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58AD551928E3D200A03F88 /* PageViewController.m */; };
 		2F58AD5C192929D300A03F88 /* AppointConditionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58AD5B192929D300A03F88 /* AppointConditionTableViewCell.m */; };
 		2F600688194B718F0059487A /* SelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F600686194B718F0059487A /* SelectionViewController.m */; };
@@ -281,6 +284,12 @@
 		2F58845F194DD09F004ACD71 /* good_course_cover_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = good_course_cover_bg.png; sourceTree = "<group>"; };
 		2F588461194DD104004ACD71 /* CourseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseTableViewCell.h; sourceTree = "<group>"; };
 		2F588462194DD104004ACD71 /* CourseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseTableViewCell.m; sourceTree = "<group>"; };
+		2F588465194DD7E6004ACD71 /* CourseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseService.h; sourceTree = "<group>"; };
+		2F588466194DD7E6004ACD71 /* CourseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseService.m; sourceTree = "<group>"; };
+		2F588468194DDF78004ACD71 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
+		2F588469194DDF78004ACD71 /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
+		2F58846C194DE03B004ACD71 /* NewsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsService.h; sourceTree = "<group>"; };
+		2F58846D194DE03B004ACD71 /* NewsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsService.m; sourceTree = "<group>"; };
 		2F58AD541928E3D200A03F88 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		2F58AD551928E3D200A03F88 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 		2F58AD5A192929D300A03F88 /* AppointConditionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointConditionTableViewCell.h; sourceTree = "<group>"; };
@@ -660,6 +669,26 @@
 		2F588454194D887C004ACD71 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				2F588468194DDF78004ACD71 /* News.h */,
+				2F588469194DDF78004ACD71 /* News.m */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		2F588464194DD7D2004ACD71 /* GoodCourse */ = {
+			isa = PBXGroup;
+			children = (
+				2F588465194DD7E6004ACD71 /* CourseService.h */,
+				2F588466194DD7E6004ACD71 /* CourseService.m */,
+			);
+			path = GoodCourse;
+			sourceTree = "<group>";
+		};
+		2F58846B194DE02B004ACD71 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				2F58846C194DE03B004ACD71 /* NewsService.h */,
+				2F58846D194DE03B004ACD71 /* NewsService.m */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -998,6 +1027,8 @@
 		37348C2B190CE691007605DA /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				2F58846B194DE02B004ACD71 /* News */,
+				2F588464194DD7D2004ACD71 /* GoodCourse */,
 				2FF5A145194D1B8800BE819E /* Appoint */,
 				37E87EF7194748930019E9AC /* Question */,
 				37E87EDD194700310019E9AC /* Teacher */,
@@ -1539,6 +1570,7 @@
 				37FEB82819332EAD00D3E047 /* KalLogic.m in Sources */,
 				37A6D6AC190FF45400B7C8B0 /* FindPWViewController.m in Sources */,
 				37E87EEE194700310019E9AC /* OpenWalletService.m in Sources */,
+				2F588467194DD7E6004ACD71 /* CourseService.m in Sources */,
 				37E87EED194700310019E9AC /* OpenUserService.m in Sources */,
 				37E87F071947EC650019E9AC /* TeacherListTableViewController.m in Sources */,
 				37E87EEC194700310019E9AC /* TeacherService.m in Sources */,
@@ -1575,6 +1607,7 @@
 				37CC3F751917E4F700023E76 /* TeacherMainCell.m in Sources */,
 				37348C36190CE79E007605DA /* ViewUtil.m in Sources */,
 				2F58AD5C192929D300A03F88 /* AppointConditionTableViewCell.m in Sources */,
+				2F58846A194DDF78004ACD71 /* News.m in Sources */,
 				37A6D6B1190FF45400B7C8B0 /* AboutViewController.m in Sources */,
 				37FEB82D19332EAD00D3E047 /* NSDate+Convenience.m in Sources */,
 				371BEE4E19167A2D000595D1 /* QuesDetailViewController.m in Sources */,
@@ -1591,6 +1624,7 @@
 				370C49561910984400C63063 /* WalletTableViewCell.m in Sources */,
 				371BEE4C19167A2D000595D1 /* QuesDetailTableViewCell.m in Sources */,
 				37E87EDC1946FE3C0019E9AC /* TeacherDetail.m in Sources */,
+				2F58846E194DE03B004ACD71 /* NewsService.m in Sources */,
 				371BEE5019167A2D000595D1 /* QuesTableViewCell.m in Sources */,
 				3721C3F9191A853700D63FBE /* TeacherPersonInfoTableViewCell.m in Sources */,
 				37FEB82A19332EAD00D3E047 /* KalTileView.m in Sources */,

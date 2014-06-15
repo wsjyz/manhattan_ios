@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseTableViewController.h"
 
-@interface NewsTableViewController : UITableViewController
+@interface NewsTableViewController : BaseTableViewController
+
+@property (strong, nonatomic) NSArray *allNews;
 
 @end

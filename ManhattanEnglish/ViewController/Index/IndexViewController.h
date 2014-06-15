@@ -8,7 +8,7 @@
 
 #import "BaseViewController.h"
 
-@interface IndexViewController : UIViewController
+@interface IndexViewController : BaseViewController
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *loginBtnItem;
 @property (weak, nonatomic) IBOutlet UIScrollView *mainScrollView;

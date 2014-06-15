@@ -8,7 +8,11 @@
 
 #import "BaseViewController.h"
 
+@class News;
+
 @interface NewsDetailViewController : BaseViewController
+
+@property (strong, nonatomic) News *news;
 
 @property (weak, nonatomic) IBOutlet UILabel *createTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;

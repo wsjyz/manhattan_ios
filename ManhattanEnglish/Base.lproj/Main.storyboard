@@ -19,7 +19,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LjL-gp-d7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-305" y="2037"/>
+            <point key="canvasLocation" x="-1041" y="3389"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fuj-vu-hW8">
@@ -84,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqD-va-wpf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128" y="2037"/>
+            <point key="canvasLocation" x="-608" y="3389"/>
         </scene>
         <!--Personal Info View Controller - 个人资料-->
         <scene sceneID="dLK-K7-rJ2">
@@ -706,7 +706,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WA2-X5-x9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="584" y="3027"/>
+            <point key="canvasLocation" x="-152" y="4379"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="E29-rx-ISV">
@@ -870,7 +870,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NjO-58-DP8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1080" y="3161"/>
+            <point key="canvasLocation" x="344" y="4513"/>
         </scene>
         <!--Index View Controller - 曼哈顿英语-->
         <scene sceneID="oWp-qd-l9o">
@@ -955,7 +955,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQS-HK-dMb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="90" y="3027"/>
+            <point key="canvasLocation" x="-646" y="4379"/>
         </scene>
         <!--Register View Controller - 注册-->
         <scene sceneID="3fx-X2-A17">
@@ -1115,7 +1115,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQE-Xs-7AQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-899" y="3120"/>
+            <point key="canvasLocation" x="-1635" y="4472"/>
         </scene>
         <!--View Controller - Item 2-->
         <scene sceneID="a5e-wJ-moH">
@@ -1134,7 +1134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qBT-sU-Ryc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-305" y="2762"/>
+            <point key="canvasLocation" x="-1041" y="4114"/>
         </scene>
         <!--View Controller - Item-->
         <scene sceneID="UPQ-wS-EXV">
@@ -1153,7 +1153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JlX-d2-wHm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-305" y="3435"/>
+            <point key="canvasLocation" x="-1041" y="4787"/>
         </scene>
         <!--Navigation Controller - 更多-->
         <scene sceneID="9tJ-LD-h5B">
@@ -1171,7 +1171,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CWE-5Z-CvP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="681" y="585"/>
+            <point key="canvasLocation" x="681" y="2499"/>
         </scene>
         <!--More View Controller-->
         <scene sceneID="10e-IS-RuU">
@@ -1190,7 +1190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qrO-rH-tl7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1200" y="585"/>
+            <point key="canvasLocation" x="1200" y="2499"/>
         </scene>
         <!--Tab Bar Controller - <-->
         <scene sceneID="Mmp-G3-eaR">
@@ -1207,6 +1207,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="WCb-s2-hmT" kind="relationship" relationship="viewControllers" id="E5p-jb-mNM"/>
+                        <segue destination="TKC-6R-NcS" kind="relationship" relationship="viewControllers" id="qmW-qr-Pug"/>
+                        <segue destination="n8I-gh-pxS" kind="relationship" relationship="viewControllers" id="eel-j7-Hq3"/>
+                        <segue destination="hE4-db-Lvf" kind="relationship" relationship="viewControllers" id="Hy4-Tw-Oi1"/>
                         <segue destination="DtK-eN-ZUH" kind="relationship" relationship="viewControllers" id="mzh-nY-fc8"/>
                     </connections>
                 </tabBarController>
@@ -1395,6 +1398,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmH-ng-aeE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1200" y="-330"/>
+        </scene>
+        <!--Navigation Controller - 我的收藏-->
+        <scene sceneID="pxY-bf-Cvf">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="TKC-6R-NcS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的收藏" image="tab_favor_n.png" id="aYD-ZX-hW4">
+                        <inset key="imageInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b1G-Jd-rXr">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zAU-v1-At1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="681" y="410"/>
         </scene>
         <!--New Appoint View Controller - 我要预约-->
         <scene sceneID="raS-HU-sTX">
@@ -1597,7 +1615,7 @@
                                     <outlet property="contentLabel" destination="gxg-4u-Qjh" id="xHf-lR-ngQ"/>
                                     <outlet property="createTimeLabel" destination="EOL-ax-stp" id="b4P-9x-acQ"/>
                                     <outlet property="titleLabel" destination="71c-Fw-IaS" id="2gW-KU-oul"/>
-                                    <segue destination="egG-9r-GkP" kind="push" id="z5Q-sE-j58"/>
+                                    <segue destination="egG-9r-GkP" kind="push" identifier="detail" id="z5Q-sE-j58"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1796,7 +1814,7 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mhf-8L-Dgh">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhf-8L-Dgh">
                                 <rect key="frame" x="0.0" y="168" width="320" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1963,6 +1981,36 @@
             </objects>
             <point key="canvasLocation" x="1764" y="-1362"/>
         </scene>
+        <!--Navigation Controller - 我的预约-->
+        <scene sceneID="271-WR-VpO">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="n8I-gh-pxS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的预约" image="tab_appointment_n.png" id="KI1-X4-w8z">
+                        <inset key="imageInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Cm-eh-cvu">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aPk-tr-lnH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="681" y="1124"/>
+        </scene>
+        <!--Navigation Controller - 我的试听-->
+        <scene sceneID="SUs-NR-lFS">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="hE4-db-Lvf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的试听" image="tab_audition_n.png" id="D7P-0R-OOA">
+                        <inset key="imageInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rxg-Us-3wI">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pem-jI-fDO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="673" y="1843"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Push-button.png" width="614" height="88"/>
@@ -1997,6 +2045,9 @@
         <image name="ques_vip.png" width="43" height="66"/>
         <image name="register_btn_n.png" width="185" height="45"/>
         <image name="sj.png" width="50" height="50"/>
+        <image name="tab_appointment_n.png" width="44" height="44"/>
+        <image name="tab_audition_n.png" width="44" height="44"/>
+        <image name="tab_favor_n.png" width="44" height="44"/>
         <image name="tab_home_p.png" width="50" height="50"/>
         <image name="tab_more_n.png" width="44" height="44"/>
         <image name="tx.png" width="194" height="194"/>
@@ -2008,7 +2059,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="b29-ic-cPn"/>
         <segue reference="YVr-p5-r2R"/>
+        <segue reference="1G1-Ch-Dgc"/>
     </inferredMetricsTieBreakers>
 </document>
