@@ -14,7 +14,7 @@
 #import <TbcLibCore/CommonUtil.h>
 #import "AppointService.h"
 #import "AppointSearchCondition.h"
-#import "GoodCourseTableViewController.h"
+#import "CourseTableViewController.h"
 
 #define APPOINT_DATE_FORMAT         @"%@~%@"
 
@@ -176,7 +176,7 @@
     }else if ([segue.identifier isEqualToString:@"goodCourse"]){
         
         NSArray *courses = [self.appointService findCourseWithAppointSearchCondition:self.condition];
-        GoodCourseTableViewController *goodCourseViewCon = segue.destinationViewController;
+        CourseTableViewController *goodCourseViewCon = segue.destinationViewController;
         goodCourseViewCon.courses = courses;
     }
     

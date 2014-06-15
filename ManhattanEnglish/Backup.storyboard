@@ -291,10 +291,10 @@
             </objects>
             <point key="canvasLocation" x="1716" y="-353"/>
         </scene>
-        <!--Good Course Table View Controller - 精品课程-->
+        <!--Course Table View Controller - 精品课程-->
         <scene sceneID="w1n-Iu-Jp9">
             <objects>
-                <tableViewController id="BcQ-6h-MEV" customClass="GoodCourseTableViewController" sceneMemberID="viewController">
+                <tableViewController id="BcQ-6h-MEV" customClass="CourseTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="AeO-af-iQM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

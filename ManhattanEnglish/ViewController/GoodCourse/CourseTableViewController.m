@@ -6,16 +6,16 @@
 //  Copyright (c) 2014年 8hinfo. All rights reserved.
 //
 
-#import "GoodCourseTableViewController.h"
+#import "CourseTableViewController.h"
 #import "CourseTableViewCell.h"
 #import "Course.h"
 #import <TbcLibUI/UIImageView+WebCache.h>
 
-@interface GoodCourseTableViewController ()
+@interface CourseTableViewController ()
 
 @end
 
-@implementation GoodCourseTableViewController
+@implementation CourseTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

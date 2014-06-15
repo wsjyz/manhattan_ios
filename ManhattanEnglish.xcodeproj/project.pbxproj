@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F2024CD192A734500272AAB /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2024CC192A734500272AAB /* NewsTableViewController.m */; };
-		2F2024D0192A736400272AAB /* GoodCourseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2024CF192A736400272AAB /* GoodCourseTableViewController.m */; };
+		2F2024D0192A736400272AAB /* CourseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2024CF192A736400272AAB /* CourseTableViewController.m */; };
 		2F2024D5192A778D00272AAB /* good_course_bh.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F2024D2192A778D00272AAB /* good_course_bh.png */; };
 		2F2024D6192A778D00272AAB /* good_course_fy.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F2024D3192A778D00272AAB /* good_course_fy.png */; };
 		2F2024D7192A778D00272AAB /* good_course_skdd.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F2024D4192A778D00272AAB /* good_course_skdd.png */; };
@@ -253,8 +253,8 @@
 /* Begin PBXFileReference section */
 		2F2024CB192A734500272AAB /* NewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewController.h; sourceTree = "<group>"; };
 		2F2024CC192A734500272AAB /* NewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewController.m; sourceTree = "<group>"; };
-		2F2024CE192A736400272AAB /* GoodCourseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodCourseTableViewController.h; sourceTree = "<group>"; };
-		2F2024CF192A736400272AAB /* GoodCourseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodCourseTableViewController.m; sourceTree = "<group>"; };
+		2F2024CE192A736400272AAB /* CourseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseTableViewController.h; sourceTree = "<group>"; };
+		2F2024CF192A736400272AAB /* CourseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseTableViewController.m; sourceTree = "<group>"; };
 		2F2024D2192A778D00272AAB /* good_course_bh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = good_course_bh.png; sourceTree = "<group>"; };
 		2F2024D3192A778D00272AAB /* good_course_fy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = good_course_fy.png; sourceTree = "<group>"; };
 		2F2024D4192A778D00272AAB /* good_course_skdd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = good_course_skdd.png; sourceTree = "<group>"; };
@@ -590,8 +590,8 @@
 		2F2024C8192A71D600272AAB /* GoodCourse */ = {
 			isa = PBXGroup;
 			children = (
-				2F2024CE192A736400272AAB /* GoodCourseTableViewController.h */,
-				2F2024CF192A736400272AAB /* GoodCourseTableViewController.m */,
+				2F2024CE192A736400272AAB /* CourseTableViewController.h */,
+				2F2024CF192A736400272AAB /* CourseTableViewController.m */,
 				2F314895192BC5850021C40B /* CourseDetailViewController.h */,
 				2F314896192BC5850021C40B /* CourseDetailViewController.m */,
 				2F588461194DD104004ACD71 /* CourseTableViewCell.h */,
@@ -1587,7 +1587,7 @@
 				37FEB82C19332EAD00D3E047 /* KalViewController.m in Sources */,
 				37E87EFD194749020019E9AC /* QuestionService.m in Sources */,
 				37A6D6AB190FF45400B7C8B0 /* BaseViewController.m in Sources */,
-				2F2024D0192A736400272AAB /* GoodCourseTableViewController.m in Sources */,
+				2F2024D0192A736400272AAB /* CourseTableViewController.m in Sources */,
 				3721C3F4191A850700D63FBE /* TeacherChargeTableViewCell.m in Sources */,
 				2F2024CD192A734500272AAB /* NewsTableViewController.m in Sources */,
 				37A6D6B0190FF45400B7C8B0 /* RegisterViewController.m in Sources */,

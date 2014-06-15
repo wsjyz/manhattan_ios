@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BaseTableViewController.h"
 
-@interface GoodCourseTableViewController : BaseTableViewController
+@interface CourseTableViewController : BaseTableViewController
 
 @property (strong, nonatomic) NSArray *courses;
 

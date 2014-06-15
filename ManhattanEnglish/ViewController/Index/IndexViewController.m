@@ -13,7 +13,7 @@
 #import "NSDate+Convenience.h"
 #import "CourseService.h"
 #import "NewsService.h"
-#import "GoodCourseTableViewController.h"
+#import "CourseTableViewController.h"
 #import "NewsTableViewController.h"
 
 #define MANUAL_SEGUE_LOGIN                  @"login"
@@ -126,7 +126,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:MANUAL_SEGUE_GOOD_COURSE]) {
-        GoodCourseTableViewController *goodCourseViewCon = segue.destinationViewController;
+        CourseTableViewController *goodCourseViewCon = segue.destinationViewController;
         goodCourseViewCon.courses = [self.courseService listAllGoodCourses];
     }else if ([segue.identifier isEqualToString:MANUAL_SEGUE_NEWS]){
         NewsTableViewController *newsTableViewCon = segue.destinationViewController;
