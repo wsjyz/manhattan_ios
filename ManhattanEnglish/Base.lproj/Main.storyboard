@@ -1431,6 +1431,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="searchBtnClick:" destination="PfS-2f-tUA" eventType="touchUpInside" id="z5W-0h-K96"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -1446,6 +1449,7 @@
                     <navigationItem key="navigationItem" title="我要预约" id="a9c-su-UDL"/>
                     <connections>
                         <outlet property="containerView" destination="ksS-h9-QSm" id="j97-Rp-MJy"/>
+                        <segue destination="1dz-DF-jQk" kind="push" identifier="goodCourse" id="b29-ic-cPn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Po-Vh-y4t" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1461,7 +1465,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="1Cu-12-b2j">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="1Cu-12-b2j" customClass="CourseTableViewCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Cu-12-b2j" id="EFn-CO-KyT">
@@ -1528,6 +1532,12 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="courseImageView" destination="h8g-3G-rbT" id="2Yu-IV-3kD"/>
+                                    <outlet property="coursePlaceLabel" destination="FHI-9E-tdp" id="PZX-Y1-lbt"/>
+                                    <outlet property="coursePriceLabel" destination="xBH-Wq-rQW" id="Egt-VN-g1d"/>
+                                    <outlet property="courseTitleLabel" destination="AKZ-4N-SGD" id="ZgG-Jw-vEu"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1874,7 +1884,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fUR-oj-90f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2599" y="-198"/>
+            <point key="canvasLocation" x="2639" y="-166"/>
         </scene>
         <!--Navigation Controller - 首页-->
         <scene sceneID="WRe-i9-yeu">
@@ -1998,6 +2008,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="b29-ic-cPn"/>
         <segue reference="YVr-p5-r2R"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -8,8 +8,14 @@
 
 #import "BaseViewController.h"
 
+@class AppointSearchCondition;
+
 @interface NewAppointViewController : BaseViewController
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
+
+@property (strong, nonatomic) AppointSearchCondition *condition;
+
+- (IBAction)searchBtnClick:(id)sender;
 
 @end

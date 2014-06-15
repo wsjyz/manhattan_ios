@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseTableViewController.h"
 
-@interface GoodCourseTableViewController : UITableViewController
+@interface GoodCourseTableViewController : BaseTableViewController
+
+@property (strong, nonatomic) NSArray *courses;
 
 @end

@@ -25,8 +25,16 @@
 		2F53C22C19324A4B0099FCD7 /* tab_home_p.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F53C22A19324A4B0099FCD7 /* tab_home_p.png */; };
 		2F53C272193269420099FCD7 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F53C271193269420099FCD7 /* CoreText.framework */; };
 		2F53C29819326C6D0099FCD7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F53C29719326C6D0099FCD7 /* Localizable.strings */; };
+		2F588459194D8923004ACD71 /* AppointSearchCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F588458194D8923004ACD71 /* AppointSearchCondition.m */; };
+		2F58845C194D8CB1004ACD71 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58845B194D8CB1004ACD71 /* Course.m */; };
+		2F588460194DD09F004ACD71 /* good_course_cover_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F58845F194DD09F004ACD71 /* good_course_cover_bg.png */; };
+		2F588463194DD104004ACD71 /* CourseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F588462194DD104004ACD71 /* CourseTableViewCell.m */; };
 		2F58AD561928E3D200A03F88 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58AD551928E3D200A03F88 /* PageViewController.m */; };
 		2F58AD5C192929D300A03F88 /* AppointConditionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58AD5B192929D300A03F88 /* AppointConditionTableViewCell.m */; };
+		2F600688194B718F0059487A /* SelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F600686194B718F0059487A /* SelectionViewController.m */; };
+		2F600689194B718F0059487A /* SelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F600687194B718F0059487A /* SelectionViewController.xib */; };
+		2F600690194B7A8B0059487A /* SelectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F60068F194B7A8B0059487A /* SelectionTableViewCell.m */; };
+		2F600692194B7AA60059487A /* SelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F600691194B7AA60059487A /* SelectionTableViewCell.xib */; };
 		2F6D6A951913F8EC0097617E /* index_dtzx.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6D6A8D1913F8EC0097617E /* index_dtzx.png */; };
 		2F6D6A961913F8EC0097617E /* index_fbkc.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6D6A8E1913F8EC0097617E /* index_fbkc.png */; };
 		2F6D6A971913F8EC0097617E /* index_jpkc.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6D6A8F1913F8EC0097617E /* index_jpkc.png */; };
@@ -74,6 +82,7 @@
 		2FDD4E9E193645FF0044671A /* tab_favor_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDD4E99193645FF0044671A /* tab_favor_n.png */; };
 		2FDD4E9F193645FF0044671A /* tab_more_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDD4E9A193645FF0044671A /* tab_more_n.png */; };
 		2FDD4EA0193645FF0044671A /* tab_student_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDD4E9B193645FF0044671A /* tab_student_n.png */; };
+		2FF5A14C194D1B9E00BE819E /* AppointService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5A14B194D1B9E00BE819E /* AppointService.m */; };
 		370C49401910971200C63063 /* IdentifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370C49361910971200C63063 /* IdentifyViewController.m */; };
 		370C49411910971200C63063 /* InfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 370C49381910971200C63063 /* InfoTableViewCell.m */; };
 		370C49421910971200C63063 /* InfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370C49391910971200C63063 /* InfoTableViewCell.xib */; };
@@ -265,10 +274,23 @@
 		2F53C24A19325EE00099FCD7 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		2F53C271193269420099FCD7 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		2F53C29719326C6D0099FCD7 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		2F588457194D8923004ACD71 /* AppointSearchCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointSearchCondition.h; sourceTree = "<group>"; };
+		2F588458194D8923004ACD71 /* AppointSearchCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointSearchCondition.m; sourceTree = "<group>"; };
+		2F58845A194D8CB1004ACD71 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
+		2F58845B194D8CB1004ACD71 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
+		2F58845F194DD09F004ACD71 /* good_course_cover_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = good_course_cover_bg.png; sourceTree = "<group>"; };
+		2F588461194DD104004ACD71 /* CourseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseTableViewCell.h; sourceTree = "<group>"; };
+		2F588462194DD104004ACD71 /* CourseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseTableViewCell.m; sourceTree = "<group>"; };
 		2F58AD541928E3D200A03F88 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		2F58AD551928E3D200A03F88 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 		2F58AD5A192929D300A03F88 /* AppointConditionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointConditionTableViewCell.h; sourceTree = "<group>"; };
 		2F58AD5B192929D300A03F88 /* AppointConditionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointConditionTableViewCell.m; sourceTree = "<group>"; };
+		2F600685194B718F0059487A /* SelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionViewController.h; sourceTree = "<group>"; };
+		2F600686194B718F0059487A /* SelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionViewController.m; sourceTree = "<group>"; };
+		2F600687194B718F0059487A /* SelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectionViewController.xib; sourceTree = "<group>"; };
+		2F60068E194B7A8B0059487A /* SelectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionTableViewCell.h; sourceTree = "<group>"; };
+		2F60068F194B7A8B0059487A /* SelectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionTableViewCell.m; sourceTree = "<group>"; };
+		2F600691194B7AA60059487A /* SelectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectionTableViewCell.xib; sourceTree = "<group>"; };
 		2F6D6A8D1913F8EC0097617E /* index_dtzx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = index_dtzx.png; sourceTree = "<group>"; };
 		2F6D6A8E1913F8EC0097617E /* index_fbkc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = index_fbkc.png; sourceTree = "<group>"; };
 		2F6D6A8F1913F8EC0097617E /* index_jpkc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = index_jpkc.png; sourceTree = "<group>"; };
@@ -323,6 +345,8 @@
 		2FDD4E99193645FF0044671A /* tab_favor_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_favor_n.png; sourceTree = "<group>"; };
 		2FDD4E9A193645FF0044671A /* tab_more_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_more_n.png; sourceTree = "<group>"; };
 		2FDD4E9B193645FF0044671A /* tab_student_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_student_n.png; sourceTree = "<group>"; };
+		2FF5A14A194D1B9E00BE819E /* AppointService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointService.h; sourceTree = "<group>"; };
+		2FF5A14B194D1B9E00BE819E /* AppointService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointService.m; sourceTree = "<group>"; };
 		370C49351910971200C63063 /* IdentifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdentifyViewController.h; sourceTree = "<group>"; };
 		370C49361910971200C63063 /* IdentifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdentifyViewController.m; sourceTree = "<group>"; };
 		370C49371910971200C63063 /* InfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTableViewCell.h; sourceTree = "<group>"; };
@@ -561,6 +585,8 @@
 				2F2024CF192A736400272AAB /* GoodCourseTableViewController.m */,
 				2F314895192BC5850021C40B /* CourseDetailViewController.h */,
 				2F314896192BC5850021C40B /* CourseDetailViewController.m */,
+				2F588461194DD104004ACD71 /* CourseTableViewCell.h */,
+				2F588462194DD104004ACD71 /* CourseTableViewCell.m */,
 			);
 			path = GoodCourse;
 			sourceTree = "<group>";
@@ -588,6 +614,7 @@
 		2F2024D1192A778D00272AAB /* GoodCourse */ = {
 			isa = PBXGroup;
 			children = (
+				2F58845F194DD09F004ACD71 /* good_course_cover_bg.png */,
 				2F31488F192BC38C0021C40B /* good_course_st_btn_n.png */,
 				2F314890192BC38C0021C40B /* good_course_wave_line.png */,
 				2F314891192BC38C0021C40B /* good_course_yy_btn_n.png */,
@@ -610,6 +637,31 @@
 				2F53C22A19324A4B0099FCD7 /* tab_home_p.png */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		2F58826F194D887B004ACD71 /* Appoint */ = {
+			isa = PBXGroup;
+			children = (
+				2F588457194D8923004ACD71 /* AppointSearchCondition.h */,
+				2F588458194D8923004ACD71 /* AppointSearchCondition.m */,
+			);
+			path = Appoint;
+			sourceTree = "<group>";
+		};
+		2F588270194D887B004ACD71 /* GoodCourse */ = {
+			isa = PBXGroup;
+			children = (
+				2F58845A194D8CB1004ACD71 /* Course.h */,
+				2F58845B194D8CB1004ACD71 /* Course.m */,
+			);
+			path = GoodCourse;
+			sourceTree = "<group>";
+		};
+		2F588454194D887C004ACD71 /* News */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 		2F6D6A8C1913F8EC0097617E /* Index */ = {
@@ -758,6 +810,12 @@
 				2FD87201194A0B7300B52781 /* TimespanPickerViewController.h */,
 				2FD87202194A0B7300B52781 /* TimespanPickerViewController.m */,
 				2FD87203194A0B7300B52781 /* TimespanPickerViewController.xib */,
+				2F600685194B718F0059487A /* SelectionViewController.h */,
+				2F600686194B718F0059487A /* SelectionViewController.m */,
+				2F600687194B718F0059487A /* SelectionViewController.xib */,
+				2F60068E194B7A8B0059487A /* SelectionTableViewCell.h */,
+				2F60068F194B7A8B0059487A /* SelectionTableViewCell.m */,
+				2F600691194B7AA60059487A /* SelectionTableViewCell.xib */,
 			);
 			path = Appoint;
 			sourceTree = "<group>";
@@ -792,6 +850,15 @@
 				2FDD4E941936379A0044671A /* TbcLibCoreTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2FF5A145194D1B8800BE819E /* Appoint */ = {
+			isa = PBXGroup;
+			children = (
+				2FF5A14A194D1B9E00BE819E /* AppointService.h */,
+				2FF5A14B194D1B9E00BE819E /* AppointService.m */,
+			);
+			path = Appoint;
 			sourceTree = "<group>";
 		};
 		370C49341910971200C63063 /* PersonalCenter */ = {
@@ -903,6 +970,9 @@
 		37348C28190CE691007605DA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2F58826F194D887B004ACD71 /* Appoint */,
+				2F588270194D887B004ACD71 /* GoodCourse */,
+				2F588454194D887C004ACD71 /* News */,
 				37E87F021947E8920019E9AC /* Page.h */,
 				37E87F031947E8920019E9AC /* Page.m */,
 				37B40CAE19303A0700D90923 /* User.h */,
@@ -928,6 +998,7 @@
 		37348C2B190CE691007605DA /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				2FF5A145194D1B8800BE819E /* Appoint */,
 				37E87EF7194748930019E9AC /* Question */,
 				37E87EDD194700310019E9AC /* Teacher */,
 				37E87EE2194700310019E9AC /* User */,
@@ -1414,12 +1485,15 @@
 				37CC3F6E1917E29200023E76 /* ques_vip.png in Resources */,
 				3721C3F0191A84DF00D63FBE /* TeacherScheduleTableViewCell.xib in Resources */,
 				2FDD4EA0193645FF0044671A /* tab_student_n.png in Resources */,
+				2F588460194DD09F004ACD71 /* good_course_cover_bg.png in Resources */,
 				2F6D6A9B1913F8EC0097617E /* index_wytw.png in Resources */,
+				2F600689194B718F0059487A /* SelectionViewController.xib in Resources */,
 				370C49631910A41B00C63063 /* ques_arrow.png in Resources */,
 				2FDD4E9C193645FF0044671A /* tab_appointment_n.png in Resources */,
 				37CC3F6C1917E29200023E76 /* ques_btn_bg.png in Resources */,
 				3721C3E1191A847700D63FBE /* teacher_collect.png in Resources */,
 				37A6D694190FF44700B7C8B0 /* arrow.png in Resources */,
+				2F600692194B7AA60059487A /* SelectionTableViewCell.xib in Resources */,
 				2F2024D7192A778D00272AAB /* good_course_skdd.png in Resources */,
 				3721C3E2191A847700D63FBE /* teacher_comment.png in Resources */,
 				371BEE4F19167A2D000595D1 /* QuesDetailViewController.xib in Resources */,
@@ -1454,6 +1528,7 @@
 			files = (
 				37AF51E21938945E00853E10 /* CKParagraphStyle.m in Sources */,
 				37A6D6AF190FF45400B7C8B0 /* LoginViewController.m in Sources */,
+				2F588463194DD104004ACD71 /* CourseTableViewCell.m in Sources */,
 				37FEB7D719331F3500D3E047 /* Question.m in Sources */,
 				37FEB82919332EAD00D3E047 /* KalMonthView.m in Sources */,
 				2F4160781919496300156EDB /* PrepareViewController.m in Sources */,
@@ -1474,6 +1549,7 @@
 				37E87EEB194700310019E9AC /* OpenTeacherService.m in Sources */,
 				37FEB82F19332EAD00D3E047 /* UIViewAdditions.m in Sources */,
 				37B40CB019303A0700D90923 /* User.m in Sources */,
+				2FF5A14C194D1B9E00BE819E /* AppointService.m in Sources */,
 				37A6D66D190FF43400B7C8B0 /* CommonService.m in Sources */,
 				2FBC69E4191541ED00990DD1 /* NewAppointViewController.m in Sources */,
 				37FEB82C19332EAD00D3E047 /* KalViewController.m in Sources */,
@@ -1490,9 +1566,11 @@
 				2FD87204194A0B7300B52781 /* TimespanPickerViewController.m in Sources */,
 				37E87EEF194700310019E9AC /* UserService.m in Sources */,
 				2F314897192BC5850021C40B /* CourseDetailViewController.m in Sources */,
+				2F600690194B7A8B0059487A /* SelectionTableViewCell.m in Sources */,
 				37FEB82719332EAD00D3E047 /* KalGridView.m in Sources */,
 				2FA5478E1927C4B300726D3E /* PageContentViewController.m in Sources */,
 				3726A6491931E8A300E91B36 /* LoginService.m in Sources */,
+				2F588459194D8923004ACD71 /* AppointSearchCondition.m in Sources */,
 				37FEB82619332EAD00D3E047 /* KalDataSource.m in Sources */,
 				37CC3F751917E4F700023E76 /* TeacherMainCell.m in Sources */,
 				37348C36190CE79E007605DA /* ViewUtil.m in Sources */,
@@ -1525,6 +1603,8 @@
 				37AF51DA193893E900853E10 /* TableFooterView.m in Sources */,
 				2FAB68A7190A26D40081D6B6 /* main.m in Sources */,
 				3726A6351931CA9700E91B36 /* OpenLoginService.m in Sources */,
+				2F58845C194D8CB1004ACD71 /* Course.m in Sources */,
+				2F600688194B718F0059487A /* SelectionViewController.m in Sources */,
 				37FEB82B19332EAD00D3E047 /* KalView.m in Sources */,
 				370C49411910971200C63063 /* InfoTableViewCell.m in Sources */,
 				3721C3EF191A84DF00D63FBE /* TeacherScheduleTableViewCell.m in Sources */,

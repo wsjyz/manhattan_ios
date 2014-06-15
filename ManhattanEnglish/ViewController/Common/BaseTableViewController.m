@@ -89,6 +89,40 @@
     if (self.enableLoadmore) {
         [self initFootView];
     }
+    
+    [self setLeftButtonWithImageName:@"back.png" title:nil];
+}
+
+- (void)setLeftButtonWithImageName:(NSString *)imgName title:(NSString *)title
+{
+    UIButton *coustomButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 51, 48)];
+    coustomButton.backgroundColor = [UIColor clearColor];
+    [coustomButton setBackgroundImage:[UIImage imageNamed:@"button.png"] forState:UIControlStateNormal];
+    [coustomButton setBackgroundImage:[UIImage imageNamed:@"button-ok.png"] forState:UIControlStateHighlighted];
+    
+    if (imgName != nil)
+    {
+        [coustomButton setImage:[UIImage imageNamed:imgName] forState:UIControlStateNormal];
+    }
+    
+    if (title != nil)
+    {
+        coustomButton.frame = CGRectMake(0, 0, 55, 20);
+        [coustomButton setTitle:title forState:UIControlStateNormal];
+        coustomButton.titleLabel.font = [UIFont systemFontOfSize:16.0f];
+        [coustomButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [coustomButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    }
+    [coustomButton addTarget:self action:@selector(leftBtnPressed)
+            forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithCustomView:coustomButton];
+    self.navigationItem.leftBarButtonItem = leftButton;
+}
+
+- (void)leftBtnPressed
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)resetNodataViewImageName:(NSString *)imageName text:(NSString *)text
