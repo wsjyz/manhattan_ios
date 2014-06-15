@@ -32,6 +32,11 @@
 		2F588467194DD7E6004ACD71 /* CourseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F588466194DD7E6004ACD71 /* CourseService.m */; };
 		2F58846A194DDF78004ACD71 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F588469194DDF78004ACD71 /* News.m */; };
 		2F58846E194DE03B004ACD71 /* NewsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58846D194DE03B004ACD71 /* NewsService.m */; };
+		2F588472194DFE1A004ACD71 /* CourseHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F588470194DFE1A004ACD71 /* CourseHeaderView.m */; };
+		2F588473194DFE1A004ACD71 /* CourseHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F588471194DFE1A004ACD71 /* CourseHeaderView.xib */; };
+		2F588479194E0330004ACD71 /* CourseFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F588478194E0330004ACD71 /* CourseFooterView.m */; };
+		2F58847B194E033E004ACD71 /* CourseFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F58847A194E033E004ACD71 /* CourseFooterView.xib */; };
+		2F58847D194E0426004ACD71 /* good_course_section_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F58847C194E0426004ACD71 /* good_course_section_bg.png */; };
 		2F58AD561928E3D200A03F88 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58AD551928E3D200A03F88 /* PageViewController.m */; };
 		2F58AD5C192929D300A03F88 /* AppointConditionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58AD5B192929D300A03F88 /* AppointConditionTableViewCell.m */; };
 		2F600688194B718F0059487A /* SelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F600686194B718F0059487A /* SelectionViewController.m */; };
@@ -290,6 +295,13 @@
 		2F588469194DDF78004ACD71 /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
 		2F58846C194DE03B004ACD71 /* NewsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsService.h; sourceTree = "<group>"; };
 		2F58846D194DE03B004ACD71 /* NewsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsService.m; sourceTree = "<group>"; };
+		2F58846F194DFE1A004ACD71 /* CourseHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseHeaderView.h; sourceTree = "<group>"; };
+		2F588470194DFE1A004ACD71 /* CourseHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseHeaderView.m; sourceTree = "<group>"; };
+		2F588471194DFE1A004ACD71 /* CourseHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CourseHeaderView.xib; sourceTree = "<group>"; };
+		2F588477194E0330004ACD71 /* CourseFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseFooterView.h; sourceTree = "<group>"; };
+		2F588478194E0330004ACD71 /* CourseFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseFooterView.m; sourceTree = "<group>"; };
+		2F58847A194E033E004ACD71 /* CourseFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CourseFooterView.xib; sourceTree = "<group>"; };
+		2F58847C194E0426004ACD71 /* good_course_section_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = good_course_section_bg.png; sourceTree = "<group>"; };
 		2F58AD541928E3D200A03F88 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		2F58AD551928E3D200A03F88 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 		2F58AD5A192929D300A03F88 /* AppointConditionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointConditionTableViewCell.h; sourceTree = "<group>"; };
@@ -596,6 +608,12 @@
 				2F314896192BC5850021C40B /* CourseDetailViewController.m */,
 				2F588461194DD104004ACD71 /* CourseTableViewCell.h */,
 				2F588462194DD104004ACD71 /* CourseTableViewCell.m */,
+				2F58846F194DFE1A004ACD71 /* CourseHeaderView.h */,
+				2F588470194DFE1A004ACD71 /* CourseHeaderView.m */,
+				2F588471194DFE1A004ACD71 /* CourseHeaderView.xib */,
+				2F588477194E0330004ACD71 /* CourseFooterView.h */,
+				2F588478194E0330004ACD71 /* CourseFooterView.m */,
+				2F58847A194E033E004ACD71 /* CourseFooterView.xib */,
 			);
 			path = GoodCourse;
 			sourceTree = "<group>";
@@ -623,6 +641,7 @@
 		2F2024D1192A778D00272AAB /* GoodCourse */ = {
 			isa = PBXGroup;
 			children = (
+				2F58847C194E0426004ACD71 /* good_course_section_bg.png */,
 				2F58845F194DD09F004ACD71 /* good_course_cover_bg.png */,
 				2F31488F192BC38C0021C40B /* good_course_st_btn_n.png */,
 				2F314890192BC38C0021C40B /* good_course_wave_line.png */,
@@ -1473,6 +1492,7 @@
 				37A6D692190FF44700B7C8B0 /* tx.png in Resources */,
 				371BEE5119167A2D000595D1 /* QuesTableViewCell.xib in Resources */,
 				37A6D68D190FF44700B7C8B0 /* ok.png in Resources */,
+				2F58847D194E0426004ACD71 /* good_course_section_bg.png in Resources */,
 				371BEE4D19167A2D000595D1 /* QuesDetailTableViewCell.xib in Resources */,
 				2FBC69DF19153D0E00990DD1 /* appoint_jxfs.png in Resources */,
 				2F53C22C19324A4B0099FCD7 /* tab_home_p.png in Resources */,
@@ -1497,9 +1517,11 @@
 				2F6D6A9C1913F8EC0097617E /* index_wyyy.png in Resources */,
 				37A6D690190FF44700B7C8B0 /* register_btn_p.png in Resources */,
 				2F41607B19194DA800156EDB /* nav_back_btn_n.png in Resources */,
+				2F588473194DFE1A004ACD71 /* CourseHeaderView.xib in Resources */,
 				37A6D693190FF44700B7C8B0 /* xz.png in Resources */,
 				2F2024D5192A778D00272AAB /* good_course_bh.png in Resources */,
 				2FBC69DE19153D0E00990DD1 /* appoint_jxdd.png in Resources */,
+				2F58847B194E033E004ACD71 /* CourseFooterView.xib in Resources */,
 				3721C3E6191A847700D63FBE /* tearcher_btn_bg.png in Resources */,
 				2FBC69DD19153D0E00990DD1 /* appoint_jsxb.png in Resources */,
 				37A6D68E190FF44700B7C8B0 /* Push-button.png in Resources */,
@@ -1571,6 +1593,7 @@
 				37A6D6AC190FF45400B7C8B0 /* FindPWViewController.m in Sources */,
 				37E87EEE194700310019E9AC /* OpenWalletService.m in Sources */,
 				2F588467194DD7E6004ACD71 /* CourseService.m in Sources */,
+				2F588472194DFE1A004ACD71 /* CourseHeaderView.m in Sources */,
 				37E87EED194700310019E9AC /* OpenUserService.m in Sources */,
 				37E87F071947EC650019E9AC /* TeacherListTableViewController.m in Sources */,
 				37E87EEC194700310019E9AC /* TeacherService.m in Sources */,
@@ -1608,6 +1631,7 @@
 				37348C36190CE79E007605DA /* ViewUtil.m in Sources */,
 				2F58AD5C192929D300A03F88 /* AppointConditionTableViewCell.m in Sources */,
 				2F58846A194DDF78004ACD71 /* News.m in Sources */,
+				2F588479194E0330004ACD71 /* CourseFooterView.m in Sources */,
 				37A6D6B1190FF45400B7C8B0 /* AboutViewController.m in Sources */,
 				37FEB82D19332EAD00D3E047 /* NSDate+Convenience.m in Sources */,
 				371BEE4E19167A2D000595D1 /* QuesDetailViewController.m in Sources */,

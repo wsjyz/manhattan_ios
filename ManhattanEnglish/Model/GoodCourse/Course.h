@@ -29,4 +29,6 @@
 @property (strong, nonatomic) NSString *videoUrl;
 @property (strong, nonatomic) NSString *teachingTime;
 
+@property (strong, nonatomic) NSArray *teacherList;
+
 @end

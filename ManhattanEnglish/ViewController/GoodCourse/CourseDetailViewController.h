@@ -8,6 +8,10 @@
 
 #import "BaseViewController.h"
 
+@class Course;
+
 @interface CourseDetailViewController : BaseViewController
+
+@property (strong, nonatomic) Course *course;
 
 @end

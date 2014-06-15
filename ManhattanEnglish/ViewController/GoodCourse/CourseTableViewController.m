@@ -10,6 +10,7 @@
 #import "CourseTableViewCell.h"
 #import "Course.h"
 #import <TbcLibUI/UIImageView+WebCache.h>
+#import "CourseDetailViewController.h"
 
 @interface CourseTableViewController ()
 
@@ -114,15 +115,18 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    Course *course = self.courses[path.row];
+    
+    CourseDetailViewController *detailViewCon = [segue destinationViewController];
+    detailViewCon.course = course;
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
 
 @end
