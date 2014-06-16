@@ -105,7 +105,7 @@
                            destructiveButtonTitle:nil
                            otherButtonTitles:@"相册",
                            @"拍照", nil];
-    [menu showInView:self.view];
+    [menu showInView:[UIApplication sharedApplication].keyWindow];
 
 }
 
@@ -159,9 +159,6 @@
     }else if(buttonIndex==1)
     {
         [self photocamera];//拍照
-    }else if(buttonIndex==2)
-    {
-        
     }
 }
 //从相册获取
