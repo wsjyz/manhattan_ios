@@ -224,6 +224,11 @@ NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotific
     [self reloadData];
 }
 
+- (BOOL)hidesBottomBar
+{
+    return YES;
+}
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];

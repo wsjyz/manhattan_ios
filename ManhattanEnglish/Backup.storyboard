@@ -211,14 +211,7 @@
                             <constraint firstItem="Joa-pg-atg" firstAttribute="top" secondItem="Hz5-3y-iMq" secondAttribute="top" id="rHG-Yp-iTu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="曼哈顿英语" id="yPs-ks-6MY">
-                        <barButtonItem key="leftBarButtonItem" title="日程" id="qJm-Ng-F3C">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="calendarBtnClick:" destination="tJD-qv-uwd" id="4nX-B3-xia"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="曼哈顿英语" id="yPs-ks-6MY"/>
                     <connections>
                         <outlet property="appoinBtn" destination="9AG-AB-jcq" id="sCh-1b-rgv"/>
                         <outlet property="mainScrollView" destination="Joa-pg-atg" id="hOp-p6-V5X"/>

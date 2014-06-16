@@ -18,6 +18,7 @@
 		2F314893192BC38C0021C40B /* good_course_wave_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F314890192BC38C0021C40B /* good_course_wave_line.png */; };
 		2F314894192BC38C0021C40B /* good_course_yy_btn_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F314891192BC38C0021C40B /* good_course_yy_btn_n.png */; };
 		2F314897192BC5850021C40B /* CourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F314896192BC5850021C40B /* CourseDetailViewController.m */; };
+		2F369032194F40FA00A7B676 /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F369031194F40FA00A7B676 /* KxMenu.m */; };
 		2F4160781919496300156EDB /* PrepareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4160771919496300156EDB /* PrepareViewController.m */; };
 		2F41607B19194DA800156EDB /* nav_back_btn_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F41607919194DA800156EDB /* nav_back_btn_n.png */; };
 		2F41607C19194DA800156EDB /* nav_back_btn_p.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F41607A19194DA800156EDB /* nav_back_btn_p.png */; };
@@ -278,6 +279,8 @@
 		2F314891192BC38C0021C40B /* good_course_yy_btn_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = good_course_yy_btn_n.png; sourceTree = "<group>"; };
 		2F314895192BC5850021C40B /* CourseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseDetailViewController.h; sourceTree = "<group>"; };
 		2F314896192BC5850021C40B /* CourseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseDetailViewController.m; sourceTree = "<group>"; };
+		2F369030194F40FA00A7B676 /* KxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMenu.h; sourceTree = "<group>"; };
+		2F369031194F40FA00A7B676 /* KxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMenu.m; sourceTree = "<group>"; };
 		2F4160761919496300156EDB /* PrepareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrepareViewController.h; sourceTree = "<group>"; };
 		2F4160771919496300156EDB /* PrepareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrepareViewController.m; sourceTree = "<group>"; };
 		2F41607919194DA800156EDB /* nav_back_btn_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_back_btn_n.png; sourceTree = "<group>"; };
@@ -663,6 +666,15 @@
 				2F2024D4192A778D00272AAB /* good_course_skdd.png */,
 			);
 			path = GoodCourse;
+			sourceTree = "<group>";
+		};
+		2F36902F194F40FA00A7B676 /* KxMenu */ = {
+			isa = PBXGroup;
+			children = (
+				2F369030194F40FA00A7B676 /* KxMenu.h */,
+				2F369031194F40FA00A7B676 /* KxMenu.m */,
+			);
+			path = KxMenu;
 			sourceTree = "<group>";
 		};
 		2F53C22819324A4B0099FCD7 /* TabBar */ = {
@@ -1260,6 +1272,7 @@
 		37B40CC81931B8B200D90923 /* OtherSource */ = {
 			isa = PBXGroup;
 			children = (
+				2F36902F194F40FA00A7B676 /* KxMenu */,
 				37AF51DB1938945E00853E10 /* CKRefreshControl */,
 				37FEB80D19332EAD00D3E047 /* Kal */,
 				37B40CC91931B8B200D90923 /* iVersion */,
@@ -1678,6 +1691,7 @@
 				37CC3F711917E4B300023E76 /* TeacherListViewController.m in Sources */,
 				2F31488E192BBEAF0021C40B /* NewsDetailViewController.m in Sources */,
 				37A6D6B3190FF45400B7C8B0 /* ContactUsViewController.m in Sources */,
+				2F369032194F40FA00A7B676 /* KxMenu.m in Sources */,
 				37FEB82E19332EAD00D3E047 /* NSDateAdditions.m in Sources */,
 				37A6D6AD190FF45400B7C8B0 /* HelpViewController.m in Sources */,
 				37E87EFA194748CB0019E9AC /* OpenQuestionService.m in Sources */,

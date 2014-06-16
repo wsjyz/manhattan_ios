@@ -15,6 +15,8 @@
 #import "NewsService.h"
 #import "CourseTableViewController.h"
 #import "NewsTableViewController.h"
+#import "KxMenu.h"
+#import "User.h"
 
 #define MANUAL_SEGUE_LOGIN                  @"login"
 #define MANUAL_SEGUE_GOOD_COURSE            @"goodCourse"
@@ -89,6 +91,112 @@
     self.newsService = [[NewsService alloc] init];
 }
 
+- (void)showItemCalendar
+{
+    if (self.kalController == nil) {
+        [self initKalController];
+    }
+    
+    [self.navigationController pushViewController:self.kalController animated:YES];
+}
+
+- (void)showItemPersonDetail
+{
+    
+}
+
+- (void)showItemMyWallet
+{
+    
+}
+
+- (void)showItemMyQues
+{
+    
+}
+
+- (void)showItemLogout
+{
+    
+}
+
+- (void)showQuickMenu
+{
+    User *loginUser = [self.commonService currentLoginUser];
+    loginUser.userName = @"Lisa";
+    
+    NSArray *menuItems =
+    @[
+      [KxMenuItem menuItem:loginUser.userName
+                     image:nil
+                    target:nil
+                    action:NULL],
+      
+      [KxMenuItem menuItem:@"个人资料"
+                     image:nil
+                    target:self
+                    action:@selector(showItemPersonDetail)],
+      
+      [KxMenuItem menuItem:@"钱包"
+                     image:nil
+                    target:self
+                    action:@selector(showItemMyWallet)],
+      
+      [KxMenuItem menuItem:@"日程表"
+                     image:nil
+                    target:self
+                    action:@selector(showItemCalendar)],
+      
+      [KxMenuItem menuItem:@"我的问题"
+                     image:nil
+                    target:self
+                    action:@selector(showItemMyQues)],
+      
+      [KxMenuItem menuItem:@"注销"
+                     image:nil
+                    target:self
+                    action:@selector(showItemLogout)],
+      ];
+    
+    [KxMenu setTintColor:[UIColor whiteColor]];
+    [KxMenu showMenuInView:self.view
+                  fromRect:CGRectMake(self.naviRightBtn.x, self.naviRightBtn.y - 44.0, self.naviRightBtn.width, self.naviRightBtn.height)
+                 menuItems:menuItems];
+    
+}
+
+- (void) pushMenuItem:(id)sender
+{
+    NSLog(@"%@", sender);
+}
+
+- (void)goToLogin
+{
+    [self performSegueWithIdentifier:MANUAL_SEGUE_LOGIN sender:self];
+}
+
+- (void)initNaviBtnsLayout:(BOOL)hasLogin
+{
+    // set image
+    NSString *imageName = hasLogin ? @"nav_bar_person_btn_n.png" : nil;
+    NSString *bgImageName = hasLogin ? nil : @"nav_bar_red_btn_n.png";
+    
+    [self.naviRightBtn setImage:[UIImage imageNamed:imageName] forState:
+     UIControlStateNormal];
+    [self.naviRightBtn setBackgroundImage:[UIImage imageNamed:bgImageName] forState:
+     UIControlStateNormal];
+    
+    // set selector
+    SEL clickSel = hasLogin ? @selector(showQuickMenu) : @selector(goToLogin);
+    [self.naviRightBtn addTarget:self action:clickSel forControlEvents:UIControlEventTouchUpInside];
+    
+    // set title
+    NSString *title = hasLogin ? @"" : @"登录";
+    [self.naviRightBtn setTitle:title forState:UIControlStateNormal];
+    
+    self.navigationItem.leftBarButtonItem = nil;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -102,11 +210,8 @@
     
     self.commonService = [[CommonService alloc] init];
     User *loginUser = [self.commonService currentLoginUser];
-    
-    if (loginUser != nil) {
-        self.navigationItem.rightBarButtonItem = nil;
-        return;
-    }
+    BOOL hasLogin = loginUser != nil;
+    [self initNaviBtnsLayout:hasLogin];
     
     if ([self.commonService getLoginCheckBox] && [self.commonService getLastLoginMobile] != nil) {
         [self performSegueWithIdentifier:MANUAL_SEGUE_LOGIN sender:self];
@@ -209,14 +314,7 @@
             break;
     }
     
-    [self performSegueWithIdentifier:performSegueId sender:self];}
-
-- (void)calendarBtnClick:(id)sender
-{
-    if (self.kalController == nil) {
-        [self initKalController];
-    }
-    
-    [self.navigationController pushViewController:self.kalController animated:YES];
+    [self performSegueWithIdentifier:performSegueId sender:self];
 }
+
 @end

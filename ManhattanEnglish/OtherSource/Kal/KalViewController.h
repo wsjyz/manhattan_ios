@@ -6,6 +6,7 @@
 #import <UIKit/UIKit.h>
 #import "KalView.h"       // for the KalViewDelegate protocol
 #import "KalDataSource.h" // for the KalDataSourceCallbacks protocol
+#import "BaseViewController.h"
 
 @class KalLogic;
 
@@ -20,7 +21,7 @@
  *  date is selected (just like in Apple's calendar app).
  *
  */
-@interface KalViewController : UIViewController <KalViewDelegate, KalDataSourceCallbacks>
+@interface KalViewController : BaseViewController <KalViewDelegate, KalDataSourceCallbacks>
 {
   KalLogic *logic;
   UITableView *tableView;
