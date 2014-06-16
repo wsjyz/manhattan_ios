@@ -360,7 +360,7 @@
                         <viewControllerLayoutGuide type="bottom" id="1rW-UD-8YX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Rej-NM-IKR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" fixedFrame="YES" placeholder="输入名师姓名" translatesAutoresizingMaskIntoConstraints="NO" id="TSn-5K-Edu">
@@ -372,7 +372,7 @@
                                 </connections>
                             </searchBar>
                             <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YdJ-0b-BaU">
-                                <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
@@ -393,7 +393,7 @@
             <objects>
                 <tableViewController id="gTl-EA-7c8" customClass="TeacherListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="uMx-cc-Ywr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
@@ -1393,6 +1393,7 @@
                         <segue destination="UqQ-4f-8su" kind="push" identifier="askQuestion" id="fJd-sJ-CWN"/>
                         <segue destination="dMy-O9-4sf" kind="push" identifier="answerQuestion" id="tWJ-eE-1dl"/>
                         <segue destination="6ek-oq-1Gg" kind="push" identifier="login" id="IXb-7a-60o"/>
+                        <segue destination="6PD-Qm-rll" kind="push" identifier="goodTeacher" id="ew5-og-MDo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmH-ng-aeE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1931,7 +1932,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="YVr-p5-r2R"/>
         <segue reference="1G1-Ch-Dgc"/>
+        <segue reference="ew5-og-MDo"/>
+        <segue reference="YVr-p5-r2R"/>
     </inferredMetricsTieBreakers>
 </document>
