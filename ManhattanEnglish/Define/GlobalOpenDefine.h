@@ -36,20 +36,4 @@
 #define OpenQuestionService_myQuestions                 @"/question/myQuestions"
 #define OpenQuestionService_needAnswerList              @"/question/needAnswerList"
 
-#pragma mark OpenCourseService
-#define OpenCourseService_getWorthCourses               @"/course/getWorthCourses"
-#define OpenCourseService_getCourseDetail               @"/course/getCourseDetail"
-#define OpenCourseService_postCourses               @"/course/postCourses"
-#define OpenCourseService_getOrderCourses               @"/course/getOrderCourses"
-#define OpenCourseService_getSchedule               @"/course/getSchedule"
-#define OpenCourseService_getOrderCoursesByUserId               @"/course/getOrderCoursesByUserId"
-#define OpenCourseService_getListenCoursesByUserId               @"/course/getListenCoursesByUserId"
-#define OpenCourseService_getCollectCoursesByUserId               @"/course/getCollectCoursesByUserId"
-#define OpenCourseService_addAppointment               @"/course/addAppointment"
-#define OpenCourseService_addListen               @"/course/addListen"
-#define OpenCourseService_addCollect               @"/course/addCollect"
-#define OpenCourseService_getOrderCoursesByTeacher               @"/course/getOrderCoursesByTeacher"
-#define OpenCourseService_getListenCoursesByTeacher               @"/course/getListenCoursesByTeacher"
-#define OpenCourseService_getInformations               @"/course/getInformations"
-
 #endif
