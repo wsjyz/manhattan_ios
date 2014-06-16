@@ -1410,10 +1410,40 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="b1G-Jd-rXr">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="duu-n4-LZ5" kind="relationship" relationship="rootViewController" id="ZwV-YF-qpw"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zAU-v1-At1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="681" y="410"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oRn-Gm-QSe">
+            <objects>
+                <viewController id="duu-n4-LZ5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lyX-m9-JA3"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZVg-jN-GJL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3KS-BD-1nK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dY-u3-9iV">
+                                <rect key="frame" x="81" y="216" width="158" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rTc-t3-9fE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efY-Cm-l6w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1315" y="1124"/>
         </scene>
         <!--New Appoint View Controller - 我要预约-->
         <scene sceneID="raS-HU-sTX">
@@ -1867,6 +1897,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Cm-eh-cvu">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="duu-n4-LZ5" kind="relationship" relationship="rootViewController" id="ggH-ek-SbP"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPk-tr-lnH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1882,6 +1915,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rxg-Us-3wI">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="duu-n4-LZ5" kind="relationship" relationship="rootViewController" id="3Rd-E7-qaT"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pem-jI-fDO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1932,8 +1968,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="1G1-Ch-Dgc"/>
+        <segue reference="3Rd-E7-qaT"/>
         <segue reference="ew5-og-MDo"/>
         <segue reference="YVr-p5-r2R"/>
+        <segue reference="1G1-Ch-Dgc"/>
     </inferredMetricsTieBreakers>
 </document>
