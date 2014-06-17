@@ -48,7 +48,7 @@
     // Do any additional setup after loading the view.
     [self setNavgationItemTitle:@"个人资料"];
     
-    _personalID = [_commonService getCurrentPersonalID];
+    _personalID = [_commonService currentPersonalID];
     _user = [_commonService currentLoginUser];
     
     _name.text = VALUE(_user.userName);

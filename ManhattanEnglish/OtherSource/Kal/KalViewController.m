@@ -224,11 +224,6 @@ NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotific
     [self reloadData];
 }
 
-- (BOOL)hidesBottomBar
-{
-    return YES;
-}
-
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -239,16 +234,16 @@ NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotific
 {
     [super viewWillAppear:animated];
     [tableView reloadData];
-    
+
 // not changed navigation bar style
-    if ([self.navigationController.navigationBar respondsToSelector:@selector(setBarTintColor:)]) {
-        self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
-        self.navigationController.navigationBar.tintColor = [UIColor orangeColor];
-    } else {
-        self.navigationController.navigationBar.tintColor = [UIColor blackColor];
-    }
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : kLightGrayColor, NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue" size:20]};
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+//    if ([self.navigationController.navigationBar respondsToSelector:@selector(setBarTintColor:)]) {
+//        self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
+//        self.navigationController.navigationBar.tintColor = [UIColor orangeColor];
+//    } else {
+//        self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+//    }
+//    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : kLightGrayColor, NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue" size:20]};
+//    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
 }
 
 - (void)viewDidAppear:(BOOL)animated

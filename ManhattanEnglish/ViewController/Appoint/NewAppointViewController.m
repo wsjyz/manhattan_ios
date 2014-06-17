@@ -184,11 +184,6 @@
     // Pass the selected object to the new view controller.
 }
 
-- (BOOL)hidesBottomBar
-{
-    return YES;
-}
-
 - (IBAction)searchBtnClick:(id)sender {
     [self performSegueWithIdentifier:@"goodCourse" sender:self];
 }

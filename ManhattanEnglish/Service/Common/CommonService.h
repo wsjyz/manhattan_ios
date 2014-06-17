@@ -23,7 +23,7 @@
 
 - (NSString *)getCurrentUserID;
 
-- (PERSONAL_ID)getCurrentPersonalID;
+- (PERSONAL_ID)currentPersonalID;
 
 - (NSString *)getLastLoginMobile;
 

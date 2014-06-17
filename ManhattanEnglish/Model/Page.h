@@ -44,7 +44,7 @@
 /*
  * 总记录数
  */
-@property (assign, nonatomic) long long total;
+@property (assign, nonatomic) NSUInteger total;
 
 /************************* Custom Properties **************************/
 

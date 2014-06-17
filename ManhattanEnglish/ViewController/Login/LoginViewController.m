@@ -126,13 +126,11 @@
             [_commonService saveAndUpdateLastLoginMobile:mobile Password:password];
             [_commonService saveAndUpdateLastLoginCheckBox:_checked];
             [_commonService updateCurrentUser:user];
+            
+            [self.navigationController popViewControllerAnimated:YES];
         }
         [hud removeFromSuperview];
     }];
-    if (user)
-    {
-        [self.navigationController popViewControllerAnimated:YES];
-    }
 }
 
 - (IBAction)autoLoginCheckbtnPressed:(id)sender

@@ -31,10 +31,12 @@
 
 @interface IndexViewController ()
 
-@property(strong, nonatomic) CourseService *courseService;
-@property(strong, nonatomic) NewsService *newsService;
-@property(strong, nonatomic) CommonService *commonService;
-@property(strong, nonatomic) KalViewController *kalController;
+@property (strong, nonatomic) CourseService *courseService;
+@property (strong, nonatomic) NewsService *newsService;
+@property (strong, nonatomic) CommonService *commonService;
+@property (strong, nonatomic) KalViewController *kalController;
+
+@property (strong, nonatomic) User *loginUser;
 
 @end
 
@@ -71,24 +73,36 @@
     [self.kalController showAndSelectDate:[NSDate date]];
 }
 
-- (void)initViewsByCurrentPersionID
+- (void)initViewsWithCurrentPersionID:(PERSONAL_ID)personId
 {
-    PERSONAL_ID personId = [self.commonService getCurrentPersonalID];
+    // btn images
     if (personId == PERSONAL_STUDENT || personId == PERSONAL_GUEST) {
+        
         [self.appoinBtn setBackgroundImage:[UIImage imageNamed:@"index_wyyy.png"] forState:UIControlStateNormal];
         [self.qaBtn setBackgroundImage:[UIImage imageNamed:@"index_wytw.png"] forState:UIControlStateNormal];
     }else if (personId == PERSONAL_TEACHER){
+        
         [self.appoinBtn setBackgroundImage:[UIImage imageNamed:@"index_fbkc.png"] forState:UIControlStateNormal];
         [self.qaBtn setBackgroundImage:[UIImage imageNamed:@"index_wyhd.png"] forState:UIControlStateNormal];
     }else{
         
+        
     }
+    
+    // tab bar items
+    NSArray *items = self.tabBarController.tabBar.items;
+    
+    // disable function items if not login
+    [items[1] setEnabled:self.loginUser != nil];
+    [items[2] setEnabled:self.loginUser != nil];
+    [items[3] setEnabled:self.loginUser != nil];
 }
 
 - (void)initService
 {
     self.courseService = [[CourseService alloc] init];
     self.newsService = [[NewsService alloc] init];
+    self.commonService = [[CommonService alloc] init];
 }
 
 - (void)showItemCalendar
@@ -186,6 +200,9 @@
     [self.naviRightBtn setBackgroundImage:[UIImage imageNamed:bgImageName] forState:
      UIControlStateNormal];
     
+    // clear all actions
+    [self.naviRightBtn removeTarget:self action:NULL forControlEvents:UIControlEventAllEvents];
+    
     // set selector
     SEL clickSel = hasLogin ? @selector(showQuickMenu) : @selector(goToLogin);
     [self.naviRightBtn addTarget:self action:clickSel forControlEvents:UIControlEventTouchUpInside];
@@ -197,21 +214,25 @@
     self.navigationItem.leftBarButtonItem = nil;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.loginUser = [self.commonService currentLoginUser];
+    
+    PERSONAL_ID persionID = [self.commonService currentPersonalID];
+    [self initViewsWithCurrentPersionID:persionID];
+    
+    BOOL hasLogin = self.loginUser != nil;
+    [self initNaviBtnsLayout:hasLogin];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+ 
     // Do any additional setup after loading the view.
-    
     if (IPHONE5) {
         self.mainScrollView.scrollEnabled = NO;
     }
-    
-    [self initViewsByCurrentPersionID];
-    
-    self.commonService = [[CommonService alloc] init];
-    User *loginUser = [self.commonService currentLoginUser];
-    BOOL hasLogin = loginUser != nil;
-    [self initNaviBtnsLayout:hasLogin];
     
     if ([self.commonService getLoginCheckBox] && [self.commonService getLastLoginMobile] != nil) {
         [self performSegueWithIdentifier:MANUAL_SEGUE_LOGIN sender:self];
@@ -244,7 +265,7 @@
 
 - (IBAction)appointBtnClick:(id)sender {
     
-    PERSONAL_ID personId = [self.commonService getCurrentPersonalID];
+    PERSONAL_ID personId = [self.commonService currentPersonalID];
     NSString *performSegueId = nil;
     switch (personId) {
         case PERSONAL_GUEST:
@@ -279,7 +300,7 @@
 
 - (IBAction)homeworkBtnClick:(id)sender {
     
-    PERSONAL_ID personId = [self.commonService getCurrentPersonalID];
+    PERSONAL_ID personId = [self.commonService currentPersonalID];
     NSString *performSegueId = nil;
     switch (personId) {
         case PERSONAL_GUEST:
@@ -299,7 +320,7 @@
 
 - (IBAction)qaBtnClick:(id)sender {
     
-    PERSONAL_ID personId = [self.commonService getCurrentPersonalID];
+    PERSONAL_ID personId = [self.commonService currentPersonalID];
     NSString *performSegueId = nil;
     switch (personId) {
         case PERSONAL_GUEST:

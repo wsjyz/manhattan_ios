@@ -1207,8 +1207,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="WCb-s2-hmT" kind="relationship" relationship="viewControllers" id="E5p-jb-mNM"/>
+                        <segue destination="dst-5M-RVY" kind="relationship" relationship="viewControllers" id="GoR-Dl-xX5"/>
                         <segue destination="n8I-gh-pxS" kind="relationship" relationship="viewControllers" id="eel-j7-Hq3"/>
-                        <segue destination="n8I-gh-pxS" kind="relationship" relationship="viewControllers" id="YWY-Wl-48H"/>
+                        <segue destination="8o7-2d-oNr" kind="relationship" relationship="viewControllers" id="qkd-60-yRU"/>
                         <segue destination="DtK-eN-ZUH" kind="relationship" relationship="viewControllers" id="mzh-nY-fc8"/>
                     </connections>
                 </tabBarController>
@@ -1219,7 +1220,7 @@
         <!--Index View Controller - 曼哈顿英语-->
         <scene sceneID="0Eg-GS-PTv">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="otA-w0-NjZ" customClass="IndexViewController" sceneMemberID="viewController">
+                <viewController id="otA-w0-NjZ" customClass="IndexViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZA5-86-040"/>
                         <viewControllerLayoutGuide type="bottom" id="rOR-u2-jyU"/>
@@ -1393,7 +1394,7 @@
         <!--View Controller-->
         <scene sceneID="oRn-Gm-QSe">
             <objects>
-                <viewController id="duu-n4-LZ5" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="duu-n4-LZ5" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lyX-m9-JA3"/>
                         <viewControllerLayoutGuide type="bottom" id="ZVg-jN-GJL"/>
@@ -1402,12 +1403,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dY-u3-9iV">
-                                <rect key="frame" x="81" y="216" width="158" height="112"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIq-PM-moP">
+                                <rect key="frame" x="0.0" y="69" width="160" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="课程">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmV-0Y-qu2">
+                                <rect key="frame" x="160" y="69" width="160" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="教师">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DMf-Qh-6K2">
+                                <rect key="frame" x="0.0" y="107" width="320" height="461"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="duu-n4-LZ5" id="Dib-ox-Ge3"/>
+                                    <outlet property="delegate" destination="duu-n4-LZ5" id="BYo-QQ-8dh"/>
+                                </connections>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hbo-nA-hrL">
+                                <rect key="frame" x="0.0" y="107" width="320" height="461"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="duu-n4-LZ5" id="dlK-10-qZm"/>
+                                    <outlet property="delegate" destination="duu-n4-LZ5" id="HAM-l7-NId"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1415,7 +1442,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efY-Cm-l6w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1315" y="1124"/>
+            <point key="canvasLocation" x="1200" y="1124"/>
         </scene>
         <!--New Appoint View Controller - 我要预约-->
         <scene sceneID="raS-HU-sTX">
@@ -1859,11 +1886,11 @@
             </objects>
             <point key="canvasLocation" x="1764" y="-1362"/>
         </scene>
-        <!--Navigation Controller - 我的预约-->
+        <!--Navigation Controller - 预约-->
         <scene sceneID="271-WR-VpO">
             <objects>
                 <navigationController definesPresentationContext="YES" id="n8I-gh-pxS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的预约" image="tab_appointment_n.png" id="KI1-X4-w8z">
+                    <tabBarItem key="tabBarItem" title="预约" image="tab_appointment_n.png" id="KI1-X4-w8z">
                         <inset key="imageInsets" minX="8" minY="8" maxX="8" maxY="8"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Cm-eh-cvu">
@@ -1876,6 +1903,96 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPk-tr-lnH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="681" y="1124"/>
+        </scene>
+        <!--Navigation Controller - 收藏-->
+        <scene sceneID="UzN-Y4-RY6">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="dst-5M-RVY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="收藏" image="tab_favor_n.png" id="Owf-iu-OtI">
+                        <inset key="imageInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8KN-b4-l3O">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="C9W-te-sWd" kind="relationship" relationship="rootViewController" id="mcc-Ae-cDq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cBo-Pd-Gsf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="681" y="410"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="chb-U4-cH9">
+            <objects>
+                <viewController id="C9W-te-sWd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gQ9-cV-ZP8"/>
+                        <viewControllerLayoutGuide type="bottom" id="he9-AV-lbL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cyw-qm-NCc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oa1-So-4Mt">
+                                <rect key="frame" x="81" y="216" width="158" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OJN-jJ-pP6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Feg-fY-8hc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1200" y="410"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LHf-Hc-NAP">
+            <objects>
+                <viewController id="Pmp-xr-H3d" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RSr-Gx-TDt"/>
+                        <viewControllerLayoutGuide type="bottom" id="qYI-We-uWw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HVF-jS-yi7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rcr-rL-eHl">
+                                <rect key="frame" x="81" y="216" width="158" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hfn-Af-3ir"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qE8-oE-dQY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1200" y="1843"/>
+        </scene>
+        <!--Navigation Controller - 试听-->
+        <scene sceneID="HcF-PD-hR9">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="8o7-2d-oNr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="试听" image="tab_audition_n.png" id="4mZ-W1-9Y4">
+                        <inset key="imageInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WaI-wq-fKV">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Pmp-xr-H3d" kind="relationship" relationship="rootViewController" id="SYp-pf-ulU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZbW-kb-zHe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="681" y="1843"/>
         </scene>
     </scenes>
     <resources>
@@ -1909,6 +2026,8 @@
         <image name="register_btn_n.png" width="185" height="45"/>
         <image name="sj.png" width="50" height="50"/>
         <image name="tab_appointment_n.png" width="44" height="44"/>
+        <image name="tab_audition_n.png" width="44" height="44"/>
+        <image name="tab_favor_n.png" width="44" height="44"/>
         <image name="tab_home_p.png" width="50" height="50"/>
         <image name="tab_more_n.png" width="44" height="44"/>
         <image name="tx.png" width="194" height="194"/>
@@ -1920,8 +2039,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="eel-j7-Hq3"/>
-        <segue reference="1G1-Ch-Dgc"/>
         <segue reference="ew5-og-MDo"/>
+        <segue reference="b29-ic-cPn"/>
     </inferredMetricsTieBreakers>
 </document>
