@@ -1207,9 +1207,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="WCb-s2-hmT" kind="relationship" relationship="viewControllers" id="E5p-jb-mNM"/>
-                        <segue destination="TKC-6R-NcS" kind="relationship" relationship="viewControllers" id="qmW-qr-Pug"/>
                         <segue destination="n8I-gh-pxS" kind="relationship" relationship="viewControllers" id="eel-j7-Hq3"/>
-                        <segue destination="hE4-db-Lvf" kind="relationship" relationship="viewControllers" id="Hy4-Tw-Oi1"/>
+                        <segue destination="n8I-gh-pxS" kind="relationship" relationship="viewControllers" id="YWY-Wl-48H"/>
                         <segue destination="DtK-eN-ZUH" kind="relationship" relationship="viewControllers" id="mzh-nY-fc8"/>
                     </connections>
                 </tabBarController>
@@ -1220,7 +1219,7 @@
         <!--Index View Controller - 曼哈顿英语-->
         <scene sceneID="0Eg-GS-PTv">
             <objects>
-                <viewController id="otA-w0-NjZ" customClass="IndexViewController" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="otA-w0-NjZ" customClass="IndexViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZA5-86-040"/>
                         <viewControllerLayoutGuide type="bottom" id="rOR-u2-jyU"/>
@@ -1390,24 +1389,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmH-ng-aeE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1200" y="-330"/>
-        </scene>
-        <!--Navigation Controller - 我的收藏-->
-        <scene sceneID="pxY-bf-Cvf">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="TKC-6R-NcS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的收藏" image="tab_favor_n.png" id="aYD-ZX-hW4">
-                        <inset key="imageInsets" minX="8" minY="8" maxX="8" maxY="8"/>
-                    </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b1G-Jd-rXr">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="duu-n4-LZ5" kind="relationship" relationship="rootViewController" id="ZwV-YF-qpw"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zAU-v1-At1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="681" y="410"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="oRn-Gm-QSe">
@@ -1896,24 +1877,6 @@
             </objects>
             <point key="canvasLocation" x="681" y="1124"/>
         </scene>
-        <!--Navigation Controller - 我的试听-->
-        <scene sceneID="SUs-NR-lFS">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="hE4-db-Lvf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的试听" image="tab_audition_n.png" id="D7P-0R-OOA">
-                        <inset key="imageInsets" minX="8" minY="8" maxX="8" maxY="8"/>
-                    </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rxg-Us-3wI">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="duu-n4-LZ5" kind="relationship" relationship="rootViewController" id="3Rd-E7-qaT"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pem-jI-fDO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="673" y="1843"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Push-button.png" width="614" height="88"/>
@@ -1946,8 +1909,6 @@
         <image name="register_btn_n.png" width="185" height="45"/>
         <image name="sj.png" width="50" height="50"/>
         <image name="tab_appointment_n.png" width="44" height="44"/>
-        <image name="tab_audition_n.png" width="44" height="44"/>
-        <image name="tab_favor_n.png" width="44" height="44"/>
         <image name="tab_home_p.png" width="50" height="50"/>
         <image name="tab_more_n.png" width="44" height="44"/>
         <image name="tx.png" width="194" height="194"/>
@@ -1959,8 +1920,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="eel-j7-Hq3"/>
         <segue reference="1G1-Ch-Dgc"/>
         <segue reference="ew5-og-MDo"/>
-        <segue reference="ZwV-YF-qpw"/>
     </inferredMetricsTieBreakers>
 </document>

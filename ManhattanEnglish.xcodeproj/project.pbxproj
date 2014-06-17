@@ -81,7 +81,6 @@
 		2FBC69E019153D0E00990DD1 /* appoint_kcfl.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBC69D919153D0E00990DD1 /* appoint_kcfl.png */; };
 		2FBC69E119153D0E00990DD1 /* appoint_yyrq.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBC69DA19153D0E00990DD1 /* appoint_yyrq.png */; };
 		2FBC69E4191541ED00990DD1 /* NewAppointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBC69E3191541ED00990DD1 /* NewAppointViewController.m */; };
-		2FD871FC1949FEDC00B52781 /* Repositories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FD871FB1949FEDC00B52781 /* Repositories.storyboard */; };
 		2FD87204194A0B7300B52781 /* TimespanPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD87202194A0B7300B52781 /* TimespanPickerViewController.m */; };
 		2FD87205194A0B7300B52781 /* TimespanPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FD87203194A0B7300B52781 /* TimespanPickerViewController.xib */; };
 		2FDD4E9C193645FF0044671A /* tab_appointment_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDD4E97193645FF0044671A /* tab_appointment_n.png */; };
@@ -365,7 +364,6 @@
 		2FBC69DA19153D0E00990DD1 /* appoint_yyrq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appoint_yyrq.png; sourceTree = "<group>"; };
 		2FBC69E2191541ED00990DD1 /* NewAppointViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewAppointViewController.h; sourceTree = "<group>"; };
 		2FBC69E3191541ED00990DD1 /* NewAppointViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewAppointViewController.m; sourceTree = "<group>"; };
-		2FD871FB1949FEDC00B52781 /* Repositories.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Repositories.storyboard; sourceTree = "<group>"; };
 		2FD87201194A0B7300B52781 /* TimespanPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimespanPickerViewController.h; sourceTree = "<group>"; };
 		2FD87202194A0B7300B52781 /* TimespanPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimespanPickerViewController.m; sourceTree = "<group>"; };
 		2FD87203194A0B7300B52781 /* TimespanPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimespanPickerViewController.xib; sourceTree = "<group>"; };
@@ -827,7 +825,6 @@
 				2FAB68AA190A26D40081D6B6 /* AppDelegate.m */,
 				37348C44190CF10E007605DA /* Main.storyboard */,
 				2F739C96190FF4C000FE2608 /* Backup.storyboard */,
-				2FD871FB1949FEDC00B52781 /* Repositories.storyboard */,
 				37348C27190CE691007605DA /* Define */,
 				37348C28190CE691007605DA /* Model */,
 				37348C2B190CE691007605DA /* Service */,
@@ -1583,7 +1580,6 @@
 				2F6D6A991913F8EC0097617E /* index_wdzy.png in Resources */,
 				3721C3F5191A850700D63FBE /* TeacherChargeTableViewCell.xib in Resources */,
 				2F739CB21910045F00FE2608 /* nav_bar_bg.png in Resources */,
-				2FD871FC1949FEDC00B52781 /* Repositories.storyboard in Resources */,
 				37CC3F7B1917E74800023E76 /* teacher_arrow.png in Resources */,
 				372A796E191B850800B698CB /* teacher_schedule_select.png in Resources */,
 				37CC3F6E1917E29200023E76 /* ques_vip.png in Resources */,
