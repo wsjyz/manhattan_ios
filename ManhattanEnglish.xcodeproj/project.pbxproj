@@ -1718,6 +1718,7 @@
 				372DDB411952BF6900F3AAEE /* HomeworkSubmit.m in Sources */,
 				37B40CC31931B7C300D90923 /* InitService.m in Sources */,
 				2F4AEBC11950AF50009AD63E /* MyAppointViewController.m in Sources */,
+				370092CC19508B3E00A6EF8E /* CourseSchedule.m in Sources */,
 				371BEE5219167A2D000595D1 /* QuestionViewController.m in Sources */,
 				37AF51D7193893D200853E10 /* NodataBgView.m in Sources */,
 				37FEB82819332EAD00D3E047 /* KalLogic.m in Sources */,

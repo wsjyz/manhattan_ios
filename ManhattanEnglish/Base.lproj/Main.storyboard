@@ -1501,69 +1501,58 @@
             </objects>
             <point key="canvasLocation" x="1200" y="-330"/>
         </scene>
-        <!--My Appoint View Controller - 我的预约-->
-        <scene sceneID="gR0-yX-vA2">
+        <!--View Controller-->
+        <scene sceneID="oRn-Gm-QSe">
             <objects>
-                <viewController id="djN-G7-G77" customClass="MyAppointViewController" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="duu-n4-LZ5" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="aCm-h1-TUv"/>
-                        <viewControllerLayoutGuide type="bottom" id="pre-Vb-qcw"/>
+                        <viewControllerLayoutGuide type="top" id="lyX-m9-JA3"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZVg-jN-GJL"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="HuF-zQ-pCP">
+                    <view key="view" contentMode="scaleToFill" id="3KS-BD-1nK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PPA-Bc-Bu6">
-                                <rect key="frame" x="20" y="69" width="280" height="29"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIq-PM-moP">
+                                <rect key="frame" x="0.0" y="69" width="160" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="课程"/>
-                                    <segment title="教师"/>
-                                </segments>
-                            </segmentedControl>
-                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7w-Yn-dk3">
-                                <rect key="frame" x="0.0" y="105" width="320" height="413"/>
+                                <state key="normal" title="课程">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmV-0Y-qu2">
+                                <rect key="frame" x="160" y="69" width="160" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal" title="教师">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DMf-Qh-6K2">
+                                <rect key="frame" x="0.0" y="107" width="320" height="461"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="ofd-q5-IP1" kind="embed" id="cB3-rc-kOK"/>
+                                    <outlet property="dataSource" destination="duu-n4-LZ5" id="Dib-ox-Ge3"/>
+                                    <outlet property="delegate" destination="duu-n4-LZ5" id="BYo-QQ-8dh"/>
                                 </connections>
-                            </containerView>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hbo-nA-hrL">
+                                <rect key="frame" x="0.0" y="107" width="320" height="461"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="duu-n4-LZ5" id="dlK-10-qZm"/>
+                                    <outlet property="delegate" destination="duu-n4-LZ5" id="HAM-l7-NId"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="PPA-Bc-Bu6" firstAttribute="leading" secondItem="HuF-zQ-pCP" secondAttribute="leading" constant="20" symbolic="YES" id="2DU-Z4-dKI"/>
-                            <constraint firstItem="PPA-Bc-Bu6" firstAttribute="top" secondItem="aCm-h1-TUv" secondAttribute="bottom" constant="5" id="5Sc-2J-IAT"/>
-                            <constraint firstItem="e7w-Yn-dk3" firstAttribute="top" secondItem="PPA-Bc-Bu6" secondAttribute="bottom" constant="8" symbolic="YES" id="E1H-8k-JHV"/>
-                            <constraint firstAttribute="trailing" secondItem="PPA-Bc-Bu6" secondAttribute="trailing" constant="20" symbolic="YES" id="oIo-Y0-kYx"/>
-                            <constraint firstItem="pre-Vb-qcw" firstAttribute="top" secondItem="e7w-Yn-dk3" secondAttribute="bottom" constant="1" id="oQc-4K-tLD"/>
-                            <constraint firstItem="PPA-Bc-Bu6" firstAttribute="centerX" secondItem="e7w-Yn-dk3" secondAttribute="centerX" id="pR6-fg-xYd"/>
-                            <constraint firstItem="e7w-Yn-dk3" firstAttribute="leading" secondItem="HuF-zQ-pCP" secondAttribute="leading" id="yih-rU-nwr"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="我的预约" id="cBo-14-ihu"/>
+                    <navigationItem key="navigationItem" id="rTc-t3-9fE"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vlC-Ps-eDP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efY-Cm-l6w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1200" y="1124"/>
-        </scene>
-        <!--Course Table View Controller-->
-        <scene sceneID="RaR-CM-pTP">
-            <objects>
-                <tableViewController id="ofd-q5-IP1" customClass="CourseTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="O5H-6y-nOV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="413"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <outlet property="dataSource" destination="ofd-q5-IP1" id="wJ9-3O-bQa"/>
-                            <outlet property="delegate" destination="ofd-q5-IP1" id="XQP-Ob-IEn"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cEA-BP-PGX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1693" y="1201"/>
         </scene>
         <!--New Appoint View Controller - 我要预约-->
         <scene sceneID="raS-HU-sTX">
@@ -2018,7 +2007,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="djN-G7-G77" kind="relationship" relationship="rootViewController" id="H0B-Y8-VXs"/>
+                        <segue destination="duu-n4-LZ5" kind="relationship" relationship="rootViewController" id="ggH-ek-SbP"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPk-tr-lnH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2160,7 +2149,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="1G1-Ch-Dgc"/>
-        <segue reference="ew5-og-MDo"/>
+        <segue reference="CDS-yI-pkY"/>
+        <segue reference="b29-ic-cPn"/>
     </inferredMetricsTieBreakers>
 </document>
