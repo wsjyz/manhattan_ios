@@ -24,6 +24,7 @@
 		2F41607C19194DA800156EDB /* nav_back_btn_p.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F41607A19194DA800156EDB /* nav_back_btn_p.png */; };
 		2F4AEBBD19509594009AD63E /* libTbcLibCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F4AEBB6195094B5009AD63E /* libTbcLibCore.a */; };
 		2F4AEBBE19509594009AD63E /* libTbcLibUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F4AEBAE195094A6009AD63E /* libTbcLibUI.a */; };
+		2F4AEBC11950AF50009AD63E /* MyAppointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4AEBC01950AF50009AD63E /* MyAppointViewController.m */; };
 		2F53C22B19324A4B0099FCD7 /* tab_home_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F53C22919324A4B0099FCD7 /* tab_home_n.png */; };
 		2F53C22C19324A4B0099FCD7 /* tab_home_p.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F53C22A19324A4B0099FCD7 /* tab_home_p.png */; };
 		2F53C272193269420099FCD7 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F53C271193269420099FCD7 /* CoreText.framework */; };
@@ -284,6 +285,8 @@
 		2F4160771919496300156EDB /* PrepareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrepareViewController.m; sourceTree = "<group>"; };
 		2F41607919194DA800156EDB /* nav_back_btn_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_back_btn_n.png; sourceTree = "<group>"; };
 		2F41607A19194DA800156EDB /* nav_back_btn_p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_back_btn_p.png; sourceTree = "<group>"; };
+		2F4AEBBF1950AF50009AD63E /* MyAppointViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAppointViewController.h; sourceTree = "<group>"; };
+		2F4AEBC01950AF50009AD63E /* MyAppointViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAppointViewController.m; sourceTree = "<group>"; };
 		2F53C22919324A4B0099FCD7 /* tab_home_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_home_n.png; sourceTree = "<group>"; };
 		2F53C22A19324A4B0099FCD7 /* tab_home_p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_home_p.png; sourceTree = "<group>"; };
 		2F53C24919325EE00099FCD7 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
@@ -903,6 +906,8 @@
 				2F60068E194B7A8B0059487A /* SelectionTableViewCell.h */,
 				2F60068F194B7A8B0059487A /* SelectionTableViewCell.m */,
 				2F600691194B7AA60059487A /* SelectionTableViewCell.xib */,
+				2F4AEBBF1950AF50009AD63E /* MyAppointViewController.h */,
+				2F4AEBC01950AF50009AD63E /* MyAppointViewController.m */,
 			);
 			path = Appoint;
 			sourceTree = "<group>";
@@ -1636,6 +1641,7 @@
 				2F4160781919496300156EDB /* PrepareViewController.m in Sources */,
 				37A6D6B5190FF45400B7C8B0 /* MoreViewController.m in Sources */,
 				37B40CC31931B7C300D90923 /* InitService.m in Sources */,
+				2F4AEBC11950AF50009AD63E /* MyAppointViewController.m in Sources */,
 				371BEE5219167A2D000595D1 /* QuestionViewController.m in Sources */,
 				37AF51D7193893D200853E10 /* NodataBgView.m in Sources */,
 				37FEB82819332EAD00D3E047 /* KalLogic.m in Sources */,

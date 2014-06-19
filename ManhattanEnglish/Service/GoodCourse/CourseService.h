@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseRestService.h"
 
 @class Course;
 
-@interface CourseService : NSObject
+@interface CourseService : BaseRestService
 
 // 获取所有精品课程
 - (NSArray *)listAllGoodCourses;
