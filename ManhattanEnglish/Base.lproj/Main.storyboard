@@ -2149,13 +2149,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
-        <segue reference="ZwV-YF-qpw"/>
-        <segue reference="1G1-Ch-Dgc"/>
         <segue reference="CDS-yI-pkY"/>
-=======
-        <segue reference="ew5-og-MDo"/>
         <segue reference="b29-ic-cPn"/>
->>>>>>> FETCH_HEAD
     </inferredMetricsTieBreakers>
 </document>
