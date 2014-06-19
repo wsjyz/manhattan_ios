@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ScheduleView.h"
 
 @interface TeacherScheduleTableViewCell : UITableViewCell
+
+@property (nonatomic, strong) NSMutableArray *scheduleArr;
+@property (nonatomic, assign) BOOL enable;
 
 @end

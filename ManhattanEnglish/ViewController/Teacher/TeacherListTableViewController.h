@@ -8,9 +8,17 @@
 
 #import "BaseTableViewController.h"
 
+@protocol TeacherListTVCDelegate <NSObject>
+
+- (void)selectTeacherID:(NSString *)teacherID andTeacherName:(NSString *)name;
+
+@end
+
 @interface TeacherListTableViewController : BaseTableViewController
 
 @property (nonatomic, strong) NSMutableArray *resourceArr;
 @property (nonatomic, strong) NSString *searchKey;
+@property (nonatomic, assign) BOOL selectTeacher;
+@property (nonatomic, weak) id<TeacherListTVCDelegate> teacherDelegate;
 
 @end

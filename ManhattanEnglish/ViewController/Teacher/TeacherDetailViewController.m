@@ -12,6 +12,7 @@
 #import "TeacherScheduleTableViewCell.h"
 #import "TeacherChargeTableViewCell.h"
 #import "TeacherPersonInfoTableViewCell.h"
+#import "CourseSchedule.h"
 
 @interface TeacherDetailViewController ()<TeaCommentCellDelegate>
 
@@ -91,7 +92,17 @@
         if (cell == nil)
         {
             cell = [ViewUtil viewFromNibOfClass:[TeacherScheduleTableViewCell class] owner:self];
+            cell.enable = NO;
         }
+        //TODO:
+        NSArray *list ;
+        [list enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            CourseSchedule *schedule = obj;
+            ScheduleView *view = cell.scheduleArr[idx];
+            [view showForeBtn:schedule.forenoon];
+            [view showAfterBtn:schedule.afternoon];
+            [view showAfterSixBtn:schedule.aftersix];
+        }];
         
         return cell;
     }

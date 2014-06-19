@@ -12,6 +12,9 @@
 
 @property (nonatomic, weak) IBOutlet UITextField *quesTitle;
 @property (nonatomic, weak) IBOutlet UITextView *quesContent;
+@property (nonatomic, weak) IBOutlet UILabel *imgName;
+@property (nonatomic, weak) IBOutlet UILabel *teacherName;
+@property (nonatomic, weak) IBOutlet UIButton *selectTeacherBtn;
 
 - (IBAction)selectImg:(id)sender;
 - (IBAction)sendQuestion:(id)sender;

@@ -11,6 +11,7 @@
 #import "QuesDetailViewController.h"
 #import "QuestionService.h"
 #import "CommonService.h"
+#import "AnswerHomeWorkViewController.h"
 
 @interface QuestionViewController ()<QuesDetailDelegate>
 {
@@ -43,7 +44,23 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self setNavgationItemTitle:@"我的问题"];
+    switch (_quesType) {
+        case 0:
+        {
+            [self setNavgationItemTitle:@"我的问题"];
+            break;
+        }
+        case 1:
+        case 2:
+        {
+            [self setNavgationItemTitle:@"我的作业"];
+            break;
+        }
+            
+        default:
+            break;
+    }
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -55,7 +72,26 @@
     [self.navigationController.view addSubview:hud];
     
     [hud showAnimated:YES whileExecutingBlock:^{
-        _resourceArr = [NSMutableArray arrayWithArray:[_quesService myQuestionsWithUserId:[_commonService getCurrentUserID]]];
+        switch (_quesType) {
+            case 0:
+            {
+                _resourceArr = [NSMutableArray arrayWithArray:[_quesService myQuestionsWithUserId:[_commonService getCurrentUserID]]];
+                break;
+            }
+            case 1:
+            {
+                //TODO:
+                break;
+            }
+            case 2:
+            {
+                break;
+            }
+                
+            default:
+                break;
+        }
+        
     } completionBlock:^{
         if (_resourceArr && _resourceArr.count != 0)
         {
@@ -102,10 +138,29 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    QuesDetailViewController *quesDetailVC = [ViewUtil viewControllerFromNibOfClass:[QuesDetailViewController class]];
-    quesDetailVC.delegate = self;
-    quesDetailVC.ques = _resourceArr[indexPath.row];
-    [self.navigationController pushViewController:quesDetailVC animated:YES];
+    switch (_quesType) {
+        case 0:
+        {
+//            我的问题
+            QuesDetailViewController *quesDetailVC = [ViewUtil viewControllerFromNibOfClass:[QuesDetailViewController class]];
+            quesDetailVC.delegate = self;
+            quesDetailVC.ques = _resourceArr[indexPath.row];
+            [self.navigationController pushViewController:quesDetailVC animated:YES];
+            break;
+        }
+        case 1:
+        {
+//            我的作业
+            AnswerHomeWorkViewController *homwworkDetailVC = [ViewUtil viewControllerFromNibOfClass:[AnswerHomeWorkViewController class]];
+            //TODO:
+            [self.navigationController pushViewController:homwworkDetailVC animated:YES];
+            break;
+        }
+            
+        default:
+            break;
+    }
+    
 }
 
 #pragma mark QuesDetailDelegate
@@ -114,6 +169,7 @@
     [_resourceArr removeObject:ques];
     [_tableView reloadData];
 }
+
 
 /*
 #pragma mark - Navigation

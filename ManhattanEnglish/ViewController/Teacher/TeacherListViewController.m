@@ -9,7 +9,7 @@
 #import "TeacherListViewController.h"
 #import "TeacherListTableViewController.h"
 
-@interface TeacherListViewController ()
+@interface TeacherListViewController ()<TeacherListTVCDelegate>
 {
     TeacherListTableViewController *_listTVC;
 }
@@ -33,6 +33,7 @@
     // Do any additional setup after loading the view.
     [self setNavgationItemTitle:@"名师列表"];
     _listTVC = [self.childViewControllers objectAtIndex:0];
+    _listTVC.selectTeacher = self.selectTeacher;
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,6 +62,15 @@
 {
     _listTVC.searchKey = nil;
     [searchBar resignFirstResponder];
+}
+
+#pragma mark TeacherListTVCDelegate
+- (void)selectTeacherID:(NSString *)teacherID andTeacherName:(NSString *)name
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(selectTeacherID:andTeacherName:)])
+    {
+        [self.delegate selectTeacherWithTeacherID:teacherID andTeacherName:name];
+    }
 }
 
 /*
