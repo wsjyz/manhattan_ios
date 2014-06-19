@@ -50,8 +50,8 @@ static PERSONAL_ID currentPersonalID = PERSONAL_GUEST;
 
 - (User *)currentLoginUser
 {
-    return [[User alloc] init];
-//    return currentUser;
+//    return [[User alloc] init];
+    return currentUser;
 }
 
 - (NSString *)getCurrentUserID
@@ -79,10 +79,10 @@ static PERSONAL_ID currentPersonalID = PERSONAL_GUEST;
     }
 }
 
-- (PERSONAL_ID)getCurrentPersonalID
+- (PERSONAL_ID)currentPersonalID
 {
-    return PERSONAL_STUDENT;
-//    return currentPersonalID;
+//    return PERSONAL_STUDENT;
+    return currentPersonalID;
 }
 
 - (NSString *)getLastLoginMobile

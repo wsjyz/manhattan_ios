@@ -12,20 +12,16 @@
 
 @interface BaseViewController ()
 
-- (void)customInitLayout;
+- (void)customInit;
 
 @end
 
 @implementation BaseViewController
 
-- (void)customInitLayout
+- (void)customInit
 {
-    self.hidesBottomBarWhenPushed = [self hidesBottomBar];
-}
-
-- (BOOL)hidesBottomBar
-{
-    return DEFAULT_HIDES_BOTTOM_BAR;
+    [self initService];
+    [self initLayoutBeforeViewLoad];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -33,7 +29,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        [self customInitLayout];
+        [self customInit];
     }
     return self;
 }
@@ -43,14 +39,19 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         // Custom initialization
-        [self customInitLayout];
+        [self customInit];
     }
     return self;
 }
 
+- (void)initLayoutBeforeViewLoad
+{
+    // need to be overrided
+}
+
 - (void)initService
 {
-    
+    // need to be overrided
 }
 
 - (void)viewDidLoad
@@ -66,9 +67,6 @@
     {
         self.edgesForExtendedLayout= UIRectEdgeNone;
     }
-    
-    // init service
-    [self initService];
     
     NSString *navImg = ISiOS7? @"Navigation-Bar.png":@"Navigation-Bar_6.png";
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:navImg] forBarMetrics:UIBarMetricsDefault];

@@ -21,7 +21,7 @@
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                      mobile, @"mobile",
                                      password, @"password",nil];
-    return [RestServiceManager performRequestWithPath:OpenLoginService_login paramDic:paramDic returnType:NSStringFromClass([NSString class]) delegate:self.delegate];
+    return [RestServiceManager performRequestWithPath:OpenLoginService_login paramDic:paramDic returnType:NSStringFromClass([User class]) delegate:self.delegate];
 }
 
 /**

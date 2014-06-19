@@ -14,9 +14,9 @@
 
 - (void)initService;
 
-- (void)showErrorInfoWithMessage:(NSString *)message delegate:(id)delegate;
+- (void)initLayoutBeforeViewLoad;
 
-- (BOOL)hidesBottomBar;
+- (void)showErrorInfoWithMessage:(NSString *)message delegate:(id)delegate;
 
 - (void)setNavgationItemTitle:(NSString *)title;
 

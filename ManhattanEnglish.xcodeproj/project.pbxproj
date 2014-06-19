@@ -22,6 +22,8 @@
 		2F4160781919496300156EDB /* PrepareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4160771919496300156EDB /* PrepareViewController.m */; };
 		2F41607B19194DA800156EDB /* nav_back_btn_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F41607919194DA800156EDB /* nav_back_btn_n.png */; };
 		2F41607C19194DA800156EDB /* nav_back_btn_p.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F41607A19194DA800156EDB /* nav_back_btn_p.png */; };
+		2F4AEBBD19509594009AD63E /* libTbcLibCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F4AEBB6195094B5009AD63E /* libTbcLibCore.a */; };
+		2F4AEBBE19509594009AD63E /* libTbcLibUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F4AEBAE195094A6009AD63E /* libTbcLibUI.a */; };
 		2F53C22B19324A4B0099FCD7 /* tab_home_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F53C22919324A4B0099FCD7 /* tab_home_n.png */; };
 		2F53C22C19324A4B0099FCD7 /* tab_home_p.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F53C22A19324A4B0099FCD7 /* tab_home_p.png */; };
 		2F53C272193269420099FCD7 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F53C271193269420099FCD7 /* CoreText.framework */; };
@@ -81,7 +83,6 @@
 		2FBC69E019153D0E00990DD1 /* appoint_kcfl.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBC69D919153D0E00990DD1 /* appoint_kcfl.png */; };
 		2FBC69E119153D0E00990DD1 /* appoint_yyrq.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBC69DA19153D0E00990DD1 /* appoint_yyrq.png */; };
 		2FBC69E4191541ED00990DD1 /* NewAppointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBC69E3191541ED00990DD1 /* NewAppointViewController.m */; };
-		2FD871FC1949FEDC00B52781 /* Repositories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FD871FB1949FEDC00B52781 /* Repositories.storyboard */; };
 		2FD87204194A0B7300B52781 /* TimespanPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD87202194A0B7300B52781 /* TimespanPickerViewController.m */; };
 		2FD87205194A0B7300B52781 /* TimespanPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FD87203194A0B7300B52781 /* TimespanPickerViewController.xib */; };
 		2FDD4E9C193645FF0044671A /* tab_appointment_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDD4E97193645FF0044671A /* tab_appointment_n.png */; };
@@ -90,8 +91,6 @@
 		2FDD4E9F193645FF0044671A /* tab_more_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDD4E9A193645FF0044671A /* tab_more_n.png */; };
 		2FDD4EA0193645FF0044671A /* tab_student_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDD4E9B193645FF0044671A /* tab_student_n.png */; };
 		2FF5A14C194D1B9E00BE819E /* AppointService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5A14B194D1B9E00BE819E /* AppointService.m */; };
-		3700927F194F2DFB00A6EF8E /* libTbcLibCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37009273194F2DC900A6EF8E /* libTbcLibCore.a */; };
-		37009280194F2DFB00A6EF8E /* libTbcLibUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3700927C194F2DE300A6EF8E /* libTbcLibUI.a */; };
 		3700928B194F33BB00A6EF8E /* CmnLoadMoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37009285194F33BB00A6EF8E /* CmnLoadMoreView.xib */; };
 		3700928C194F33BB00A6EF8E /* CmnLoadMoreView_ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37009286194F33BB00A6EF8E /* CmnLoadMoreView_ipad.xib */; };
 		3700928D194F33BB00A6EF8E /* NodataBgView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37009287194F33BB00A6EF8E /* NodataBgView.xib */; };
@@ -239,40 +238,40 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2FAB68BD190A26D40081D6B6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2FAB688F190A26D40081D6B6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2FAB6896190A26D40081D6B6;
-			remoteInfo = ManhattanEnglish;
-		};
-		37009272194F2DC900A6EF8E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3700926D194F2DC800A6EF8E /* TbcLibCore.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2FEA3E6818EABC690073CA51;
-			remoteInfo = TbcLibCore;
-		};
-		37009274194F2DC900A6EF8E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3700926D194F2DC800A6EF8E /* TbcLibCore.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2FEA3E7818EABC690073CA51;
-			remoteInfo = TbcLibCoreTests;
-		};
-		3700927B194F2DE300A6EF8E /* PBXContainerItemProxy */ = {
+		2F4AEBAD195094A6009AD63E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 37009276194F2DE200A6EF8E /* TbcLibUI.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2F595516172588B8001980D3;
 			remoteInfo = TbcLibUI;
 		};
-		3700927D194F2DE300A6EF8E /* PBXContainerItemProxy */ = {
+		2F4AEBAF195094A6009AD63E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 37009276194F2DE200A6EF8E /* TbcLibUI.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2F595527172588B9001980D3;
 			remoteInfo = TbcLibUITests;
+		};
+		2F4AEBB5195094B5009AD63E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3700926D194F2DC800A6EF8E /* TbcLibCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2FEA3E6818EABC690073CA51;
+			remoteInfo = TbcLibCore;
+		};
+		2F4AEBB7195094B5009AD63E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3700926D194F2DC800A6EF8E /* TbcLibCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2FEA3E7818EABC690073CA51;
+			remoteInfo = TbcLibCoreTests;
+		};
+		2FAB68BD190A26D40081D6B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2FAB688F190A26D40081D6B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2FAB6896190A26D40081D6B6;
+			remoteInfo = ManhattanEnglish;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -379,7 +378,6 @@
 		2FBC69DA19153D0E00990DD1 /* appoint_yyrq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appoint_yyrq.png; sourceTree = "<group>"; };
 		2FBC69E2191541ED00990DD1 /* NewAppointViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewAppointViewController.h; sourceTree = "<group>"; };
 		2FBC69E3191541ED00990DD1 /* NewAppointViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewAppointViewController.m; sourceTree = "<group>"; };
-		2FD871FB1949FEDC00B52781 /* Repositories.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Repositories.storyboard; sourceTree = "<group>"; };
 		2FD87201194A0B7300B52781 /* TimespanPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimespanPickerViewController.h; sourceTree = "<group>"; };
 		2FD87202194A0B7300B52781 /* TimespanPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimespanPickerViewController.m; sourceTree = "<group>"; };
 		2FD87203194A0B7300B52781 /* TimespanPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimespanPickerViewController.xib; sourceTree = "<group>"; };
@@ -390,8 +388,8 @@
 		2FDD4E9B193645FF0044671A /* tab_student_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_student_n.png; sourceTree = "<group>"; };
 		2FF5A14A194D1B9E00BE819E /* AppointService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointService.h; sourceTree = "<group>"; };
 		2FF5A14B194D1B9E00BE819E /* AppointService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointService.m; sourceTree = "<group>"; };
-		3700926D194F2DC800A6EF8E /* TbcLibCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TbcLibCore.xcodeproj; path = ../../Apple/Project/TbcLib/TbcLibCore/TbcLibCore.xcodeproj; sourceTree = "<group>"; };
-		37009276194F2DE200A6EF8E /* TbcLibUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TbcLibUI.xcodeproj; path = ../../Apple/Project/TbcLib/TbcLibUI/TbcLibUI.xcodeproj; sourceTree = "<group>"; };
+		3700926D194F2DC800A6EF8E /* TbcLibCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TbcLibCore.xcodeproj; path = ../../../../Documents/Repositories/Apple/Project/TbcLib/TbcLibCore/TbcLibCore.xcodeproj; sourceTree = "<group>"; };
+		37009276194F2DE200A6EF8E /* TbcLibUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TbcLibUI.xcodeproj; path = ../../../../Documents/Repositories/Apple/Project/TbcLib/TbcLibUI/TbcLibUI.xcodeproj; sourceTree = "<group>"; };
 		37009285194F33BB00A6EF8E /* CmnLoadMoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CmnLoadMoreView.xib; sourceTree = "<group>"; };
 		37009286194F33BB00A6EF8E /* CmnLoadMoreView_ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CmnLoadMoreView_ipad.xib; sourceTree = "<group>"; };
 		37009287194F33BB00A6EF8E /* NodataBgView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NodataBgView.xib; sourceTree = "<group>"; };
@@ -626,8 +624,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3700927F194F2DFB00A6EF8E /* libTbcLibCore.a in Frameworks */,
-				37009280194F2DFB00A6EF8E /* libTbcLibUI.a in Frameworks */,
+				2F4AEBBD19509594009AD63E /* libTbcLibCore.a in Frameworks */,
+				2F4AEBBE19509594009AD63E /* libTbcLibUI.a in Frameworks */,
 				3726A6611931EBA800E91B36 /* MapKit.framework in Frameworks */,
 				3726A65F1931EB8D00E91B36 /* ImageIO.framework in Frameworks */,
 				3726A6461931E05F00E91B36 /* libz.dylib in Frameworks */,
@@ -714,6 +712,24 @@
 				2F369031194F40FA00A7B676 /* KxMenu.m */,
 			);
 			path = KxMenu;
+			sourceTree = "<group>";
+		};
+		2F4AEBA9195094A6009AD63E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F4AEBAE195094A6009AD63E /* libTbcLibUI.a */,
+				2F4AEBB0195094A6009AD63E /* TbcLibUITests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F4AEBB1195094B5009AD63E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F4AEBB6195094B5009AD63E /* libTbcLibCore.a */,
+				2F4AEBB8195094B5009AD63E /* TbcLibCoreTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		2F53C22819324A4B0099FCD7 /* TabBar */ = {
@@ -866,7 +882,6 @@
 				2FAB68AA190A26D40081D6B6 /* AppDelegate.m */,
 				37348C44190CF10E007605DA /* Main.storyboard */,
 				2F739C96190FF4C000FE2608 /* Backup.storyboard */,
-				2FD871FB1949FEDC00B52781 /* Repositories.storyboard */,
 				37348C27190CE691007605DA /* Define */,
 				37348C28190CE691007605DA /* Model */,
 				37348C2B190CE691007605DA /* Service */,
@@ -952,24 +967,6 @@
 				2FF5A14B194D1B9E00BE819E /* AppointService.m */,
 			);
 			path = Appoint;
-			sourceTree = "<group>";
-		};
-		3700926E194F2DC800A6EF8E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				37009273194F2DC900A6EF8E /* libTbcLibCore.a */,
-				37009275194F2DC900A6EF8E /* TbcLibCoreTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		37009277194F2DE200A6EF8E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3700927C194F2DE300A6EF8E /* libTbcLibUI.a */,
-				3700927E194F2DE300A6EF8E /* TbcLibUITests.octest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		37009283194F33BB00A6EF8E /* Xibs */ = {
@@ -1523,11 +1520,11 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 3700926E194F2DC800A6EF8E /* Products */;
+					ProductGroup = 2F4AEBB1195094B5009AD63E /* Products */;
 					ProjectRef = 3700926D194F2DC800A6EF8E /* TbcLibCore.xcodeproj */;
 				},
 				{
-					ProductGroup = 37009277194F2DE200A6EF8E /* Products */;
+					ProductGroup = 2F4AEBA9195094A6009AD63E /* Products */;
 					ProjectRef = 37009276194F2DE200A6EF8E /* TbcLibUI.xcodeproj */;
 				},
 			);
@@ -1540,32 +1537,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		37009273194F2DC900A6EF8E /* libTbcLibCore.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libTbcLibCore.a;
-			remoteRef = 37009272194F2DC900A6EF8E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		37009275194F2DC900A6EF8E /* TbcLibCoreTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = TbcLibCoreTests.xctest;
-			remoteRef = 37009274194F2DC900A6EF8E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3700927C194F2DE300A6EF8E /* libTbcLibUI.a */ = {
+		2F4AEBAE195094A6009AD63E /* libTbcLibUI.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libTbcLibUI.a;
-			remoteRef = 3700927B194F2DE300A6EF8E /* PBXContainerItemProxy */;
+			remoteRef = 2F4AEBAD195094A6009AD63E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		3700927E194F2DE300A6EF8E /* TbcLibUITests.octest */ = {
+		2F4AEBB0195094A6009AD63E /* TbcLibUITests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = TbcLibUITests.octest;
-			remoteRef = 3700927D194F2DE300A6EF8E /* PBXContainerItemProxy */;
+			remoteRef = 2F4AEBAF195094A6009AD63E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2F4AEBB6195094B5009AD63E /* libTbcLibCore.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTbcLibCore.a;
+			remoteRef = 2F4AEBB5195094B5009AD63E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2F4AEBB8195094B5009AD63E /* TbcLibCoreTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TbcLibCoreTests.xctest;
+			remoteRef = 2F4AEBB7195094B5009AD63E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1657,7 +1654,6 @@
 				2F6D6A991913F8EC0097617E /* index_wdzy.png in Resources */,
 				3721C3F5191A850700D63FBE /* TeacherChargeTableViewCell.xib in Resources */,
 				2F739CB21910045F00FE2608 /* nav_bar_bg.png in Resources */,
-				2FD871FC1949FEDC00B52781 /* Repositories.storyboard in Resources */,
 				37CC3F7B1917E74800023E76 /* teacher_arrow.png in Resources */,
 				372A796E191B850800B698CB /* teacher_schedule_select.png in Resources */,
 				37CC3F6E1917E29200023E76 /* ques_vip.png in Resources */,
