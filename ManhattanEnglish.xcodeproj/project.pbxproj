@@ -47,6 +47,9 @@
 		2F600689194B718F0059487A /* SelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F600687194B718F0059487A /* SelectionViewController.xib */; };
 		2F600690194B7A8B0059487A /* SelectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F60068F194B7A8B0059487A /* SelectionTableViewCell.m */; };
 		2F600692194B7AA60059487A /* SelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F600691194B7AA60059487A /* SelectionTableViewCell.xib */; };
+		2F68A67E19532A79006CE404 /* CourseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F68A67D19532A79006CE404 /* CourseTableViewCell.xib */; };
+		2F68A68619534853006CE404 /* AuditionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F68A68419534853006CE404 /* AuditionDetailViewController.m */; };
+		2F68A68A195349C3006CE404 /* IndexTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F68A689195349C3006CE404 /* IndexTabBarViewController.m */; };
 		2F6D6A951913F8EC0097617E /* index_dtzx.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6D6A8D1913F8EC0097617E /* index_dtzx.png */; };
 		2F6D6A961913F8EC0097617E /* index_fbkc.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6D6A8E1913F8EC0097617E /* index_fbkc.png */; };
 		2F6D6A971913F8EC0097617E /* index_jpkc.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F6D6A8F1913F8EC0097617E /* index_jpkc.png */; };
@@ -337,6 +340,11 @@
 		2F60068E194B7A8B0059487A /* SelectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionTableViewCell.h; sourceTree = "<group>"; };
 		2F60068F194B7A8B0059487A /* SelectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionTableViewCell.m; sourceTree = "<group>"; };
 		2F600691194B7AA60059487A /* SelectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectionTableViewCell.xib; sourceTree = "<group>"; };
+		2F68A67D19532A79006CE404 /* CourseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CourseTableViewCell.xib; sourceTree = "<group>"; };
+		2F68A68319534853006CE404 /* AuditionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuditionDetailViewController.h; sourceTree = "<group>"; };
+		2F68A68419534853006CE404 /* AuditionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuditionDetailViewController.m; sourceTree = "<group>"; };
+		2F68A688195349C3006CE404 /* IndexTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexTabBarViewController.h; sourceTree = "<group>"; };
+		2F68A689195349C3006CE404 /* IndexTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexTabBarViewController.m; sourceTree = "<group>"; };
 		2F6D6A8D1913F8EC0097617E /* index_dtzx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = index_dtzx.png; sourceTree = "<group>"; };
 		2F6D6A8E1913F8EC0097617E /* index_fbkc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = index_fbkc.png; sourceTree = "<group>"; };
 		2F6D6A8F1913F8EC0097617E /* index_jpkc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = index_jpkc.png; sourceTree = "<group>"; };
@@ -669,6 +677,7 @@
 				2F588477194E0330004ACD71 /* CourseFooterView.h */,
 				2F588478194E0330004ACD71 /* CourseFooterView.m */,
 				2F58847A194E033E004ACD71 /* CourseFooterView.xib */,
+				2F68A67D19532A79006CE404 /* CourseTableViewCell.xib */,
 			);
 			path = GoodCourse;
 			sourceTree = "<group>";
@@ -820,6 +829,8 @@
 				2F4160771919496300156EDB /* PrepareViewController.m */,
 				2F58AD541928E3D200A03F88 /* PageViewController.h */,
 				2F58AD551928E3D200A03F88 /* PageViewController.m */,
+				2F68A688195349C3006CE404 /* IndexTabBarViewController.h */,
+				2F68A689195349C3006CE404 /* IndexTabBarViewController.m */,
 			);
 			path = Index;
 			sourceTree = "<group>";
@@ -947,6 +958,8 @@
 				2F600691194B7AA60059487A /* SelectionTableViewCell.xib */,
 				2F4AEBBF1950AF50009AD63E /* MyAppointViewController.h */,
 				2F4AEBC01950AF50009AD63E /* MyAppointViewController.m */,
+				2F68A68319534853006CE404 /* AuditionDetailViewController.h */,
+				2F68A68419534853006CE404 /* AuditionDetailViewController.m */,
 			);
 			path = Appoint;
 			sourceTree = "<group>";
@@ -1619,6 +1632,7 @@
 				371BEE4D19167A2D000595D1 /* QuesDetailTableViewCell.xib in Resources */,
 				2FBC69DF19153D0E00990DD1 /* appoint_jxfs.png in Resources */,
 				2F53C22C19324A4B0099FCD7 /* tab_home_p.png in Resources */,
+				2F68A67E19532A79006CE404 /* CourseTableViewCell.xib in Resources */,
 				372DDB36195278C000F3AAEE /* AnswerHomeWorkViewController.xib in Resources */,
 				370C494B1910971F00C63063 /* personal_girl.png in Resources */,
 				2F6D6A951913F8EC0097617E /* index_dtzx.png in Resources */,
@@ -1771,6 +1785,7 @@
 				37FEB82D19332EAD00D3E047 /* NSDate+Convenience.m in Sources */,
 				371BEE4E19167A2D000595D1 /* QuesDetailViewController.m in Sources */,
 				37CC3F711917E4B300023E76 /* TeacherListViewController.m in Sources */,
+				2F68A68619534853006CE404 /* AuditionDetailViewController.m in Sources */,
 				2F31488E192BBEAF0021C40B /* NewsDetailViewController.m in Sources */,
 				37A6D6B3190FF45400B7C8B0 /* ContactUsViewController.m in Sources */,
 				2F369032194F40FA00A7B676 /* KxMenu.m in Sources */,
@@ -1794,6 +1809,7 @@
 				2FAB68AB190A26D40081D6B6 /* AppDelegate.m in Sources */,
 				37CC3F671917D56600023E76 /* AskQuestionViewController.m in Sources */,
 				37FEB83619334C0D00D3E047 /* BaseRestService.m in Sources */,
+				2F68A68A195349C3006CE404 /* IndexTabBarViewController.m in Sources */,
 				372DDB481952D58B00F3AAEE /* TeacherHomeWorkViewController.m in Sources */,
 				370092E11950940F00A6EF8E /* StudentMainCell.m in Sources */,
 				37AF51E31938945E00853E10 /* CKRefreshArrowView.m in Sources */,

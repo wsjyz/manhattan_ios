@@ -60,7 +60,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CourseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    CourseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    if (cell == nil) {
+        cell = [ViewUtil viewFromNibOfClass:[CourseTableViewCell class] owner:self];
+    }
     
     // Configure the cell...
     Course *course = self.courses[indexPath.row];

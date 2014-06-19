@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol AuditionDetailDelegate <NSObject>
+
+@required
+- (void)auditionBtnClick;
+- (void)appointBtnClick;
+
+@end
+
 @interface CourseHeaderView : UIView
 
 @property (weak, nonatomic) IBOutlet UIImageView *courseImageView;
@@ -18,6 +26,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *startDateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *endDateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *periodLabel;
+
+@property (weak, nonatomic) id<AuditionDetailDelegate> delegate;
 
 - (IBAction)auditionBtnClick:(id)sender;
 - (IBAction)appointBtnClick:(id)sender;

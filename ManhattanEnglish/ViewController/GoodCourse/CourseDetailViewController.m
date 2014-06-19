@@ -14,8 +14,9 @@
 #import "CourseFooterView.h"
 #import <TbcLibCore/CommonUtil.h>
 #import <TbcLibUI/UIImageView+WebCache.h>
+#import "AuditionDetailViewController.h"
 
-@interface CourseDetailViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface CourseDetailViewController () <UITableViewDataSource, UITableViewDelegate, AuditionDetailDelegate>
 
 @end
 
@@ -40,6 +41,24 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)toAuditionDetailController:(BOOL)isAudition
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    AuditionDetailViewController *auditionViewCon = [storyboard instantiateViewControllerWithIdentifier:@"auditionDetail"];
+    auditionViewCon.isAudition = isAudition;
+    [self.navigationController pushViewController:auditionViewCon animated:YES];
+}
+
+- (void)appointBtnClick
+{
+    [self toAuditionDetailController:NO];
+}
+
+- (void)auditionBtnClick
+{
+    [self toAuditionDetailController:YES];
 }
 
 #pragma mark - Table view data source
@@ -69,6 +88,7 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     CourseHeaderView *headerView = [ViewUtil viewFromNibOfClass:[CourseHeaderView class] owner:self];
+    headerView.delegate = self;
     [headerView.courseImageView setImageWithURL:[NSURL URLWithString:self.course
                                                  .coursePic] placeholderImage:[UIImage imageNamed:@"good_course_cover_bg.png"]];
     headerView.classNoLabel.text = self.course.courseTitle;

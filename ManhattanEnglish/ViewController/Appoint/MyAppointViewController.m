@@ -9,10 +9,12 @@
 #import "MyAppointViewController.h"
 #import "CourseTableViewController.h"
 #import "CourseService.h"
+#import "TeacherListTableViewController.h"
 
 @interface MyAppointViewController ()
 
 @property (strong, nonatomic) CourseService *courseService;
+@property (assign, nonatomic) BOOL isAudition;
 
 @end
 
@@ -38,7 +40,13 @@
     // Do any additional setup after loading the view.
     
     self.navigationItem.leftBarButtonItem = nil;
-    self.courseTableViewController.courses = [self.courseService listAllGoodCourses];
+    
+    [self updateControlLayoutWithCurrentSegmentControlSelected];
+    
+    UITabBarItem *item = self.navigationController.tabBarItem;
+    self.isAudition = [@"试听" isEqualToString:item.title];
+    
+    [self setNavgationItemTitle:self.isAudition? @"我的试听" : @"我的预约"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,15 +55,33 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([@"innerCourse" isEqualToString:segue.identifier]) {
+        
+        CourseTableViewController *courseTableViewCon = [segue destinationViewController];
+        courseTableViewCon.courses = [self.courseService listAllGoodCourses];
+    }else if ([@"innerTeacher" isEqualToString:segue.identifier]) {
+        
+        TeacherListTableViewController *teacherTableViewCon = [segue destinationViewController];
+//        courseTableViewCon.courses = [self.courseService listAllGoodCourses];
+    }
 }
-*/
 
+- (void)updateControlLayoutWithCurrentSegmentControlSelected
+{
+    NSUInteger index = self.segmentedControl.selectedSegmentIndex;
+    self.courseInnerView.hidden = index == 1;
+    self.teacherInnerView.hidden = index == 0;
+}
+
+
+- (IBAction)segmentCtlClick:(id)sender {
+    
+    [self updateControlLayoutWithCurrentSegmentControlSelected];
+}
 @end

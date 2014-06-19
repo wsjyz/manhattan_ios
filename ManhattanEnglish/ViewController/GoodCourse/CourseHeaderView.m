@@ -7,6 +7,7 @@
 //
 
 #import "CourseHeaderView.h"
+#import "AuditionDetailViewController.h"
 
 @implementation CourseHeaderView
 
@@ -29,8 +30,16 @@
  */
 
 - (IBAction)auditionBtnClick:(id)sender {
+    
+    if (self.delegate != nil) {
+        [self.delegate auditionBtnClick];
+    }
 }
 
 - (IBAction)appointBtnClick:(id)sender {
+    
+    if (self.delegate != nil) {
+        [self.delegate appointBtnClick];
+    }
 }
 @end
