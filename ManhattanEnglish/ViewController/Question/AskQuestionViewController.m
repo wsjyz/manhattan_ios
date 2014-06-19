@@ -9,14 +9,16 @@
 #import "AskQuestionViewController.h"
 #import <MobileCoreServices/UTCoreTypes.h>
 #import "QuestionService.h"
+#import "TeacherListViewController.h"
 
 #define SMALL_WIDTH                         150    //小图片宽度
 
-@interface AskQuestionViewController ()<UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface AskQuestionViewController ()<UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,TeacherListDelegate>
 {
     UIImageView *_sendImage;
     NSString *_sendImageName;
     QuestionService *_quesService;
+    NSString *_teacherID;
 }
 
 @property (nonatomic, retain) UIPopoverController *popover;
@@ -112,6 +114,8 @@
 - (void)sendQuestion:(id)sender
 {
     Question *ques = [[Question alloc] init];
+    ques.questionTitle = _quesTitle.text;
+    ques.questionContent = _quesContent.text;
 }
 
 /*
@@ -132,22 +136,22 @@
     return YES;
 }
 
-#pragma mark UITextViewDelegate
-- (void)textViewDidChange:(UITextView *)textView
-{
-    //modify _sendImage frame
-    CGSize textSize = [_quesContent.text sizeWithFont:_quesContent.font constrainedToSize:CGSizeMake(CGRectGetWidth(_quesContent.frame), MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
-    _sendImage.frame = CGRectMake(10,textSize.height+30,
-                                  CGRectGetWidth(_sendImage.frame), CGRectGetHeight(_sendImage.frame));
-    //modify _blogText frame
-    _quesContent.contentSize = CGSizeMake(_quesContent.contentSize.width, _quesContent.contentSize.height + CGRectGetHeight(_sendImage.frame));
-}
-
-- (void)textViewDidEndEditing:(UITextView *)textView
-{
-    //modify _blogText frame
-    _quesContent.contentSize = CGSizeMake(_quesContent.contentSize.width, _quesContent.contentSize.height + CGRectGetHeight(_sendImage.frame));
-}
+//#pragma mark UITextViewDelegate
+//- (void)textViewDidChange:(UITextView *)textView
+//{
+//    //modify _sendImage frame
+//    CGSize textSize = [_quesContent.text sizeWithFont:_quesContent.font constrainedToSize:CGSizeMake(CGRectGetWidth(_quesContent.frame), MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
+//    _sendImage.frame = CGRectMake(10,textSize.height+30,
+//                                  CGRectGetWidth(_sendImage.frame), CGRectGetHeight(_sendImage.frame));
+//    //modify content frame
+//    _quesContent.contentSize = CGSizeMake(_quesContent.contentSize.width,300);
+//}
+//
+//- (void)textViewDidEndEditing:(UITextView *)textView
+//{
+//    //modify _blogText frame
+//    _quesContent.contentSize = CGSizeMake(_quesContent.contentSize.width, _quesContent.contentSize.height + CGRectGetHeight(_sendImage.frame));
+//}
 
 #pragma mark UIActionSheetDelegate
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -238,31 +242,32 @@
             _sendImageName = imagePath;
             
         }
-        if (_sendImage == nil)
-        {
-            UIImageView *sendImage = [[UIImageView alloc] initWithFrame:CGRectMake(0,
-                                                                                   _quesContent.frame.size.height-100,
-                                                                                   100, 100)];
-            sendImage.userInteractionEnabled = YES;
-            UITapGestureRecognizer *imageTapGesture = [[UITapGestureRecognizer alloc]
-                                                       initWithTarget:self
-                                                       action:@selector(sendImageViewTap:)];
-            [sendImage addGestureRecognizer:imageTapGesture];
-            _sendImage = sendImage;
-        }
-        
-        CGSize size = image.size;
-        if (image.size.width > SMALL_WIDTH)
-        {
-            size = CGSizeMake(SMALL_WIDTH, image.size.height*(SMALL_WIDTH/image.size.width));
-            
-        }
-        CGSize textSize = [_quesContent.text sizeWithFont:_quesContent.font constrainedToSize:CGSizeMake(CGRectGetWidth(_quesContent.frame), MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
-        _sendImage.frame = CGRectMake(10,textSize.height+30,
-                                      size.width, size.height);
-        _sendImage.image = image;
-        [_quesContent addSubview:_sendImage];
-        _quesContent.contentSize = CGSizeMake(_quesContent.contentSize.width, _quesContent.contentSize.height + CGRectGetHeight(_sendImage.frame));
+        _imgName.text = _sendImageName;
+//        if (_sendImage == nil)
+//        {
+//            UIImageView *sendImage = [[UIImageView alloc] initWithFrame:CGRectMake(0,
+//                                                                                   _quesContent.frame.size.height-100,
+//                                                                                   100, 100)];
+//            sendImage.userInteractionEnabled = YES;
+//            UITapGestureRecognizer *imageTapGesture = [[UITapGestureRecognizer alloc]
+//                                                       initWithTarget:self
+//                                                       action:@selector(sendImageViewTap:)];
+//            [sendImage addGestureRecognizer:imageTapGesture];
+//            _sendImage = sendImage;
+//        }
+//        
+//        CGSize size = image.size;
+//        if (image.size.width > SMALL_WIDTH)
+//        {
+//            size = CGSizeMake(SMALL_WIDTH, image.size.height*(SMALL_WIDTH/image.size.width));
+//            
+//        }
+//        CGSize textSize = [_quesContent.text sizeWithFont:_quesContent.font constrainedToSize:CGSizeMake(CGRectGetWidth(_quesContent.frame), MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
+//        _sendImage.frame = CGRectMake(10,textSize.height+30,
+//                                      size.width, size.height);
+//        _sendImage.image = image;
+//        [_quesContent addSubview:_sendImage];
+//        _quesContent.contentSize = CGSizeMake(_quesContent.contentSize.width, _quesContent.contentSize.height + CGRectGetHeight(_sendImage.frame));
         [picker dismissViewControllerAnimated:YES completion:nil];
     }
 }
@@ -289,6 +294,23 @@
     _quesContent.contentSize = CGSizeMake(_quesContent.contentSize.width, _quesContent.contentSize.height - CGRectGetHeight(_sendImage.frame));
     [_sendImage removeFromSuperview];
     _sendImage = nil;
+}
+
+#pragma mark TeacherListDelegate
+- (void)selectTeacherWithTeacherID:(NSString *)teacherID andTeacherName:(NSString *)teacherName
+{
+    _teacherID = teacherID;
+    _teacherName.text = teacherName;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"SelectTeacherSegue"])
+    {
+        TeacherListViewController *teacherListVC = [segue destinationViewController];
+        teacherListVC.selectTeacher = YES;
+        teacherListVC.delegate = self;
+    }
 }
 
 @end

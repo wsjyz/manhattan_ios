@@ -56,11 +56,11 @@
     {
         _faceImg.image = [UIImage imageNamed:[NSURL URLWithString:_user.avatar]];
     }
-    if (_user.sex && [_user.sex isEqualToString:@"MALE"])
+    if (_user.sex && [_user.sex isEqualToString:SEX_MALE])
     {
         _sexImg.image = [UIImage imageNamed:@"personal_boy.png"];
     }
-    else if (_user.sex && [_user.sex isEqualToString:@"FEMALE"])
+    else if (_user.sex && [_user.sex isEqualToString:SEX_FEMALE])
     {
         _sexImg.image = [UIImage imageNamed:@"personal_girl.png"];
     }

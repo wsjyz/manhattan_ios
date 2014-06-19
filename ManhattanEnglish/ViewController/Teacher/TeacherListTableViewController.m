@@ -10,7 +10,9 @@
 #import "TeacherMainCell.h"
 #import "TeacherDetailViewController.h"
 #import "TeacherService.h"
+#import "TeacherDetail.h"
 #import "Page.h"
+#import <TbcLibUI/UIImageView+WebCache.h>
 
 @interface TeacherListTableViewController ()
 {
@@ -126,6 +128,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self willBeginRefreshData];
+    [self refreshData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -139,15 +143,14 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 3;
+    return self.resourceArr.count;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -156,13 +159,41 @@
     {
         cell = [ViewUtil viewFromNibOfClass:[TeacherMainCell class] owner:self];
     }
-    cell.name.text = @"cafei";
+    
+    TeacherDetail *teacher = _resourceArr[indexPath.row];
+    cell.name.text = teacher.user.userName;
+    [cell.headImg setImageWithURL:[NSURL URLWithString:teacher.user.avatar] placeholderImage:nil];
+    if ([teacher.user.sex isEqualToString:SEX_MALE])
+    {
+        cell.sexImg.image = [UIImage imageNamed:@"personal_boy.png"];
+    }
+    else if ([teacher.user.sex isEqualToString:SEX_FEMALE])
+    {
+        cell.sexImg.image = [UIImage imageNamed:@"personal_girl.png"];
+    }
+    else
+    {
+        cell.sexImg.hidden = YES;
+    }
+    cell.school.text = teacher.finalGraduateSchool;
+    cell.subject.text = teacher.course_category;
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    TeacherDetail *teacher = _resourceArr[indexPath.row];
+    
+    if (self.selectTeacher)
+    {
+        if (self.teacherDelegate && [self.teacherDelegate respondsToSelector:@selector(selectTeacherID:andTeacherName:)])
+        {
+            [self.teacherDelegate selectTeacherID:teacher.userId andTeacherName:teacher.user.userName];
+        }
+    };
+    
+    
     TeacherDetailViewController *teacherDetailVC = [ViewUtil viewControllerFromNibOfClass:[TeacherDetailViewController class]];
     [self.navigationController pushViewController:teacherDetailVC animated:YES];
 }

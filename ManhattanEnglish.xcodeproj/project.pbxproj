@@ -98,6 +98,13 @@
 		3700928E194F33BB00A6EF8E /* NodataBgView_ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37009288194F33BB00A6EF8E /* NodataBgView_ipad.xib */; };
 		3700928F194F33BB00A6EF8E /* TableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37009289194F33BB00A6EF8E /* TableFooterView.xib */; };
 		37009290194F33BB00A6EF8E /* TableFooterView_ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3700928A194F33BB00A6EF8E /* TableFooterView_ipad.xib */; };
+		370092CC19508B3E00A6EF8E /* CourseSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 370092CB19508B3E00A6EF8E /* CourseSchedule.m */; };
+		370092D419508D2500A6EF8E /* MyCollectTeacherListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370092D319508D2500A6EF8E /* MyCollectTeacherListViewController.m */; };
+		370092D719508D4000A6EF8E /* MyCollectTeacherListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370092D619508D4000A6EF8E /* MyCollectTeacherListTableViewController.m */; };
+		370092DA19508D6600A6EF8E /* MyStudentListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370092D919508D6600A6EF8E /* MyStudentListTableViewController.m */; };
+		370092DD19508D7900A6EF8E /* MyStudentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370092DC19508D7900A6EF8E /* MyStudentListViewController.m */; };
+		370092E11950940F00A6EF8E /* StudentMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 370092DF1950940F00A6EF8E /* StudentMainCell.m */; };
+		370092E21950940F00A6EF8E /* StudentMainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370092E01950940F00A6EF8E /* StudentMainCell.xib */; };
 		370C49401910971200C63063 /* IdentifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370C49361910971200C63063 /* IdentifyViewController.m */; };
 		370C49411910971200C63063 /* InfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 370C49381910971200C63063 /* InfoTableViewCell.m */; };
 		370C49421910971200C63063 /* InfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370C49391910971200C63063 /* InfoTableViewCell.xib */; };
@@ -145,6 +152,13 @@
 		3726A6611931EBA800E91B36 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3726A6601931EBA800E91B36 /* MapKit.framework */; };
 		372A796C191B817700B698CB /* teacher_schedule.png in Resources */ = {isa = PBXBuildFile; fileRef = 372A796B191B817700B698CB /* teacher_schedule.png */; };
 		372A796E191B850800B698CB /* teacher_schedule_select.png in Resources */ = {isa = PBXBuildFile; fileRef = 372A796D191B850800B698CB /* teacher_schedule_select.png */; };
+		372DDB301952755E00F3AAEE /* AnswerHomeWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 372DDB2F1952755E00F3AAEE /* AnswerHomeWorkViewController.m */; };
+		372DDB36195278C000F3AAEE /* AnswerHomeWorkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 372DDB35195278C000F3AAEE /* AnswerHomeWorkViewController.xib */; };
+		372DDB38195283D500F3AAEE /* ScheduleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 372DDB37195283D500F3AAEE /* ScheduleView.xib */; };
+		372DDB3B195284E200F3AAEE /* ScheduleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 372DDB3A195284E200F3AAEE /* ScheduleView.m */; };
+		372DDB3E1952BD5400F3AAEE /* HomeWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 372DDB3D1952BD5400F3AAEE /* HomeWork.m */; };
+		372DDB411952BF6900F3AAEE /* HomeworkSubmit.m in Sources */ = {isa = PBXBuildFile; fileRef = 372DDB401952BF6900F3AAEE /* HomeworkSubmit.m */; };
+		372DDB481952D58B00F3AAEE /* TeacherHomeWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 372DDB471952D58B00F3AAEE /* TeacherHomeWorkViewController.m */; };
 		37348C36190CE79E007605DA /* ViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 37348C35190CE79E007605DA /* ViewUtil.m */; };
 		37348C4A190CF1AA007605DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37348C44190CF10E007605DA /* Main.storyboard */; };
 		37A6D66D190FF43400B7C8B0 /* CommonService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A6D66C190FF43400B7C8B0 /* CommonService.m */; };
@@ -384,6 +398,19 @@
 		37009288194F33BB00A6EF8E /* NodataBgView_ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NodataBgView_ipad.xib; sourceTree = "<group>"; };
 		37009289194F33BB00A6EF8E /* TableFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableFooterView.xib; sourceTree = "<group>"; };
 		3700928A194F33BB00A6EF8E /* TableFooterView_ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableFooterView_ipad.xib; sourceTree = "<group>"; };
+		370092CA19508B3E00A6EF8E /* CourseSchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseSchedule.h; sourceTree = "<group>"; };
+		370092CB19508B3E00A6EF8E /* CourseSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseSchedule.m; sourceTree = "<group>"; };
+		370092D219508D2500A6EF8E /* MyCollectTeacherListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectTeacherListViewController.h; sourceTree = "<group>"; };
+		370092D319508D2500A6EF8E /* MyCollectTeacherListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectTeacherListViewController.m; sourceTree = "<group>"; };
+		370092D519508D4000A6EF8E /* MyCollectTeacherListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectTeacherListTableViewController.h; sourceTree = "<group>"; };
+		370092D619508D4000A6EF8E /* MyCollectTeacherListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectTeacherListTableViewController.m; sourceTree = "<group>"; };
+		370092D819508D6600A6EF8E /* MyStudentListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyStudentListTableViewController.h; sourceTree = "<group>"; };
+		370092D919508D6600A6EF8E /* MyStudentListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyStudentListTableViewController.m; sourceTree = "<group>"; };
+		370092DB19508D7900A6EF8E /* MyStudentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyStudentListViewController.h; sourceTree = "<group>"; };
+		370092DC19508D7900A6EF8E /* MyStudentListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyStudentListViewController.m; sourceTree = "<group>"; };
+		370092DE1950940F00A6EF8E /* StudentMainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentMainCell.h; sourceTree = "<group>"; };
+		370092DF1950940F00A6EF8E /* StudentMainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentMainCell.m; sourceTree = "<group>"; };
+		370092E01950940F00A6EF8E /* StudentMainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudentMainCell.xib; sourceTree = "<group>"; };
 		370C49351910971200C63063 /* IdentifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdentifyViewController.h; sourceTree = "<group>"; };
 		370C49361910971200C63063 /* IdentifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdentifyViewController.m; sourceTree = "<group>"; };
 		370C49371910971200C63063 /* InfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTableViewCell.h; sourceTree = "<group>"; };
@@ -448,6 +475,18 @@
 		3726A6601931EBA800E91B36 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		372A796B191B817700B698CB /* teacher_schedule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacher_schedule.png; sourceTree = "<group>"; };
 		372A796D191B850800B698CB /* teacher_schedule_select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacher_schedule_select.png; sourceTree = "<group>"; };
+		372DDB2E1952755E00F3AAEE /* AnswerHomeWorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerHomeWorkViewController.h; sourceTree = "<group>"; };
+		372DDB2F1952755E00F3AAEE /* AnswerHomeWorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerHomeWorkViewController.m; sourceTree = "<group>"; };
+		372DDB35195278C000F3AAEE /* AnswerHomeWorkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerHomeWorkViewController.xib; sourceTree = "<group>"; };
+		372DDB37195283D500F3AAEE /* ScheduleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleView.xib; sourceTree = "<group>"; };
+		372DDB39195284E200F3AAEE /* ScheduleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleView.h; sourceTree = "<group>"; };
+		372DDB3A195284E200F3AAEE /* ScheduleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleView.m; sourceTree = "<group>"; };
+		372DDB3C1952BD5200F3AAEE /* HomeWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeWork.h; sourceTree = "<group>"; };
+		372DDB3D1952BD5400F3AAEE /* HomeWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeWork.m; sourceTree = "<group>"; };
+		372DDB3F1952BF6900F3AAEE /* HomeworkSubmit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeworkSubmit.h; sourceTree = "<group>"; };
+		372DDB401952BF6900F3AAEE /* HomeworkSubmit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeworkSubmit.m; sourceTree = "<group>"; };
+		372DDB461952D58B00F3AAEE /* TeacherHomeWorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherHomeWorkViewController.h; sourceTree = "<group>"; };
+		372DDB471952D58B00F3AAEE /* TeacherHomeWorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherHomeWorkViewController.m; sourceTree = "<group>"; };
 		37348C34190CE79E007605DA /* ViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewUtil.h; sourceTree = "<group>"; };
 		37348C35190CE79E007605DA /* ViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewUtil.m; sourceTree = "<group>"; };
 		37348C3D190CEA5B007605DA /* GlobalDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDefine.h; sourceTree = "<group>"; };
@@ -954,6 +993,20 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		370092D119508CB600A6EF8E /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				370092DB19508D7900A6EF8E /* MyStudentListViewController.h */,
+				370092DC19508D7900A6EF8E /* MyStudentListViewController.m */,
+				370092D819508D6600A6EF8E /* MyStudentListTableViewController.h */,
+				370092D919508D6600A6EF8E /* MyStudentListTableViewController.m */,
+				370092DE1950940F00A6EF8E /* StudentMainCell.h */,
+				370092DF1950940F00A6EF8E /* StudentMainCell.m */,
+				370092E01950940F00A6EF8E /* StudentMainCell.xib */,
+			);
+			path = Student;
+			sourceTree = "<group>";
+		};
 		370C49341910971200C63063 /* PersonalCenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -1003,6 +1056,11 @@
 				371BEE4519167A2D000595D1 /* QuesDetailViewController.xib */,
 				37CC3F651917D56600023E76 /* AskQuestionViewController.h */,
 				37CC3F661917D56600023E76 /* AskQuestionViewController.m */,
+				372DDB2E1952755E00F3AAEE /* AnswerHomeWorkViewController.h */,
+				372DDB2F1952755E00F3AAEE /* AnswerHomeWorkViewController.m */,
+				372DDB35195278C000F3AAEE /* AnswerHomeWorkViewController.xib */,
+				372DDB461952D58B00F3AAEE /* TeacherHomeWorkViewController.h */,
+				372DDB471952D58B00F3AAEE /* TeacherHomeWorkViewController.m */,
 			);
 			path = Question;
 			sourceTree = "<group>";
@@ -1026,12 +1084,19 @@
 				3721C3EC191A84DF00D63FBE /* TeacherScheduleTableViewCell.h */,
 				3721C3ED191A84DF00D63FBE /* TeacherScheduleTableViewCell.m */,
 				3721C3EE191A84DF00D63FBE /* TeacherScheduleTableViewCell.xib */,
+				372DDB39195284E200F3AAEE /* ScheduleView.h */,
+				372DDB3A195284E200F3AAEE /* ScheduleView.m */,
+				372DDB37195283D500F3AAEE /* ScheduleView.xib */,
 				3721C3F1191A850700D63FBE /* TeacherChargeTableViewCell.h */,
 				3721C3F2191A850700D63FBE /* TeacherChargeTableViewCell.m */,
 				3721C3F3191A850700D63FBE /* TeacherChargeTableViewCell.xib */,
 				3721C3F6191A853700D63FBE /* TeacherPersonInfoTableViewCell.h */,
 				3721C3F7191A853700D63FBE /* TeacherPersonInfoTableViewCell.m */,
 				3721C3F8191A853700D63FBE /* TeacherPersonInfoTableViewCell.xib */,
+				370092D219508D2500A6EF8E /* MyCollectTeacherListViewController.h */,
+				370092D319508D2500A6EF8E /* MyCollectTeacherListViewController.m */,
+				370092D519508D4000A6EF8E /* MyCollectTeacherListTableViewController.h */,
+				370092D619508D4000A6EF8E /* MyCollectTeacherListTableViewController.m */,
 			);
 			path = Teacher;
 			sourceTree = "<group>";
@@ -1076,6 +1141,12 @@
 				37AF51CD1938850000853E10 /* Wallet.m */,
 				37E87EDA1946FE3C0019E9AC /* TeacherDetail.h */,
 				37E87EDB1946FE3C0019E9AC /* TeacherDetail.m */,
+				370092CA19508B3E00A6EF8E /* CourseSchedule.h */,
+				370092CB19508B3E00A6EF8E /* CourseSchedule.m */,
+				372DDB3C1952BD5200F3AAEE /* HomeWork.h */,
+				372DDB3D1952BD5400F3AAEE /* HomeWork.m */,
+				372DDB3F1952BF6900F3AAEE /* HomeworkSubmit.h */,
+				372DDB401952BF6900F3AAEE /* HomeworkSubmit.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1116,6 +1187,7 @@
 		37348C2D190CE691007605DA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				370092D119508CB600A6EF8E /* Student */,
 				2F2024C9192A729800272AAB /* Homework */,
 				2F2024CA192A729900272AAB /* News */,
 				2F2024C8192A71D600272AAB /* GoodCourse */,
@@ -1519,6 +1591,7 @@
 				370C49501910982200C63063 /* personal_identify.png in Resources */,
 				37FEB82519332EAD00D3E047 /* Kal.bundle in Resources */,
 				2F739CB61910045F00FE2608 /* nav_bar_red_btn_p.png in Resources */,
+				370092E21950940F00A6EF8E /* StudentMainCell.xib in Resources */,
 				37A6D689190FF44700B7C8B0 /* hq.png in Resources */,
 				37A6D683190FF44700B7C8B0 /* back.png in Resources */,
 				37A6D68A190FF44700B7C8B0 /* logo.png in Resources */,
@@ -1544,6 +1617,7 @@
 				371BEE4D19167A2D000595D1 /* QuesDetailTableViewCell.xib in Resources */,
 				2FBC69DF19153D0E00990DD1 /* appoint_jxfs.png in Resources */,
 				2F53C22C19324A4B0099FCD7 /* tab_home_p.png in Resources */,
+				372DDB36195278C000F3AAEE /* AnswerHomeWorkViewController.xib in Resources */,
 				370C494B1910971F00C63063 /* personal_girl.png in Resources */,
 				2F6D6A951913F8EC0097617E /* index_dtzx.png in Resources */,
 				2F6D6A961913F8EC0097617E /* index_fbkc.png in Resources */,
@@ -1594,6 +1668,7 @@
 				2F600689194B718F0059487A /* SelectionViewController.xib in Resources */,
 				370C49631910A41B00C63063 /* ques_arrow.png in Resources */,
 				2FDD4E9C193645FF0044671A /* tab_appointment_n.png in Resources */,
+				372DDB38195283D500F3AAEE /* ScheduleView.xib in Resources */,
 				37CC3F6C1917E29200023E76 /* ques_btn_bg.png in Resources */,
 				3721C3E1191A847700D63FBE /* teacher_collect.png in Resources */,
 				37A6D694190FF44700B7C8B0 /* arrow.png in Resources */,
@@ -1639,14 +1714,18 @@
 				37FEB82919332EAD00D3E047 /* KalMonthView.m in Sources */,
 				2F4160781919496300156EDB /* PrepareViewController.m in Sources */,
 				37A6D6B5190FF45400B7C8B0 /* MoreViewController.m in Sources */,
+				372DDB411952BF6900F3AAEE /* HomeworkSubmit.m in Sources */,
 				37B40CC31931B7C300D90923 /* InitService.m in Sources */,
+				370092CC19508B3E00A6EF8E /* CourseSchedule.m in Sources */,
 				371BEE5219167A2D000595D1 /* QuestionViewController.m in Sources */,
 				37AF51D7193893D200853E10 /* NodataBgView.m in Sources */,
 				37FEB82819332EAD00D3E047 /* KalLogic.m in Sources */,
 				37A6D6AC190FF45400B7C8B0 /* FindPWViewController.m in Sources */,
 				37E87EEE194700310019E9AC /* OpenWalletService.m in Sources */,
 				2F588467194DD7E6004ACD71 /* CourseService.m in Sources */,
+				372DDB301952755E00F3AAEE /* AnswerHomeWorkViewController.m in Sources */,
 				2F588472194DFE1A004ACD71 /* CourseHeaderView.m in Sources */,
+				372DDB3B195284E200F3AAEE /* ScheduleView.m in Sources */,
 				37E87EED194700310019E9AC /* OpenUserService.m in Sources */,
 				37E87F071947EC650019E9AC /* TeacherListTableViewController.m in Sources */,
 				37E87EEC194700310019E9AC /* TeacherService.m in Sources */,
@@ -1660,6 +1739,7 @@
 				2FF5A14C194D1B9E00BE819E /* AppointService.m in Sources */,
 				37A6D66D190FF43400B7C8B0 /* CommonService.m in Sources */,
 				2FBC69E4191541ED00990DD1 /* NewAppointViewController.m in Sources */,
+				370092DD19508D7900A6EF8E /* MyStudentListViewController.m in Sources */,
 				37FEB82C19332EAD00D3E047 /* KalViewController.m in Sources */,
 				37E87EFD194749020019E9AC /* QuestionService.m in Sources */,
 				37A6D6AB190FF45400B7C8B0 /* BaseViewController.m in Sources */,
@@ -1699,21 +1779,27 @@
 				37E87EF0194700310019E9AC /* WalletService.m in Sources */,
 				2F31488B192BBE9D0021C40B /* NewsTableViewCell.m in Sources */,
 				37AF51E41938945E00853E10 /* CKRefreshControl.m in Sources */,
+				370092D719508D4000A6EF8E /* MyCollectTeacherListTableViewController.m in Sources */,
 				370C49561910984400C63063 /* WalletTableViewCell.m in Sources */,
 				371BEE4C19167A2D000595D1 /* QuesDetailTableViewCell.m in Sources */,
 				37E87EDC1946FE3C0019E9AC /* TeacherDetail.m in Sources */,
 				2F58846E194DE03B004ACD71 /* NewsService.m in Sources */,
 				371BEE5019167A2D000595D1 /* QuesTableViewCell.m in Sources */,
 				3721C3F9191A853700D63FBE /* TeacherPersonInfoTableViewCell.m in Sources */,
+				370092D419508D2500A6EF8E /* MyCollectTeacherListViewController.m in Sources */,
 				37FEB82A19332EAD00D3E047 /* KalTileView.m in Sources */,
 				37E87F041947E8920019E9AC /* Page.m in Sources */,
 				2FAB68AB190A26D40081D6B6 /* AppDelegate.m in Sources */,
 				37CC3F671917D56600023E76 /* AskQuestionViewController.m in Sources */,
 				37FEB83619334C0D00D3E047 /* BaseRestService.m in Sources */,
+				372DDB481952D58B00F3AAEE /* TeacherHomeWorkViewController.m in Sources */,
+				370092E11950940F00A6EF8E /* StudentMainCell.m in Sources */,
 				37AF51E31938945E00853E10 /* CKRefreshArrowView.m in Sources */,
 				37B40CCE1931B8B200D90923 /* iVersion.m in Sources */,
 				37AF51DA193893E900853E10 /* TableFooterView.m in Sources */,
+				372DDB3E1952BD5400F3AAEE /* HomeWork.m in Sources */,
 				2FAB68A7190A26D40081D6B6 /* main.m in Sources */,
+				370092DA19508D6600A6EF8E /* MyStudentListTableViewController.m in Sources */,
 				3726A6351931CA9700E91B36 /* OpenLoginService.m in Sources */,
 				2F58845C194D8CB1004ACD71 /* Course.m in Sources */,
 				2F600688194B718F0059487A /* SelectionViewController.m in Sources */,
@@ -1786,7 +1872,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: yongfu yang (A3CL6M2UD6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yongfu yang (A3CL6M2UD6)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1806,6 +1893,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-Objc";
+				PROVISIONING_PROFILE = "0BCF6BA2-383C-477E-910C-A21B66E36E96";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;

@@ -8,6 +8,15 @@
 
 #import "BaseViewController.h"
 
+typedef enum
+{
+    QuesType_ques = 0,
+    QuesType_homeWork_Stu = 1,
+    QuesType_homeWork_Tea
+}QuesType;
+
 @interface QuestionViewController : BaseViewController
+
+@property (nonatomic, assign) QuesType quesType;
 
 @end

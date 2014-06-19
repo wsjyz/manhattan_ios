@@ -8,6 +8,15 @@
 
 #import "BaseViewController.h"
 
+@protocol TeacherListDelegate <NSObject>
+
+- (void)selectTeacherWithTeacherID:(NSString *)teacherID andTeacherName:(NSString *)teacherName;
+
+@end
+
 @interface TeacherListViewController : BaseViewController
+
+@property (nonatomic, weak) id<TeacherListDelegate> delegate;
+@property (nonatomic, assign) BOOL selectTeacher;
 
 @end
