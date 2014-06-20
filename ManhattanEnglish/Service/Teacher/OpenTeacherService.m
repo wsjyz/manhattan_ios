@@ -34,7 +34,7 @@
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                      OPENVALUE(page), @"page",nil];
     [ReflectionUtil setArrayType:NSStringFromClass([TeacherDetail class]) forPropName:@"rows" ofClassName:NSStringFromClass([Page class])];
-    return [RestServiceManager performRequestWithPath:OpenTeacherService_listPage paramDic:paramDic returnType:NSStringFromClass([NSString class]) delegate:self.delegate];
+    return [RestServiceManager performRequestWithPath:OpenTeacherService_listPage paramDic:paramDic returnType:NSStringFromClass([Page class]) delegate:self.delegate];
 }
 
 /**
