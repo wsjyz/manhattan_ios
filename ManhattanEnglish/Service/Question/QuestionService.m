@@ -46,13 +46,13 @@
 }
 
 //获取我的问题
-- (NSArray *)myQuestionsWithUserId:(NSString *)userId
+- (Page *)myQuestionsWithUserId:(NSString *)userId Page:(Page *)page
 {
-    return [_quesService myQuestionsWithUserId:userId];
+    return [_quesService myQuestionsWithUserId:userId Page:page];
 }
 
 //获取我的问题
-- (NSArray *)needAnswerListWithUserId:(NSString *)userId Type:(NSString *)type Page:(Page *)page
+- (Page *)needAnswerListWithUserId:(NSString *)userId Type:(NSString *)type Page:(Page *)page
 {
     return [_quesService needAnswerListWithUserId:userId Type:type Page:page];
 }

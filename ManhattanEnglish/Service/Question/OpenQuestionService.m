@@ -53,7 +53,7 @@
  * @param page
  * @return Page<Question>
  */
-- (NSArray *)myQuestionsWithUserId:(NSString *)userId
+- (Page *)myQuestionsWithUserId:(NSString *)userId Page:(Page *)page
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                      userId, @"userId",nil];
@@ -68,7 +68,7 @@
  * @param type （指定回答(ASSIGN)；已回答(ANSWER)；未回答(UNANSWER)）
  * @return Page<Question>（rows 是包含question 对象的数组）
  */
-- (NSArray *)needAnswerListWithUserId:(NSString *)userId Type:(NSString *)type Page:(Page *)page
+- (Page *)needAnswerListWithUserId:(NSString *)userId Type:(NSString *)type Page:(Page *)page
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                      userId, @"userId",

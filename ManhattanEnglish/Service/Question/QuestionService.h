@@ -23,10 +23,10 @@
 - (BOOL)deleteQuestionWithQuestionId:(NSString *)questionId;
 
 //获取我的问题
-- (NSArray *)myQuestionsWithUserId:(NSString *)userId;
+- (Page *)myQuestionsWithUserId:(NSString *)userId Page:(Page *)page;
 
 //获取需要回答列表
-- (NSArray *)needAnswerListWithUserId:(NSString *)userId Type:(NSString *)type Page:(Page *)page;
+- (Page *)needAnswerListWithUserId:(NSString *)userId Type:(NSString *)type Page:(Page *)page;
 
 
 @end

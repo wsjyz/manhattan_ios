@@ -36,4 +36,10 @@
 #define OpenQuestionService_myQuestions                 @"/question/myQuestions"
 #define OpenQuestionService_needAnswerList              @"/question/needAnswerList"
 
+#pragma mark HomeWorkService
+#define HomeWorkService_getHomeworksByUser              @"/homeWork/getHomeworksByUser"
+#define HomeWorkService_getHomeworksByTeacher           @"/homeWork/getHomeworksByTeacher"
+#define HomeWorkService_postHomeWork                    @"/homeWork/postHomeWork"
+#define HomeWorkService_submitHomeWork                  @"/homeWork/submitHomeWork"
+
 #endif

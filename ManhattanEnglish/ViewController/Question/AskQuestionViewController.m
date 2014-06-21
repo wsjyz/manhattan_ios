@@ -9,6 +9,7 @@
 #import "AskQuestionViewController.h"
 #import <MobileCoreServices/UTCoreTypes.h>
 #import "QuestionService.h"
+#import "CommonService.h"
 #import "TeacherListViewController.h"
 
 #define SMALL_WIDTH                         150    //小图片宽度
@@ -18,6 +19,7 @@
     UIImageView *_sendImage;
     NSString *_sendImageName;
     QuestionService *_quesService;
+    CommonService *_commonService;
     NSString *_teacherID;
 }
 
@@ -39,6 +41,7 @@
 - (void)initService
 {
     _quesService = [[QuestionService alloc] initWithDelegate:self];
+    _commonService = [[CommonService alloc] initWithDelegate:nil];
 }
 
 - (void)viewDidLoad
@@ -51,6 +54,17 @@
     self.quesTitle.layer.borderWidth = 1;
     self.quesContent.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.quesContent.layer.borderWidth = 1;
+    
+    //判断指定教师按钮是否可用
+    PERSONAL_ID personID = [_commonService currentPersonalID];
+    if (personID == PERSONAL_VIP)
+    {
+        _selectTeacherBtn.enabled = YES;
+    }
+    else
+    {
+        _selectTeacherBtn.enabled = NO;
+    }
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
@@ -113,9 +127,37 @@
 
 - (void)sendQuestion:(id)sender
 {
+    
+    if (_quesTitle.text == nil || _quesTitle.text.length == 0)
+    {
+        [self showErrorInfoWithMessage:@"标题不能为空" delegate:nil];
+        return;
+    }
+    else if (_quesContent.text == nil || _quesContent.text.length == 0)
+    {
+        [self showErrorInfoWithMessage:@"内容不能为空" delegate:nil];
+        return;
+    }
+
+    NSData *imageData = nil;
+    if (_sendImage.image != nil)
+    {
+        imageData = UIImageJPEGRepresentation(_sendImage.image, 0.5);
+    }
+    
     Question *ques = [[Question alloc] init];
     ques.questionTitle = _quesTitle.text;
     ques.questionContent = _quesContent.text;
+    
+    BOOL result = [_quesService askQuestionWithQuestion:ques];
+    if (result)
+    {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else
+    {
+        [self showErrorInfoWithMessage:@"发布失败" delegate:nil];
+    }
 }
 
 /*
@@ -243,19 +285,19 @@
             
         }
         _imgName.text = _sendImageName;
-//        if (_sendImage == nil)
-//        {
-//            UIImageView *sendImage = [[UIImageView alloc] initWithFrame:CGRectMake(0,
-//                                                                                   _quesContent.frame.size.height-100,
-//                                                                                   100, 100)];
+        if (_sendImage == nil)
+        {
+            UIImageView *sendImage = [[UIImageView alloc] initWithFrame:CGRectMake(0,
+                                                                                   _quesContent.frame.size.height-100,
+                                                                                   100, 100)];
 //            sendImage.userInteractionEnabled = YES;
 //            UITapGestureRecognizer *imageTapGesture = [[UITapGestureRecognizer alloc]
 //                                                       initWithTarget:self
 //                                                       action:@selector(sendImageViewTap:)];
 //            [sendImage addGestureRecognizer:imageTapGesture];
-//            _sendImage = sendImage;
-//        }
-//        
+            _sendImage = sendImage;
+        }
+//
 //        CGSize size = image.size;
 //        if (image.size.width > SMALL_WIDTH)
 //        {
@@ -265,7 +307,7 @@
 //        CGSize textSize = [_quesContent.text sizeWithFont:_quesContent.font constrainedToSize:CGSizeMake(CGRectGetWidth(_quesContent.frame), MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
 //        _sendImage.frame = CGRectMake(10,textSize.height+30,
 //                                      size.width, size.height);
-//        _sendImage.image = image;
+        _sendImage.image = image;
 //        [_quesContent addSubview:_sendImage];
 //        _quesContent.contentSize = CGSizeMake(_quesContent.contentSize.width, _quesContent.contentSize.height + CGRectGetHeight(_sendImage.frame));
         [picker dismissViewControllerAnimated:YES completion:nil];

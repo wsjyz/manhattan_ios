@@ -39,7 +39,7 @@
  * @param page
  * @return Page<Question>
  */
-- (NSArray *)myQuestionsWithUserId:(NSString *)userId;
+- (Page *)myQuestionsWithUserId:(NSString *)userId Page:(Page *)page;
 
 /**
  * 获取需要回答列表
@@ -49,6 +49,6 @@
  * @param type （指定回答(ASSIGN)；已回答(ANSWER)；未回答(UNANSWER)）
  * @return Page<Question>（rows 是包含question 对象的数组）
  */
-- (NSArray *)needAnswerListWithUserId:(NSString *)userId Type:(NSString *)type Page:(Page *)page;
+- (Page *)needAnswerListWithUserId:(NSString *)userId Type:(NSString *)type Page:(Page *)page;
 
 @end
