@@ -14,7 +14,7 @@
 @interface QuestionService : BaseRestService
 
 //提问
-- (Question *)askQuestionWithQuestion:(Question *)ques;
+- (BOOL)askQuestionWithQuestion:(Question *)ques FileData:(NSData *)data FileName:(NSString *)fileName;
 
 //回答问题
 - (BOOL)answerQuestionWithQuestion:(Question *)ques;

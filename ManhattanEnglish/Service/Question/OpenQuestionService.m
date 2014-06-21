@@ -15,12 +15,12 @@
  * @param question
  * @return Boolean
  */
-- (Question *)askQuestionWithQuestion:(Question *)ques
+-  (BOOL)askQuestionWithQuestion:(Question *)ques FileData:(NSData *)data FileName:(NSString *)fileName
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                      OPENVALUE(ques), @"ques",nil];
     [ReflectionUtil setArrayType:NSStringFromClass([Question class]) forPropName:@"rows" ofClassName:NSStringFromClass([Page class])];
-    return [RestServiceManager performRequestWithPath:OpenQuestionService_askQuestion paramDic:paramDic returnType:NSStringFromClass([NSString class]) delegate:self.delegate];
+    return [[RestServiceManager performRequestWithPath:OpenQuestionService_askQuestion paramDic:paramDic returnType:NSStringFromClass([NSNumber class]) withFileData:data andFileName:fileName delegate:self.delegate] boolValue];
 }
 
 /**

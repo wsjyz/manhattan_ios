@@ -28,9 +28,9 @@
 }
 
 //提问
-- (Question *)askQuestionWithQuestion:(Question *)ques
+- (BOOL)askQuestionWithQuestion:(Question *)ques FileData:(NSData *)data FileName:(NSString *)fileName
 {
-    return [_quesService askQuestionWithQuestion:ques];
+    return [_quesService askQuestionWithQuestion:ques FileData:data FileName:fileName];
 }
 
 //回答问题

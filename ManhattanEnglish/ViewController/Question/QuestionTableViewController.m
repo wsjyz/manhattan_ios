@@ -186,14 +186,31 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    Question *ques = _resourceArr[indexPath.row];
-    
     QuesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QuesTableViewCell"];
     if (cell == nil)
     {
         cell = [ViewUtil viewFromNibOfClass:[QuesTableViewCell class] owner:self];
     }
-    cell.content.text = ques.questionTitle;
+    
+    switch (_quesType) {
+        case QuesType_ques:
+        {
+            Question *ques = _resourceArr[indexPath.row];
+            cell.content.text = ques.questionTitle;
+           break;
+        }
+        case QuesType_homeWork_Stu:
+        case QuesType_homeWork_Tea:
+        {
+            HomeWork *homework = _resourceArr[indexPath.row];
+            cell.content.text = homework.homeworkTitle;
+            break;
+        }
+            
+        default:
+            break;
+    }
+    
     [cell setFrame:CGRectMake(0, 0, CGRectGetWidth(tableView.frame), MAXFLOAT)];
     
     return cell;

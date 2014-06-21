@@ -149,7 +149,7 @@
     ques.questionTitle = _quesTitle.text;
     ques.questionContent = _quesContent.text;
     
-    BOOL result = [_quesService askQuestionWithQuestion:ques];
+    BOOL result = [_quesService askQuestionWithQuestion:ques FileData:imageData FileName:_sendImageName];
     if (result)
     {
         [self.navigationController popViewControllerAnimated:YES];
