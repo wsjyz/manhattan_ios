@@ -80,7 +80,7 @@
 }
 
 
-- (IBAction)segmentCtlClick:(id)sender {
+- (IBAction)segmentValueChanged:(id)sender {
     
     [self updateControlLayoutWithCurrentSegmentControlSelected];
 }

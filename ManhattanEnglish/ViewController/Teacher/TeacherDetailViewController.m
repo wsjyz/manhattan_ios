@@ -13,6 +13,7 @@
 #import "TeacherChargeTableViewCell.h"
 #import "TeacherPersonInfoTableViewCell.h"
 #import "CourseSchedule.h"
+#import "AuditionDetailViewController.h"
 
 @interface TeacherDetailViewController ()<TeaCommentCellDelegate>
 
@@ -161,16 +162,26 @@
 }
 
 #pragma mark TeaCommentCellDelegate
+
+- (void)toAuditionDetailController:(BOOL)isAudition
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    AuditionDetailViewController *auditionViewCon = [storyboard instantiateViewControllerWithIdentifier:@"auditionDetail"];
+    auditionViewCon.isAudition = isAudition;
+    auditionViewCon.isTeacher = YES;
+    [self.navigationController pushViewController:auditionViewCon animated:YES];
+}
+
 //试听
 - (void)selectListenBtn
 {
-    
+    [self toAuditionDetailController:YES];
 }
 
 //预约
 - (void)selectOrderBtn
 {
-    
+    [self toAuditionDetailController:NO];
 }
 
 //收藏
