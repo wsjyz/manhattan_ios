@@ -11,7 +11,7 @@
 #import "AppointService.h"
 #import "AppointConditionTableViewCell.h"
 
-@interface AuditionDetailViewController () <UITableViewDelegate, SelectionViewDelegate>
+@interface AuditionDetailViewController () <UITableViewDelegate, UITableViewDataSource, SelectionViewDelegate>
 
 @property (strong, nonatomic) AppointService *appointService;
 @property (strong, nonatomic) UITableView *tableView;
@@ -70,7 +70,20 @@
     cell.contentLabel.text = selectedItemStr;
 }
 
-#pragma mark -UITableView Delegate
+#pragma mark - UITableView DataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (!self.isTeacher && section == 0) {
+        return 0;
+    }
+    else
+    {
+        return 3;
+    }
+}
+
+#pragma mark - UITableView Delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

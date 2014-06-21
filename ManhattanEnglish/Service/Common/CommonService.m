@@ -81,8 +81,8 @@ static PERSONAL_ID currentPersonalID = PERSONAL_GUEST;
 
 - (PERSONAL_ID)currentPersonalID
 {
-//    return PERSONAL_STUDENT;
-    return currentPersonalID;
+    return PERSONAL_TEACHER;
+//    return currentPersonalID;
 }
 
 - (NSString *)getLastLoginMobile

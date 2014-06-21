@@ -1919,9 +1919,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ktC-ay-g3A"/>
         <segue reference="CDS-yI-pkY"/>
-        <segue reference="b29-ic-cPn"/>
+        <segue reference="ktC-ay-g3A"/>
+        <segue reference="1G1-Ch-Dgc"/>
         <segue reference="P35-k1-ZJG"/>
     </inferredMetricsTieBreakers>
 </document>

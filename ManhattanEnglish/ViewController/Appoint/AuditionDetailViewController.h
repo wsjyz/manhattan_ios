@@ -10,7 +10,11 @@
 
 @interface AuditionDetailViewController : BaseViewController
 
+// 试听还是预约
 @property (assign, nonatomic) BOOL isAudition;
+
+// 课程还是老师
+@property (assign, nonatomic) BOOL isTeacher;
 
 @property (weak, nonatomic) IBOutlet UIButton *auditionBtn;
 

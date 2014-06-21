@@ -646,8 +646,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B91454DC19556354003E5BC5 /* libTbcLibCore.a in Frameworks */,
-				B91454DD19556354003E5BC5 /* libTbcLibUI.a in Frameworks */,
+				37B7204F19553789000C32DB /* libTbcLibCore.a in Frameworks */,
+				37B7205019553789000C32DB /* libTbcLibUI.a in Frameworks */,
 				3726A6611931EBA800E91B36 /* MapKit.framework in Frameworks */,
 				3726A65F1931EB8D00E91B36 /* ImageIO.framework in Frameworks */,
 				3726A6461931E05F00E91B36 /* libz.dylib in Frameworks */,
