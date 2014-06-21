@@ -17,7 +17,8 @@
 - (Page *)getHomeworksByUserWithPage:(Page*)page andUserID:(NSString *)userID
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                     OPENVALUE(page), @"page",nil];
+                                     @"u1", @"userId",
+                                     OPENVALUE(page), @"page", nil];
     [ReflectionUtil setArrayType:NSStringFromClass([HomeWork class]) forPropName:@"rows" ofClassName:NSStringFromClass([Page class])];
     return [RestServiceManager performRequestWithPath:HomeWorkService_getHomeworksByUser paramDic:paramDic returnType:NSStringFromClass([Page class]) delegate:self.delegate];
 }
