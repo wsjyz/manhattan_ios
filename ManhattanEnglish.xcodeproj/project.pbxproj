@@ -237,6 +237,8 @@
 		37FEB82E19332EAD00D3E047 /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FEB82219332EAD00D3E047 /* NSDateAdditions.m */; };
 		37FEB82F19332EAD00D3E047 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FEB82419332EAD00D3E047 /* UIViewAdditions.m */; };
 		37FEB83619334C0D00D3E047 /* BaseRestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FEB83519334C0D00D3E047 /* BaseRestService.m */; };
+		B91454DC19556354003E5BC5 /* libTbcLibCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B961237919549FCD003C511A /* libTbcLibCore.a */; };
+		B91454DD19556354003E5BC5 /* libTbcLibUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B961237119549FB5003C511A /* libTbcLibUI.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -633,6 +635,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B91454DC19556354003E5BC5 /* libTbcLibCore.a in Frameworks */,
+				B91454DD19556354003E5BC5 /* libTbcLibUI.a in Frameworks */,
 				3726A6611931EBA800E91B36 /* MapKit.framework in Frameworks */,
 				3726A65F1931EB8D00E91B36 /* ImageIO.framework in Frameworks */,
 				3726A6461931E05F00E91B36 /* libz.dylib in Frameworks */,
