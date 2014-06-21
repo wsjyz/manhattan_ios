@@ -16,6 +16,7 @@
 #import "CourseTableViewController.h"
 #import "NewsTableViewController.h"
 #import "QuestionViewController.h"
+#import "TeacherHomeWorkViewController.h"
 #import "KxMenu.h"
 #import "User.h"
 
@@ -262,7 +263,7 @@
         NewsTableViewController *newsTableViewCon = segue.destinationViewController;
         newsTableViewCon.allNews = [self.newsService listAllNews];
     }
-    else if ([segue.identifier isEqualToString:MANUAL_SEGUE_ANSWER_QUESTION])
+    else if ([segue.identifier isEqualToString:MANUAL_SEGUE_STUDENT_HOMEWORK])
     {
         QuestionViewController *quesVC = segue.destinationViewController;
         quesVC.quesType = QuesType_homeWork_Stu;
