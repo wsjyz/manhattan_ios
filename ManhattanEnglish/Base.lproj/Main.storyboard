@@ -1323,7 +1323,7 @@
                         <segue destination="1dz-DF-jQk" kind="push" identifier="goodCourse" id="1G1-Ch-Dgc"/>
                         <segue destination="hZF-ou-Mjy" kind="push" identifier="news" id="rkZ-90-bYH"/>
                         <segue destination="UqQ-4f-8su" kind="push" identifier="askQuestion" id="fJd-sJ-CWN"/>
-                        <segue destination="dMy-O9-4sf" kind="push" identifier="answerQuestion" id="tWJ-eE-1dl"/>
+                        <segue destination="dMy-O9-4sf" kind="push" identifier="homework" id="tWJ-eE-1dl"/>
                         <segue destination="6ek-oq-1Gg" kind="push" identifier="login" id="IXb-7a-60o"/>
                         <segue destination="6PD-Qm-rll" kind="push" identifier="goodTeacher" id="ew5-og-MDo"/>
                     </connections>

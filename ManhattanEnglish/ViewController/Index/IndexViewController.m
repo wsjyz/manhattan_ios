@@ -25,8 +25,7 @@
 #define MANUAL_SEGUE_ANSWER_QUESTION        @"answerQuestion"
 #define MANUAL_SEGUE_MAKE_APPOINTMENT       @"makeAppointment"
 #define MANUAL_SEGUE_PUBLISH_COURSE         @"publishCourse"
-#define MANUAL_SEGUE_TEACHER_HOMEWORK       @"teacherHomework"
-#define MANUAL_SEGUE_STUDENT_HOMEWORK       @"studentHomework"
+#define MANUAL_SEGUE_HOMEWORK               @"homework"
 #define MANUAL_SEGUE_NEWS                   @"news"
 #define MANUAL_SEGUE_GOOD_TEACHER           @"goodTeacher"
 
@@ -262,10 +261,18 @@
         NewsTableViewController *newsTableViewCon = segue.destinationViewController;
         newsTableViewCon.allNews = [self.newsService listAllNews];
     }
-    else if ([segue.identifier isEqualToString:MANUAL_SEGUE_ANSWER_QUESTION])
+    else if ([segue.identifier isEqualToString:MANUAL_SEGUE_HOMEWORK])
     {
         QuestionViewController *quesVC = segue.destinationViewController;
-        quesVC.quesType = QuesType_homeWork_Stu;
+        PERSONAL_ID personID = [self.commonService currentPersonalID];
+        if (personID == PERSONAL_STUDENT || personID == PERSONAL_VIP)
+        {
+            quesVC.quesType = QuesType_homeWork_Stu;
+        }
+        else if (personID == PERSONAL_TEACHER)
+        {
+            quesVC.quesType = QuesType_homeWork_Tea;
+        }
     }
     
     // Get the new view controller using [segue destinationViewController].
@@ -317,10 +324,8 @@
             break;
         case PERSONAL_STUDENT:
         case PERSONAL_VIP:
-            performSegueId = MANUAL_SEGUE_STUDENT_HOMEWORK;
-            break;
         case PERSONAL_TEACHER:
-            performSegueId = MANUAL_SEGUE_TEACHER_HOMEWORK;
+            performSegueId = MANUAL_SEGUE_HOMEWORK;
             break;
     }
     
