@@ -15,7 +15,6 @@
 @property (nonatomic, strong) NSString *teacherId;
 @property (nonatomic, strong) NSString *postTime;  //发布时间
 @property (nonatomic, strong) NSString *homeworkFile;      //作业文件
-@property (nonatomic, strong) NSString *homeworkContent;
 @property (nonatomic, strong) NSString *userId;     //学员Id
 
 @end

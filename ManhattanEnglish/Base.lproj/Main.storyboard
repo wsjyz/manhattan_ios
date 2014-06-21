@@ -369,26 +369,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ld7-u1-5aT">
-                                <rect key="frame" x="10" y="10" width="300" height="548"/>
+                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QlC-AR-9pM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="dMy-O9-4sf" id="STH-L7-diw"/>
-                                    <outlet property="delegate" destination="dMy-O9-4sf" id="gjd-rA-HPr"/>
+                                    <segue destination="OsQ-m1-7Q1" kind="embed" id="SjT-J9-Ajy"/>
                                 </connections>
-                            </tableView>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="我的问题" id="PEf-XW-MJA"/>
-                    <connections>
-                        <outlet property="_tableView" destination="Ld7-u1-5aT" id="Cup-MG-WtG"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LAU-IN-uNS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2148" y="2499"/>
+        </scene>
+        <!--Question Table View Controller-->
+        <scene sceneID="Gof-n1-LDJ">
+            <objects>
+                <tableViewController id="OsQ-m1-7Q1" customClass="QuestionTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ddD-4m-Nfc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="OsQ-m1-7Q1" id="Rzi-FO-0VE"/>
+                            <outlet property="delegate" destination="OsQ-m1-7Q1" id="BOf-PW-chK"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OJq-pt-8nO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2599" y="2499"/>
         </scene>
         <!--Teacher Home Work View Controller-->
         <scene sceneID="u3S-pW-a6Z">
@@ -439,9 +453,6 @@
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <action selector="selectImg:" destination="UqQ-4f-8su" eventType="touchUpInside" id="dZd-gn-xWJ"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -585,7 +596,6 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="selectTeacher:" destination="UqQ-4f-8su" eventType="touchUpInside" id="suY-v9-NHM"/>
                                     <action selector="sendQuestion:" destination="UqQ-4f-8su" eventType="touchUpInside" id="iKP-L4-y9O"/>
                                 </connections>
                             </button>

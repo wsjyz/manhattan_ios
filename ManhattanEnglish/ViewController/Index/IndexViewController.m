@@ -15,6 +15,7 @@
 #import "NewsService.h"
 #import "CourseTableViewController.h"
 #import "NewsTableViewController.h"
+#import "QuestionViewController.h"
 #import "KxMenu.h"
 #import "User.h"
 
@@ -251,12 +252,20 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    UIViewController *viewController = segue.destinationViewController;
+    viewController.hidesBottomBarWhenPushed = YES;
+    
     if ([segue.identifier isEqualToString:MANUAL_SEGUE_GOOD_COURSE]) {
         CourseTableViewController *goodCourseViewCon = segue.destinationViewController;
         goodCourseViewCon.courses = [self.courseService listAllGoodCourses];
     }else if ([segue.identifier isEqualToString:MANUAL_SEGUE_NEWS]){
         NewsTableViewController *newsTableViewCon = segue.destinationViewController;
         newsTableViewCon.allNews = [self.newsService listAllNews];
+    }
+    else if ([segue.identifier isEqualToString:MANUAL_SEGUE_ANSWER_QUESTION])
+    {
+        QuestionViewController *quesVC = segue.destinationViewController;
+        quesVC.quesType = QuesType_homeWork_Stu;
     }
     
     // Get the new view controller using [segue destinationViewController].

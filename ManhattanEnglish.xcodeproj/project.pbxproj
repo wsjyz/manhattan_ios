@@ -203,6 +203,8 @@
 		37B40CC31931B7C300D90923 /* InitService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B40CC21931B7C300D90923 /* InitService.m */; };
 		37B40CCD1931B8B200D90923 /* iVersion.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 37B40CCA1931B8B200D90923 /* iVersion.bundle */; };
 		37B40CCE1931B8B200D90923 /* iVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B40CCC1931B8B200D90923 /* iVersion.m */; };
+		37B7204F19553789000C32DB /* libTbcLibCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B7204C1955377D000C32DB /* libTbcLibCore.a */; };
+		37B7205019553789000C32DB /* libTbcLibUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B7204319553769000C32DB /* libTbcLibUI.a */; };
 		37CC3F671917D56600023E76 /* AskQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CC3F661917D56600023E76 /* AskQuestionViewController.m */; };
 		37CC3F6C1917E29200023E76 /* ques_btn_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CC3F691917E29200023E76 /* ques_btn_bg.png */; };
 		37CC3F6D1917E29200023E76 /* ques_month.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CC3F6A1917E29200023E76 /* ques_month.png */; };
@@ -213,6 +215,9 @@
 		37CC3F7B1917E74800023E76 /* teacher_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CC3F781917E74800023E76 /* teacher_arrow.png */; };
 		37CC3F7C1917E74800023E76 /* teacher_boy.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CC3F791917E74800023E76 /* teacher_boy.png */; };
 		37CC3F7D1917E74800023E76 /* teacher_girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CC3F7A1917E74800023E76 /* teacher_girl.png */; };
+		37D7837519554B8100239B1E /* OpenHomeworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D7837419554B8100239B1E /* OpenHomeworkService.m */; };
+		37D7837819554B9400239B1E /* HomeworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D7837719554B9400239B1E /* HomeworkService.m */; };
+		37D7837B19555B8D00239B1E /* QuestionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D7837A19555B8D00239B1E /* QuestionTableViewController.m */; };
 		37E87EDC1946FE3C0019E9AC /* TeacherDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E87EDB1946FE3C0019E9AC /* TeacherDetail.m */; };
 		37E87EEB194700310019E9AC /* OpenTeacherService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E87EDF194700310019E9AC /* OpenTeacherService.m */; };
 		37E87EEC194700310019E9AC /* TeacherService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E87EE1194700310019E9AC /* TeacherService.m */; };
@@ -247,30 +252,30 @@
 			remoteGlobalIDString = 2FAB6896190A26D40081D6B6;
 			remoteInfo = ManhattanEnglish;
 		};
-		B961237019549FB5003C511A /* PBXContainerItemProxy */ = {
+		37B7204219553769000C32DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 37009276194F2DE200A6EF8E /* TbcLibUI.xcodeproj */;
+			containerPortal = 37B7203D19553769000C32DB /* TbcLibUI.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2F595516172588B8001980D3;
 			remoteInfo = TbcLibUI;
 		};
-		B961237219549FB5003C511A /* PBXContainerItemProxy */ = {
+		37B7204419553769000C32DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 37009276194F2DE200A6EF8E /* TbcLibUI.xcodeproj */;
+			containerPortal = 37B7203D19553769000C32DB /* TbcLibUI.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2F595527172588B9001980D3;
 			remoteInfo = TbcLibUITests;
 		};
-		B961237819549FCD003C511A /* PBXContainerItemProxy */ = {
+		37B7204B1955377D000C32DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3700926D194F2DC800A6EF8E /* TbcLibCore.xcodeproj */;
+			containerPortal = 37B720461955377D000C32DB /* TbcLibCore.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2FEA3E6818EABC690073CA51;
 			remoteInfo = TbcLibCore;
 		};
-		B961237A19549FCD003C511A /* PBXContainerItemProxy */ = {
+		37B7204D1955377D000C32DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3700926D194F2DC800A6EF8E /* TbcLibCore.xcodeproj */;
+			containerPortal = 37B720461955377D000C32DB /* TbcLibCore.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2FEA3E7818EABC690073CA51;
 			remoteInfo = TbcLibCoreTests;
@@ -397,8 +402,6 @@
 		2FDD4E9B193645FF0044671A /* tab_student_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_student_n.png; sourceTree = "<group>"; };
 		2FF5A14A194D1B9E00BE819E /* AppointService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointService.h; sourceTree = "<group>"; };
 		2FF5A14B194D1B9E00BE819E /* AppointService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointService.m; sourceTree = "<group>"; };
-		3700926D194F2DC800A6EF8E /* TbcLibCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TbcLibCore.xcodeproj; path = ../../../../Repositories/Apple/Project/TbcLib/TbcLibCore/TbcLibCore.xcodeproj; sourceTree = "<group>"; };
-		37009276194F2DE200A6EF8E /* TbcLibUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TbcLibUI.xcodeproj; path = ../../../../Repositories/Apple/Project/TbcLib/TbcLibUI/TbcLibUI.xcodeproj; sourceTree = "<group>"; };
 		37009285194F33BB00A6EF8E /* CmnLoadMoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CmnLoadMoreView.xib; sourceTree = "<group>"; };
 		37009286194F33BB00A6EF8E /* CmnLoadMoreView_ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CmnLoadMoreView_ipad.xib; sourceTree = "<group>"; };
 		37009287194F33BB00A6EF8E /* NodataBgView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NodataBgView.xib; sourceTree = "<group>"; };
@@ -564,6 +567,8 @@
 		37B40CCA1931B8B200D90923 /* iVersion.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iVersion.bundle; sourceTree = "<group>"; };
 		37B40CCB1931B8B200D90923 /* iVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iVersion.h; sourceTree = "<group>"; };
 		37B40CCC1931B8B200D90923 /* iVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iVersion.m; sourceTree = "<group>"; };
+		37B7203D19553769000C32DB /* TbcLibUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TbcLibUI.xcodeproj; path = ../../Apple/Project/TbcLib/TbcLibUI/TbcLibUI.xcodeproj; sourceTree = "<group>"; };
+		37B720461955377D000C32DB /* TbcLibCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TbcLibCore.xcodeproj; path = ../../Apple/Project/TbcLib/TbcLibCore/TbcLibCore.xcodeproj; sourceTree = "<group>"; };
 		37CC3F651917D56600023E76 /* AskQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskQuestionViewController.h; sourceTree = "<group>"; };
 		37CC3F661917D56600023E76 /* AskQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskQuestionViewController.m; sourceTree = "<group>"; };
 		37CC3F691917E29200023E76 /* ques_btn_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ques_btn_bg.png; sourceTree = "<group>"; };
@@ -577,6 +582,12 @@
 		37CC3F781917E74800023E76 /* teacher_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacher_arrow.png; sourceTree = "<group>"; };
 		37CC3F791917E74800023E76 /* teacher_boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacher_boy.png; sourceTree = "<group>"; };
 		37CC3F7A1917E74800023E76 /* teacher_girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacher_girl.png; sourceTree = "<group>"; };
+		37D7837319554B8100239B1E /* OpenHomeworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenHomeworkService.h; sourceTree = "<group>"; };
+		37D7837419554B8100239B1E /* OpenHomeworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenHomeworkService.m; sourceTree = "<group>"; };
+		37D7837619554B9400239B1E /* HomeworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeworkService.h; sourceTree = "<group>"; };
+		37D7837719554B9400239B1E /* HomeworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeworkService.m; sourceTree = "<group>"; };
+		37D7837919555B8D00239B1E /* QuestionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionTableViewController.h; sourceTree = "<group>"; };
+		37D7837A19555B8D00239B1E /* QuestionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTableViewController.m; sourceTree = "<group>"; };
 		37E87EDA1946FE3C0019E9AC /* TeacherDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherDetail.h; sourceTree = "<group>"; };
 		37E87EDB1946FE3C0019E9AC /* TeacherDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherDetail.m; sourceTree = "<group>"; };
 		37E87EDE194700310019E9AC /* OpenTeacherService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenTeacherService.h; sourceTree = "<group>"; };
@@ -633,6 +644,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37B7204F19553789000C32DB /* libTbcLibCore.a in Frameworks */,
+				37B7205019553789000C32DB /* libTbcLibUI.a in Frameworks */,
 				3726A6611931EBA800E91B36 /* MapKit.framework in Frameworks */,
 				3726A65F1931EB8D00E91B36 /* ImageIO.framework in Frameworks */,
 				3726A6461931E05F00E91B36 /* libz.dylib in Frameworks */,
@@ -1041,6 +1054,8 @@
 				371BEE4819167A2D000595D1 /* QuesTableViewCell.xib */,
 				371BEE4919167A2D000595D1 /* QuestionViewController.h */,
 				371BEE4A19167A2D000595D1 /* QuestionViewController.m */,
+				37D7837919555B8D00239B1E /* QuestionTableViewController.h */,
+				37D7837A19555B8D00239B1E /* QuestionTableViewController.m */,
 				371BEE4019167A2D000595D1 /* QuesDetailTableViewCell.h */,
 				371BEE4119167A2D000595D1 /* QuesDetailTableViewCell.m */,
 				371BEE4219167A2D000595D1 /* QuesDetailTableViewCell.xib */,
@@ -1156,6 +1171,7 @@
 		37348C2B190CE691007605DA /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				37D7836E19554A6100239B1E /* Homework */,
 				2F58846B194DE02B004ACD71 /* News */,
 				2F588464194DD7D2004ACD71 /* GoodCourse */,
 				2FF5A145194D1B8800BE819E /* Appoint */,
@@ -1328,8 +1344,8 @@
 		37B40CB41931B2FB00D90923 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				37009276194F2DE200A6EF8E /* TbcLibUI.xcodeproj */,
-				3700926D194F2DC800A6EF8E /* TbcLibCore.xcodeproj */,
+				37B720461955377D000C32DB /* TbcLibCore.xcodeproj */,
+				37B7203D19553769000C32DB /* TbcLibUI.xcodeproj */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
@@ -1353,6 +1369,24 @@
 				37B40CCC1931B8B200D90923 /* iVersion.m */,
 			);
 			path = iVersion;
+			sourceTree = "<group>";
+		};
+		37B7203E19553769000C32DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37B7204319553769000C32DB /* libTbcLibUI.a */,
+				37B7204519553769000C32DB /* TbcLibUITests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37B720471955377D000C32DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37B7204C1955377D000C32DB /* libTbcLibCore.a */,
+				37B7204E1955377D000C32DB /* TbcLibCoreTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		37CC3F681917E29200023E76 /* Question */ = {
@@ -1382,6 +1416,17 @@
 				37CC3F7A1917E74800023E76 /* teacher_girl.png */,
 			);
 			path = Teacher;
+			sourceTree = "<group>";
+		};
+		37D7836E19554A6100239B1E /* Homework */ = {
+			isa = PBXGroup;
+			children = (
+				37D7837319554B8100239B1E /* OpenHomeworkService.h */,
+				37D7837419554B8100239B1E /* OpenHomeworkService.m */,
+				37D7837619554B9400239B1E /* HomeworkService.h */,
+				37D7837719554B9400239B1E /* HomeworkService.m */,
+			);
+			path = Homework;
 			sourceTree = "<group>";
 		};
 		37E87EDD194700310019E9AC /* Teacher */ = {
@@ -1451,24 +1496,6 @@
 			path = Kal;
 			sourceTree = "<group>";
 		};
-		B961236C19549FB5003C511A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B961237119549FB5003C511A /* libTbcLibUI.a */,
-				B961237319549FB5003C511A /* TbcLibUITests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		B961237419549FCD003C511A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B961237919549FCD003C511A /* libTbcLibCore.a */,
-				B961237B19549FCD003C511A /* TbcLibCoreTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1534,12 +1561,12 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = B961237419549FCD003C511A /* Products */;
-					ProjectRef = 3700926D194F2DC800A6EF8E /* TbcLibCore.xcodeproj */;
+					ProductGroup = 37B720471955377D000C32DB /* Products */;
+					ProjectRef = 37B720461955377D000C32DB /* TbcLibCore.xcodeproj */;
 				},
 				{
-					ProductGroup = B961236C19549FB5003C511A /* Products */;
-					ProjectRef = 37009276194F2DE200A6EF8E /* TbcLibUI.xcodeproj */;
+					ProductGroup = 37B7203E19553769000C32DB /* Products */;
+					ProjectRef = 37B7203D19553769000C32DB /* TbcLibUI.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1551,32 +1578,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		B961237119549FB5003C511A /* libTbcLibUI.a */ = {
+		37B7204319553769000C32DB /* libTbcLibUI.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libTbcLibUI.a;
-			remoteRef = B961237019549FB5003C511A /* PBXContainerItemProxy */;
+			remoteRef = 37B7204219553769000C32DB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B961237319549FB5003C511A /* TbcLibUITests.octest */ = {
+		37B7204519553769000C32DB /* TbcLibUITests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = TbcLibUITests.octest;
-			remoteRef = B961237219549FB5003C511A /* PBXContainerItemProxy */;
+			remoteRef = 37B7204419553769000C32DB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B961237919549FCD003C511A /* libTbcLibCore.a */ = {
+		37B7204C1955377D000C32DB /* libTbcLibCore.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libTbcLibCore.a;
-			remoteRef = B961237819549FCD003C511A /* PBXContainerItemProxy */;
+			remoteRef = 37B7204B1955377D000C32DB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B961237B19549FCD003C511A /* TbcLibCoreTests.xctest */ = {
+		37B7204E1955377D000C32DB /* TbcLibCoreTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = TbcLibCoreTests.xctest;
-			remoteRef = B961237A19549FCD003C511A /* PBXContainerItemProxy */;
+			remoteRef = 37B7204D1955377D000C32DB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1719,6 +1746,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37AF51E21938945E00853E10 /* CKParagraphStyle.m in Sources */,
+				37D7837819554B9400239B1E /* HomeworkService.m in Sources */,
 				37A6D6AF190FF45400B7C8B0 /* LoginViewController.m in Sources */,
 				2F588463194DD104004ACD71 /* CourseTableViewCell.m in Sources */,
 				37FEB7D719331F3500D3E047 /* Question.m in Sources */,
@@ -1755,6 +1783,7 @@
 				37FEB82C19332EAD00D3E047 /* KalViewController.m in Sources */,
 				37E87EFD194749020019E9AC /* QuestionService.m in Sources */,
 				37A6D6AB190FF45400B7C8B0 /* BaseViewController.m in Sources */,
+				37D7837B19555B8D00239B1E /* QuestionTableViewController.m in Sources */,
 				2F2024D0192A736400272AAB /* CourseTableViewController.m in Sources */,
 				3721C3F4191A850700D63FBE /* TeacherChargeTableViewCell.m in Sources */,
 				2F2024CD192A734500272AAB /* NewsTableViewController.m in Sources */,
@@ -1790,6 +1819,7 @@
 				37E87EFA194748CB0019E9AC /* OpenQuestionService.m in Sources */,
 				2F6D6AA01913F9440097617E /* IndexViewController.m in Sources */,
 				37E87EF0194700310019E9AC /* WalletService.m in Sources */,
+				37D7837519554B8100239B1E /* OpenHomeworkService.m in Sources */,
 				2F31488B192BBE9D0021C40B /* NewsTableViewCell.m in Sources */,
 				37AF51E41938945E00853E10 /* CKRefreshControl.m in Sources */,
 				370092D719508D4000A6EF8E /* MyCollectTeacherListTableViewController.m in Sources */,
