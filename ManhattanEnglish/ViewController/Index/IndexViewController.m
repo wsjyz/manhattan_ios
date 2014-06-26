@@ -258,7 +258,7 @@
     
     if ([segue.identifier isEqualToString:MANUAL_SEGUE_GOOD_COURSE]) {
         CourseTableViewController *goodCourseViewCon = segue.destinationViewController;
-        goodCourseViewCon.courses = [self.courseService listAllGoodCourses];
+        goodCourseViewCon.currPage = [self.courseService listAllGoodCourses];
     }else if ([segue.identifier isEqualToString:MANUAL_SEGUE_NEWS]){
         NewsTableViewController *newsTableViewCon = segue.destinationViewController;
         newsTableViewCon.allNews = [self.newsService listAllNews];

@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSString *courseTitle;
 @property (strong, nonatomic) NSString *courseSubtitle;
 @property (strong, nonatomic) NSString *coursePic;
+@property (strong, nonatomic) NSString *classNo;
 @property (strong, nonatomic) NSDate *startTime;
 @property (strong, nonatomic) NSDate *endTime;
 @property (assign, nonatomic) CGFloat period;
@@ -29,6 +30,6 @@
 @property (strong, nonatomic) NSString *videoUrl;
 @property (strong, nonatomic) NSString *teachingTime;
 
-@property (strong, nonatomic) NSArray *teacherList;
+@property (strong, nonatomic) NSArray *teacherDetailList;
 
 @end

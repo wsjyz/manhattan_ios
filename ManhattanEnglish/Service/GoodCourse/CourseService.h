@@ -10,10 +10,11 @@
 #import "BaseRestService.h"
 
 @class Course;
+@class Page;
 
 @interface CourseService : BaseRestService
 
 // 获取所有精品课程
-- (NSArray *)listAllGoodCourses;
+- (Page *)listAllGoodCourses;
 
 @end

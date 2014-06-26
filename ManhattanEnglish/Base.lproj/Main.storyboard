@@ -1923,8 +1923,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="eel-j7-Hq3"/>
         <segue reference="ew5-og-MDo"/>
-        <segue reference="ktC-ay-g3A"/>
         <segue reference="1G1-Ch-Dgc"/>
         <segue reference="P35-k1-ZJG"/>
     </inferredMetricsTieBreakers>

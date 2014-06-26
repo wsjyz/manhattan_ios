@@ -92,7 +92,7 @@
     headerView.delegate = self;
     [headerView.courseImageView setImageWithURL:[NSURL URLWithString:self.course
                                                  .coursePic] placeholderImage:[UIImage imageNamed:@"good_course_cover_bg.png"]];
-    headerView.classNoLabel.text = self.course.courseTitle;
+    headerView.classNoLabel.text = self.course.classNo;
     headerView.priceLabel.text = [NSString stringWithFormat:@"%0.0f RMB", self.course.expense];
     headerView.subTitleLabel.text = self.course.courseSubtitle;
     headerView.startDateLabel.text = [CommonUtil stringWithDate:self.course.startTime andFormatStr:yyyy_MM_dd];

@@ -11,8 +11,11 @@
 #import "Course.h"
 #import <TbcLibUI/UIImageView+WebCache.h>
 #import "CourseDetailViewController.h"
+#import "Page.h"
 
 @interface CourseTableViewController ()
+
+@property (strong, nonatomic) NSArray *rows;
 
 @end
 
@@ -36,6 +39,9 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    if (self.currPage != nil && self.currPage.rows != nil) {
+        self.rows = self.currPage.rows;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,7 +61,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return self.courses.count;
+    return self.rows.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -66,9 +72,9 @@
     }
     
     // Configure the cell...
-    Course *course = self.courses[indexPath.row];
+    Course *course = self.rows[indexPath.row];
     [cell.courseImageView setImageWithURL:[NSURL URLWithString:course.coursePic] placeholderImage:[UIImage imageNamed:@"good_course_cover_bg.png"]];
-    cell.courseTitleLabel.text = course.courseTitle;
+    cell.courseTitleLabel.text = course.classNo;
     cell.coursePriceLabel.text = [NSString stringWithFormat:@"%0.0f", course.expense];
     cell.coursePlaceLabel.text = course.place;
     
@@ -124,7 +130,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-    Course *course = self.courses[path.row];
+    Course *course = self.rows[path.row];
     
     CourseDetailViewController *detailViewCon = [segue destinationViewController];
     detailViewCon.course = course;

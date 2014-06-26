@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "BaseTableViewController.h"
 
+@class Page;
+
 @interface CourseTableViewController : BaseTableViewController
 
-@property (strong, nonatomic) NSArray *courses;
+@property (strong, nonatomic) Page *currPage;
 
 @end
