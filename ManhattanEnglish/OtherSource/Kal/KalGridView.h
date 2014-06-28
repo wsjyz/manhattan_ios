@@ -37,6 +37,8 @@ typedef enum {
 @property (nonatomic, strong) NSDate *maxAVailableDate;
 @property (nonatomic, strong) NSDate *beginDate;
 @property (nonatomic, strong) NSDate *endDate;
+@property (nonatomic, strong) NSArray *selectedDates;
+@property (nonatomic, assign) BOOL enableTouches;
 
 - (id)initWithFrame:(CGRect)frame logic:(KalLogic *)logic delegate:(id<KalViewDelegate>)delegate;
 - (void)markTilesForDates:(NSArray *)dates;

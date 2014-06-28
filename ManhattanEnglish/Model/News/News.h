@@ -10,9 +10,10 @@
 
 @interface News : NSObject
 
-@property (strong, nonatomic) NSString *newsId;
+@property (strong, nonatomic) NSString *informationId;
 @property (strong, nonatomic) NSString *title;
-@property (strong, nonatomic) NSDate *createTime;
+@property (strong, nonatomic) NSDate *postTime;
 @property (strong, nonatomic) NSString *content;
+@property (strong, nonatomic) NSString *status;
 
 @end

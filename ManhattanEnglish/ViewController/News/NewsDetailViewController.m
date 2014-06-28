@@ -34,7 +34,7 @@
     
     self.titleLabel.text = self.news.title;
     self.contentTextView.text = self.news.content;
-    self.createTimeLabel.text = [CommonUtil stringWithDate:self.news.createTime andFormatStr:@"yyyy-MM-dd HH:mm"];
+    self.createTimeLabel.text = [CommonUtil stringWithDate:self.news.postTime andFormatStr:@"yyyy-MM-dd HH:mm"];
 }
 
 - (void)didReceiveMemoryWarning

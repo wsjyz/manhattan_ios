@@ -11,13 +11,6 @@
 #import "Page.h"
 #import "TeacherDetail.h"
 
-@interface CourseService (OpenExtension)
-
-- (Page *)getWorthCourses:(Page *)openPage;
-
-@end
-
-
 @implementation CourseService (OpenExtension)
 
 - (Page *)getWorthCourses:(Page *)openPage
@@ -27,6 +20,19 @@
     [ReflectionUtil setArrayType:NSStringFromClass([Course class]) forPropName:@"rows" ofClassName:NSStringFromClass([Page class])];
     [ReflectionUtil setArrayType:NSStringFromClass([TeacherDetail class]) forPropName:@"teacherDetailList" ofClassName:NSStringFromClass([Course class])];
     return [RestServiceManager performRequestWithPath:@"/course/getWorthCourses" paramDic:paramDic returnType:NSStringFromClass([Page class]) delegate:self.delegate];
+}
+
+- (NSArray *)getScheduleWithStartTime:(NSDate *)startTime endTime:(NSDate *)endTime userId:(NSString *)userId
+{
+    userId = @"t1";
+    startTime = [CommonUtil dateWithString:@"2014-06-21" withFormatStr:yyyy_MM_dd];
+    endTime = [CommonUtil dateWithString:@"2014-06-26" withFormatStr:yyyy_MM_dd];
+    
+    NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                    [CommonUtil stringWithDate:startTime andFormatStr:yyyy_MM_dd], @"startTime",
+                                    [CommonUtil stringWithDate:endTime andFormatStr:yyyy_MM_dd], @"endTime",
+                                     userId, @"userId", nil];
+    return [RestServiceManager performRequestWithPath:@"/course/getSchedule" paramDic:paramDic returnType:NSStringFromClass([NSDate class]) delegate:self.delegate];
 }
 
 @end

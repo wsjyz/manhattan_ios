@@ -30,6 +30,17 @@
     return self;
 }
 
+- (void)setCurrPage:(Page *)currPage
+{
+    _currPage = currPage;
+    
+    if (currPage != nil && currPage.rows != nil) {
+        self.rows = currPage.rows;
+        
+        [self.tableView reloadData];
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -39,9 +50,6 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    if (self.currPage != nil && self.currPage.rows != nil) {
-        self.rows = self.currPage.rows;
-    }
 }
 
 - (void)didReceiveMemoryWarning

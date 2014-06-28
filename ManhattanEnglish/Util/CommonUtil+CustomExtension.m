@@ -18,4 +18,22 @@
     return page;
 }
 
++ (NSArray *)getFirstAndLastDateOfCurrentMonth
+{
+    NSDate *curDate = [NSDate date];
+    NSCalendar* calendar = [NSCalendar currentCalendar];
+    NSDateComponents* comps = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSWeekCalendarUnit|NSWeekdayCalendarUnit fromDate:curDate]; // Get necessary date components
+
+    comps.day = 1;
+
+    NSDate *firstDay = [calendar dateFromComponents:comps];
+    
+    comps.month += 1;
+    comps.day = 0;
+    
+    NSDate *lastDay = [calendar dateFromComponents:comps];
+    
+    return @[firstDay, lastDay];
+}
+
 @end

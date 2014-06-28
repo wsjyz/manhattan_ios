@@ -8,9 +8,17 @@
 
 #import "BaseRestService.h"
 
+@class Page;
+
 @interface NewsService : BaseRestService
 
 // 获取所有动态新闻列表
 - (NSArray *)listAllNews;
+
+@end
+
+@interface NewsService (OpenExtension)
+
+- (Page *) getInformations;
 
 @end

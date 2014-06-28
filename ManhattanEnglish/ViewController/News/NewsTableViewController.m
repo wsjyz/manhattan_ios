@@ -9,10 +9,13 @@
 #import "NewsTableViewController.h"
 #import "NewsTableViewCell.h"
 #import "News.h"
+#import "Page.h"
 #import <TbcLibCore/CommonUtil.h>
 #import "NewsDetailViewController.h"
 
 @interface NewsTableViewController ()
+
+@property (strong, nonatomic) NSArray *rows;
 
 @end
 
@@ -27,6 +30,17 @@
     return self;
 }
 
+- (void)setCurrPage:(Page *)currPage
+{
+    _currPage = self.currPage;
+    
+    if (currPage != nil && currPage.rows != nil) {
+        self.rows = currPage.rows;
+        
+        [self.tableView reloadData];
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -36,6 +50,10 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    if (self.rows != nil) {
+        [self.tableView reloadData];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,7 +78,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return self.allNews.count;
+    return self.rows.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -68,11 +86,11 @@
     NewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell...
-    News *news = self.allNews[indexPath.row];
+    News *news = self.rows[indexPath.row];
     
     cell.titleLabel.text = news.title;
     cell.contentLabel.text = news.content;
-    cell.createTimeLabel.text = [CommonUtil stringWithDate:news.createTime andFormatStr:@"yyyy-MM-dd HH:mm"];
+    cell.createTimeLabel.text = [CommonUtil stringWithDate:news.postTime andFormatStr:@"yyyy-MM-dd HH:mm"];
     
     return cell;
 }
@@ -124,7 +142,7 @@
     
     if ([segue.identifier isEqualToString:@"detail"]) {
         NewsDetailViewController *detailViewCon = segue.destinationViewController;
-        detailViewCon.news = self.allNews[indexPath.row];
+        detailViewCon.news = self.rows[indexPath.row];
     }
     
     // Get the new view controller using [segue destinationViewController].

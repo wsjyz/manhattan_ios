@@ -16,7 +16,7 @@
 
 - (Page *)getOrderCoursesWithPage:(Page *)openPage andUserId:(NSString *)userId
 {
-    userId = @"u1";
+    userId = @"t1";
     
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                      OPENVALUE(openPage), @"openPage",

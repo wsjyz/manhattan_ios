@@ -32,6 +32,7 @@
 @property (nonatomic, unsafe_unretained) id<UITableViewDelegate> delegate;
 @property (nonatomic, unsafe_unretained) id<KalDataSource> dataSource;
 @property (nonatomic, strong) NSDate *selectedDate;
+@property (nonatomic, strong) NSArray *initialHighlightedDates;
 @property (nonatomic, strong) NSDate *beginDate;
 @property (nonatomic, strong) NSDate *endDate;
 @property (nonatomic, assign) KalSelectionMode selectionMode;

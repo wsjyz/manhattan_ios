@@ -34,6 +34,14 @@ static NSString *kSlideAnimationId = @"KalSwitchMonths";
     BOOL _needRemoveRanges;
 }
 
+- (void)setSelectedDates:(NSArray *)selectedDates
+{
+    for (NSDate *selectedDate in selectedDates) {
+        KalTileView *currentTile = [frontMonthView tileForDate:selectedDate];
+        currentTile.state = KalTileStateSelected;
+    }
+}
+
 - (void)setBeginDate:(NSDate *)beginDate
 {
     KalTileView *preTile = [frontMonthView tileForDate:_beginDate];
@@ -139,6 +147,10 @@ static NSString *kSlideAnimationId = @"KalSwitchMonths";
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    if (!self.enableTouches) {
+        return;
+    }
+    
     UITouch *touch = [touches anyObject];
     CGPoint location = [touch locationInView:self];
     UIView *hitView = [self hitTest:location withEvent:event];
@@ -166,6 +178,10 @@ static NSString *kSlideAnimationId = @"KalSwitchMonths";
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    if (!self.enableTouches) {
+        return;
+    }
+    
     if (self.selectionMode == KalSelectionModeSingle)
         return;
     
@@ -197,6 +213,10 @@ static NSString *kSlideAnimationId = @"KalSwitchMonths";
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    if (!self.enableTouches) {
+        return;
+    }
+    
     UITouch *touch = [touches anyObject];
     CGPoint location = [touch locationInView:self];
     UIView *hitView = [self hitTest:location withEvent:event];

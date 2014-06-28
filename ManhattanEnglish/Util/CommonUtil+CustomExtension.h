@@ -12,4 +12,6 @@
 
 + (Page *)defaultPage;
 
++ (NSArray *)getFirstAndLastDateOfCurrentMonth;
+
 @end

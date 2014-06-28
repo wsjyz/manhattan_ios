@@ -65,8 +65,6 @@
 - (void)initKalController
 {
     self.kalController = [[KalViewController alloc] initWithSelectionMode:KalSelectionModeSingle];
-    self.kalController.selectedDate = [NSDate date];
-    
     self.kalController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Today", @"") style:UIBarButtonItemStyleBordered target:self action:@selector(showAndSelectToday)];
 }
 
@@ -112,6 +110,10 @@
     if (self.kalController == nil) {
         [self initKalController];
     }
+    
+    NSArray *dateArr = [CommonUtil getFirstAndLastDateOfCurrentMonth];
+    NSArray *courseDateArr = [self.courseService getScheduleWithStartTime:dateArr[0] endTime:dateArr[1] userId:[self.commonService getCurrentUserID]];
+    self.kalController.initialHighlightedDates = courseDateArr;
     
     [self.navigationController pushViewController:self.kalController animated:YES];
 }
@@ -258,10 +260,10 @@
     
     if ([segue.identifier isEqualToString:MANUAL_SEGUE_GOOD_COURSE]) {
         CourseTableViewController *goodCourseViewCon = segue.destinationViewController;
-        goodCourseViewCon.currPage = [self.courseService listAllGoodCourses];
+        goodCourseViewCon.currPage = [self.courseService getWorthCourses:[CommonUtil defaultPage]];
     }else if ([segue.identifier isEqualToString:MANUAL_SEGUE_NEWS]){
         NewsTableViewController *newsTableViewCon = segue.destinationViewController;
-        newsTableViewCon.allNews = [self.newsService listAllNews];
+        newsTableViewCon.currPage = [self.newsService getInformations];
     }
     else if ([segue.identifier isEqualToString:MANUAL_SEGUE_STUDENT_HOMEWORK])
     {
