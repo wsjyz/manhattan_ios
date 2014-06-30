@@ -17,8 +17,8 @@
 - (Page *)getHomeworksByUserWithPage:(Page*)page andUserID:(NSString *)userID
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                     @"u1", @"userId",
-                                     OPENVALUE(page), @"page", nil];
+                                     userID, @"userId",
+                                     OPENVALUE(page), @"openPage", nil];
     [ReflectionUtil setArrayType:NSStringFromClass([HomeWork class]) forPropName:@"rows" ofClassName:NSStringFromClass([Page class])];
     return [RestServiceManager performRequestWithPath:HomeWorkService_getHomeworksByUser paramDic:paramDic returnType:NSStringFromClass([Page class]) delegate:self.delegate];
 }
@@ -50,7 +50,7 @@
  * 提交一个新的作业
  * @param homeworkSubmit
  */
-- (HomeworkSubmit *)submitHomeWork:(HomeworkSubmit *)submitHomeWork
+- (HomeworkSubmit *)submitHomeWork:(HomeworkSubmit *)submitHomeWork FileData:(NSData *)data FileName:(NSString *)name
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                      OPENVALUE(submitHomeWork), @"submitHomeWork",nil];

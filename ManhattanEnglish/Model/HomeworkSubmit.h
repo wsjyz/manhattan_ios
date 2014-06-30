@@ -16,6 +16,6 @@
 @property (nonatomic, strong) NSString *homeworkContent;
 @property (nonatomic, strong) NSString *submitFile;//服务器上存放的文件名
 @property (nonatomic, strong) NSString *originalFileName;//原始文件名
-@property (nonatomic, strong) NSString *submitTime;
+@property (nonatomic, strong) NSDate *submitTime;
 
 @end

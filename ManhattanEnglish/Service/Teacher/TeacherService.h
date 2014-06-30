@@ -15,10 +15,7 @@
 - (NSArray *)getAuthDataWithUserID:(NSString *)userID;
 
 //获取教师列表
-- (Page *)listPageWithPage:(Page *)page;
-
-//搜索教师列表
-- (NSArray *)listByNameWithSearchKey:(NSString *)searchKey;
+- (Page *)listPageWithPage:(Page *)page andSearchKey:(NSString *)searchKey;
 
 //收藏教师
 - (BOOL)collectWithUserId:(NSString *)userId;

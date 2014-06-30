@@ -17,6 +17,7 @@
 #import "NewsTableViewController.h"
 #import "QuestionViewController.h"
 #import "TeacherHomeWorkViewController.h"
+#import "LoginViewController.h"
 #import "KxMenu.h"
 #import "User.h"
 
@@ -135,7 +136,9 @@
 
 - (void)showItemLogout
 {
-    
+    //TODO:
+    [_commonService updateCurrentUser:nil];
+    [self initNaviBtnsLayout:NO];
 }
 
 - (void)showQuickMenu

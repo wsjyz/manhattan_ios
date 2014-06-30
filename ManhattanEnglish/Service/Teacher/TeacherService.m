@@ -35,15 +35,9 @@
 }
 
 //获取教师列表
-- (Page *)listPageWithPage:(Page *)page
+- (Page *)listPageWithPage:(Page *)page andSearchKey:(NSString *)searchKey
 {
-    return [_teacherService listPageWithPage:page];
-}
-
-//搜索教师列表
-- (NSArray *)listByNameWithSearchKey:(NSString *)searchKey
-{
-    return [_teacherService listByNameWithSearchKey:searchKey];
+    return [_teacherService listPageWithPage:page andSearchKey:searchKey];
 }
 
 //收藏教师

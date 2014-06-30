@@ -14,7 +14,7 @@
 
 @end
 
-@interface TeacherListTableViewController : BaseTableViewController
+@interface TeacherListTableViewController:BaseTableViewController
 
 @property (nonatomic, strong) NSMutableArray *resourceArr;
 @property (nonatomic, strong) NSString *searchKey;

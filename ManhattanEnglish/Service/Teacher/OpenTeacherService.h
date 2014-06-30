@@ -26,15 +26,7 @@
  * @param page
  * @return Page<TeacherDetail>
  */
-- (Page *)listPageWithPage:(Page *)page;
-
-/**
- * 搜索教师列表
- *
- * @param searchKey
- * @return array<TeacherDetail>
- */
-- (NSArray *)listByNameWithSearchKey:(NSString *)searchKey;
+- (Page *)listPageWithPage:(Page *)page andSearchKey:(NSString *)searchKey;
 
 /**
  * 收藏教师

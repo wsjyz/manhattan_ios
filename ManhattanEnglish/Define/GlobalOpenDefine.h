@@ -25,7 +25,6 @@
 #pragma mark OpenTeacherService                        
 #define OpenTeacherSerice_getAuthData                   @"/teacher/getAuthData"
 #define OpenTeacherService_listPage                     @"/teacher/listPage"
-#define OpenTeacherService_listByName                   @"/teacher/listByName"
 #define OpenTeacherService_collect                      @"/user/collect"
 #define OpenTeacherService_cancelCollect                @"/user/cancelCollect"
 

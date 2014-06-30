@@ -19,7 +19,6 @@
     QuestionService *_quesService;
     CommonService *_commonService;
     HomeworkService *_homeworkService;
-    Page *_currentPage;
 }
 
 @property (nonatomic, strong) NSMutableArray *resourceArr;
@@ -79,6 +78,21 @@
                 newPage = [_quesService myQuestionsWithUserId:userID Page:_currentPage];
                 break;
             }
+            case QuesType_answer_assign:
+            {
+                newPage = [_quesService needAnswerListWithUserId:userID Type:ANS_TYPE_ASSIGN Page:_currentPage];
+                break;
+            }
+            case QuesType_answered:
+            {
+                newPage = [_quesService needAnswerListWithUserId:userID Type:ANS_TYPE_ANSWER Page:_currentPage];
+                break;
+            }
+            case QuesType_unAnswer:
+            {
+                newPage = [_quesService needAnswerListWithUserId:userID Type:ANS_TYPE_UNANSWER Page:_currentPage];
+                break;
+            }
             case QuesType_homeWork_Stu:
             {
                 newPage = [_homeworkService getHomeworksByUserWithPage:_currentPage andUserID:userID];
@@ -128,9 +142,24 @@
                 newPage = [_quesService myQuestionsWithUserId:userID Page:_currentPage];
                 break;
             }
+            case QuesType_answer_assign:
+            {
+                newPage = [_quesService needAnswerListWithUserId:userID Type:ANS_TYPE_ASSIGN Page:_currentPage];
+                break;
+            }
+            case QuesType_answered:
+            {
+                newPage = [_quesService needAnswerListWithUserId:userID Type:ANS_TYPE_ANSWER Page:_currentPage];
+                break;
+            }
+            case QuesType_unAnswer:
+            {
+                newPage = [_quesService needAnswerListWithUserId:userID Type:ANS_TYPE_UNANSWER Page:_currentPage];
+                break;
+            }
             case QuesType_homeWork_Stu:
             {
-                newPage = [_homeworkService getHomeworksByUserWithPage:_currentPage andUserID:userID];
+                newPage = [_homeworkService getHomeworksByUserWithPage:_currentPage andUserID:@"u1"];
                 break;
             }
             case QuesType_homeWork_Tea:
@@ -186,14 +215,34 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    Question *ques = _resourceArr[indexPath.row];
-    
     QuesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QuesTableViewCell"];
     if (cell == nil)
     {
         cell = [ViewUtil viewFromNibOfClass:[QuesTableViewCell class] owner:self];
     }
-    cell.content.text = ques.questionTitle;
+    
+    switch (_quesType) {
+        case QuesType_ques:
+        case QuesType_answer_assign:
+        case QuesType_answered:
+        case QuesType_unAnswer:
+        {
+            Question *ques = _resourceArr[indexPath.row];
+            cell.content.text = ques.questionTitle;
+           break;
+        }
+        case QuesType_homeWork_Stu:
+        case QuesType_homeWork_Tea:
+        {
+            HomeWork *homework = _resourceArr[indexPath.row];
+            cell.content.text = homework.homeworkTitle;
+            break;
+        }
+            
+        default:
+            break;
+    }
+    
     [cell setFrame:CGRectMake(0, 0, CGRectGetWidth(tableView.frame), MAXFLOAT)];
     
     return cell;
@@ -210,6 +259,9 @@
 {
     switch (_quesType) {
         case QuesType_ques:
+        case QuesType_answer_assign:
+        case QuesType_answered:
+        case QuesType_unAnswer:
         {
             //            我的问题
             QuesDetailViewController *quesDetailVC = [ViewUtil viewControllerFromNibOfClass:[QuesDetailViewController class]];
@@ -222,7 +274,7 @@
         {
             //            我的作业
             AnswerHomeWorkViewController *homwworkDetailVC = [ViewUtil viewControllerFromNibOfClass:[AnswerHomeWorkViewController class]];
-            //TODO:
+            homwworkDetailVC.homework = _resourceArr[indexPath.row];
             [self.navigationController pushViewController:homwworkDetailVC animated:YES];
             break;
         }

@@ -144,6 +144,7 @@
 		3721C3F5191A850700D63FBE /* TeacherChargeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3721C3F3191A850700D63FBE /* TeacherChargeTableViewCell.xib */; };
 		3721C3F9191A853700D63FBE /* TeacherPersonInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3721C3F7191A853700D63FBE /* TeacherPersonInfoTableViewCell.m */; };
 		3721C3FA191A853700D63FBE /* TeacherPersonInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3721C3F8191A853700D63FBE /* TeacherPersonInfoTableViewCell.xib */; };
+		372250C519614BF000DA319A /* TeacherAnswerQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 372250C419614BF000DA319A /* TeacherAnswerQuestionViewController.m */; };
 		3726A6351931CA9700E91B36 /* OpenLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3726A6341931CA9700E91B36 /* OpenLoginService.m */; };
 		3726A6401931E03500E91B36 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3726A63F1931E03500E91B36 /* libsqlite3.dylib */; };
 		3726A6441931E04400E91B36 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3726A6431931E04400E91B36 /* libxml2.2.dylib */; };
@@ -216,6 +217,8 @@
 		37D7837519554B8100239B1E /* OpenHomeworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D7837419554B8100239B1E /* OpenHomeworkService.m */; };
 		37D7837819554B9400239B1E /* HomeworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D7837719554B9400239B1E /* HomeworkService.m */; };
 		37D7837B19555B8D00239B1E /* QuestionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D7837A19555B8D00239B1E /* QuestionTableViewController.m */; };
+		37D783921955784C00239B1E /* libTbcLibCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D783861955782D00239B1E /* libTbcLibCore.a */; };
+		37D783931955784C00239B1E /* libTbcLibUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D7838F1955784000239B1E /* libTbcLibUI.a */; };
 		37E87EDC1946FE3C0019E9AC /* TeacherDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E87EDB1946FE3C0019E9AC /* TeacherDetail.m */; };
 		37E87EEB194700310019E9AC /* OpenTeacherService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E87EDF194700310019E9AC /* OpenTeacherService.m */; };
 		37E87EEC194700310019E9AC /* TeacherService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E87EE1194700310019E9AC /* TeacherService.m */; };
@@ -240,9 +243,6 @@
 		37FEB82E19332EAD00D3E047 /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FEB82219332EAD00D3E047 /* NSDateAdditions.m */; };
 		37FEB82F19332EAD00D3E047 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FEB82419332EAD00D3E047 /* UIViewAdditions.m */; };
 		37FEB83619334C0D00D3E047 /* BaseRestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FEB83519334C0D00D3E047 /* BaseRestService.m */; };
-		B91454F619557189003E5BC5 /* libTbcLibCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B91454EB195570F0003E5BC5 /* libTbcLibCore.a */; };
-		B91454F719557189003E5BC5 /* libTbcLibUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B91454F319557104003E5BC5 /* libTbcLibUI.a */; };
-		B92AC498195C91DF00601E90 /* CommonUtil+CustomExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B92AC497195C91DF00601E90 /* CommonUtil+CustomExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -253,30 +253,30 @@
 			remoteGlobalIDString = 2FAB6896190A26D40081D6B6;
 			remoteInfo = ManhattanEnglish;
 		};
-		B91454EA195570F0003E5BC5 /* PBXContainerItemProxy */ = {
+		37D783851955782D00239B1E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 37B720461955377D000C32DB /* TbcLibCore.xcodeproj */;
+			containerPortal = 37D783801955782D00239B1E /* TbcLibCore.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2FEA3E6818EABC690073CA51;
 			remoteInfo = TbcLibCore;
 		};
-		B91454EC195570F0003E5BC5 /* PBXContainerItemProxy */ = {
+		37D783871955782D00239B1E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 37B720461955377D000C32DB /* TbcLibCore.xcodeproj */;
+			containerPortal = 37D783801955782D00239B1E /* TbcLibCore.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2FEA3E7818EABC690073CA51;
 			remoteInfo = TbcLibCoreTests;
 		};
-		B91454F219557104003E5BC5 /* PBXContainerItemProxy */ = {
+		37D7838E1955784000239B1E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 37B7203D19553769000C32DB /* TbcLibUI.xcodeproj */;
+			containerPortal = 37D783891955784000239B1E /* TbcLibUI.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2F595516172588B8001980D3;
 			remoteInfo = TbcLibUI;
 		};
-		B91454F419557104003E5BC5 /* PBXContainerItemProxy */ = {
+		37D783901955784000239B1E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 37B7203D19553769000C32DB /* TbcLibUI.xcodeproj */;
+			containerPortal = 37D783891955784000239B1E /* TbcLibUI.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2F595527172588B9001980D3;
 			remoteInfo = TbcLibUITests;
@@ -474,6 +474,8 @@
 		3721C3F6191A853700D63FBE /* TeacherPersonInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherPersonInfoTableViewCell.h; sourceTree = "<group>"; };
 		3721C3F7191A853700D63FBE /* TeacherPersonInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherPersonInfoTableViewCell.m; sourceTree = "<group>"; };
 		3721C3F8191A853700D63FBE /* TeacherPersonInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeacherPersonInfoTableViewCell.xib; sourceTree = "<group>"; };
+		372250C319614BF000DA319A /* TeacherAnswerQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherAnswerQuestionViewController.h; sourceTree = "<group>"; };
+		372250C419614BF000DA319A /* TeacherAnswerQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherAnswerQuestionViewController.m; sourceTree = "<group>"; };
 		3726A6331931CA9700E91B36 /* OpenLoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenLoginService.h; sourceTree = "<group>"; };
 		3726A6341931CA9700E91B36 /* OpenLoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenLoginService.m; sourceTree = "<group>"; };
 		3726A63F1931E03500E91B36 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -568,8 +570,6 @@
 		37B40CCA1931B8B200D90923 /* iVersion.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iVersion.bundle; sourceTree = "<group>"; };
 		37B40CCB1931B8B200D90923 /* iVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iVersion.h; sourceTree = "<group>"; };
 		37B40CCC1931B8B200D90923 /* iVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iVersion.m; sourceTree = "<group>"; };
-		37B7203D19553769000C32DB /* TbcLibUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TbcLibUI.xcodeproj; path = ../../../../Repositories/Apple/Project/TbcLib/TbcLibUI/TbcLibUI.xcodeproj; sourceTree = "<group>"; };
-		37B720461955377D000C32DB /* TbcLibCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TbcLibCore.xcodeproj; path = ../../../../Repositories/Apple/Project/TbcLib/TbcLibCore/TbcLibCore.xcodeproj; sourceTree = "<group>"; };
 		37CC3F651917D56600023E76 /* AskQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskQuestionViewController.h; sourceTree = "<group>"; };
 		37CC3F661917D56600023E76 /* AskQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskQuestionViewController.m; sourceTree = "<group>"; };
 		37CC3F691917E29200023E76 /* ques_btn_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ques_btn_bg.png; sourceTree = "<group>"; };
@@ -589,6 +589,8 @@
 		37D7837719554B9400239B1E /* HomeworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeworkService.m; sourceTree = "<group>"; };
 		37D7837919555B8D00239B1E /* QuestionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionTableViewController.h; sourceTree = "<group>"; };
 		37D7837A19555B8D00239B1E /* QuestionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTableViewController.m; sourceTree = "<group>"; };
+		37D783801955782D00239B1E /* TbcLibCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TbcLibCore.xcodeproj; path = ../../Apple/Project/TbcLib/TbcLibCore/TbcLibCore.xcodeproj; sourceTree = "<group>"; };
+		37D783891955784000239B1E /* TbcLibUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TbcLibUI.xcodeproj; path = ../../Apple/Project/TbcLib/TbcLibUI/TbcLibUI.xcodeproj; sourceTree = "<group>"; };
 		37E87EDA1946FE3C0019E9AC /* TeacherDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherDetail.h; sourceTree = "<group>"; };
 		37E87EDB1946FE3C0019E9AC /* TeacherDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherDetail.m; sourceTree = "<group>"; };
 		37E87EDE194700310019E9AC /* OpenTeacherService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenTeacherService.h; sourceTree = "<group>"; };
@@ -647,8 +649,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B91454F619557189003E5BC5 /* libTbcLibCore.a in Frameworks */,
-				B91454F719557189003E5BC5 /* libTbcLibUI.a in Frameworks */,
+				37D783921955784C00239B1E /* libTbcLibCore.a in Frameworks */,
+				37D783931955784C00239B1E /* libTbcLibUI.a in Frameworks */,
 				3726A6611931EBA800E91B36 /* MapKit.framework in Frameworks */,
 				3726A65F1931EB8D00E91B36 /* ImageIO.framework in Frameworks */,
 				3726A6461931E05F00E91B36 /* libz.dylib in Frameworks */,
@@ -692,13 +694,6 @@
 				2F68A67D19532A79006CE404 /* CourseTableViewCell.xib */,
 			);
 			path = GoodCourse;
-			sourceTree = "<group>";
-		};
-		2F2024C9192A729800272AAB /* Homework */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Homework;
 			sourceTree = "<group>";
 		};
 		2F2024CA192A729900272AAB /* News */ = {
@@ -1072,6 +1067,8 @@
 				372DDB35195278C000F3AAEE /* AnswerHomeWorkViewController.xib */,
 				372DDB461952D58B00F3AAEE /* TeacherHomeWorkViewController.h */,
 				372DDB471952D58B00F3AAEE /* TeacherHomeWorkViewController.m */,
+				372250C319614BF000DA319A /* TeacherAnswerQuestionViewController.h */,
+				372250C419614BF000DA319A /* TeacherAnswerQuestionViewController.m */,
 			);
 			path = Question;
 			sourceTree = "<group>";
@@ -1202,7 +1199,6 @@
 			isa = PBXGroup;
 			children = (
 				370092D119508CB600A6EF8E /* Student */,
-				2F2024C9192A729800272AAB /* Homework */,
 				2F2024CA192A729900272AAB /* News */,
 				2F2024C8192A71D600272AAB /* GoodCourse */,
 				371BEE3F19167A2D000595D1 /* Question */,
@@ -1349,8 +1345,8 @@
 		37B40CB41931B2FB00D90923 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				37B720461955377D000C32DB /* TbcLibCore.xcodeproj */,
-				37B7203D19553769000C32DB /* TbcLibUI.xcodeproj */,
+				37D783891955784000239B1E /* TbcLibUI.xcodeproj */,
+				37D783801955782D00239B1E /* TbcLibCore.xcodeproj */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
@@ -1414,6 +1410,24 @@
 				37D7837719554B9400239B1E /* HomeworkService.m */,
 			);
 			path = Homework;
+			sourceTree = "<group>";
+		};
+		37D783811955782D00239B1E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37D783861955782D00239B1E /* libTbcLibCore.a */,
+				37D783881955782D00239B1E /* TbcLibCoreTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37D7838A1955784000239B1E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37D7838F1955784000239B1E /* libTbcLibUI.a */,
+				37D783911955784000239B1E /* TbcLibUITests.octest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		37E87EDD194700310019E9AC /* Teacher */ = {
@@ -1483,24 +1497,6 @@
 			path = Kal;
 			sourceTree = "<group>";
 		};
-		B91454E6195570F0003E5BC5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B91454EB195570F0003E5BC5 /* libTbcLibCore.a */,
-				B91454ED195570F0003E5BC5 /* TbcLibCoreTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		B91454EE19557104003E5BC5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B91454F319557104003E5BC5 /* libTbcLibUI.a */,
-				B91454F519557104003E5BC5 /* TbcLibUITests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1566,12 +1562,12 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = B91454E6195570F0003E5BC5 /* Products */;
-					ProjectRef = 37B720461955377D000C32DB /* TbcLibCore.xcodeproj */;
+					ProductGroup = 37D783811955782D00239B1E /* Products */;
+					ProjectRef = 37D783801955782D00239B1E /* TbcLibCore.xcodeproj */;
 				},
 				{
-					ProductGroup = B91454EE19557104003E5BC5 /* Products */;
-					ProjectRef = 37B7203D19553769000C32DB /* TbcLibUI.xcodeproj */;
+					ProductGroup = 37D7838A1955784000239B1E /* Products */;
+					ProjectRef = 37D783891955784000239B1E /* TbcLibUI.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1583,32 +1579,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		B91454EB195570F0003E5BC5 /* libTbcLibCore.a */ = {
+		37D783861955782D00239B1E /* libTbcLibCore.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libTbcLibCore.a;
-			remoteRef = B91454EA195570F0003E5BC5 /* PBXContainerItemProxy */;
+			remoteRef = 37D783851955782D00239B1E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B91454ED195570F0003E5BC5 /* TbcLibCoreTests.xctest */ = {
+		37D783881955782D00239B1E /* TbcLibCoreTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = TbcLibCoreTests.xctest;
-			remoteRef = B91454EC195570F0003E5BC5 /* PBXContainerItemProxy */;
+			remoteRef = 37D783871955782D00239B1E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B91454F319557104003E5BC5 /* libTbcLibUI.a */ = {
+		37D7838F1955784000239B1E /* libTbcLibUI.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libTbcLibUI.a;
-			remoteRef = B91454F219557104003E5BC5 /* PBXContainerItemProxy */;
+			remoteRef = 37D7838E1955784000239B1E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B91454F519557104003E5BC5 /* TbcLibUITests.octest */ = {
+		37D783911955784000239B1E /* TbcLibUITests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = TbcLibUITests.octest;
-			remoteRef = B91454F419557104003E5BC5 /* PBXContainerItemProxy */;
+			remoteRef = 37D783901955784000239B1E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1825,6 +1821,7 @@
 				2F6D6AA01913F9440097617E /* IndexViewController.m in Sources */,
 				37E87EF0194700310019E9AC /* WalletService.m in Sources */,
 				37D7837519554B8100239B1E /* OpenHomeworkService.m in Sources */,
+				372250C519614BF000DA319A /* TeacherAnswerQuestionViewController.m in Sources */,
 				2F31488B192BBE9D0021C40B /* NewsTableViewCell.m in Sources */,
 				37AF51E41938945E00853E10 /* CKRefreshControl.m in Sources */,
 				370092D719508D4000A6EF8E /* MyCollectTeacherListTableViewController.m in Sources */,
@@ -1853,7 +1850,6 @@
 				2F58845C194D8CB1004ACD71 /* Course.m in Sources */,
 				2F600688194B718F0059487A /* SelectionViewController.m in Sources */,
 				37FEB82B19332EAD00D3E047 /* KalView.m in Sources */,
-				B92AC498195C91DF00601E90 /* CommonUtil+CustomExtension.m in Sources */,
 				370C49411910971200C63063 /* InfoTableViewCell.m in Sources */,
 				3721C3EF191A84DF00D63FBE /* TeacherScheduleTableViewCell.m in Sources */,
 			);
