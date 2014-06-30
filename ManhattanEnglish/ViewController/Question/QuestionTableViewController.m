@@ -19,7 +19,6 @@
     QuestionService *_quesService;
     CommonService *_commonService;
     HomeworkService *_homeworkService;
-    Page *_currentPage;
 }
 
 @property (nonatomic, strong) NSMutableArray *resourceArr;
@@ -79,6 +78,21 @@
                 newPage = [_quesService myQuestionsWithUserId:userID Page:_currentPage];
                 break;
             }
+            case QuesType_answer_assign:
+            {
+                newPage = [_quesService needAnswerListWithUserId:userID Type:ANS_TYPE_ASSIGN Page:_currentPage];
+                break;
+            }
+            case QuesType_answered:
+            {
+                newPage = [_quesService needAnswerListWithUserId:userID Type:ANS_TYPE_ANSWER Page:_currentPage];
+                break;
+            }
+            case QuesType_unAnswer:
+            {
+                newPage = [_quesService needAnswerListWithUserId:userID Type:ANS_TYPE_UNANSWER Page:_currentPage];
+                break;
+            }
             case QuesType_homeWork_Stu:
             {
                 newPage = [_homeworkService getHomeworksByUserWithPage:_currentPage andUserID:userID];
@@ -126,6 +140,21 @@
             case QuesType_ques:
             {
                 newPage = [_quesService myQuestionsWithUserId:userID Page:_currentPage];
+                break;
+            }
+            case QuesType_answer_assign:
+            {
+                newPage = [_quesService needAnswerListWithUserId:userID Type:ANS_TYPE_ASSIGN Page:_currentPage];
+                break;
+            }
+            case QuesType_answered:
+            {
+                newPage = [_quesService needAnswerListWithUserId:userID Type:ANS_TYPE_ANSWER Page:_currentPage];
+                break;
+            }
+            case QuesType_unAnswer:
+            {
+                newPage = [_quesService needAnswerListWithUserId:userID Type:ANS_TYPE_UNANSWER Page:_currentPage];
                 break;
             }
             case QuesType_homeWork_Stu:
@@ -194,6 +223,9 @@
     
     switch (_quesType) {
         case QuesType_ques:
+        case QuesType_answer_assign:
+        case QuesType_answered:
+        case QuesType_unAnswer:
         {
             Question *ques = _resourceArr[indexPath.row];
             cell.content.text = ques.questionTitle;
@@ -227,6 +259,9 @@
 {
     switch (_quesType) {
         case QuesType_ques:
+        case QuesType_answer_assign:
+        case QuesType_answered:
+        case QuesType_unAnswer:
         {
             //            我的问题
             QuesDetailViewController *quesDetailVC = [ViewUtil viewControllerFromNibOfClass:[QuesDetailViewController class]];

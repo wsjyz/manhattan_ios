@@ -359,6 +359,119 @@
             </objects>
             <point key="canvasLocation" x="1162" y="2745"/>
         </scene>
+        <!--Teacher Answer Question View Controller - 我要回答-->
+        <scene sceneID="HMh-Qk-b58">
+            <objects>
+                <viewController id="Imf-hx-had" customClass="TeacherAnswerQuestionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vpa-g0-cCn"/>
+                        <viewControllerLayoutGuide type="bottom" id="aOd-sk-F5w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RYk-Lj-sr1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i63-4H-hmH">
+                                <rect key="frame" x="0.0" y="56" width="320" height="512"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="YaF-Lx-9fG" kind="embed" id="dC4-6O-jav"/>
+                                </connections>
+                            </containerView>
+                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wo8-Mx-9sI">
+                                <rect key="frame" x="0.0" y="56" width="320" height="512"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="2NE-iR-8BC" kind="embed" id="tJQ-Vk-zU8"/>
+                                </connections>
+                            </containerView>
+                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2sM-bm-mrJ">
+                                <rect key="frame" x="0.0" y="56" width="320" height="512"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="9GT-uz-5bv" kind="embed" id="gXK-s4-4Qz"/>
+                                </connections>
+                            </containerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hki-Dz-eU7">
+                                <rect key="frame" x="20" y="13" width="280" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="指定回答"/>
+                                    <segment title="已回答"/>
+                                    <segment title="未回答"/>
+                                </segments>
+                                <connections>
+                                    <action selector="select:" destination="Imf-hx-had" eventType="valueChanged" id="4WP-nT-jcE"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="我要回答" id="4JN-H8-eAP"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rjc-Pd-S0o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2143" y="4100"/>
+        </scene>
+        <!--Question Table View Controller-->
+        <scene sceneID="qdw-gb-6ga">
+            <objects>
+                <tableViewController id="YaF-Lx-9fG" customClass="QuestionTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="KzT-H3-V05">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="512"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="YaF-Lx-9fG" id="7Qy-Od-6h7"/>
+                            <outlet property="delegate" destination="YaF-Lx-9fG" id="bE7-O5-BHN"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L3l-P2-4RP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2606" y="3819"/>
+        </scene>
+        <!--Question Table View Controller-->
+        <scene sceneID="rjk-eQ-PXI">
+            <objects>
+                <tableViewController id="9GT-uz-5bv" customClass="QuestionTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" tag="2" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Dfb-Vc-cvn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="512"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="9GT-uz-5bv" id="KYE-F8-wVd"/>
+                            <outlet property="delegate" destination="9GT-uz-5bv" id="j6n-uq-DNM"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eVA-7r-Mcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2622" y="5059"/>
+        </scene>
+        <!--Question Table View Controller-->
+        <scene sceneID="p7S-9O-7rg">
+            <objects>
+                <tableViewController id="2NE-iR-8BC" customClass="QuestionTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="1K7-be-g6H">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="512"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="2NE-iR-8BC" id="Evq-q6-WqZ"/>
+                            <outlet property="delegate" destination="2NE-iR-8BC" id="pb6-Ud-w2D"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gxl-8e-Ct5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2622" y="4450"/>
+        </scene>
         <!--Question View Controller - 我的问题-->
         <scene sceneID="DxO-Hy-VCj">
             <objects>
@@ -1332,6 +1445,7 @@
                         <segue destination="6PD-Qm-rll" kind="push" identifier="goodTeacher" id="ew5-og-MDo"/>
                         <segue destination="LQ3-35-XOM" kind="push" identifier="teacherHomework" id="qO4-fd-kHd"/>
                         <segue destination="Wow-GR-9zG" kind="push" identifier="login" id="MIq-KI-guz"/>
+                        <segue destination="Imf-hx-had" kind="push" identifier="answerQuestion" id="cSQ-f9-sIy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmH-ng-aeE" userLabel="First Responder" sceneMemberID="firstResponder"/>

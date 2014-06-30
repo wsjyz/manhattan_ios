@@ -35,4 +35,9 @@ typedef enum
 #define TYPE_STUDENT                    @"STUDENT"
 #define TYPE_VIPSTUDENT                 @"VIPSTUDENT"
 
+//（指定回答(ASSIGN)；已回答(ANSWER)；未回答(UNANSWER)）
+#define ANS_TYPE_ASSIGN                 @"ASSIGN"
+#define ANS_TYPE_ANSWER                 @"ANSWER"
+#define ANS_TYPE_UNANSWER               @"UNANSWER"
+
 #endif

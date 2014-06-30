@@ -144,6 +144,7 @@
 		3721C3F5191A850700D63FBE /* TeacherChargeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3721C3F3191A850700D63FBE /* TeacherChargeTableViewCell.xib */; };
 		3721C3F9191A853700D63FBE /* TeacherPersonInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3721C3F7191A853700D63FBE /* TeacherPersonInfoTableViewCell.m */; };
 		3721C3FA191A853700D63FBE /* TeacherPersonInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3721C3F8191A853700D63FBE /* TeacherPersonInfoTableViewCell.xib */; };
+		372250C519614BF000DA319A /* TeacherAnswerQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 372250C419614BF000DA319A /* TeacherAnswerQuestionViewController.m */; };
 		3726A6351931CA9700E91B36 /* OpenLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3726A6341931CA9700E91B36 /* OpenLoginService.m */; };
 		3726A6401931E03500E91B36 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3726A63F1931E03500E91B36 /* libsqlite3.dylib */; };
 		3726A6441931E04400E91B36 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3726A6431931E04400E91B36 /* libxml2.2.dylib */; };
@@ -473,6 +474,8 @@
 		3721C3F6191A853700D63FBE /* TeacherPersonInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherPersonInfoTableViewCell.h; sourceTree = "<group>"; };
 		3721C3F7191A853700D63FBE /* TeacherPersonInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherPersonInfoTableViewCell.m; sourceTree = "<group>"; };
 		3721C3F8191A853700D63FBE /* TeacherPersonInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeacherPersonInfoTableViewCell.xib; sourceTree = "<group>"; };
+		372250C319614BF000DA319A /* TeacherAnswerQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherAnswerQuestionViewController.h; sourceTree = "<group>"; };
+		372250C419614BF000DA319A /* TeacherAnswerQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherAnswerQuestionViewController.m; sourceTree = "<group>"; };
 		3726A6331931CA9700E91B36 /* OpenLoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenLoginService.h; sourceTree = "<group>"; };
 		3726A6341931CA9700E91B36 /* OpenLoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenLoginService.m; sourceTree = "<group>"; };
 		3726A63F1931E03500E91B36 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -1064,6 +1067,8 @@
 				372DDB35195278C000F3AAEE /* AnswerHomeWorkViewController.xib */,
 				372DDB461952D58B00F3AAEE /* TeacherHomeWorkViewController.h */,
 				372DDB471952D58B00F3AAEE /* TeacherHomeWorkViewController.m */,
+				372250C319614BF000DA319A /* TeacherAnswerQuestionViewController.h */,
+				372250C419614BF000DA319A /* TeacherAnswerQuestionViewController.m */,
 			);
 			path = Question;
 			sourceTree = "<group>";
@@ -1816,6 +1821,7 @@
 				2F6D6AA01913F9440097617E /* IndexViewController.m in Sources */,
 				37E87EF0194700310019E9AC /* WalletService.m in Sources */,
 				37D7837519554B8100239B1E /* OpenHomeworkService.m in Sources */,
+				372250C519614BF000DA319A /* TeacherAnswerQuestionViewController.m in Sources */,
 				2F31488B192BBE9D0021C40B /* NewsTableViewCell.m in Sources */,
 				37AF51E41938945E00853E10 /* CKRefreshControl.m in Sources */,
 				370092D719508D4000A6EF8E /* MyCollectTeacherListTableViewController.m in Sources */,
@@ -1844,7 +1850,6 @@
 				2F58845C194D8CB1004ACD71 /* Course.m in Sources */,
 				2F600688194B718F0059487A /* SelectionViewController.m in Sources */,
 				37FEB82B19332EAD00D3E047 /* KalView.m in Sources */,
-				B92AC498195C91DF00601E90 /* CommonUtil+CustomExtension.m in Sources */,
 				370C49411910971200C63063 /* InfoTableViewCell.m in Sources */,
 				3721C3EF191A84DF00D63FBE /* TeacherScheduleTableViewCell.m in Sources */,
 			);
