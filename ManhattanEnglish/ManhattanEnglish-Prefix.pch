@@ -18,6 +18,7 @@
 #import <TbcLibUI/TbcUIExtensions.h>
 #import <TbcLibCore/TbcExtensions.h>
 #import <TbcLibCore/CommonUtil.h>
+#import "CommonUtil+CustomExtension.h"
 #endif
 
 #define RGBCOLOR(R,G,B) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1]

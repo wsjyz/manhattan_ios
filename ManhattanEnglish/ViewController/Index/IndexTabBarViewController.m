@@ -8,7 +8,7 @@
 
 #import "IndexTabBarViewController.h"
 
-@interface IndexTabBarViewController ()
+@interface IndexTabBarViewController () <UITabBarControllerDelegate>
 
 @end
 
@@ -28,6 +28,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.delegate = self;
+    
     [self.tabBar.items[3] setTitle:@"试听"];
     [self.tabBar.items[3] setImage:[UIImage imageNamed:@"tab_audition_n.png"]];
 }
@@ -36,6 +38,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    
 }
 
 /*

@@ -637,6 +637,8 @@
 		37FEB82419332EAD00D3E047 /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
 		37FEB83419334C0D00D3E047 /* BaseRestService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRestService.h; sourceTree = "<group>"; };
 		37FEB83519334C0D00D3E047 /* BaseRestService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRestService.m; sourceTree = "<group>"; };
+		B92AC496195C91DF00601E90 /* CommonUtil+CustomExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CommonUtil+CustomExtension.h"; sourceTree = "<group>"; };
+		B92AC497195C91DF00601E90 /* CommonUtil+CustomExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CommonUtil+CustomExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1182,6 +1184,8 @@
 			children = (
 				37348C34190CE79E007605DA /* ViewUtil.h */,
 				37348C35190CE79E007605DA /* ViewUtil.m */,
+				B92AC496195C91DF00601E90 /* CommonUtil+CustomExtension.h */,
+				B92AC497195C91DF00601E90 /* CommonUtil+CustomExtension.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -1840,6 +1844,7 @@
 				2F58845C194D8CB1004ACD71 /* Course.m in Sources */,
 				2F600688194B718F0059487A /* SelectionViewController.m in Sources */,
 				37FEB82B19332EAD00D3E047 /* KalView.m in Sources */,
+				B92AC498195C91DF00601E90 /* CommonUtil+CustomExtension.m in Sources */,
 				370C49411910971200C63063 /* InfoTableViewCell.m in Sources */,
 				3721C3EF191A84DF00D63FBE /* TeacherScheduleTableViewCell.m in Sources */,
 			);

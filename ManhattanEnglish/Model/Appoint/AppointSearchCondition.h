@@ -18,10 +18,10 @@ typedef enum : NSUInteger {
 
 @interface AppointSearchCondition : NSObject
 
-@property (strong, nonatomic) NSArray *kcfl;
-@property (strong, nonatomic) NSArray *jxdd;
-@property (strong, nonatomic) NSArray *jxfs;
-@property (strong, nonatomic) NSString *jsxb;
+@property (strong, nonatomic) NSArray *courseCategory;
+@property (strong, nonatomic) NSArray *place;
+@property (strong, nonatomic) NSArray *tutoringWay;
+@property (strong, nonatomic) NSString *sex;
 @property (strong, nonatomic) NSDate *startDate;
 @property (strong, nonatomic) NSDate *endDate;
 

@@ -89,6 +89,8 @@ extern const CGSize kTileSize;
 
 - (KalTileView *)tileForDate:(NSDate *)date
 {
+    [[NSCalendar currentCalendar] rangeOfUnit:NSDayCalendarUnit startDate:&date interval:NULL forDate:date];
+    
     KalTileView *tile = nil;
     for (KalTileView *t in self.subviews) {
         if ([t.date isEqualToDate:date]) {

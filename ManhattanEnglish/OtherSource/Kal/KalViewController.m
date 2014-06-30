@@ -252,6 +252,15 @@ NSString *const KalDataSourceChangedNotification = @"KalDataSourceChangedNotific
     [tableView flashScrollIndicators];
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    if (self.initialHighlightedDates != nil) {
+        self.calendarView.gridView.selectedDates = self.initialHighlightedDates;
+    }
+}
+
 #pragma mark -
 
 - (void)dealloc

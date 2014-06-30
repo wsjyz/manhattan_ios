@@ -10,11 +10,22 @@
 #import "CourseTableViewController.h"
 #import "CourseService.h"
 #import "TeacherListTableViewController.h"
+#import "AppointService.h"
+#import "CommonService.h"
+#import "Page.h"
 
 @interface MyAppointViewController ()
 
+@property (strong, nonatomic) Page *currCoursePage;
+@property (strong, nonatomic) Page *currTeacherPage;
+
+@property (strong, nonatomic) CommonService *commonService;
+@property (strong, nonatomic) AppointService *appointService;
 @property (strong, nonatomic) CourseService *courseService;
 @property (assign, nonatomic) BOOL isAudition;
+
+@property (weak, nonatomic) CourseTableViewController *courseTableViewCon;
+@property (weak, nonatomic) TeacherListTableViewController *teacherTableViewCon;
 
 @end
 
@@ -22,7 +33,17 @@
 
 - (void)initService
 {
+    self.commonService = [[CommonService alloc] init];
     self.courseService = [[CourseService alloc] initWithDelegate:self];
+    self.appointService = [[AppointService alloc] initWithDelegate:self];
+    
+    self.currCoursePage = [[Page alloc] init];
+    self.currCoursePage.autoCount = NO;
+    self.currCoursePage.autoPaging = NO;
+    
+    self.currTeacherPage = [[Page alloc] init];
+    self.currTeacherPage.autoCount = NO;
+    self.currTeacherPage.autoPaging = NO;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -47,6 +68,13 @@
     self.isAudition = [@"试听" isEqualToString:item.title];
     
     [self setNavgationItemTitle:self.isAudition? @"我的试听" : @"我的预约"];
+    
+    [self refreshData];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,6 +83,25 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)refreshData
+{
+    NSUInteger index = self.segmentedControl.selectedSegmentIndex;
+    
+    // course
+    if (index == 0) {
+        
+        if (!self.isAudition) {
+            
+            self.courseTableViewCon.currPage = [self.appointService getOrderCoursesWithPage:self.currCoursePage andUserId:[self.commonService getCurrentUserID]];
+        }else{
+            
+            self.courseTableViewCon.currPage = [self.appointService getListenCoursesWithPage:self.currCoursePage andUserId:[self.commonService getCurrentUserID]];
+        }
+    }else{
+        
+        
+    }
+}
 
 #pragma mark - Navigation
 
@@ -64,11 +111,12 @@
     if ([@"innerCourse" isEqualToString:segue.identifier]) {
         
         CourseTableViewController *courseTableViewCon = [segue destinationViewController];
-        courseTableViewCon.courses = [self.courseService listAllGoodCourses];
+        self.courseTableViewCon = courseTableViewCon;
+        
     }else if ([@"innerTeacher" isEqualToString:segue.identifier]) {
         
         TeacherListTableViewController *teacherTableViewCon = [segue destinationViewController];
-//        courseTableViewCon.courses = [self.courseService listAllGoodCourses];
+        self.teacherTableViewCon = teacherTableViewCon;
     }
 }
 
@@ -80,8 +128,10 @@
 }
 
 
-- (IBAction)segmentCtlClick:(id)sender {
+- (IBAction)segmentValueChanged:(id)sender {
     
     [self updateControlLayoutWithCurrentSegmentControlSelected];
+    
+    [self refreshData];
 }
 @end

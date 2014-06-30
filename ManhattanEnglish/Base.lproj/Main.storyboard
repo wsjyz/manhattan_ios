@@ -139,6 +139,9 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="322"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="322" id="VoT-Ya-M0L"/>
+                                </constraints>
                                 <connections>
                                     <segue destination="ckQ-VO-YnJ" kind="embed" identifier="innerTable" id="BvD-mS-0fD"/>
                                 </connections>
@@ -150,7 +153,6 @@
                             <constraint firstItem="tff-GO-x9d" firstAttribute="top" secondItem="mU7-5q-eac" secondAttribute="bottom" constant="24" id="CUC-Cl-nQh"/>
                             <constraint firstItem="mU7-5q-eac" firstAttribute="leading" secondItem="1Y0-Ip-ABd" secondAttribute="leading" id="Dat-HC-Eul"/>
                             <constraint firstItem="tff-GO-x9d" firstAttribute="leading" secondItem="1Y0-Ip-ABd" secondAttribute="leading" constant="20" symbolic="YES" id="NhZ-Wg-cWS"/>
-                            <constraint firstItem="dR9-zs-PJI" firstAttribute="top" secondItem="tff-GO-x9d" secondAttribute="bottom" constant="122" id="hW2-Ph-p3F"/>
                             <constraint firstItem="mU7-5q-eac" firstAttribute="top" secondItem="6aD-Wn-4RV" secondAttribute="bottom" id="qq3-vy-DyA"/>
                             <constraint firstAttribute="trailing" secondItem="tff-GO-x9d" secondAttribute="trailing" constant="20" symbolic="YES" id="vc4-Vz-pF8"/>
                         </constraints>
@@ -1356,7 +1358,7 @@
                                     <segment title="教师"/>
                                 </segments>
                                 <connections>
-                                    <action selector="segmentCtlClick:" destination="duu-n4-LZ5" eventType="touchUpInside" id="6ib-pZ-1gq"/>
+                                    <action selector="segmentValueChanged:" destination="duu-n4-LZ5" eventType="valueChanged" id="bAK-a3-Vfx"/>
                                 </connections>
                             </segmentedControl>
                             <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nH0-bG-wOx">
@@ -1922,8 +1924,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="eel-j7-Hq3"/>
         <segue reference="ew5-og-MDo"/>
-        <segue reference="ktC-ay-g3A"/>
         <segue reference="1G1-Ch-Dgc"/>
         <segue reference="P35-k1-ZJG"/>
     </inferredMetricsTieBreakers>

@@ -10,10 +10,22 @@
 #import "BaseRestService.h"
 
 @class Course;
+@class Page;
 
 @interface CourseService : BaseRestService
 
-// 获取所有精品课程
-- (NSArray *)listAllGoodCourses;
+
+//- (Page *)listAllGoodCourses;
 
 @end
+
+@interface CourseService (OpenExtension)
+
+// 获取所有精品课程
+- (Page *)getWorthCourses:(Page *)openPage;
+
+// 获取指定学生的课程日历表
+- (NSArray *)getScheduleWithStartTime:(NSDate *)startTime endTime:(NSDate *)endTime userId:(NSString *)userId;
+
+@end
+

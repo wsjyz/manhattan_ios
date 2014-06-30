@@ -93,16 +93,16 @@
     
     switch (self.currentCondition) {
         case ConditionTagKcfl:
-            self.condition.kcfl = selecedItems;
+            self.condition.courseCategory = selecedItems;
             break;
         case ConditionTagJxdd:
-            self.condition.jxdd = selecedItems;
+            self.condition.place = selecedItems;
             break;
         case ConditionTagJxfs:
-            self.condition.jxfs = selecedItems;
+            self.condition.tutoringWay = selecedItems;
             break;
         case ConditionTagJsxb:
-            self.condition.jsxb = selecedItems[0];
+            self.condition.sex = selecedItems[0];
             break;
         default:
             break;
@@ -175,9 +175,9 @@
         self.tableView = innerTableViewController.tableView;
     }else if ([segue.identifier isEqualToString:@"goodCourse"]){
         
-        NSArray *courses = [self.appointService findCourseWithAppointSearchCondition:self.condition];
+        Page *currPage = [self.appointService getOrderCourses:[CommonUtil defaultPage] withCondition:self.condition];
         CourseTableViewController *goodCourseViewCon = segue.destinationViewController;
-        goodCourseViewCon.courses = courses;
+        goodCourseViewCon.currPage = currPage;
     }
     
     // Get the new view controller using [segue destinationViewController].
@@ -185,6 +185,7 @@
 }
 
 - (IBAction)searchBtnClick:(id)sender {
+    
     [self performSegueWithIdentifier:@"goodCourse" sender:self];
 }
 @end
