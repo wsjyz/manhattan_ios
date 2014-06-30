@@ -130,7 +130,7 @@
             }
             case QuesType_homeWork_Stu:
             {
-                newPage = [_homeworkService getHomeworksByUserWithPage:_currentPage andUserID:userID];
+                newPage = [_homeworkService getHomeworksByUserWithPage:_currentPage andUserID:@"u1"];
                 break;
             }
             case QuesType_homeWork_Tea:
@@ -239,7 +239,7 @@
         {
             //            我的作业
             AnswerHomeWorkViewController *homwworkDetailVC = [ViewUtil viewControllerFromNibOfClass:[AnswerHomeWorkViewController class]];
-            //TODO:
+            homwworkDetailVC.homework = _resourceArr[indexPath.row];
             [self.navigationController pushViewController:homwworkDetailVC animated:YES];
             break;
         }

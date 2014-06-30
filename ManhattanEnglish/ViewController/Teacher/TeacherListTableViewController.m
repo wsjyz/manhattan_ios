@@ -71,7 +71,7 @@
     
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
-        __block Page *newPage = [_teacherService listPageWithPage:_currentPage];
+        __block Page *newPage = [_teacherService listPageWithPage:_currentPage andSearchKey:_searchKey];
         dispatch_async(dispatch_get_main_queue(), ^{
             if (newPage != nil)
             {
@@ -92,35 +92,22 @@
         return NO;
     }
     
-    if (_searchKey!= nil && _searchKey.length != 0)
-    {
-        //搜索
-        _currentPage = nil;
-        _currentPage = [[Page alloc] init];
-        _resourceArr = [NSMutableArray arrayWithArray:[_teacherService listByNameWithSearchKey:_searchKey]];
-        [self.tableView reloadData];
-        [self refreshDataComplete];
-    }
-    else
-    {
-        _currentPage.pageNo = 1;
-        _currentPage.rows = nil;
-        _currentPage.autoCount = YES;
-        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-        dispatch_async(queue, ^{
-            __block Page *newPage = [_teacherService listPageWithPage:_currentPage];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                if (newPage != nil)
-                {
-                    _currentPage = newPage;
-                    self.resourceArr = _currentPage.rows;
-                    [self.tableView reloadData];
-                }
-                [self refreshDataComplete];
-            });
+    _currentPage.pageNo = 1;
+    _currentPage.rows = nil;
+    _currentPage.autoCount = YES;
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(queue, ^{
+        __block Page *newPage = [_teacherService listPageWithPage:_currentPage andSearchKey:_searchKey];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (newPage != nil)
+            {
+                _currentPage = newPage;
+                self.resourceArr = _currentPage.rows;
+                [self.tableView reloadData];
+            }
+            [self refreshDataComplete];
         });
-
-    }
+    });
     
     return YES;
 }
@@ -128,6 +115,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    _currentPage = [[Page alloc] init];
     [self willBeginRefreshData];
     [self refreshData];
 }

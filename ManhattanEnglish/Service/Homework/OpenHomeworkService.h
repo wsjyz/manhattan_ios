@@ -35,6 +35,6 @@
  * 提交一个新的作业
  * @param homeworkSubmit
  */
-- (HomeworkSubmit *)submitHomeWork:(HomeworkSubmit *)submitHomeWork;
+- (HomeworkSubmit *)submitHomeWork:(HomeworkSubmit *)submitHomeWork FileData:(NSData *)data FileName:(NSString *)name;
 
 @end

@@ -7,7 +7,14 @@
 //
 
 #import "BaseViewController.h"
+#import "HomeWork.h"
+#import "HomeworkSubmit.h"
 
 @interface AnswerHomeWorkViewController : BaseViewController
+
+@property (nonatomic, strong) HomeWork *homework;
+
+- (IBAction)selectPic:(id)sender;
+- (IBAction)submitHomework:(id)sender;
 
 @end

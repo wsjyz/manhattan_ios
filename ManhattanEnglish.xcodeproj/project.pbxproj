@@ -691,13 +691,6 @@
 			path = GoodCourse;
 			sourceTree = "<group>";
 		};
-		2F2024C9192A729800272AAB /* Homework */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Homework;
-			sourceTree = "<group>";
-		};
 		2F2024CA192A729900272AAB /* News */ = {
 			isa = PBXGroup;
 			children = (
@@ -1197,7 +1190,6 @@
 			isa = PBXGroup;
 			children = (
 				370092D119508CB600A6EF8E /* Student */,
-				2F2024C9192A729800272AAB /* Homework */,
 				2F2024CA192A729900272AAB /* News */,
 				2F2024C8192A71D600272AAB /* GoodCourse */,
 				371BEE3F19167A2D000595D1 /* Question */,

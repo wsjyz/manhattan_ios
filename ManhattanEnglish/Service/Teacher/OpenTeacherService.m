@@ -29,25 +29,13 @@
  * @param page
  * @return Page<TeacherDetail>
  */
-- (Page *)listPageWithPage:(Page *)page
+- (Page *)listPageWithPage:(Page *)page andSearchKey:(NSString *)searchKey
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                     OPENVALUE(page), @"page",nil];
+                                     OPENVALUE(page), @"page",
+                                     searchKey,@"searchKey",nil];
     [ReflectionUtil setArrayType:NSStringFromClass([TeacherDetail class]) forPropName:@"rows" ofClassName:NSStringFromClass([Page class])];
     return [RestServiceManager performRequestWithPath:OpenTeacherService_listPage paramDic:paramDic returnType:NSStringFromClass([Page class]) delegate:self.delegate];
-}
-
-/**
- * 搜索教师列表
- *
- * @param searchKey
- * @return array<TeacherDetail>
- */
-- (NSArray *)listByNameWithSearchKey:(NSString *)searchKey
-{
-    NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                     searchKey, @"searchKey",nil];
-    return [RestServiceManager performRequestWithPath:OpenTeacherService_listByName paramDic:paramDic returnType:NSStringFromClass([TeacherDetail class]) delegate:self.delegate];
 }
 
 /**

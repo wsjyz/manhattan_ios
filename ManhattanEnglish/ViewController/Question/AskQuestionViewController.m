@@ -146,8 +146,11 @@
     }
     
     Question *ques = [[Question alloc] init];
+    ques.userId = [_commonService getCurrentUserID];
     ques.questionTitle = _quesTitle.text;
     ques.questionContent = _quesContent.text;
+    ques.assignTeacher = _teacherID;
+    ques.createTime = [NSDate date];
     
     BOOL result = [_quesService askQuestionWithQuestion:ques FileData:imageData FileName:_sendImageName];
     if (result)
