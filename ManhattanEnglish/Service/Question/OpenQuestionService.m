@@ -56,7 +56,8 @@
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                      userId, @"userId",nil];
-    return [RestServiceManager performRequestWithPath:OpenQuestionService_myQuestions paramDic:paramDic returnType:NSStringFromClass([Question class]) delegate:self.delegate];
+    [ReflectionUtil setArrayType:NSStringFromClass([Question class]) forPropName:@"rows" ofClassName:NSStringFromClass([Page class])];
+    return [RestServiceManager performRequestWithPath:OpenQuestionService_myQuestions paramDic:paramDic returnType:NSStringFromClass([Page class]) delegate:self.delegate];
 }
 
 /**
@@ -72,8 +73,9 @@
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                      userId, @"userId",
                                      type, @"type",
-                                     OPENVALUE(page), @"page",nil];
-    return [RestServiceManager performRequestWithPath:OpenQuestionService_needAnswerList paramDic:paramDic returnType:NSStringFromClass([Question class]) delegate:self.delegate];
+                                     OPENVALUE(page), @"openPage",nil];
+    [ReflectionUtil setArrayType:NSStringFromClass([Question class]) forPropName:@"rows" ofClassName:NSStringFromClass([Page class])];
+    return [RestServiceManager performRequestWithPath:OpenQuestionService_needAnswerList paramDic:paramDic returnType:NSStringFromClass([Page class]) delegate:self.delegate];
 }
 
 @end

@@ -19,7 +19,7 @@
 - (NSArray *)getAuthDataWithUserID:(NSString *)userID
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                     userID, @"userID",nil];
+                                     userID, @"userId",nil];
     return [RestServiceManager performRequestWithPath:OpenTeacherSerice_getAuthData paramDic:paramDic returnType:NSStringFromClass([NSString class]) delegate:self.delegate];
 }
 
@@ -32,7 +32,7 @@
 - (Page *)listPageWithPage:(Page *)page andSearchKey:(NSString *)searchKey
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                     OPENVALUE(page), @"page",
+                                     OPENVALUE(page), @"openPage",
                                      searchKey,@"searchKey",nil];
     [ReflectionUtil setArrayType:NSStringFromClass([TeacherDetail class]) forPropName:@"rows" ofClassName:NSStringFromClass([Page class])];
     return [RestServiceManager performRequestWithPath:OpenTeacherService_listPage paramDic:paramDic returnType:NSStringFromClass([Page class]) delegate:self.delegate];

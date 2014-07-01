@@ -30,7 +30,8 @@
 - (Page *)getHomeworksByTeacherWithPage:(Page *)page andTeacherID:(NSString *)teacherID
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                     OPENVALUE(page), @"page",nil];
+                                     OPENVALUE(page), @"openPage",
+                                     OPENVALUE(teacherID), @"teacherId",nil];
     [ReflectionUtil setArrayType:NSStringFromClass([HomeWork class]) forPropName:@"rows" ofClassName:NSStringFromClass([Page class])];
     return [RestServiceManager performRequestWithPath:HomeWorkService_getHomeworksByTeacher paramDic:paramDic returnType:NSStringFromClass([Page class]) delegate:self.delegate];
 }
@@ -39,10 +40,10 @@
  * 发布一个新的作业
  * @param homeWork
  */
-- (HomeWork *)postHomeWorkL:(HomeWork *)homework
+- (HomeWork *)postHomeWork:(HomeWork *)homework
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                     OPENVALUE(homework), @"homework",nil];
+                                     OPENVALUE(homework), @"homeWork",nil];
     return [RestServiceManager performRequestWithPath:HomeWorkService_postHomeWork paramDic:paramDic returnType:NSStringFromClass([HomeWork class]) delegate:self.delegate];
 }
 

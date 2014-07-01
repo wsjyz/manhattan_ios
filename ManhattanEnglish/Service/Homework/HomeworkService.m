@@ -49,9 +49,9 @@
  * 发布一个新的作业
  * @param homeWork
  */
-- (HomeWork *)postHomeWorkL:(HomeWork *)homework
+- (HomeWork *)postHomeWork:(HomeWork *)homework
 {
-    return [_homeworkService postHomeWorkL:homework];
+    return [_homeworkService postHomeWork:homework];
 }
 
 /**

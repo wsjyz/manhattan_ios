@@ -7,7 +7,10 @@
 //
 
 #import "BaseViewController.h"
+#import "TeacherDetail.h"
 
 @interface TeacherDetailViewController : BaseViewController
+
+@property (nonatomic, retain) TeacherDetail *teacherDetail;
 
 @end

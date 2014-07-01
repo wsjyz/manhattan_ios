@@ -12,8 +12,10 @@
 #import "TeacherScheduleTableViewCell.h"
 #import "TeacherChargeTableViewCell.h"
 #import "TeacherPersonInfoTableViewCell.h"
-#import "CourseSchedule.h"
 #import "AuditionDetailViewController.h"
+#import <TbcLibUI/UIImageView+WebCache.h>
+
+#define VALUE(a)                        a==nil?@"":a
 
 @interface TeacherDetailViewController ()<TeaCommentCellDelegate>
 
@@ -51,6 +53,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    User *user = _teacherDetail.user;
     NSUInteger row = indexPath.row;
     if (row == 0)
     {
@@ -60,7 +63,25 @@
             cell = [ViewUtil viewFromNibOfClass:[TeacherMainCell class] owner:self];
             cell.arrowImg.hidden = YES;
         }
-        cell.name.text = @"cafei";
+        cell.name.text = VALUE(user.userName);
+        if (user.avatar)
+        {
+            cell.headImg.image = [UIImage imageNamed:[NSURL URLWithString:user.avatar]];
+        }
+        if (user.sex && [user.sex isEqualToString:SEX_MALE])
+        {
+            cell.sexImg.image = [UIImage imageNamed:@"personal_boy.png"];
+        }
+        else if (user.sex && [user.sex isEqualToString:SEX_FEMALE])
+        {
+            cell.sexImg.image = [UIImage imageNamed:@"personal_girl.png"];
+        }
+        else
+        {
+            cell.sexImg.hidden = YES;
+        }
+        cell.school.text = VALUE(_teacherDetail.finalGraduateSchool);
+        cell.subject.text = VALUE(_teacherDetail.course_category);
         
         return cell;
     }
@@ -74,10 +95,10 @@
             cell.delegate = self;
         }
         
-        cell.score.text = @"85分";
-        cell.commentContent.text = @"该老师从业时间长，业务精湛，堪称教师中的典范，收费低，回报高，是你不二的选择";
-        cell.area.text = @"黄浦区，徐汇区";
-        cell.mode.text = @"教师上门";
+        cell.score.text = VALUE(_teacherDetail.expertScore);
+        cell.commentContent.text = VALUE(_teacherDetail.expertComments);
+        cell.area.text = VALUE(_teacherDetail.teachingArea);
+        cell.mode.text = VALUE(_teacherDetail.tutoringWay);
         cell.concernNum.text = @"10";
         cell.commentNum.text = @"12";
         cell.collectNum.text = @"14";
@@ -96,14 +117,19 @@
             cell.enable = NO;
         }
         //TODO:
-        NSArray *list ;
-        [list enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            CourseSchedule *schedule = obj;
-            ScheduleView *view = cell.scheduleArr[idx];
-            [view showForeBtn:schedule.forenoon];
-            [view showAfterBtn:schedule.afternoon];
-            [view showAfterSixBtn:schedule.aftersix];
-        }];
+        for (int i = 0 ; i<_teacherDetail.teachingTime.length ; i++)
+        {
+            int day = i/3;
+            int index = i%3;
+            unichar timeChar = [_teacherDetail.teachingTime characterAtIndex:i];
+        }
+//        [timeList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+//            CourseSchedule *schedule = obj;
+//            ScheduleView *view = cell.scheduleArr[idx];
+//            [view showForeBtn:schedule.forenoon];
+//            [view showAfterBtn:schedule.afternoon];
+//            [view showAfterSixBtn:schedule.aftersix];
+//        }];
         
         return cell;
     }

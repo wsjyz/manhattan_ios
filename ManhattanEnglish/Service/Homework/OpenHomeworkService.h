@@ -29,7 +29,7 @@
  * 发布一个新的作业
  * @param homeWork
  */
-- (HomeWork *)postHomeWorkL:(HomeWork *)homework;
+- (HomeWork *)postHomeWork:(HomeWork *)homework;
 
 /**
  * 提交一个新的作业

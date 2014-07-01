@@ -16,6 +16,7 @@
 @interface AnswerHomeWorkViewController ()<UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 {
     __weak IBOutlet UITextView *_quesTextView;
+    __weak IBOutlet UIImageView *_quesImgView;
     __weak IBOutlet BaseTextView *_answerTextView;
     __weak IBOutlet UIButton *_passImgBtn;
     __weak IBOutlet UILabel *_imgNameLabel;
@@ -50,12 +51,31 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self setNavgationItemTitle:@"我的作业"];
+    if (_isHomeWork)
+    {
+        [self setNavgationItemTitle:@"我的作业"];
+        _quesTextView.frame = CGRectMake(5, CGRectGetMinY(_quesTextView.frame), VIEW_WIDTH-10, CGRectGetHeight(_quesTextView.frame));
+        _quesImgView.hidden = YES;
+        _quesTextView.text = _homework.homeworkTitle;
+    }
+    else
+    {
+        [self setNavgationItemTitle:@"我要回答"];
+        if (_question.questionPic == nil || _question.questionPic.length == 0)
+        {
+            _quesTextView.frame = CGRectMake(5, CGRectGetMinY(_quesTextView.frame), VIEW_WIDTH-10, CGRectGetHeight(_quesTextView.frame));
+            _quesImgView.hidden = YES;
+        }
+        else
+        {
+            _quesTextView.frame = CGRectMake(5+CGRectGetMaxX(_quesImgView.frame), CGRectGetMinY(_quesTextView.frame), VIEW_WIDTH-10, CGRectGetHeight(_quesTextView.frame));
+            _quesImgView.hidden = NO;
+        }
+        _quesTextView.text = _question.questionContent;
+    }
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
-    
-    _quesTextView.text = _homework.homeworkTitle;
 }
 
 -(void)keyboardWillShow:(NSNotification *)note
