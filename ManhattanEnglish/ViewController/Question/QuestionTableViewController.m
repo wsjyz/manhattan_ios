@@ -176,7 +176,7 @@
             if (newPage != nil)
             {
                 _currentPage = newPage;
-                self.resourceArr = _currentPage.rows;
+                self.resourceArr = _currentPage.rows == nil ?  nil : _currentPage.rows;
                 [self.tableView reloadData];
             }
             [self refreshDataComplete];
@@ -259,21 +259,30 @@
 {
     switch (_quesType) {
         case QuesType_ques:
-        case QuesType_answer_assign:
         case QuesType_answered:
-        case QuesType_unAnswer:
         {
-            //            我的问题
+            //我的问题
             QuesDetailViewController *quesDetailVC = [ViewUtil viewControllerFromNibOfClass:[QuesDetailViewController class]];
             quesDetailVC.delegate = self;
             quesDetailVC.ques = _resourceArr[indexPath.row];
             [self.navigationController pushViewController:quesDetailVC animated:YES];
             break;
         }
+        case QuesType_answer_assign:
+        case QuesType_unAnswer:
+        {
+            //我的问题(未回答)
+            AnswerHomeWorkViewController *homwworkDetailVC = [ViewUtil viewControllerFromNibOfClass:[AnswerHomeWorkViewController class]];
+            homwworkDetailVC.question = _resourceArr[indexPath.row];
+            homwworkDetailVC.isHomeWork = NO;
+            [self.navigationController pushViewController:homwworkDetailVC animated:YES];
+            break;
+        }
         case QuesType_homeWork_Stu:
         {
-            //            我的作业
+            //我的作业
             AnswerHomeWorkViewController *homwworkDetailVC = [ViewUtil viewControllerFromNibOfClass:[AnswerHomeWorkViewController class]];
+            homwworkDetailVC.isHomeWork = YES;
             homwworkDetailVC.homework = _resourceArr[indexPath.row];
             [self.navigationController pushViewController:homwworkDetailVC animated:YES];
             break;

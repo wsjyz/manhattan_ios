@@ -9,10 +9,13 @@
 #import "BaseViewController.h"
 #import "HomeWork.h"
 #import "HomeworkSubmit.h"
+#import "Question.h"
 
 @interface AnswerHomeWorkViewController : BaseViewController
 
 @property (nonatomic, strong) HomeWork *homework;
+@property (nonatomic, strong) Question *question;
+@property (nonatomic, assign) BOOL isHomeWork;
 
 - (IBAction)selectPic:(id)sender;
 - (IBAction)submitHomework:(id)sender;

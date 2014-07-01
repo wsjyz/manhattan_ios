@@ -170,6 +170,11 @@
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 70;
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TeacherDetail *teacher = _resourceArr[indexPath.row];
@@ -184,6 +189,7 @@
     
     
     TeacherDetailViewController *teacherDetailVC = [ViewUtil viewControllerFromNibOfClass:[TeacherDetailViewController class]];
+    teacherDetailVC.teacherDetail = _resourceArr[indexPath.row];
     [self.navigationController pushViewController:teacherDetailVC animated:YES];
 }
 
