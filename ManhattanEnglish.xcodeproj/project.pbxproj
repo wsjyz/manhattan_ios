@@ -243,6 +243,7 @@
 		37FEB82E19332EAD00D3E047 /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FEB82219332EAD00D3E047 /* NSDateAdditions.m */; };
 		37FEB82F19332EAD00D3E047 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FEB82419332EAD00D3E047 /* UIViewAdditions.m */; };
 		37FEB83619334C0D00D3E047 /* BaseRestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FEB83519334C0D00D3E047 /* BaseRestService.m */; };
+		B97BD97119644861001C507E /* CommonUtil+CustomExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B92AC497195C91DF00601E90 /* CommonUtil+CustomExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1814,6 +1815,7 @@
 				2F68A68619534853006CE404 /* AuditionDetailViewController.m in Sources */,
 				2F31488E192BBEAF0021C40B /* NewsDetailViewController.m in Sources */,
 				37A6D6B3190FF45400B7C8B0 /* ContactUsViewController.m in Sources */,
+				B97BD97119644861001C507E /* CommonUtil+CustomExtension.m in Sources */,
 				2F369032194F40FA00A7B676 /* KxMenu.m in Sources */,
 				37FEB82E19332EAD00D3E047 /* NSDateAdditions.m in Sources */,
 				37A6D6AD190FF45400B7C8B0 /* HelpViewController.m in Sources */,
