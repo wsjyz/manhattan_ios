@@ -20,5 +20,6 @@
 @property (nonatomic, strong) NSString *searchKey;
 @property (nonatomic, assign) BOOL selectTeacher;
 @property (nonatomic, weak) id<TeacherListTVCDelegate> teacherDelegate;
+@property (nonatomic, assign) BOOL isCollect;
 
 @end

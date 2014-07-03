@@ -7,11 +7,11 @@
 //
 
 #import "MyCollectTeacherListViewController.h"
-#import "MyCollectTeacherListTableViewController.h"
+#import "TeacherListTableViewController.h"
 
 @interface MyCollectTeacherListViewController ()
 {
-    MyCollectTeacherListTableViewController *_teacherListTVC;
+    TeacherListTableViewController *_teacherListTVC;
 }
 
 @end
@@ -32,7 +32,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setNavgationItemTitle:@"我的收藏"];
+    self.navigationItem.leftBarButtonItem = nil;
     _teacherListTVC = [self.childViewControllers objectAtIndex:0];
+    _teacherListTVC.isCollect = YES;
     [_teacherListTVC willBeginRefreshData];
     [_teacherListTVC refreshData];
 }

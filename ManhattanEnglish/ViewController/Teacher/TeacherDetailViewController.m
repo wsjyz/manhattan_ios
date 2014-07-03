@@ -14,10 +14,16 @@
 #import "TeacherPersonInfoTableViewCell.h"
 #import "AuditionDetailViewController.h"
 #import <TbcLibUI/UIImageView+WebCache.h>
+#import "TeacherService.h"
+#import "CommonService.h"
 
 #define VALUE(a)                        a==nil?@"":a
 
 @interface TeacherDetailViewController ()<TeaCommentCellDelegate>
+{
+    TeacherService *_teacherService;
+    CommonService *_commonService;
+}
 
 @end
 
@@ -32,11 +38,23 @@
     return self;
 }
 
+- (void)initService
+{
+    _teacherService = [[TeacherService alloc] initWithDelegate:self];
+    _commonService = [[CommonService alloc] initWithDelegate:nil];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setNavgationItemTitle:@"名师资料"];
+    
+    TeacherDetail *newDetail = [_teacherService getTeacherDetailById:_teacherDetail.userId];
+    if (newDetail != nil)
+    {
+        _teacherDetail = newDetail;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,7 +82,7 @@
             cell.arrowImg.hidden = YES;
         }
         cell.name.text = VALUE(user.userName);
-        if (user.avatar)
+        if (user.avatar!= nil && user.avatar.length != 0)
         {
             cell.headImg.image = [UIImage imageNamed:[NSURL URLWithString:user.avatar]];
         }
@@ -204,11 +222,6 @@
     return height;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-}
-
 #pragma mark TeaCommentCellDelegate
 
 - (void)toAuditionDetailController:(BOOL)isAudition
@@ -235,7 +248,11 @@
 //收藏
 - (void)selectCollectBtn
 {
-    
+    BOOL result = [_teacherService collectWithUserId:[_commonService getCurrentUserID] andTeacherId:_teacherDetail.userId];
+    if (result)
+    {
+        
+    }
 }
 
 /*

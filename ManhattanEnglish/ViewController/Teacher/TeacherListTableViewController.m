@@ -13,10 +13,12 @@
 #import "TeacherDetail.h"
 #import "Page.h"
 #import <TbcLibUI/UIImageView+WebCache.h>
+#import "CommonService.h"
 
 @interface TeacherListTableViewController ()
 {
     TeacherService *_teacherService;
+    CommonService *_commonService;
     Page *_currentPage;
 }
 
@@ -36,6 +38,7 @@
 - (void)initService
 {
     _teacherService = [[TeacherService alloc] initWithDelegate:self];
+    _commonService = [[CommonService alloc] initWithDelegate:nil];
 }
 
 - (BOOL)enableRefresh
@@ -71,7 +74,17 @@
     
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
-        __block Page *newPage = [_teacherService listPageWithPage:_currentPage andSearchKey:_searchKey];
+        
+        __block Page *newPage;
+        if (!_isCollect)
+        {
+            newPage = [_teacherService listPageWithPage:_currentPage andSearchKey:_searchKey];
+        }
+        else
+        {
+            newPage = [_teacherService getCollectTeachersByUserId:[_commonService getCurrentUserID] andPage:_currentPage];
+        }
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             if (newPage != nil)
             {
@@ -97,7 +110,15 @@
     _currentPage.autoCount = YES;
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
-        __block Page *newPage = [_teacherService listPageWithPage:_currentPage andSearchKey:_searchKey];
+        __block Page *newPage;
+        if (!_isCollect)
+        {
+            newPage = [_teacherService listPageWithPage:_currentPage andSearchKey:_searchKey];
+        }
+        else
+        {
+            newPage = [_teacherService getCollectTeachersByUserId:[_commonService getCurrentUserID] andPage:_currentPage];
+        }
         dispatch_async(dispatch_get_main_queue(), ^{
             if (newPage != nil)
             {

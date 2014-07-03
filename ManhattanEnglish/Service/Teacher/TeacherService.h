@@ -7,6 +7,7 @@
 //
 
 #import "BaseRestService.h"
+#import "TeacherDetail.h"
 #import "Page.h"
 
 @interface TeacherService : BaseRestService
@@ -18,9 +19,15 @@
 - (Page *)listPageWithPage:(Page *)page andSearchKey:(NSString *)searchKey;
 
 //收藏教师
-- (BOOL)collectWithUserId:(NSString *)userId;
+- (BOOL)collectWithUserId:(NSString *)userId andTeacherId:(NSString *)teacherId;
 
 //取消收藏教师
-- (BOOL)cancelCollectWithUserId:(NSString *)userId;
+- (BOOL)cancelCollectWithUserId:(NSString *)userId andTeacherId:(NSString *)teacherId;
+
+//获取指定学生的收藏教师列表
+- (Page *)getCollectTeachersByUserId:(NSString *)userId andPage:(Page *)page;
+
+//获取教师信息
+- (TeacherDetail *)getTeacherDetailById:(NSString *)userId;
 
 @end

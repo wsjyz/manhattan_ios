@@ -59,6 +59,10 @@
         case 0:
         {
             //指定回答
+            _quesTVC1.tableView.hidden = NO;
+            _quesTVC2.tableView.hidden = YES;
+            _quesTVC3.tableView.hidden = YES;
+            
             if (_quesTVC1.currentPage.rows == nil || _quesTVC1.currentPage.rows.count == 0)
             {
                 [_quesTVC1 willBeginRefreshData];
@@ -69,6 +73,10 @@
         case 1:
         {
             //已回答
+            _quesTVC1.tableView.hidden = YES;
+            _quesTVC2.tableView.hidden = NO;
+            _quesTVC3.tableView.hidden = YES;
+            
             if (_quesTVC2.currentPage.rows == nil || _quesTVC2.currentPage.rows.count == 0)
             {
                 [_quesTVC2 willBeginRefreshData];
@@ -79,6 +87,10 @@
         case 2:
         {
             //未回答
+            _quesTVC1.tableView.hidden = YES;
+            _quesTVC2.tableView.hidden = YES;
+            _quesTVC3.tableView.hidden = NO;
+            
             if (_quesTVC3.currentPage.rows == nil || _quesTVC3.currentPage.rows.count == 0)
             {
                 [_quesTVC3 willBeginRefreshData];

@@ -70,6 +70,7 @@
         {
             _quesTextView.frame = CGRectMake(5+CGRectGetMaxX(_quesImgView.frame), CGRectGetMinY(_quesTextView.frame), VIEW_WIDTH-10, CGRectGetHeight(_quesTextView.frame));
             _quesImgView.hidden = NO;
+            [_quesImgView setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:_question.questionPic]]]];
         }
         _quesTextView.text = _question.questionContent;
     }

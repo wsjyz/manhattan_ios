@@ -44,10 +44,11 @@
  * @param userId
  * @param teacherId
  */
-- (BOOL)collectWithUserId:(NSString *)userId
+- (BOOL)collectWithUserId:(NSString *)userId andTeacherId:(NSString *)teacherId
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                     userId, @"userId", nil];
+                                     userId, @"userId",
+                                     teacherId, @"teacherId",nil];
     return [[RestServiceManager performRequestWithPath:OpenTeacherService_collect paramDic:paramDic returnType:@(@encode(BOOL)) delegate:self.delegate] boolValue];
 }
 
@@ -56,11 +57,38 @@
  * @param userId
  * @param teacherId
  */
-- (BOOL)cancelCollectWithUserId:(NSString *)userId
+- (BOOL)cancelCollectWithUserId:(NSString *)userId andTeacherId:(NSString *)teacherId
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                     userId, @"userId", nil];
+                                     userId, @"userId",
+                                     teacherId, @"teacherId",nil];
     return [[RestServiceManager performRequestWithPath:OpenTeacherService_cancelCollect paramDic:paramDic returnType:@(@encode(BOOL)) delegate:self.delegate] boolValue];
+}
+
+/**
+ * 获取指定学生的收藏教师列表
+ * @return
+ */
+- (Page *)getCollectTeachersByUserId:(NSString *)userId andPage:(Page *)page
+{
+    NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                     OPENVALUE(page), @"openPage",
+                                     userId,@"userId",nil];
+    [ReflectionUtil setArrayType:NSStringFromClass([TeacherDetail class]) forPropName:@"rows" ofClassName:NSStringFromClass([Page class])];
+    return [RestServiceManager performRequestWithPath:OpenTeacherService_getCollectTeachersByUserId paramDic:paramDic returnType:NSStringFromClass([Page class]) delegate:self.delegate];
+}
+
+/**
+ * 获取教师信息
+ *
+ * @param userId
+ * @return TeacherDetail
+ */
+- (TeacherDetail *)getTeacherDetailById:(NSString *)userId
+{
+    NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                     userId,@"userId",nil];
+    return [RestServiceManager performRequestWithPath:OpenTeacherService_getTeacherDetailById paramDic:paramDic returnType:NSStringFromClass([TeacherDetail class]) delegate:self.delegate];
 }
 
 @end

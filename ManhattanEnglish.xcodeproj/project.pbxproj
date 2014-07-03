@@ -101,7 +101,6 @@
 		37009290194F33BB00A6EF8E /* TableFooterView_ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3700928A194F33BB00A6EF8E /* TableFooterView_ipad.xib */; };
 		370092CC19508B3E00A6EF8E /* CourseSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 370092CB19508B3E00A6EF8E /* CourseSchedule.m */; };
 		370092D419508D2500A6EF8E /* MyCollectTeacherListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370092D319508D2500A6EF8E /* MyCollectTeacherListViewController.m */; };
-		370092D719508D4000A6EF8E /* MyCollectTeacherListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370092D619508D4000A6EF8E /* MyCollectTeacherListTableViewController.m */; };
 		370092DA19508D6600A6EF8E /* MyStudentListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370092D919508D6600A6EF8E /* MyStudentListTableViewController.m */; };
 		370092DD19508D7900A6EF8E /* MyStudentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370092DC19508D7900A6EF8E /* MyStudentListViewController.m */; };
 		370092E11950940F00A6EF8E /* StudentMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 370092DF1950940F00A6EF8E /* StudentMainCell.m */; };
@@ -145,6 +144,7 @@
 		3721C3F9191A853700D63FBE /* TeacherPersonInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3721C3F7191A853700D63FBE /* TeacherPersonInfoTableViewCell.m */; };
 		3721C3FA191A853700D63FBE /* TeacherPersonInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3721C3F8191A853700D63FBE /* TeacherPersonInfoTableViewCell.xib */; };
 		372250C519614BF000DA319A /* TeacherAnswerQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 372250C419614BF000DA319A /* TeacherAnswerQuestionViewController.m */; };
+		3722559C196535A200DA319A /* CommonUtil+CustomExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B92AC497195C91DF00601E90 /* CommonUtil+CustomExtension.m */; };
 		3726A6351931CA9700E91B36 /* OpenLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3726A6341931CA9700E91B36 /* OpenLoginService.m */; };
 		3726A6401931E03500E91B36 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3726A63F1931E03500E91B36 /* libsqlite3.dylib */; };
 		3726A6441931E04400E91B36 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3726A6431931E04400E91B36 /* libxml2.2.dylib */; };
@@ -413,8 +413,6 @@
 		370092CB19508B3E00A6EF8E /* CourseSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseSchedule.m; sourceTree = "<group>"; };
 		370092D219508D2500A6EF8E /* MyCollectTeacherListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectTeacherListViewController.h; sourceTree = "<group>"; };
 		370092D319508D2500A6EF8E /* MyCollectTeacherListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectTeacherListViewController.m; sourceTree = "<group>"; };
-		370092D519508D4000A6EF8E /* MyCollectTeacherListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectTeacherListTableViewController.h; sourceTree = "<group>"; };
-		370092D619508D4000A6EF8E /* MyCollectTeacherListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectTeacherListTableViewController.m; sourceTree = "<group>"; };
 		370092D819508D6600A6EF8E /* MyStudentListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyStudentListTableViewController.h; sourceTree = "<group>"; };
 		370092D919508D6600A6EF8E /* MyStudentListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyStudentListTableViewController.m; sourceTree = "<group>"; };
 		370092DB19508D7900A6EF8E /* MyStudentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyStudentListViewController.h; sourceTree = "<group>"; };
@@ -1103,8 +1101,6 @@
 				3721C3F8191A853700D63FBE /* TeacherPersonInfoTableViewCell.xib */,
 				370092D219508D2500A6EF8E /* MyCollectTeacherListViewController.h */,
 				370092D319508D2500A6EF8E /* MyCollectTeacherListViewController.m */,
-				370092D519508D4000A6EF8E /* MyCollectTeacherListTableViewController.h */,
-				370092D619508D4000A6EF8E /* MyCollectTeacherListTableViewController.m */,
 			);
 			path = Teacher;
 			sourceTree = "<group>";
@@ -1746,6 +1742,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3722559C196535A200DA319A /* CommonUtil+CustomExtension.m in Sources */,
 				37AF51E21938945E00853E10 /* CKParagraphStyle.m in Sources */,
 				37D7837819554B9400239B1E /* HomeworkService.m in Sources */,
 				37A6D6AF190FF45400B7C8B0 /* LoginViewController.m in Sources */,
@@ -1824,7 +1821,6 @@
 				372250C519614BF000DA319A /* TeacherAnswerQuestionViewController.m in Sources */,
 				2F31488B192BBE9D0021C40B /* NewsTableViewCell.m in Sources */,
 				37AF51E41938945E00853E10 /* CKRefreshControl.m in Sources */,
-				370092D719508D4000A6EF8E /* MyCollectTeacherListTableViewController.m in Sources */,
 				370C49561910984400C63063 /* WalletTableViewCell.m in Sources */,
 				371BEE4C19167A2D000595D1 /* QuesDetailTableViewCell.m in Sources */,
 				37E87EDC1946FE3C0019E9AC /* TeacherDetail.m in Sources */,
