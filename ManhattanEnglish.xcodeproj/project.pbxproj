@@ -217,8 +217,6 @@
 		37D7837519554B8100239B1E /* OpenHomeworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D7837419554B8100239B1E /* OpenHomeworkService.m */; };
 		37D7837819554B9400239B1E /* HomeworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D7837719554B9400239B1E /* HomeworkService.m */; };
 		37D7837B19555B8D00239B1E /* QuestionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D7837A19555B8D00239B1E /* QuestionTableViewController.m */; };
-		37D783921955784C00239B1E /* libTbcLibCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D783861955782D00239B1E /* libTbcLibCore.a */; };
-		37D783931955784C00239B1E /* libTbcLibUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D7838F1955784000239B1E /* libTbcLibUI.a */; };
 		37E87EDC1946FE3C0019E9AC /* TeacherDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E87EDB1946FE3C0019E9AC /* TeacherDetail.m */; };
 		37E87EEB194700310019E9AC /* OpenTeacherService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E87EDF194700310019E9AC /* OpenTeacherService.m */; };
 		37E87EEC194700310019E9AC /* TeacherService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E87EE1194700310019E9AC /* TeacherService.m */; };
@@ -243,6 +241,8 @@
 		37FEB82E19332EAD00D3E047 /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FEB82219332EAD00D3E047 /* NSDateAdditions.m */; };
 		37FEB82F19332EAD00D3E047 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FEB82419332EAD00D3E047 /* UIViewAdditions.m */; };
 		37FEB83619334C0D00D3E047 /* BaseRestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FEB83519334C0D00D3E047 /* BaseRestService.m */; };
+		B922A53A1965B2F9007A0FB3 /* libTbcLibCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B922A5371965B2D2007A0FB3 /* libTbcLibCore.a */; };
+		B922A53B1965B2F9007A0FB3 /* libTbcLibUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B922A52F1965B2B7007A0FB3 /* libTbcLibUI.a */; };
 		B97BD97119644861001C507E /* CommonUtil+CustomExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B92AC497195C91DF00601E90 /* CommonUtil+CustomExtension.m */; };
 /* End PBXBuildFile section */
 
@@ -254,33 +254,33 @@
 			remoteGlobalIDString = 2FAB6896190A26D40081D6B6;
 			remoteInfo = ManhattanEnglish;
 		};
-		37D783851955782D00239B1E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 37D783801955782D00239B1E /* TbcLibCore.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2FEA3E6818EABC690073CA51;
-			remoteInfo = TbcLibCore;
-		};
-		37D783871955782D00239B1E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 37D783801955782D00239B1E /* TbcLibCore.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2FEA3E7818EABC690073CA51;
-			remoteInfo = TbcLibCoreTests;
-		};
-		37D7838E1955784000239B1E /* PBXContainerItemProxy */ = {
+		B922A52E1965B2B7007A0FB3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 37D783891955784000239B1E /* TbcLibUI.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2F595516172588B8001980D3;
 			remoteInfo = TbcLibUI;
 		};
-		37D783901955784000239B1E /* PBXContainerItemProxy */ = {
+		B922A5301965B2B7007A0FB3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 37D783891955784000239B1E /* TbcLibUI.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2F595527172588B9001980D3;
 			remoteInfo = TbcLibUITests;
+		};
+		B922A5361965B2D2007A0FB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37D783801955782D00239B1E /* TbcLibCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2FEA3E6818EABC690073CA51;
+			remoteInfo = TbcLibCore;
+		};
+		B922A5381965B2D2007A0FB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37D783801955782D00239B1E /* TbcLibCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2FEA3E7818EABC690073CA51;
+			remoteInfo = TbcLibCoreTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -588,8 +588,8 @@
 		37D7837719554B9400239B1E /* HomeworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeworkService.m; sourceTree = "<group>"; };
 		37D7837919555B8D00239B1E /* QuestionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionTableViewController.h; sourceTree = "<group>"; };
 		37D7837A19555B8D00239B1E /* QuestionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTableViewController.m; sourceTree = "<group>"; };
-		37D783801955782D00239B1E /* TbcLibCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TbcLibCore.xcodeproj; path = ../../Apple/Project/TbcLib/TbcLibCore/TbcLibCore.xcodeproj; sourceTree = "<group>"; };
-		37D783891955784000239B1E /* TbcLibUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TbcLibUI.xcodeproj; path = ../../Apple/Project/TbcLib/TbcLibUI/TbcLibUI.xcodeproj; sourceTree = "<group>"; };
+		37D783801955782D00239B1E /* TbcLibCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TbcLibCore.xcodeproj; path = ../../../../Repositories/Apple/Project/TbcLib/TbcLibCore/TbcLibCore.xcodeproj; sourceTree = "<group>"; };
+		37D783891955784000239B1E /* TbcLibUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TbcLibUI.xcodeproj; path = ../../../../Repositories/Apple/Project/TbcLib/TbcLibUI/TbcLibUI.xcodeproj; sourceTree = "<group>"; };
 		37E87EDA1946FE3C0019E9AC /* TeacherDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherDetail.h; sourceTree = "<group>"; };
 		37E87EDB1946FE3C0019E9AC /* TeacherDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherDetail.m; sourceTree = "<group>"; };
 		37E87EDE194700310019E9AC /* OpenTeacherService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenTeacherService.h; sourceTree = "<group>"; };
@@ -648,8 +648,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37D783921955784C00239B1E /* libTbcLibCore.a in Frameworks */,
-				37D783931955784C00239B1E /* libTbcLibUI.a in Frameworks */,
+				B922A53A1965B2F9007A0FB3 /* libTbcLibCore.a in Frameworks */,
+				B922A53B1965B2F9007A0FB3 /* libTbcLibUI.a in Frameworks */,
 				3726A6611931EBA800E91B36 /* MapKit.framework in Frameworks */,
 				3726A65F1931EB8D00E91B36 /* ImageIO.framework in Frameworks */,
 				3726A6461931E05F00E91B36 /* libz.dylib in Frameworks */,
@@ -1409,24 +1409,6 @@
 			path = Homework;
 			sourceTree = "<group>";
 		};
-		37D783811955782D00239B1E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				37D783861955782D00239B1E /* libTbcLibCore.a */,
-				37D783881955782D00239B1E /* TbcLibCoreTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		37D7838A1955784000239B1E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				37D7838F1955784000239B1E /* libTbcLibUI.a */,
-				37D783911955784000239B1E /* TbcLibUITests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		37E87EDD194700310019E9AC /* Teacher */ = {
 			isa = PBXGroup;
 			children = (
@@ -1494,6 +1476,24 @@
 			path = Kal;
 			sourceTree = "<group>";
 		};
+		B922A52A1965B2B7007A0FB3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B922A52F1965B2B7007A0FB3 /* libTbcLibUI.a */,
+				B922A5311965B2B7007A0FB3 /* TbcLibUITests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B922A5321965B2D2007A0FB3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B922A5371965B2D2007A0FB3 /* libTbcLibCore.a */,
+				B922A5391965B2D2007A0FB3 /* TbcLibCoreTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1559,11 +1559,11 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 37D783811955782D00239B1E /* Products */;
+					ProductGroup = B922A5321965B2D2007A0FB3 /* Products */;
 					ProjectRef = 37D783801955782D00239B1E /* TbcLibCore.xcodeproj */;
 				},
 				{
-					ProductGroup = 37D7838A1955784000239B1E /* Products */;
+					ProductGroup = B922A52A1965B2B7007A0FB3 /* Products */;
 					ProjectRef = 37D783891955784000239B1E /* TbcLibUI.xcodeproj */;
 				},
 			);
@@ -1576,32 +1576,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		37D783861955782D00239B1E /* libTbcLibCore.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libTbcLibCore.a;
-			remoteRef = 37D783851955782D00239B1E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		37D783881955782D00239B1E /* TbcLibCoreTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = TbcLibCoreTests.xctest;
-			remoteRef = 37D783871955782D00239B1E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		37D7838F1955784000239B1E /* libTbcLibUI.a */ = {
+		B922A52F1965B2B7007A0FB3 /* libTbcLibUI.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libTbcLibUI.a;
-			remoteRef = 37D7838E1955784000239B1E /* PBXContainerItemProxy */;
+			remoteRef = B922A52E1965B2B7007A0FB3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		37D783911955784000239B1E /* TbcLibUITests.octest */ = {
+		B922A5311965B2B7007A0FB3 /* TbcLibUITests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = TbcLibUITests.octest;
-			remoteRef = 37D783901955784000239B1E /* PBXContainerItemProxy */;
+			remoteRef = B922A5301965B2B7007A0FB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B922A5371965B2D2007A0FB3 /* libTbcLibCore.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTbcLibCore.a;
+			remoteRef = B922A5361965B2D2007A0FB3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B922A5391965B2D2007A0FB3 /* TbcLibCoreTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TbcLibCoreTests.xctest;
+			remoteRef = B922A5381965B2D2007A0FB3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

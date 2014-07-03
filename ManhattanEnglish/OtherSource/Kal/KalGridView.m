@@ -37,7 +37,11 @@ static NSString *kSlideAnimationId = @"KalSwitchMonths";
 - (void)setSelectedDates:(NSArray *)selectedDates
 {
     for (NSDate *selectedDate in selectedDates) {
-        KalTileView *currentTile = [frontMonthView tileForDate:selectedDate];
+        
+        // get date components to search for tile view
+        NSDate *date = [NSDate dateForDay:selectedDate.day month:selectedDate.month year:selectedDate.year];
+        
+        KalTileView *currentTile = [frontMonthView tileForDate:date];
         currentTile.state = KalTileStateSelected;
     }
 }

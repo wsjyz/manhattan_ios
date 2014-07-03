@@ -7,8 +7,11 @@
 //
 
 #import "IndexTabBarViewController.h"
+#import "CommonService.h"
 
 @interface IndexTabBarViewController () <UITabBarControllerDelegate>
+
+@property (strong, nonatomic) CommonService *commonService;
 
 @end
 
@@ -23,11 +26,17 @@
     return self;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.commonService = [[CommonService alloc] init];
     self.delegate = self;
     
     [self.tabBar.items[3] setTitle:@"试听"];
