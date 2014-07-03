@@ -20,6 +20,8 @@
 #import "LoginViewController.h"
 #import "KxMenu.h"
 #import "User.h"
+#import "PersonalInfoViewController.h"
+#import "WalletViewController.h"
 
 #define MANUAL_SEGUE_LOGIN                  @"login"
 #define MANUAL_SEGUE_GOOD_COURSE            @"goodCourse"
@@ -121,24 +123,33 @@
 
 - (void)showItemPersonDetail
 {
-    
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    PersonalInfoViewController *personInfoVC = [storyBoard instantiateViewControllerWithIdentifier:@"personInfo"];
+    [self.navigationController pushViewController:personInfoVC animated:YES];
 }
 
 - (void)showItemMyWallet
 {
-    
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    WalletViewController *walletVC = [storyBoard instantiateViewControllerWithIdentifier:@"wallet"];
+    [self.navigationController pushViewController:walletVC animated:YES];
 }
 
 - (void)showItemMyQues
 {
-    
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    QuestionViewController *questionVC = [storyBoard instantiateViewControllerWithIdentifier:@"question"];
+    questionVC.quesType = QuesType_ques;
+    [self.navigationController pushViewController:questionVC animated:YES];
 }
 
 - (void)showItemLogout
 {
-    //TODO:
     [_commonService updateCurrentUser:nil];
-    [self initNaviBtnsLayout:NO];
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    LoginViewController *loginVC = [storyBoard instantiateViewControllerWithIdentifier:@"loginView"];
+    loginVC.isLogout = YES;
+    [self.navigationController pushViewController:loginVC animated:YES];
 }
 
 - (void)showQuickMenu
@@ -146,7 +157,8 @@
     User *loginUser = [self.commonService currentLoginUser];
     loginUser.userName = @"Lisa";
     
-    NSArray *menuItems =
+    NSMutableArray *menuItems = [[NSMutableArray alloc] init];
+    NSArray *itmes =
     @[
       [KxMenuItem menuItem:loginUser.userName
                      image:nil
@@ -166,18 +178,25 @@
       [KxMenuItem menuItem:@"日程表"
                      image:nil
                     target:self
-                    action:@selector(showItemCalendar)],
-      
-      [KxMenuItem menuItem:@"我的问题"
-                     image:nil
-                    target:self
-                    action:@selector(showItemMyQues)],
-      
-      [KxMenuItem menuItem:@"注销"
-                     image:nil
-                    target:self
-                    action:@selector(showItemLogout)],
+                    action:@selector(showItemCalendar)]
       ];
+    
+    [menuItems addObjectsFromArray:itmes];
+    if ([_commonService currentPersonalID] != PERSONAL_TEACHER)
+    {
+        [menuItems addObject:
+         [KxMenuItem menuItem:@"我的问题"
+                        image:nil
+                       target:self
+                       action:@selector(showItemMyQues)]
+         ];
+    }
+    [menuItems addObject:
+     [KxMenuItem menuItem:@"注销"
+                    image:nil
+                   target:self
+                   action:@selector(showItemLogout)]
+     ];
     
     [KxMenu setTintColor:[UIColor whiteColor]];
     [KxMenu showMenuInView:self.view

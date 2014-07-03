@@ -55,7 +55,8 @@
 - (Page *)myQuestionsWithUserId:(NSString *)userId Page:(Page *)page
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                     userId, @"userId",nil];
+                                     userId, @"userId",
+                                     OPENVALUE(page), @"openPage",nil];
     [ReflectionUtil setArrayType:NSStringFromClass([Question class]) forPropName:@"rows" ofClassName:NSStringFromClass([Page class])];
     return [RestServiceManager performRequestWithPath:OpenQuestionService_myQuestions paramDic:paramDic returnType:NSStringFromClass([Page class]) delegate:self.delegate];
 }

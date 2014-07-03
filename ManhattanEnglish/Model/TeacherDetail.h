@@ -22,7 +22,8 @@
 @property (nonatomic, strong) NSString *expertScore;       // 专家评分
 @property (nonatomic, strong) NSString *expertComments;       // 专家点评
 @property (nonatomic, strong) NSString *teachingArea;       // 授课区域
-@property (nonatomic, strong) NSString *tutoringWay;       // 辅导方式
+@property (nonatomic, strong) NSString *tutoringWay;       // 辅导方式（学生上门STUDENT_VISIT;教师上门：TEACHER_VISIT）
+@property (nonatomic, strong) NSString *studentLevel;       //学员程度(初级JUNIOR 中级INTERMEDIATE 高级SENIOR)
 @property (nonatomic, strong) NSString *classFees;       // 课时费
 @property (nonatomic, strong) NSString *teachingTime;       // 可授课时间；0010001
 @property (nonatomic, strong) NSString *finalGraduateSchool;       // 最高毕业院校
@@ -38,5 +39,10 @@
 @property (nonatomic, strong) NSString *authenticationStatus;       // 认证状态
 
 @property (nonatomic, strong) User *user;
+@property (nonatomic, strong) NSMutableDictionary *extMap;
+
+@property (nonatomic, assign) NSInteger focusCount;
+@property (nonatomic, assign) NSInteger commentCount;
+@property (nonatomic, assign) NSInteger collectCount;
 
 @end

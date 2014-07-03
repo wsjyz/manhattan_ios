@@ -10,4 +10,8 @@
 
 @interface TeacherChargeTableViewCell : UITableViewCell
 
+@property (nonatomic, weak) IBOutlet UILabel *tutoringWagLabel;
+@property (nonatomic, weak) IBOutlet UILabel *studentLevelLabel;
+@property (nonatomic, weak) IBOutlet UILabel *classFeesLabel;
+
 @end

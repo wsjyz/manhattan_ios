@@ -10,7 +10,7 @@
 
 @interface TeacherHomeWorkViewController : BaseViewController
 
-@property (nonatomic, weak) IBOutlet UITextView *homeworkContent;
+@property (nonatomic, weak) IBOutlet BaseTextView *homeworkContent;
 @property (nonatomic, weak) IBOutlet UIButton *sendHKbtn;
 
 - (IBAction)sendHomework:(id)sender;

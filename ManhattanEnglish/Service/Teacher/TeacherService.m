@@ -41,15 +41,27 @@
 }
 
 //收藏教师
-- (BOOL)collectWithUserId:(NSString *)userId
+- (BOOL)collectWithUserId:(NSString *)userId andTeacherId:(NSString *)teacherId
 {
-    return [_teacherService collectWithUserId:userId];
+    return [_teacherService collectWithUserId:userId andTeacherId:teacherId];
 }
 
 //取消收藏教师
-- (BOOL)cancelCollectWithUserId:(NSString *)userId
+- (BOOL)cancelCollectWithUserId:(NSString *)userId andTeacherId:(NSString *)teacherId
 {
-    return [_teacherService cancelCollectWithUserId:userId];
+    return [_teacherService cancelCollectWithUserId:userId andTeacherId:teacherId];
+}
+
+//获取指定学生的收藏教师列表
+- (Page *)getCollectTeachersByUserId:(NSString *)userId andPage:(Page *)page
+{
+    return [_teacherService getCollectTeachersByUserId:userId andPage:page];
+}
+
+//获取教师信息
+- (TeacherDetail *)getTeacherDetailById:(NSString *)userId
+{
+    return [_teacherService getTeacherDetailById:userId];
 }
 
 @end

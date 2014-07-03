@@ -31,7 +31,7 @@
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                      OPENVALUE(page), @"openPage",
-                                     OPENVALUE(teacherID), @"teacherId",nil];
+                                     teacherID, @"teacherId",nil];
     [ReflectionUtil setArrayType:NSStringFromClass([HomeWork class]) forPropName:@"rows" ofClassName:NSStringFromClass([Page class])];
     return [RestServiceManager performRequestWithPath:HomeWorkService_getHomeworksByTeacher paramDic:paramDic returnType:NSStringFromClass([Page class]) delegate:self.delegate];
 }
@@ -55,7 +55,7 @@
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                      OPENVALUE(submitHomeWork), @"submitHomeWork",nil];
-    return [RestServiceManager performRequestWithPath:HomeWorkService_submitHomeWork paramDic:paramDic returnType:NSStringFromClass([submitHomeWork class]) delegate:self.delegate];
+    return [RestServiceManager performRequestWithPath:HomeWorkService_submitHomeWork paramDic:paramDic returnType:NSStringFromClass([submitHomeWork class]) withFileData:data andFileName:name delegate:self.delegate];
 }
 
 @end

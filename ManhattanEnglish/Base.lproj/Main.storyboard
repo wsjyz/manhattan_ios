@@ -8,7 +8,7 @@
         <!--Personal Info View Controller - 个人资料-->
         <scene sceneID="dLK-K7-rJ2">
             <objects>
-                <viewController id="8es-uW-CYq" customClass="PersonalInfoViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="personInfo" id="8es-uW-CYq" customClass="PersonalInfoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LAm-eJ-FaW"/>
                         <viewControllerLayoutGuide type="bottom" id="xY0-Qj-R6D"/>
@@ -61,7 +61,7 @@
         <!--Wallet View Controller - 钱包-->
         <scene sceneID="KuJ-K9-o1T">
             <objects>
-                <viewController id="HUN-Ie-vEt" customClass="WalletViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="wallet" id="HUN-Ie-vEt" customClass="WalletViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rqf-sy-isz"/>
                         <viewControllerLayoutGuide type="bottom" id="naU-cR-AyG"/>
@@ -81,7 +81,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="800RMB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5L-UR-i2Y">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5L-UR-i2Y">
                                 <rect key="frame" x="107" y="55" width="101" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -475,7 +475,7 @@
         <!--Question View Controller - 我的问题-->
         <scene sceneID="DxO-Hy-VCj">
             <objects>
-                <viewController id="dMy-O9-4sf" customClass="QuestionViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="question" id="dMy-O9-4sf" customClass="QuestionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5yX-IY-Ouy"/>
                         <viewControllerLayoutGuide type="bottom" id="HPh-2p-YC4"/>
@@ -553,7 +553,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6bx-ff-qDX">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6bx-ff-qDX" customClass="BaseTextView">
                                         <rect key="frame" x="41" y="5" width="257" height="107"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -848,7 +848,7 @@
         <!--Login View Controller-->
         <scene sceneID="wf1-o2-aDi">
             <objects>
-                <viewController id="Wow-GR-9zG" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginView" id="Wow-GR-9zG" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n9o-cp-1LJ"/>
                         <viewControllerLayoutGuide type="bottom" id="tEs-z3-qoK"/>
@@ -1963,10 +1963,10 @@
             </objects>
             <point key="canvasLocation" x="681" y="410"/>
         </scene>
-        <!--View Controller-->
+        <!--My Collect Teacher List View Controller - 我的收藏-->
         <scene sceneID="chb-U4-cH9">
             <objects>
-                <viewController id="C9W-te-sWd" sceneMemberID="viewController">
+                <viewController id="C9W-te-sWd" customClass="MyCollectTeacherListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gQ9-cV-ZP8"/>
                         <viewControllerLayoutGuide type="bottom" id="he9-AV-lbL"/>
@@ -1975,16 +1975,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oa1-So-4Mt">
-                                <rect key="frame" x="81" y="216" width="158" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zYW-PR-Ulo">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="ENP-nC-chf" kind="embed" id="2aa-A1-czB"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="OJN-jJ-pP6"/>
+                    <navigationItem key="navigationItem" title="我的收藏" id="OJN-jJ-pP6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Feg-fY-8hc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联系人：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Ba-Dt-0Xr">
@@ -2001,7 +2003,25 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
             </objects>
-            <point key="canvasLocation" x="1200" y="410"/>
+            <point key="canvasLocation" x="1057" y="410"/>
+        </scene>
+        <!--Teacher List Table View Controller-->
+        <scene sceneID="PgA-ov-Jty">
+            <objects>
+                <tableViewController id="ENP-nC-chf" customClass="TeacherListTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="cQb-oW-OJm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="ENP-nC-chf" id="gDB-9u-tMe"/>
+                            <outlet property="delegate" destination="ENP-nC-chf" id="Wwx-lD-Gdb"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="djC-Qm-713" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1424" y="410"/>
         </scene>
     </scenes>
     <resources>

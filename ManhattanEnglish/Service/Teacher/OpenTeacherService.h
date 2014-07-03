@@ -34,13 +34,27 @@
  * @param userId
  * @param teacherId
  */
-- (BOOL)collectWithUserId:(NSString *)userId;
+- (BOOL)collectWithUserId:(NSString *)userId andTeacherId:(NSString *)teacherId;
 
 /**
  * 取消收藏教师
  * @param userId
  * @param teacherId
  */
-- (BOOL)cancelCollectWithUserId:(NSString *)userId;
+- (BOOL)cancelCollectWithUserId:(NSString *)userId andTeacherId:(NSString *)teacherId;
+
+/**
+ * 获取指定学生的收藏教师列表
+ * @return
+ */
+- (Page *)getCollectTeachersByUserId:(NSString *)userId andPage:(Page *)page;
+
+/**
+ * 获取教师信息
+ *
+ * @param userId
+ * @return TeacherDetail
+ */
+- (TeacherDetail *)getTeacherDetailById:(NSString *)userId;
 
 @end

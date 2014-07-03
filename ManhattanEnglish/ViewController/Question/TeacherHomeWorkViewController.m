@@ -68,7 +68,11 @@
     homework.homeworkTitle = self.homeworkContent.text;
     homework.teacherId = [_commonService getCurrentUserID];
     
-    [_homeworkService postHomeWork:homework];
+    HomeWork *newHomework = [_homeworkService postHomeWork:homework];
+    if (newHomework != nil)
+    {
+        [_quesTVC addHomework:newHomework];
+    }
 }
 
 /*
