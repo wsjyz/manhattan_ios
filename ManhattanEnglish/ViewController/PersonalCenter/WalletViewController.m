@@ -58,7 +58,7 @@
         _Money = [_walletService getBalancesWithUserID:[_commonService getCurrentUserID]];
         _resourceArr = [_walletService getMoneyRecordsWithUserID:[_commonService getCurrentUserID]];
     } completionBlock:^{
-        _totalMoney.text = [NSString stringWithFormat:@"%ui",_Money];
+        _totalMoney.text = [NSString stringWithFormat:@"%i RMB",_Money];
         if (_resourceArr)
         {
             [_tableView reloadData];

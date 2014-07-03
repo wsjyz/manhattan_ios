@@ -8,7 +8,7 @@
         <!--Personal Info View Controller - 个人资料-->
         <scene sceneID="dLK-K7-rJ2">
             <objects>
-                <viewController id="8es-uW-CYq" customClass="PersonalInfoViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="personInfo" id="8es-uW-CYq" customClass="PersonalInfoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LAm-eJ-FaW"/>
                         <viewControllerLayoutGuide type="bottom" id="xY0-Qj-R6D"/>
@@ -61,7 +61,7 @@
         <!--Wallet View Controller - 钱包-->
         <scene sceneID="KuJ-K9-o1T">
             <objects>
-                <viewController id="HUN-Ie-vEt" customClass="WalletViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="wallet" id="HUN-Ie-vEt" customClass="WalletViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rqf-sy-isz"/>
                         <viewControllerLayoutGuide type="bottom" id="naU-cR-AyG"/>
@@ -81,7 +81,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="800RMB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5L-UR-i2Y">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5L-UR-i2Y">
                                 <rect key="frame" x="107" y="55" width="101" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -475,7 +475,7 @@
         <!--Question View Controller - 我的问题-->
         <scene sceneID="DxO-Hy-VCj">
             <objects>
-                <viewController id="dMy-O9-4sf" customClass="QuestionViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="question" id="dMy-O9-4sf" customClass="QuestionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5yX-IY-Ouy"/>
                         <viewControllerLayoutGuide type="bottom" id="HPh-2p-YC4"/>
@@ -848,7 +848,7 @@
         <!--Login View Controller-->
         <scene sceneID="wf1-o2-aDi">
             <objects>
-                <viewController id="Wow-GR-9zG" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginView" id="Wow-GR-9zG" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n9o-cp-1LJ"/>
                         <viewControllerLayoutGuide type="bottom" id="tEs-z3-qoK"/>

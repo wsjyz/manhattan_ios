@@ -31,7 +31,7 @@
     {
         CGSize nameSize = [_answerName.text sizeWithFont:_answerName.font constrainedToSize:CGSizeMake(_answerName.width, MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
         _answerName.frame = CGRectMake(CGRectGetMinX(_answerName.frame), CGRectGetMinY(_answerName.frame), CGRectGetWidth(_answerName.frame), nameSize.height);
-        maxHeight = CGRectGetMaxY(_answerName.frame);
+        maxHeight = nameSize.height >= CGRectGetHeight(_answerTeacher.frame)? CGRectGetMaxY(_answerName.frame):CGRectGetMaxY(_answerTeacher.frame);
     }
     [super setFrame:CGRectMake(CGRectGetMinX(frame), CGRectGetMinY(frame), CGRectGetWidth(frame), maxHeight + 10)];
 }

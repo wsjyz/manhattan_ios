@@ -18,7 +18,7 @@
 - (NSUInteger)getBalancesWithUserID:(NSString *)userID
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                     userID, @"userID",nil];
+                                     userID, @"userId",nil];
     return [[RestServiceManager performRequestWithPath:OpenWalletService_getBalances paramDic:paramDic returnType:@(@encode(NSUInteger)) delegate:self.delegate] integerValue];
 }
 

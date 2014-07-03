@@ -20,6 +20,8 @@
 #import "LoginViewController.h"
 #import "KxMenu.h"
 #import "User.h"
+#import "PersonalInfoViewController.h"
+#import "WalletViewController.h"
 
 #define MANUAL_SEGUE_LOGIN                  @"login"
 #define MANUAL_SEGUE_GOOD_COURSE            @"goodCourse"
@@ -121,24 +123,33 @@
 
 - (void)showItemPersonDetail
 {
-    
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    PersonalInfoViewController *personInfoVC = [storyBoard instantiateViewControllerWithIdentifier:@"personInfo"];
+    [self.navigationController pushViewController:personInfoVC animated:YES];
 }
 
 - (void)showItemMyWallet
 {
-    
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    WalletViewController *walletVC = [storyBoard instantiateViewControllerWithIdentifier:@"wallet"];
+    [self.navigationController pushViewController:walletVC animated:YES];
 }
 
 - (void)showItemMyQues
 {
-    
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    QuestionViewController *questionVC = [storyBoard instantiateViewControllerWithIdentifier:@"question"];
+    questionVC.quesType = QuesType_ques;
+    [self.navigationController pushViewController:questionVC animated:YES];
 }
 
 - (void)showItemLogout
 {
-    //TODO:
     [_commonService updateCurrentUser:nil];
-    [self initNaviBtnsLayout:NO];
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    LoginViewController *loginVC = [storyBoard instantiateViewControllerWithIdentifier:@"loginView"];
+    loginVC.isLogout = YES;
+    [self.navigationController pushViewController:loginVC animated:YES];
 }
 
 - (void)showQuickMenu
@@ -146,7 +157,7 @@
     User *loginUser = [self.commonService currentLoginUser];
     loginUser.userName = @"Lisa";
     
-    NSArray *menuItems =
+    NSMutableArray *menuItems =
     @[
       [KxMenuItem menuItem:loginUser.userName
                      image:nil

@@ -31,7 +31,7 @@
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                      OPENVALUE(page), @"openPage",
-                                     OPENVALUE(teacherID), @"teacherId",nil];
+                                     teacherID, @"teacherId",nil];
     [ReflectionUtil setArrayType:NSStringFromClass([HomeWork class]) forPropName:@"rows" ofClassName:NSStringFromClass([Page class])];
     return [RestServiceManager performRequestWithPath:HomeWorkService_getHomeworksByTeacher paramDic:paramDic returnType:NSStringFromClass([Page class]) delegate:self.delegate];
 }

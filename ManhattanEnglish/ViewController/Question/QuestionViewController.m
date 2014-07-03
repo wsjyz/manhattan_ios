@@ -31,13 +31,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     switch (_quesType) {
-        case 0:
+        case QuesType_ques:
         {
             [self setNavgationItemTitle:@"我的问题"];
             break;
         }
-        case 1:
-        case 2:
+        case QuesType_answer_assign:
+        case QuesType_unAnswer:
+        case QuesType_answered:
+        {
+            [self setNavgationItemTitle:@"我要回答"];
+            break;
+        }
+        case QuesType_homeWork_Stu:
+        case QuesType_homeWork_Tea:
         {
             [self setNavgationItemTitle:@"我的作业"];
             break;
