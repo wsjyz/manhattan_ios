@@ -56,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zqN-FW-OI4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-380" y="-1139"/>
+            <point key="canvasLocation" x="-427" y="-1043"/>
         </scene>
         <!--Wallet View Controller - 钱包-->
         <scene sceneID="KuJ-K9-o1T">
@@ -108,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iqq-pU-Of3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="647" y="-1139"/>
+            <point key="canvasLocation" x="651" y="-1043"/>
         </scene>
         <!--Audition Detail View Controller - 试听-->
         <scene sceneID="NFo-sF-roi">
@@ -843,7 +843,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pcs-GW-yO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128" y="-1139"/>
+            <point key="canvasLocation" x="81" y="-1043"/>
+        </scene>
+        <!--Publish Course View Controller - 发布课程-->
+        <scene sceneID="xTG-5h-SVe">
+            <objects>
+                <viewController id="0cI-Fe-Qmk" customClass="PublishCourseViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Oqb-ec-dxT"/>
+                        <viewControllerLayoutGuide type="bottom" id="cc0-t4-dCy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j9Q-34-pma">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="发布课程" id="vIx-4A-Kqq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bJZ-Ds-AA5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2158" y="-1043"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="wf1-o2-aDi">
@@ -978,7 +997,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Tc-GV-BFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2143" y="-1114"/>
+            <point key="canvasLocation" x="2639" y="-1043"/>
         </scene>
         <!--FindPW View Controller - 找回密码-->
         <scene sceneID="tQd-jB-rMB">
@@ -1450,6 +1469,7 @@
                         <segue destination="LQ3-35-XOM" kind="push" identifier="teacherHomework" id="qO4-fd-kHd"/>
                         <segue destination="Wow-GR-9zG" kind="push" identifier="login" id="MIq-KI-guz"/>
                         <segue destination="Imf-hx-had" kind="push" identifier="answerQuestion" id="cSQ-f9-sIy"/>
+                        <segue destination="0cI-Fe-Qmk" kind="push" identifier="publishCourse" id="7H4-48-PMD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmH-ng-aeE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1917,7 +1937,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hd7-t0-erI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1200" y="-1139"/>
+            <point key="canvasLocation" x="1208" y="-1043"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="Mi7-eW-8l4">
