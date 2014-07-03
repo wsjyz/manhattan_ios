@@ -7,6 +7,7 @@
 //
 
 #import "BaseTableViewController.h"
+#import "HomeWork.h"
 
 typedef enum
 {
@@ -22,5 +23,7 @@ typedef enum
 
 @property (nonatomic, assign) QuesType quesType;
 @property (nonatomic, retain) Page *currentPage;
+
+- (void)addHomework:(HomeWork *)hoemwork;
 
 @end

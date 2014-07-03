@@ -25,13 +25,14 @@
 
 - (void)commonInit
 {
+    self.scheduleArr = [[NSMutableArray alloc] init];
     for (int i = 0;i < 7; i++)
     {
         ScheduleView *scheduleView = [ViewUtil viewFromNibOfClass:[ScheduleView class] owner:self];
-        scheduleView.frame = CGRectMake(51+40*i, 105, 40, 125);
+        scheduleView.frame = CGRectMake(51+37*i, 105, 37, 125);
         scheduleView.enable = self.enable;
         [self addSubview:scheduleView];
-        [_scheduleArr addObject:scheduleView];
+        [self.scheduleArr addObject:scheduleView];
     }
     
 }

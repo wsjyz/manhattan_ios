@@ -298,6 +298,12 @@
     
 }
 
+- (void)addHomework:(HomeWork *)hoemwork
+{
+    [_resourceArr insertObject:hoemwork atIndex:0];
+    [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
+}
+
 #pragma mark QuesDetailDelegate
 - (void)deleteQuestion:(Question *)ques
 {

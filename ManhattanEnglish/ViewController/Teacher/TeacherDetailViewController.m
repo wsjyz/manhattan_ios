@@ -99,9 +99,9 @@
         cell.commentContent.text = VALUE(_teacherDetail.expertComments);
         cell.area.text = VALUE(_teacherDetail.teachingArea);
         cell.mode.text = VALUE(_teacherDetail.tutoringWay);
-        cell.concernNum.text = @"10";
-        cell.commentNum.text = @"12";
-        cell.collectNum.text = @"14";
+        cell.concernNum.text = [NSString stringWithFormat:@"%i",_teacherDetail.focusCount];
+        cell.commentNum.text = [NSString stringWithFormat:@"%i",_teacherDetail.commentCount];
+        cell.collectNum.text = [NSString stringWithFormat:@"%i",_teacherDetail.collectCount];
         
         [cell setFrame:CGRectMake(0, 0, CGRectGetWidth(tableView.frame), MAXFLOAT)];
         
@@ -116,20 +116,39 @@
             cell = [ViewUtil viewFromNibOfClass:[TeacherScheduleTableViewCell class] owner:self];
             cell.enable = NO;
         }
-        //TODO:
         for (int i = 0 ; i<_teacherDetail.teachingTime.length ; i++)
         {
             int day = i/3;
             int index = i%3;
             unichar timeChar = [_teacherDetail.teachingTime characterAtIndex:i];
+            BOOL hasSelected = NO;
+            if (timeChar == '1')
+            {
+                hasSelected = YES;
+            }
+            
+            ScheduleView *view = cell.scheduleArr[day];
+            switch (index) {
+                case 0:
+                {
+                    [view showForeBtn:hasSelected];
+                    break;
+                }
+                case 1:
+                {
+                    [view showAfterBtn:hasSelected];
+                    break;
+                }
+                case 2:
+                {
+                    [view showAfterSixBtn:hasSelected];
+                    break;
+                }
+                    
+                default:
+                    break;
+            }
         }
-//        [timeList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-//            CourseSchedule *schedule = obj;
-//            ScheduleView *view = cell.scheduleArr[idx];
-//            [view showForeBtn:schedule.forenoon];
-//            [view showAfterBtn:schedule.afternoon];
-//            [view showAfterSixBtn:schedule.aftersix];
-//        }];
         
         return cell;
     }
@@ -141,6 +160,9 @@
         {
             cell = [ViewUtil viewFromNibOfClass:[TeacherChargeTableViewCell class] owner:self];
         }
+        cell.tutoringWagLabel.text = VALUE(_teacherDetail.tutoringWay);
+        cell.studentLevelLabel.text = VALUE(_teacherDetail.studentLevel);
+        cell.classFeesLabel.text = VALUE(_teacherDetail.classFees);
         
         return cell;
     }
@@ -153,7 +175,7 @@
             cell = [ViewUtil viewFromNibOfClass:[TeacherPersonInfoTableViewCell class] owner:self];
         }
         
-        cell.content.text = @"阳光自信的老师，高中在澳大利亚墨尔本学习，在新西兰进修4年儿童教育，擅长口语交流和基本书写，会用西式教育方式培养孩子口语、单词、发音，从娱乐中培养孩子技能，对孩子有耐心、爱心";
+        cell.content.text = VALUE(_teacherDetail.authentication);
         
         [cell setFrame:CGRectMake(0, 0, CGRectGetWidth(tableView.frame), MAXFLOAT)];
         return cell;

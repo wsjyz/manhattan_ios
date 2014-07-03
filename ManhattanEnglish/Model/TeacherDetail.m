@@ -10,4 +10,43 @@
 
 @implementation TeacherDetail
 
+- (NSInteger)focusCount
+{
+    if (self.extMap != nil)
+    {
+         id count = [self.extMap valueForKey:@"followCount"];
+        if (count != nil)
+        {
+            return [count integerValue];
+        }
+    }
+    return 0;
+}
+
+- (NSInteger)commentCount
+{
+    if (self.extMap != nil)
+    {
+        id count = [self.extMap valueForKey:@"commentCount"];
+        if (count != nil)
+        {
+            return [count integerValue];
+        }
+    }
+    return 0;
+}
+
+- (NSInteger)collectCount
+{
+    if (self.extMap != nil)
+    {
+        id count = [self.extMap valueForKey:@"collectCount"];
+        if (count != nil)
+        {
+            return [count integerValue];
+        }
+    }
+    return 0;
+}
+
 @end
