@@ -80,7 +80,7 @@
 - (void)initViewsWithCurrentPersionID:(PERSONAL_ID)personId
 {
     // btn images
-    if (personId == PERSONAL_STUDENT || personId == PERSONAL_GUEST) {
+    if (personId != PERSONAL_TEACHER) {
         
         [self.appoinBtn setBackgroundImage:[UIImage imageNamed:@"index_wyyy.png"] forState:UIControlStateNormal];
         [self.qaBtn setBackgroundImage:[UIImage imageNamed:@"index_wytw.png"] forState:UIControlStateNormal];
