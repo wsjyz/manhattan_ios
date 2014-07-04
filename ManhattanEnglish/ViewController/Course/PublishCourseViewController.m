@@ -1,21 +1,18 @@
 //
-//  IndexTabBarViewController.m
+//  PublishCourseViewController.m
 //  ManhattanEnglish
 //
-//  Created by Tianyu Tan on 14-6-20.
-//  Copyright (c) 2014年 8hinfo. All rights reserved.
+//  Created by Alex on 7/4/14.
+//  Copyright (c) 2014 8hinfo. All rights reserved.
 //
 
-#import "IndexTabBarViewController.h"
-#import "CommonService.h"
+#import "PublishCourseViewController.h"
 
-@interface IndexTabBarViewController () <UITabBarControllerDelegate>
-
-@property (strong, nonatomic) CommonService *commonService;
+@interface PublishCourseViewController ()
 
 @end
 
-@implementation IndexTabBarViewController
+@implementation PublishCourseViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,32 +23,16 @@
     return self;
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.commonService = [[CommonService alloc] init];
-    self.delegate = self;
-    
-    [self.tabBar.items[3] setTitle:@"试听"];
-    [self.tabBar.items[3] setImage:[UIImage imageNamed:@"tab_audition_n.png"]];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
-{
-    
 }
 
 /*

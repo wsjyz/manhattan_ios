@@ -74,18 +74,18 @@ static const CGFloat kMonthLabelHeight = 17.f;
     const CGFloat kMonthLabelWidth = 200.0f;
     const CGFloat kHeaderVerticalAdjust = 13.f;
     
-    // Create the previous month button on the left side of the view
-    CGRect previousMonthButtonFrame = CGRectMake(self.left,
-                                                 kHeaderVerticalAdjust,
-                                                 kChangeMonthButtonWidth,
-                                                 kChangeMonthButtonHeight);
-    UIButton *previousMonthButton = [[UIButton alloc] initWithFrame:previousMonthButtonFrame];
-    [previousMonthButton setAccessibilityLabel:NSLocalizedString(@"Previous month", nil)];
-    [previousMonthButton setImage:[UIImage imageNamed:@"Kal.bundle/kal_left_arrow.png"] forState:UIControlStateNormal];
-    previousMonthButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
-    previousMonthButton.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-    [previousMonthButton addTarget:self action:@selector(showPreviousMonth) forControlEvents:UIControlEventTouchUpInside];
-    [headerView addSubview:previousMonthButton];
+//    // Create the previous month button on the left side of the view
+//    CGRect previousMonthButtonFrame = CGRectMake(self.left,
+//                                                 kHeaderVerticalAdjust,
+//                                                 kChangeMonthButtonWidth,
+//                                                 kChangeMonthButtonHeight);
+//    UIButton *previousMonthButton = [[UIButton alloc] initWithFrame:previousMonthButtonFrame];
+//    [previousMonthButton setAccessibilityLabel:NSLocalizedString(@"Previous month", nil)];
+//    [previousMonthButton setImage:[UIImage imageNamed:@"Kal.bundle/kal_left_arrow.png"] forState:UIControlStateNormal];
+//    previousMonthButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+//    previousMonthButton.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+//    [previousMonthButton addTarget:self action:@selector(showPreviousMonth) forControlEvents:UIControlEventTouchUpInside];
+//    [headerView addSubview:previousMonthButton];
     
     // Draw the selected month name centered and at the top of the view
     CGRect monthLabelFrame = CGRectMake((self.width/2.0f) - (kMonthLabelWidth/2.0f),
@@ -100,18 +100,18 @@ static const CGFloat kMonthLabelHeight = 17.f;
     [self setHeaderTitleText:[logic selectedMonthNameAndYear]];
     [headerView addSubview:headerTitleLabel];
     
-    // Create the next month button on the right side of the view
-    CGRect nextMonthButtonFrame = CGRectMake(self.width - kChangeMonthButtonWidth,
-                                             kHeaderVerticalAdjust,
-                                             kChangeMonthButtonWidth,
-                                             kChangeMonthButtonHeight);
-    UIButton *nextMonthButton = [[UIButton alloc] initWithFrame:nextMonthButtonFrame];
-    [nextMonthButton setAccessibilityLabel:NSLocalizedString(@"Next month", nil)];
-    [nextMonthButton setImage:[UIImage imageNamed:@"Kal.bundle/kal_right_arrow.png"] forState:UIControlStateNormal];
-    nextMonthButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
-    nextMonthButton.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-    [nextMonthButton addTarget:self action:@selector(showFollowingMonth) forControlEvents:UIControlEventTouchUpInside];
-    [headerView addSubview:nextMonthButton];
+//    // Create the next month button on the right side of the view
+//    CGRect nextMonthButtonFrame = CGRectMake(self.width - kChangeMonthButtonWidth,
+//                                             kHeaderVerticalAdjust,
+//                                             kChangeMonthButtonWidth,
+//                                             kChangeMonthButtonHeight);
+//    UIButton *nextMonthButton = [[UIButton alloc] initWithFrame:nextMonthButtonFrame];
+//    [nextMonthButton setAccessibilityLabel:NSLocalizedString(@"Next month", nil)];
+//    [nextMonthButton setImage:[UIImage imageNamed:@"Kal.bundle/kal_right_arrow.png"] forState:UIControlStateNormal];
+//    nextMonthButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+//    nextMonthButton.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+//    [nextMonthButton addTarget:self action:@selector(showFollowingMonth) forControlEvents:UIControlEventTouchUpInside];
+//    [headerView addSubview:nextMonthButton];
     
     // Add column labels for each weekday (adjusting based on the current locale's first weekday)
     NSArray *weekdayNames = [[[NSDateFormatter alloc] init] shortWeekdaySymbols];

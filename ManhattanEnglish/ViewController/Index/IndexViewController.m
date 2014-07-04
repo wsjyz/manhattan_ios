@@ -22,6 +22,7 @@
 #import "User.h"
 #import "PersonalInfoViewController.h"
 #import "WalletViewController.h"
+#import "IndexTabBarViewController.h"
 
 #define MANUAL_SEGUE_LOGIN                  @"login"
 #define MANUAL_SEGUE_GOOD_COURSE            @"goodCourse"
@@ -155,7 +156,9 @@
 - (void)showQuickMenu
 {
     User *loginUser = [self.commonService currentLoginUser];
-    loginUser.userName = @"Lisa";
+    if (loginUser.userName == nil) {
+        loginUser.userName = @"Unknown";
+    }
     
     NSMutableArray *menuItems = [[NSMutableArray alloc] init];
     NSArray *itmes =
@@ -249,6 +252,12 @@
     
     BOOL hasLogin = self.loginUser != nil;
     [self initNaviBtnsLayout:hasLogin];
+    
+    IndexTabBarViewController *tabBarViewCon = (IndexTabBarViewController *)self.navigationController.tabBarController;
+    if (tabBarViewCon != nil) {
+        BOOL teacherRole = persionID == PERSONAL_TEACHER;
+        [tabBarViewCon.tabBar.items[1] setTitle: teacherRole ? @"学生": @"收藏"];
+    }
 }
 
 - (void)viewDidLoad
