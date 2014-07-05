@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+#define RESOURCE_TYPE_APPOINTMENT_COURSE        @"APPOINTMENT_COURSE"
+#define RESOURCE_TYPE_LISTEN_COURSE             @"LISTEN_COURSE"
+#define RESOURCE_TYPE_APPOINTMENT_TEACHER       @"APPOINTMENT_TEACHER"
+#define RESOURCE_TYPE_LISTEN_TEACHER            @"LISTEN_TEACHER"
+
 /*
  appointmentId 预约ID
  userId

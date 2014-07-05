@@ -8,6 +8,9 @@
 
 #import "BaseViewController.h"
 
+@class TeacherDetail;
+@class Course;
+
 @interface AuditionDetailViewController : BaseViewController
 
 // 试听还是预约
@@ -15,6 +18,12 @@
 
 // 课程还是老师
 @property (assign, nonatomic) BOOL isTeacher;
+
+// 如果是教师的需要设置该属性
+@property (strong, nonatomic) TeacherDetail *teacherDetail;
+
+// 如果是课程需要设置该属性
+@property (strong, nonatomic) Course *course;
 
 @property (weak, nonatomic) IBOutlet UIButton *auditionBtn;
 
