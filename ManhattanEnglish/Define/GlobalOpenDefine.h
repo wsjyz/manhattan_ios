@@ -18,6 +18,9 @@
 #pragma mark OpenUserService
 #define OpenUserService_getUser                         @"/user/getUser"
 #define OpenUserService_updateUser                      @"/user/updateUser"
+#define OpenUserService_getStudentList                  @"/user/getStudentList"
+#define OpenUserService_getOrderStudentList             @"/user/getOrderStudentList"
+#define OpenUserService_getListenStudentList            @"/user/getListenStudentList"
 
 #pragma mark OpenWalletService
 #define OpenWalletService_getBalances                   @"/wallet/getBalances"

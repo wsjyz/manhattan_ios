@@ -14,7 +14,7 @@
 #import "HomeworkService.h"
 #import "AnswerHomeWorkViewController.h"
 
-@interface QuestionTableViewController ()<QuesDetailDelegate>
+@interface QuestionTableViewController ()<QuesDetailDelegate,AnswerDelegate>
 {
     QuestionService *_quesService;
     CommonService *_commonService;
@@ -275,6 +275,7 @@
             AnswerHomeWorkViewController *homwworkDetailVC = [ViewUtil viewControllerFromNibOfClass:[AnswerHomeWorkViewController class]];
             homwworkDetailVC.question = _resourceArr[indexPath.row];
             homwworkDetailVC.isHomeWork = NO;
+            homwworkDetailVC.delegate = self;
             [self.navigationController pushViewController:homwworkDetailVC animated:YES];
             break;
         }
@@ -283,6 +284,7 @@
             //我的作业
             AnswerHomeWorkViewController *homwworkDetailVC = [ViewUtil viewControllerFromNibOfClass:[AnswerHomeWorkViewController class]];
             homwworkDetailVC.isHomeWork = YES;
+            homwworkDetailVC.delegate = self;
             homwworkDetailVC.homework = _resourceArr[indexPath.row];
             [self.navigationController pushViewController:homwworkDetailVC animated:YES];
             break;
@@ -307,8 +309,17 @@
 #pragma mark QuesDetailDelegate
 - (void)deleteQuestion:(Question *)ques
 {
-    [_resourceArr removeObject:ques];
-    [self.tableView reloadData];
+    NSUInteger index = [_resourceArr indexOfObject:ques];
+    [_resourceArr removeObjectAtIndex:index];
+    [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:index inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
+}
+
+#pragma mark AnswerDelegate
+- (void)answerSuccessed:(id)sender
+{
+    NSUInteger index = [_resourceArr indexOfObject:sender];
+    [_resourceArr removeObjectAtIndex:index];
+    [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:index inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
 }
 
 

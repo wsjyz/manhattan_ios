@@ -17,7 +17,7 @@
 - (BOOL)askQuestionWithQuestion:(Question *)ques FileData:(NSData *)data FileName:(NSString *)fileName;
 
 //回答问题
-- (BOOL)answerQuestionWithQuestion:(Question *)ques;
+- (BOOL)answerQuestionWithQuestion:(Question *)ques FileData:(NSData *)data FileName:(NSString *)fileName;
 
 //删除问答
 - (BOOL)deleteQuestionWithQuestionId:(NSString *)questionId;

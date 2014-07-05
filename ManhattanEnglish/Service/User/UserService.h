@@ -18,4 +18,13 @@
 //更新用户信息
 - (BOOL)updateUser:(User *)user;
 
+//根据教师Id获取学生列表信息
+- (Page *)getStudentList:(Page *)openPage TeacherID:(NSString *)teacherId;
+
+//根据教师Id获取预约学生列表信息
+- (Page *)getOrderStudentList:(Page *)openPage TeacherID:(NSString *)teacherId;
+
+//根据教师Id获取试听学生列表信息
+- (Page *)getListenStudentList:(Page *)openPage TeacherID:(NSString *)teacherId;
+
 @end

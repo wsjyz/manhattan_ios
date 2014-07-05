@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "User.h"
 
 @interface Question : NSObject
 
@@ -22,5 +23,7 @@
 @property (nonatomic, strong) NSString *answerPic;
 @property (nonatomic, strong) NSDate *createTime;   //问题创建时间
 @property (nonatomic, strong) NSDate *answerTime;   //问题回答时间
+@property (nonatomic, strong) User *askUser;
+@property (nonatomic, strong) User *repUser;
 
 @end

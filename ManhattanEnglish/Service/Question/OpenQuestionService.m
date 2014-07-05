@@ -27,11 +27,11 @@
  * @param question
  * @return Boolean
  */
-- (BOOL)answerQuestionWithQuestion:(Question *)ques
+- (BOOL)answerQuestionWithQuestion:(Question *)ques FileData:(NSData *)data FileName:(NSString *)fileName
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                      OPENVALUE(ques), @"question", nil];
-    return [[RestServiceManager performRequestWithPath:OpenQuestionService_answerQuestion paramDic:paramDic returnType:@(@encode(BOOL)) delegate:self.delegate] boolValue];
+    return [[RestServiceManager performRequestWithPath:OpenQuestionService_answerQuestion paramDic:paramDic returnType:NSStringFromClass([NSNumber class]) withFileData:data andFileName:fileName delegate:self.delegate] boolValue];
 }
 
 /**

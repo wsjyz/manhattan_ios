@@ -10,6 +10,7 @@
 #import <MobileCoreServices/UTCoreTypes.h>
 #import "HomeworkService.h"
 #import "CommonService.h"
+#import "QuestionService.h"
 
 #define SMALL_WIDTH                         150    //小图片宽度
 
@@ -26,6 +27,7 @@
     
     HomeworkService *_homeworkService;
     CommonService *_commonService;
+    QuestionService *_questionService;
 }
 
 @end
@@ -45,6 +47,7 @@
 {
     _homeworkService = [[HomeworkService alloc] initWithDelegate:self];
     _commonService = [[CommonService alloc] initWithDelegate:self];
+    _questionService = [[QuestionService alloc] initWithDelegate:self];
 }
 
 - (void)viewDidLoad
@@ -110,20 +113,47 @@
         return;
     }
     
+    BOOL result = NO;
     NSData *imageData = nil;
     if (_sendImage != nil)
     {
         imageData = UIImageJPEGRepresentation(_sendImage, 0.5);
     }
     
-    HomeworkSubmit *homeworkSubmit = [[HomeworkSubmit alloc] init];
-    homeworkSubmit.userId = [_commonService getCurrentUserID];
-    homeworkSubmit.homeworkId = _homework.homeworkId;
-    homeworkSubmit.homeworkContent = _answerTextView.text;
-    homeworkSubmit.submitTime = [NSDate date];
+    if (_isHomeWork)
+    {
+        HomeworkSubmit *homeworkSubmit = [[HomeworkSubmit alloc] init];
+        homeworkSubmit.userId = [_commonService getCurrentUserID];
+        homeworkSubmit.homeworkId = _homework.homeworkId;
+        homeworkSubmit.homeworkContent = _answerTextView.text;
+        homeworkSubmit.submitTime = [NSDate date];
+        
+        HomeworkSubmit *newHomework = [_homeworkService submitHomeWork:homeworkSubmit FileData:imageData FileName:_sendImageName];
+        if (newHomework)
+        {
+            result = YES;
+            if (self.delegate && [self.delegate respondsToSelector:@selector(answerSuccessed:)])
+            {
+                [self.delegate answerSuccessed:_homework];
+            }
+        }
+    }
+    else
+    {
+        _question.replyUser = [_commonService getCurrentUserID];
+        _question.answer = _answerTextView.text;
+        
+        result = [_questionService answerQuestionWithQuestion:_question FileData:imageData FileName:_sendImageName];
+        if (result)
+        {
+            if (self.delegate && [self.delegate respondsToSelector:@selector(answerSuccessed:)])
+            {
+                [self.delegate answerSuccessed:_question];
+            }
+        }
+    }
     
-    HomeworkSubmit *newHomework = [_homeworkService submitHomeWork:homeworkSubmit FileData:imageData FileName:_sendImageName];
-    if (newHomework)
+    if (result)
     {
         [self.navigationController popViewControllerAnimated:YES];
     }
@@ -131,6 +161,7 @@
     {
         [self showErrorInfoWithMessage:@"提交失败" delegate:nil];
     }
+    
 }
 
 - (void)selectPic:(id)sender

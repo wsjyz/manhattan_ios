@@ -9,10 +9,14 @@
 #import "MyStudentListTableViewController.h"
 #import "Page.h"
 #import "StudentMainCell.h"
+#import "UserService.h"
+#import "CommonService.h"
 
 @interface MyStudentListTableViewController ()
 {
     Page *_currentPage;
+    UserService *_userService;
+    CommonService *_commonService;
 }
 @property (nonatomic, strong) NSMutableArray *resourceArr;
 
@@ -60,19 +64,40 @@
     _currentPage.rows = nil;
     _currentPage.pageNo ++;
     
-//    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-//    dispatch_async(queue, ^{
-//        __block Page *newPage = [_teacherService listPageWithPage:_currentPage];
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            if (newPage != nil)
-//            {
-//                _currentPage = newPage;
-//                [self.resourceArr addObjectsFromArray:_currentPage.rows];
-//                [self.tableView reloadData];
-//            }
-//            [self loadMoreCompleted];
-//        });
-//    });
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(queue, ^{
+        __block Page *newPage;
+        NSString *userID = [_commonService getCurrentUserID];
+        switch (_stuType) {
+            case Stu_type_myStu:
+            {
+                newPage = [_userService getStudentList:_currentPage TeacherID:userID];
+                break;
+            }
+            case Stu_type_orderStu:
+            {
+                newPage = [_userService getOrderStudentList:_currentPage TeacherID:userID];
+                break;
+            }
+            case Stu_type_listenStu:
+            {
+                newPage = [_userService getListenStudentList:_currentPage TeacherID:userID];
+                break;
+            }
+                
+            default:
+                break;
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (newPage != nil)
+            {
+                _currentPage = newPage;
+                [self.resourceArr addObjectsFromArray:_currentPage.rows];
+                [self.tableView reloadData];
+            }
+            [self loadMoreCompleted];
+        });
+    });
     
     return YES;
 }
@@ -87,21 +112,48 @@
     _currentPage.rows = nil;
     _currentPage.autoCount = YES;
     
-//    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-//    dispatch_async(queue, ^{
-//        __block Page *newPage = [_teacherService listPageWithPage:_currentPage];
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            if (newPage != nil)
-//            {
-//                _currentPage = newPage;
-//                self.resourceArr = _currentPage.rows;
-//                [self.tableView reloadData];
-//            }
-//            [self refreshDataComplete];
-//        });
-//    });
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(queue, ^{
+        __block Page *newPage;
+        NSString *userID = [_commonService getCurrentUserID];
+        switch (_stuType) {
+            case Stu_type_myStu:
+            {
+                newPage = [_userService getStudentList:_currentPage TeacherID:userID];
+                break;
+            }
+            case Stu_type_orderStu:
+            {
+                newPage = [_userService getOrderStudentList:_currentPage TeacherID:userID];
+                break;
+            }
+            case Stu_type_listenStu:
+            {
+                newPage = [_userService getListenStudentList:_currentPage TeacherID:userID];
+                break;
+            }
+                
+            default:
+                break;
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (newPage != nil)
+            {
+                _currentPage = newPage;
+                self.resourceArr = _currentPage.rows;
+                [self.tableView reloadData];
+            }
+            [self refreshDataComplete];
+        });
+    });
     
     return YES;
+}
+
+- (void)initService
+{
+    _userService = [[UserService alloc] initWithDelegate:self];
+    _commonService = [[CommonService alloc] initWithDelegate:nil];
 }
 
 - (void)viewDidLoad
