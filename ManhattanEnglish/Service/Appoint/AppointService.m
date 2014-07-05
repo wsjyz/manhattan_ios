@@ -11,6 +11,8 @@
 #import "AppointSearchCondition.h"
 #import "Page.h"
 #import "TeacherDetail.h"
+#import "Option.h"
+#import "User.h"
 
 @implementation AppointService (OpenExtension)
 
@@ -61,21 +63,24 @@
 - (NSArray *)optionsWithConditionTag:(ConditionTag)tag
 {
     NSArray *options;
-    switch (tag) {
-        case ConditionTagKcfl:
-            options = @[@"TOEFL", @"IELTS", @"SSAT", @"SAT", @"ACT", @"GRE", @"GMAT", @"LSAT"];
-            break;
-        case ConditionTagJxdd:
-            options = @[@"崇明县", @"黄浦区", @"卢湾区", @"杨浦区", @"闵行区", @"宝山区", @"奉贤区", @"普陀区", @"闸北区", @"松江区", @"静安区", @"金山区", @"徐汇区", @"虹口区", @"长宁区", @"嘉定区", @"南汇区", @"青浦区", @"浦东新区"];
-            break;
-        case ConditionTagJxfs:
-            options = @[@"学生上门", @"教师上门"];
-            break;
-        case ConditionTagJsxb:
-            options = @[@"男", @"女"];
-            break;
-        default:
-            break;
+    
+    if (tag == ConditionTagKcfl) {
+        NSArray *optionValues = @[@"TOEFL", @"IELTS", @"SSAT", @"SAT", @"ACT", @"GRE", @"GMAT", @"LSAT"];
+        options = [Option optionsWithSameTextAndValues:optionValues];
+    }else if (tag == ConditionTagJxdd){
+        NSArray *optionValues = @[@"崇明县", @"黄浦区", @"卢湾区", @"杨浦区", @"闵行区", @"宝山区", @"奉贤区", @"普陀区", @"闸北区", @"松江区", @"静安区", @"金山区", @"徐汇区", @"虹口区", @"长宁区", @"嘉定区", @"南汇区", @"青浦区", @"浦东新区"];
+        options = [Option optionsWithSameTextAndValues:optionValues];
+    }else if (tag == ConditionTagJxfs){
+        NSDictionary *keyValueDic = [NSDictionary dictionaryWithObjectsAndKeys:
+                                     @"学生上门", @"STUDENT_VISIT",
+                                     @"教师上门", @"TEACHER_VISIT", nil];
+        options = [Option optionsWithTextAndValueDic:keyValueDic];
+    }else if (tag == ConditionTagJsxb){
+        NSDictionary *keyValueDic = [NSDictionary dictionaryWithObjectsAndKeys:
+                                     @"男", SEX_MALE,
+                                     @"女", SEX_FEMALE, nil];
+        options = [Option optionsWithTextAndValueDic:keyValueDic];
+    }else{
     }
     return options;
 }

@@ -9,6 +9,7 @@
 #import "SelectionViewController.h"
 #import "SelectionTableViewCell.h"
 #import "ViewUtil.h"
+#import "Option.h"
 
 @interface SelectionViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -64,7 +65,8 @@
     }
     
     // Configure the cell...
-    cell.titleLabel.text = self.contentItems[indexPath.row];
+    Option *option = self.contentItems[indexPath.row];
+    cell.titleLabel.text = option.text;
     
     return cell;
 }

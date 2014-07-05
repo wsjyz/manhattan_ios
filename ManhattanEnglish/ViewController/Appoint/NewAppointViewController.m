@@ -42,11 +42,11 @@
 - (void)initCellPropValueDic
 {
     self.cellPropValues = [NSDictionary dictionaryWithObjectsAndKeys:
-                           @"appoint_kcfl,课程分类", @(ConditionTagKcfl),
-                           @"appoint_jxdd,教学地点", @(ConditionTagJxdd),
-                           @"appoint_jxfs,教学方式", @(ConditionTagJxfs),
-                           @"appoint_jsxb,教师性别", @(ConditionTagJsxb),
-                           @"appoint_yyrq,预约日期", @(ConditionTagYyrq), nil];
+                           @"appoint_kcfl, 课程分类", @(ConditionTagKcfl),
+                           @"appoint_jxdd, 教学地点", @(ConditionTagJxdd),
+                           @"appoint_jxfs, 教学方式", @(ConditionTagJxfs),
+                           @"appoint_jsxb, 教师性别", @(ConditionTagJsxb),
+                           @"appoint_yyrq, 预约日期", @(ConditionTagYyrq), nil];
 }
 
 - (void)initService

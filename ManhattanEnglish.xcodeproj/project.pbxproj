@@ -246,6 +246,7 @@
 		B922A5541965CBF6007A0FB3 /* PublishCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B922A5531965CBF6007A0FB3 /* PublishCourseViewController.m */; };
 		B97BD97119644861001C507E /* CommonUtil+CustomExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B92AC497195C91DF00601E90 /* CommonUtil+CustomExtension.m */; };
 		B998C87C1967B05900568B0D /* Option.m in Sources */ = {isa = PBXBuildFile; fileRef = B998C87B1967B05900568B0D /* Option.m */; };
+		B9E5166A1967F657000A1864 /* Appointment.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E516691967F657000A1864 /* Appointment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -647,6 +648,8 @@
 		B92AC497195C91DF00601E90 /* CommonUtil+CustomExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CommonUtil+CustomExtension.m"; sourceTree = "<group>"; };
 		B998C87A1967B05900568B0D /* Option.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Option.h; sourceTree = "<group>"; };
 		B998C87B1967B05900568B0D /* Option.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Option.m; sourceTree = "<group>"; };
+		B9E516681967F657000A1864 /* Appointment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appointment.h; sourceTree = "<group>"; };
+		B9E516691967F657000A1864 /* Appointment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Appointment.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -737,6 +740,8 @@
 			children = (
 				2F588457194D8923004ACD71 /* AppointSearchCondition.h */,
 				2F588458194D8923004ACD71 /* AppointSearchCondition.m */,
+				B9E516681967F657000A1864 /* Appointment.h */,
+				B9E516691967F657000A1864 /* Appointment.m */,
 			);
 			path = Appoint;
 			sourceTree = "<group>";
@@ -1776,6 +1781,7 @@
 				372DDB301952755E00F3AAEE /* AnswerHomeWorkViewController.m in Sources */,
 				372DDB3B195284E200F3AAEE /* ScheduleView.m in Sources */,
 				37E87EED194700310019E9AC /* OpenUserService.m in Sources */,
+				B9E5166A1967F657000A1864 /* Appointment.m in Sources */,
 				B922A5541965CBF6007A0FB3 /* PublishCourseViewController.m in Sources */,
 				B922A54D1965CBCF007A0FB3 /* CourseHeaderView.m in Sources */,
 				37E87F071947EC650019E9AC /* TeacherListTableViewController.m in Sources */,
