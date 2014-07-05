@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="RJf-b4-k0F">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="RJf-b4-k0F">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -784,7 +784,7 @@
                         <viewControllerLayoutGuide type="bottom" id="1rW-UD-8YX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Rej-NM-IKR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" fixedFrame="YES" placeholder="输入名师姓名" translatesAutoresizingMaskIntoConstraints="NO" id="TSn-5K-Edu">
@@ -796,7 +796,7 @@
                                 </connections>
                             </searchBar>
                             <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YdJ-0b-BaU">
-                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="436"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
@@ -817,7 +817,7 @@
             <objects>
                 <tableViewController id="gTl-EA-7c8" customClass="TeacherListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="uMx-cc-Ywr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
@@ -1494,6 +1494,24 @@
             </objects>
             <point key="canvasLocation" x="1200" y="-330"/>
         </scene>
+        <!--My Student List Table View Controller-->
+        <scene sceneID="tgO-Bd-vso">
+            <objects>
+                <tableViewController id="1nq-1L-PHu" customClass="MyStudentListTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="JCq-iF-8Dl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="1nq-1L-PHu" id="4dw-Io-tMh"/>
+                            <outlet property="delegate" destination="1nq-1L-PHu" id="muV-h7-kB4"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hZP-5K-f6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1503" y="478"/>
+        </scene>
         <!--My Appoint View Controller - 我的预约-->
         <scene sceneID="oRn-Gm-QSe">
             <objects>
@@ -1761,11 +1779,11 @@
                         <viewControllerLayoutGuide type="bottom" id="4Ej-ly-mcz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1NX-QO-Xgl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="70" sectionHeaderHeight="10" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="rH3-Qf-L35">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="70" sectionHeaderHeight="10" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="rH3-Qf-L35">
+                                <rect key="frame" x="0.0" y="64" width="320" height="347"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
@@ -2034,10 +2052,22 @@
                                     <segue destination="ENP-nC-chf" kind="embed" id="2aa-A1-czB"/>
                                 </connections>
                             </containerView>
+                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZZz-SO-94c">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="1nq-1L-PHu" kind="embed" id="NHQ-r9-Xuh"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="我的收藏" id="OJN-jJ-pP6"/>
+                    <connections>
+                        <outlet property="collectInnerView" destination="zYW-PR-Ulo" id="B8S-cA-xhE"/>
+                        <outlet property="studentInnerView" destination="ZZz-SO-94c" id="XXP-hj-yzv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Feg-fY-8hc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联系人：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Ba-Dt-0Xr">
@@ -2113,9 +2143,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="eel-j7-Hq3"/>
-        <segue reference="ew5-og-MDo"/>
+        <segue reference="ktC-ay-g3A"/>
+        <segue reference="FU8-Jh-bhs"/>
         <segue reference="1G1-Ch-Dgc"/>
-        <segue reference="P35-k1-ZJG"/>
+        <segue reference="CDS-yI-pkY"/>
     </inferredMetricsTieBreakers>
 </document>
