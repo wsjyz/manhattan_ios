@@ -43,6 +43,34 @@
     return selItems;
 }
 
+- (NSString *)selectedKeyStr
+{
+    NSArray *selectedItems = self.selectedItems;
+    if (selectedItems.count == 0) {
+        return @"";
+    }
+    
+    NSArray *selectedValues = [selectedItems select:^id(id obj) {
+        return [obj text];
+    }];
+    
+    return [selectedValues componentsJoinedByString:@","];
+}
+
+- (NSString *)selectedValueStr
+{
+    NSArray *selectedItems = self.selectedItems;
+    if (selectedItems.count == 0) {
+        return @"";
+    }
+    
+    NSArray *selectedValues = [selectedItems select:^id(id obj) {
+        return [obj optionValue];
+    }];
+    
+    return [selectedValues componentsJoinedByString:@","];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

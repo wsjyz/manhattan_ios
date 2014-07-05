@@ -25,6 +25,7 @@
 @property (strong, nonatomic) NSArray *contentItems;
 @property (strong, nonatomic, readonly) NSArray *selectedItems;
 @property (strong, nonatomic, readonly) NSString *selectedValueStr;
+@property (strong, nonatomic, readonly) NSString *selectedKeyStr;
 
 - (IBAction)completeBtnClick:(id)sender;
 

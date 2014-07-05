@@ -36,6 +36,10 @@
     self.datePicker.backgroundColor = DATE_PICKER_BG_COLOR;
     self.datePicker.hidden = YES;
     
+    if (!self.rangeSelection) {
+        self.endDateTextField.hidden = YES;
+    }
+    
     [self updateDateWithTextFiled:self.startDateTextField];
     [self updateDateWithTextFiled:self.endDateTextField];
 }

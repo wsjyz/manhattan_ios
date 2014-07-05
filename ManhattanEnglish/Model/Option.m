@@ -14,7 +14,7 @@
 {
     Option *option = [[self alloc] init];
     option.text = text;
-    option.value = value;
+    option.optionValue = value;
     return option;
 }
 
@@ -30,7 +30,12 @@
 
 + (NSArray *)optionsWithTextAndValueDic:(NSDictionary *)dic
 {
-    return nil;
+    NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:dic.count];
+    for (NSString *key in dic) {
+        Option *option = [self optionWithText:key andValue:dic[key]];
+        [array addObject:option];
+    }
+    return array;
 }
 
 @end

@@ -30,6 +30,8 @@
 
 @property (strong, nonatomic) NSDate *endDate;
 
+@property (assign, nonatomic) BOOL rangeSelection;
+
 @property (weak, nonatomic) id<TimespanPickerDelegate> delegate;
 
 - (IBAction)completeBtnClick:(id)sender;

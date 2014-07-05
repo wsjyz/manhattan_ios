@@ -76,33 +76,31 @@
 {
     AppointConditionTableViewCell *cell = self.tableView.visibleCells[4];
     NSString *startDateStr = [CommonUtil stringWithDate:viewController.startDate andFormatStr:yyyy_MM_dd];
-    NSString *endDateStr = [CommonUtil stringWithDate:viewController.endDate andFormatStr:yyyy_MM_dd];
-    cell.contentLabel.text = [NSString stringWithFormat:APPOINT_DATE_FORMAT, startDateStr, endDateStr];
+    cell.contentLabel.text = startDateStr;
     
-    self.condition.startDate = viewController.startDate;
-    self.condition.endDate = viewController.endDate;
+    self.condition.appointmentTime = viewController.startDate;
 }
 
 - (void)completeSelection:(SelectionViewController *)viewController
 {
-    NSArray *selecedItems = viewController.selectedItems;
-    NSString *selectedItemStr = selecedItems.count > 0 ? [selecedItems componentsJoinedByString:@","] : @"不限";
+    NSString *selectedValueStr = viewController.selectedValueStr;
+    NSString *selectedKeyStr = viewController.selectedKeyStr;
     
     AppointConditionTableViewCell *cell = self.tableView.visibleCells[self.currentCondition];
-    cell.contentLabel.text = selectedItemStr;
+    cell.contentLabel.text = [selectedKeyStr isEqualToString: @""] ? @"不限": selectedKeyStr;
     
     switch (self.currentCondition) {
         case ConditionTagKcfl:
-            self.condition.courseCategory = selecedItems;
+            self.condition.courseCategory = selectedValueStr;
             break;
         case ConditionTagJxdd:
-            self.condition.place = selecedItems;
+            self.condition.place = selectedValueStr;
             break;
         case ConditionTagJxfs:
-            self.condition.tutoringWay = selecedItems;
+            self.condition.tutoringWay = selectedValueStr;
             break;
         case ConditionTagJsxb:
-            self.condition.sex = selecedItems[0];
+            self.condition.sex = selectedValueStr;
             break;
         default:
             break;

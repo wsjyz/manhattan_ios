@@ -72,13 +72,13 @@
         options = [Option optionsWithSameTextAndValues:optionValues];
     }else if (tag == ConditionTagJxfs){
         NSDictionary *keyValueDic = [NSDictionary dictionaryWithObjectsAndKeys:
-                                     @"学生上门", @"STUDENT_VISIT",
-                                     @"教师上门", @"TEACHER_VISIT", nil];
+                                     @"STUDENT_VISIT", @"学生上门",
+                                     @"TEACHER_VISIT", @"教师上门", nil];
         options = [Option optionsWithTextAndValueDic:keyValueDic];
     }else if (tag == ConditionTagJsxb){
         NSDictionary *keyValueDic = [NSDictionary dictionaryWithObjectsAndKeys:
-                                     @"男", SEX_MALE,
-                                     @"女", SEX_FEMALE, nil];
+                                     SEX_MALE, @"男",
+                                     SEX_FEMALE, @"女",  nil];
         options = [Option optionsWithTextAndValueDic:keyValueDic];
     }else{
     }
