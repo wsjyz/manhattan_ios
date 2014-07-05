@@ -10,6 +10,7 @@
 #import "CourseTableViewController.h"
 #import "CourseService.h"
 #import "TeacherListTableViewController.h"
+#import "MyStudentListTableViewController.h"
 #import "AppointService.h"
 #import "CommonService.h"
 #import "Page.h"
@@ -26,6 +27,7 @@
 
 @property (weak, nonatomic) CourseTableViewController *courseTableViewCon;
 @property (weak, nonatomic) TeacherListTableViewController *teacherTableViewCon;
+@property (weak, nonatomic) MyStudentListTableViewController *studentTableViewCon;
 
 @end
 
@@ -55,26 +57,34 @@
     return self;
 }
 
-- (void)viewDidLoad
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    self.navigationItem.leftBarButtonItem = nil;
-    
-    [self updateControlLayoutWithCurrentSegmentControlSelected];
+    [super viewWillAppear:animated];
     
     UITabBarItem *item = self.navigationController.tabBarItem;
     self.isAudition = [@"试听" isEqualToString:item.title];
     
     [self setNavgationItemTitle:self.isAudition? @"我的试听" : @"我的预约"];
     
-    [self refreshData];
+    PERSONAL_ID currPersonId = [self.commonService currentPersonalID];
+    BOOL isTeacher = currPersonId == PERSONAL_TEACHER;
+    self.studentInnerVIew.hidden = !isTeacher;
+    
+    if (isTeacher) {
+        [self refreshDataOfTeacher];
+    }else{
+        [self updateControlLayoutWithCurrentSegmentControlSelected];
+        [self refreshDataOfStudent];
+    }
+
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)viewDidLoad
 {
-    [super viewWillAppear:animated];
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    self.navigationItem.leftBarButtonItem = nil;
 }
 
 - (void)didReceiveMemoryWarning
@@ -83,7 +93,22 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)refreshData
+// 刷新数据 （当前角色为老师）
+- (void)refreshDataOfTeacher
+{
+    if (self.isAudition) {
+        
+        // 试听
+//        self.studentTableViewCon.stuType = ???
+        
+    }else{
+        
+        // 预约
+    }
+}
+
+// 刷新数据 (当前角色为学生)
+- (void)refreshDataOfStudent
 {
     NSUInteger index = self.segmentedControl.selectedSegmentIndex;
     
@@ -117,6 +142,10 @@
         
         TeacherListTableViewController *teacherTableViewCon = [segue destinationViewController];
         self.teacherTableViewCon = teacherTableViewCon;
+    }else if ([@"innerStudent" isEqualToString:segue.identifier]) {
+        
+        MyStudentListTableViewController *studentTableViewCon = [segue destinationViewController];
+        self.studentTableViewCon = studentTableViewCon;
     }
 }
 
@@ -132,6 +161,6 @@
     
     [self updateControlLayoutWithCurrentSegmentControlSelected];
     
-    [self refreshData];
+    [self refreshDataOfStudent];
 }
 @end
