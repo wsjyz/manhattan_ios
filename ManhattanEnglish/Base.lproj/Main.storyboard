@@ -619,7 +619,6 @@
         <!--My Student List Table View Controller-->
         <scene sceneID="f46-90-Tkf">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MoS-fU-kxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="cRM-PG-npL" customClass="MyStudentListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="VGL-05-7nw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="454"/>
@@ -631,6 +630,7 @@
                         </connections>
                     </tableView>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MoS-fU-kxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1745" y="1946"/>
         </scene>
