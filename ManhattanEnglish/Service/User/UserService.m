@@ -40,4 +40,22 @@
     return [_userService updateUser:user];
 }
 
+//根据教师Id获取学生列表信息
+- (Page *)getStudentList:(Page *)openPage TeacherID:(NSString *)teacherId
+{
+    return [_userService getStudentList:openPage TeacherID:teacherId];
+}
+
+//根据教师Id获取预约学生列表信息
+- (Page *)getOrderStudentList:(Page *)openPage TeacherID:(NSString *)teacherId
+{
+    return [_userService getOrderStudentList:openPage TeacherID:teacherId];
+}
+
+//根据教师Id获取试听学生列表信息
+- (Page *)getListenStudentList:(Page *)openPage TeacherID:(NSString *)teacherId
+{
+    return [_userService getListenStudentList:openPage TeacherID:teacherId];
+}
+
 @end

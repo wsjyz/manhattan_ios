@@ -24,7 +24,7 @@
  * @param question
  * @return Boolean
  */
-- (BOOL)answerQuestionWithQuestion:(Question *)ques;
+- (BOOL)answerQuestionWithQuestion:(Question *)ques FileData:(NSData *)data FileName:(NSString *)fileName;
 
 /**
  * 删除问答

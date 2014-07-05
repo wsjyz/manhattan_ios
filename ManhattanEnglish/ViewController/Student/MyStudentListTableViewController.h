@@ -8,6 +8,15 @@
 
 #import "BaseTableViewController.h"
 
+typedef enum
+{
+    Stu_type_myStu = 0,
+    Stu_type_orderStu = 1,
+    Stu_type_listenStu
+}STU_TYPE;
+
 @interface MyStudentListTableViewController : BaseTableViewController
+
+@property (nonatomic, assign) STU_TYPE stuType;
 
 @end

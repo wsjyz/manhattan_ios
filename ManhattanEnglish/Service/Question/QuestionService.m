@@ -34,9 +34,9 @@
 }
 
 //回答问题
-- (BOOL)answerQuestionWithQuestion:(Question *)ques
+- (BOOL)answerQuestionWithQuestion:(Question *)ques FileData:(NSData *)data FileName:(NSString *)fileName
 {
-    return [_quesService answerQuestionWithQuestion:ques];
+    return [_quesService answerQuestionWithQuestion:ques FileData:data FileName:fileName];
 }
 
 //删除问答
