@@ -245,6 +245,7 @@
 		B922A5511965CBD0007A0FB3 /* CourseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B922A5491965CBCF007A0FB3 /* CourseTableViewController.m */; };
 		B922A5541965CBF6007A0FB3 /* PublishCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B922A5531965CBF6007A0FB3 /* PublishCourseViewController.m */; };
 		B97BD97119644861001C507E /* CommonUtil+CustomExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B92AC497195C91DF00601E90 /* CommonUtil+CustomExtension.m */; };
+		B998C87C1967B05900568B0D /* Option.m in Sources */ = {isa = PBXBuildFile; fileRef = B998C87B1967B05900568B0D /* Option.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -644,6 +645,8 @@
 		B922A5531965CBF6007A0FB3 /* PublishCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishCourseViewController.m; sourceTree = "<group>"; };
 		B92AC496195C91DF00601E90 /* CommonUtil+CustomExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CommonUtil+CustomExtension.h"; sourceTree = "<group>"; };
 		B92AC497195C91DF00601E90 /* CommonUtil+CustomExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CommonUtil+CustomExtension.m"; sourceTree = "<group>"; };
+		B998C87A1967B05900568B0D /* Option.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Option.h; sourceTree = "<group>"; };
+		B998C87B1967B05900568B0D /* Option.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Option.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1135,6 +1138,8 @@
 				372DDB3D1952BD5400F3AAEE /* HomeWork.m */,
 				372DDB3F1952BF6900F3AAEE /* HomeworkSubmit.h */,
 				372DDB401952BF6900F3AAEE /* HomeworkSubmit.m */,
+				B998C87A1967B05900568B0D /* Option.h */,
+				B998C87B1967B05900568B0D /* Option.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1848,6 +1853,7 @@
 				37B40CCE1931B8B200D90923 /* iVersion.m in Sources */,
 				37AF51DA193893E900853E10 /* TableFooterView.m in Sources */,
 				372DDB3E1952BD5400F3AAEE /* HomeWork.m in Sources */,
+				B998C87C1967B05900568B0D /* Option.m in Sources */,
 				2FAB68A7190A26D40081D6B6 /* main.m in Sources */,
 				370092DA19508D6600A6EF8E /* MyStudentListTableViewController.m in Sources */,
 				3726A6351931CA9700E91B36 /* OpenLoginService.m in Sources */,

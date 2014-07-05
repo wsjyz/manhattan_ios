@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="RJf-b4-k0F">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="RJf-b4-k0F">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -615,6 +615,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbI-PL-9US" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2606" y="3303"/>
+        </scene>
+        <!--My Student List Table View Controller-->
+        <scene sceneID="f46-90-Tkf">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MoS-fU-kxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="cRM-PG-npL" customClass="MyStudentListTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="VGL-05-7nw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="454"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="cRM-PG-npL" id="bkt-7j-LZN"/>
+                            <outlet property="delegate" destination="cRM-PG-npL" id="I2W-0J-5YZ"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="1745" y="1946"/>
         </scene>
         <!--Ask Question View Controller - 我要提问-->
         <scene sceneID="SJR-WV-CUx">
@@ -1515,18 +1533,30 @@
                                     <segue destination="Wjr-9T-UbB" kind="embed" identifier="innerTeacher" id="58v-5l-z8n"/>
                                 </connections>
                             </containerView>
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fnH-T9-avf">
+                                <rect key="frame" x="0.0" y="64" width="320" height="454"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="cRM-PG-npL" kind="embed" identifier="innerStudent" id="nEW-fH-Wqo"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="B11-dv-8Tl" firstAttribute="trailing" secondItem="nH0-bG-wOx" secondAttribute="trailing" id="0Yv-gy-HtP"/>
                             <constraint firstItem="nH0-bG-wOx" firstAttribute="leading" secondItem="3KS-BD-1nK" secondAttribute="leading" id="AfQ-LG-WRP"/>
+                            <constraint firstItem="fnH-T9-avf" firstAttribute="leading" secondItem="nH0-bG-wOx" secondAttribute="leading" id="BNc-p0-Huq"/>
                             <constraint firstItem="zX7-bn-1VB" firstAttribute="centerX" secondItem="nH0-bG-wOx" secondAttribute="centerX" id="CZq-o8-Wf7"/>
                             <constraint firstItem="nH0-bG-wOx" firstAttribute="top" secondItem="zX7-bn-1VB" secondAttribute="bottom" constant="8" symbolic="YES" id="HJt-eT-REz"/>
                             <constraint firstAttribute="trailing" secondItem="zX7-bn-1VB" secondAttribute="trailing" constant="20" symbolic="YES" id="Sv2-fo-kBK"/>
+                            <constraint firstItem="fnH-T9-avf" firstAttribute="top" secondItem="lyX-m9-JA3" secondAttribute="bottom" id="Va3-ON-p7f"/>
                             <constraint firstItem="B11-dv-8Tl" firstAttribute="bottom" secondItem="nH0-bG-wOx" secondAttribute="bottom" id="WB2-4Z-lv2"/>
                             <constraint firstItem="zX7-bn-1VB" firstAttribute="leading" secondItem="3KS-BD-1nK" secondAttribute="leading" constant="20" symbolic="YES" id="cxO-UC-aPp"/>
                             <constraint firstItem="B11-dv-8Tl" firstAttribute="top" secondItem="zX7-bn-1VB" secondAttribute="bottom" constant="8" symbolic="YES" id="ed7-b8-pG9"/>
                             <constraint firstItem="ZVg-jN-GJL" firstAttribute="top" secondItem="nH0-bG-wOx" secondAttribute="bottom" constant="1" id="jbJ-og-XFa"/>
+                            <constraint firstItem="fnH-T9-avf" firstAttribute="trailing" secondItem="nH0-bG-wOx" secondAttribute="trailing" id="otW-VO-uHl"/>
+                            <constraint firstItem="fnH-T9-avf" firstAttribute="bottom" secondItem="B11-dv-8Tl" secondAttribute="bottom" id="vNo-KK-IXJ"/>
                             <constraint firstItem="B11-dv-8Tl" firstAttribute="leading" secondItem="nH0-bG-wOx" secondAttribute="leading" id="x9Z-WK-8wY"/>
                             <constraint firstItem="zX7-bn-1VB" firstAttribute="top" secondItem="lyX-m9-JA3" secondAttribute="bottom" constant="7" id="xVe-IQ-3OX"/>
                         </constraints>
@@ -1535,6 +1565,7 @@
                     <connections>
                         <outlet property="courseInnerView" destination="nH0-bG-wOx" id="UZf-if-FNH"/>
                         <outlet property="segmentedControl" destination="zX7-bn-1VB" id="O1v-ZO-KU5"/>
+                        <outlet property="studentInnerVIew" destination="fnH-T9-avf" id="tSL-3b-6Df"/>
                         <outlet property="teacherInnerView" destination="B11-dv-8Tl" id="JQr-ez-w7D"/>
                     </connections>
                 </viewController>

@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *courseInnerView;
 @property (weak, nonatomic) IBOutlet UIView *teacherInnerView;
+@property (weak, nonatomic) IBOutlet UIView *studentInnerVIew;
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
