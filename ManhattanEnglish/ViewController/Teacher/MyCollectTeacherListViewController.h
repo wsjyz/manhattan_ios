@@ -10,4 +10,9 @@
 
 @interface MyCollectTeacherListViewController : BaseViewController
 
+@property (nonatomic, weak) IBOutlet UIView *collectInnerView;
+@property (nonatomic, weak) IBOutlet UIView *studentInnerView;
+
+@property (nonatomic, assign) BOOL isCollectTeacher;
+
 @end

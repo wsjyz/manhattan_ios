@@ -32,6 +32,8 @@
 #define OpenTeacherService_cancelCollect                @"/user/cancelCollect"
 #define OpenTeacherService_getCollectTeachersByUserId   @"/teacher/getCollectTeachersByUserId"
 #define OpenTeacherService_getTeacherDetailById         @"/teacher/getTeacherDetailById"
+#define OpenTeacherService_getOrderTeachersByUserId     @"/teacher/getOrderTeachersByUserId"
+#define OpenTeacherService_getListenTeachersByUserId    @"/teacher/getListenTeachersByUserId"
 
 #pragma mark OpenQuestionService
 #define OpenQuestionService_askQuestion                 @"/question/askQuestion"

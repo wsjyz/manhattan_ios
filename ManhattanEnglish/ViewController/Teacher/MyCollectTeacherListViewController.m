@@ -8,10 +8,12 @@
 
 #import "MyCollectTeacherListViewController.h"
 #import "TeacherListTableViewController.h"
+#import "MyStudentListTableViewController.h"
 
 @interface MyCollectTeacherListViewController ()
 {
     TeacherListTableViewController *_teacherListTVC;
+    MyStudentListTableViewController *_studentListTVC;
 }
 
 @end
@@ -31,12 +33,29 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self setNavgationItemTitle:@"我的收藏"];
+    [self setNavgationItemTitle:self.isCollectTeacher?@"我的收藏":@"我的学生"];
     self.navigationItem.leftBarButtonItem = nil;
-    _teacherListTVC = [self.childViewControllers objectAtIndex:0];
-    _teacherListTVC.isCollect = YES;
-    [_teacherListTVC willBeginRefreshData];
-    [_teacherListTVC refreshData];
+    
+    if (self.isCollectTeacher)
+    {
+        _collectInnerView.hidden = NO;
+        _studentInnerView.hidden = YES;
+        
+        _teacherListTVC = [self.childViewControllers objectAtIndex:0];
+        _teacherListTVC.teacherType = Tea_type_Collect;
+        [_teacherListTVC willBeginRefreshData];
+        [_teacherListTVC refreshData];
+    }
+    else
+    {
+        _collectInnerView.hidden = YES;
+        _studentInnerView.hidden = NO;
+        
+        _studentListTVC = [self.childViewControllers objectAtIndex:1];
+        _studentListTVC.stuType = Stu_type_myStu;
+        [_studentListTVC willBeginRefreshData];
+        [_studentListTVC refreshData];
+    }
 }
 
 - (void)didReceiveMemoryWarning

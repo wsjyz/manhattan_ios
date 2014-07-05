@@ -71,18 +71,36 @@
     _currentPage.autoCount = NO;
     _currentPage.rows = nil;
     _currentPage.pageNo ++;
+    NSString *userID = [_commonService getCurrentUserID];
     
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
         
         __block Page *newPage;
-        if (!_isCollect)
-        {
-            newPage = [_teacherService listPageWithPage:_currentPage andSearchKey:_searchKey];
-        }
-        else
-        {
-            newPage = [_teacherService getCollectTeachersByUserId:[_commonService getCurrentUserID] andPage:_currentPage];
+        switch (_teacherType) {
+            case Tea_type_all:
+            {
+                newPage = [_teacherService listPageWithPage:_currentPage andSearchKey:_searchKey];
+                break;
+            }
+            case Tea_type_Collect:
+            {
+                newPage = [_teacherService getCollectTeachersByUserId:userID andPage:_currentPage];
+                break;
+            }
+            case Tea_type_order:
+            {
+                newPage = [_teacherService getOrderTeachersByUserId:userID Page:_currentPage];
+                break;
+            }
+            case Tea_type_listen:
+            {
+                newPage = [_teacherService getListenTeachersByUserId:userID Page:_currentPage];
+                break;
+            }
+                
+            default:
+                break;
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -108,17 +126,36 @@
     _currentPage.pageNo = 1;
     _currentPage.rows = nil;
     _currentPage.autoCount = YES;
+    NSString *userID = [_commonService getCurrentUserID];
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
         __block Page *newPage;
-        if (!_isCollect)
-        {
-            newPage = [_teacherService listPageWithPage:_currentPage andSearchKey:_searchKey];
+        switch (_teacherType) {
+            case Tea_type_all:
+            {
+                newPage = [_teacherService listPageWithPage:_currentPage andSearchKey:_searchKey];
+                break;
+            }
+            case Tea_type_Collect:
+            {
+                newPage = [_teacherService getCollectTeachersByUserId:userID andPage:_currentPage];
+                break;
+            }
+            case Tea_type_order:
+            {
+                newPage = [_teacherService getOrderTeachersByUserId:userID Page:_currentPage];
+                break;
+            }
+            case Tea_type_listen:
+            {
+                newPage = [_teacherService getListenTeachersByUserId:userID Page:_currentPage];
+                break;
+            }
+                
+            default:
+                break;
         }
-        else
-        {
-            newPage = [_teacherService getCollectTeachersByUserId:[_commonService getCurrentUserID] andPage:_currentPage];
-        }
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             if (newPage != nil)
             {
