@@ -99,12 +99,15 @@
     if (self.isAudition) {
         
         // 试听
-//        self.studentTableViewCon.stuType = ???
+        self.studentTableViewCon.stuType = Stu_type_listenStu;
         
     }else{
         
         // 预约
+        self.studentTableViewCon.stuType = Stu_type_orderStu;
     }
+    [self.studentTableViewCon willBeginRefreshData];
+    [self.studentTableViewCon refreshData];
 }
 
 // 刷新数据 (当前角色为学生)
@@ -124,7 +127,18 @@
         }
     }else{
         
-        
+        if (self.isAudition)
+        {
+            //视听
+            self.teacherTableViewCon.teacherType = Tea_type_listen;
+        }
+        else
+        {
+            //预约
+            self.teacherTableViewCon.teacherType = Tea_type_order;
+        }
+        [self.teacherTableViewCon willBeginRefreshData];
+        [self.teacherTableViewCon refreshData];
     }
 }
 
