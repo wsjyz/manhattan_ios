@@ -91,4 +91,30 @@
     return [RestServiceManager performRequestWithPath:OpenTeacherService_getTeacherDetailById paramDic:paramDic returnType:NSStringFromClass([TeacherDetail class]) delegate:self.delegate];
 }
 
+/**
+ * 获取指定学生的预约教师列表
+ * @return OpenPage<TeacherDetail>
+ */
+- (Page *)getOrderTeachersByUserId:(NSString *)userId Page:(Page *)openPage
+{
+    NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                     OPENVALUE(openPage), @"openPage",
+                                     userId,@"userId",nil];
+    [ReflectionUtil setArrayType:NSStringFromClass([TeacherDetail class]) forPropName:@"rows" ofClassName:NSStringFromClass([Page class])];
+    return [RestServiceManager performRequestWithPath:OpenTeacherService_getOrderTeachersByUserId paramDic:paramDic returnType:NSStringFromClass([Page class]) delegate:self.delegate];
+}
+
+/**
+ * 获取指定学生的试听教师列表
+ * @return OpenPage<TeacherDetail>
+ */
+- (Page *)getListenTeachersByUserId:(NSString *)userId Page:(Page *)openPage
+{
+    NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                     OPENVALUE(openPage), @"openPage",
+                                     userId,@"userId",nil];
+    [ReflectionUtil setArrayType:NSStringFromClass([TeacherDetail class]) forPropName:@"rows" ofClassName:NSStringFromClass([Page class])];
+    return [RestServiceManager performRequestWithPath:OpenTeacherService_getListenTeachersByUserId paramDic:paramDic returnType:NSStringFromClass([Page class]) delegate:self.delegate];
+}
+
 @end

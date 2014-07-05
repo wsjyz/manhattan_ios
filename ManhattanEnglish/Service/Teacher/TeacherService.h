@@ -30,4 +30,10 @@
 //获取教师信息
 - (TeacherDetail *)getTeacherDetailById:(NSString *)userId;
 
+//获取指定学生的预约教师列表
+- (Page *)getOrderTeachersByUserId:(NSString *)userId Page:(Page *)openPage;
+
+//获取指定学生的试听教师列表
+- (Page *)getListenTeachersByUserId:(NSString *)userId Page:(Page *)openPage;
+
 @end

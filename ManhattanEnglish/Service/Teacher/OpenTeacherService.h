@@ -57,4 +57,16 @@
  */
 - (TeacherDetail *)getTeacherDetailById:(NSString *)userId;
 
+/**
+ * 获取指定学生的预约教师列表
+ * @return OpenPage<TeacherDetail>
+ */
+- (Page *)getOrderTeachersByUserId:(NSString *)userId Page:(Page *)openPage;
+
+/**
+ * 获取指定学生的试听教师列表
+ * @return OpenPage<TeacherDetail>
+ */
+- (Page *)getListenTeachersByUserId:(NSString *)userId Page:(Page *)openPage;
+
 @end

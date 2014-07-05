@@ -116,8 +116,24 @@
         cell = [ViewUtil viewFromNibOfClass:[TeacherMainCell class] owner:self];
     }
     
-    // Configure the cell...
-    
+    NSArray *teacherList = _course.teacherDetailList;
+    TeacherDetail *teacher = teacherList[indexPath.row];
+    cell.name.text = teacher.user.userName;
+    [cell.headImg setImageWithURL:[NSURL URLWithString:teacher.user.avatar] placeholderImage:nil];
+    if ([teacher.user.sex isEqualToString:SEX_MALE])
+    {
+        cell.sexImg.image = [UIImage imageNamed:@"personal_boy.png"];
+    }
+    else if ([teacher.user.sex isEqualToString:SEX_FEMALE])
+    {
+        cell.sexImg.image = [UIImage imageNamed:@"personal_girl.png"];
+    }
+    else
+    {
+        cell.sexImg.hidden = YES;
+    }
+    cell.school.text = teacher.finalGraduateSchool;
+    cell.subject.text = teacher.course_category;
     
     return cell;
 }

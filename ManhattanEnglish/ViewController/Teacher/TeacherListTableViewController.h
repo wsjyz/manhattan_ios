@@ -8,6 +8,14 @@
 
 #import "BaseTableViewController.h"
 
+typedef enum
+{
+    Tea_type_all = 0,
+    Tea_type_Collect = 1,
+    Tea_type_order = 2,
+    Tea_type_listen 
+}TEACHER_TYPE;
+
 @protocol TeacherListTVCDelegate <NSObject>
 
 - (void)selectTeacherID:(NSString *)teacherID andTeacherName:(NSString *)name;
@@ -20,6 +28,6 @@
 @property (nonatomic, strong) NSString *searchKey;
 @property (nonatomic, assign) BOOL selectTeacher;
 @property (nonatomic, weak) id<TeacherListTVCDelegate> teacherDelegate;
-@property (nonatomic, assign) BOOL isCollect;
+@property (nonatomic, assign) TEACHER_TYPE teacherType;
 
 @end

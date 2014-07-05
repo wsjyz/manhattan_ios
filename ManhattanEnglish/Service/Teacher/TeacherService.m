@@ -64,4 +64,16 @@
     return [_teacherService getTeacherDetailById:userId];
 }
 
+//获取指定学生的预约教师列表
+- (Page *)getOrderTeachersByUserId:(NSString *)userId Page:(Page *)openPage
+{
+    return [_teacherService getOrderTeachersByUserId:userId Page:openPage];
+}
+
+//获取指定学生的试听教师列表
+- (Page *)getListenTeachersByUserId:(NSString *)userId Page:(Page *)openPage
+{
+    return [_teacherService getListenTeachersByUserId:userId Page:openPage];
+}
+
 @end
