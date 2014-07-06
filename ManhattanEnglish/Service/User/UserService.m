@@ -43,7 +43,7 @@
 //根据教师Id获取学生列表信息
 - (Page *)getStudentList:(Page *)openPage TeacherID:(NSString *)teacherId
 {
-    return [_userService getStudentList:openPage TeacherID:teacherId];
+    return [_userService getStudentList:openPage TeacherID:@"t2"];
 }
 
 //根据教师Id获取预约学生列表信息

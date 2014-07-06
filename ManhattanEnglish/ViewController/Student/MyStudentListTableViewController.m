@@ -11,6 +11,10 @@
 #import "StudentMainCell.h"
 #import "UserService.h"
 #import "CommonService.h"
+#import <TbcLibUI/UIImageView+WebCache.h>
+#import "PersonalInfoViewController.h"
+
+#define VALUE(a)                    a==nil?@"":a
 
 @interface MyStudentListTableViewController ()
 {
@@ -191,11 +195,42 @@
     {
         cell = [ViewUtil viewFromNibOfClass:[StudentMainCell class] owner:self];
     }
-    cell.name.text = @"cafei";
+    
+    User *stu = _resourceArr[indexPath.row];
+    cell.name.text = VALUE(stu.userName);
+    [cell.headImg setImageWithURL:[NSURL URLWithString:stu.avatar] placeholderImage:nil];
+    if ([stu.sex isEqualToString:SEX_MALE])
+    {
+        cell.sexImg.image = [UIImage imageNamed:@"personal_boy.png"];
+    }
+    else if ([stu.sex isEqualToString:SEX_FEMALE])
+    {
+        cell.sexImg.image = [UIImage imageNamed:@"personal_girl.png"];
+    }
+    else
+    {
+        cell.sexImg.hidden = YES;
+    }
+    cell.mobile.text = VALUE(stu.mobile);
+    cell.address.text = VALUE(stu.address);
     
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 70;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    PersonalInfoViewController *personInfoVC = [storyBoard instantiateViewControllerWithIdentifier:@"personInfo"];
+    personInfoVC.personID = PERSONAL_STUDENT;
+    personInfoVC.user = _resourceArr[indexPath.row];
+    personInfoVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:personInfoVC animated:YES];
+}
 
 /*
 #pragma mark - Navigation

@@ -44,12 +44,12 @@
  * @param userId
  * @param teacherId
  */
-- (BOOL)collectWithUserId:(NSString *)userId andTeacherId:(NSString *)teacherId
+- (UserAction *)collectWithUserId:(NSString *)userId andTeacherId:(NSString *)teacherId
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                      userId, @"userId",
                                      teacherId, @"teacherId",nil];
-    return [[RestServiceManager performRequestWithPath:OpenTeacherService_collect paramDic:paramDic returnType:@(@encode(BOOL)) delegate:self.delegate] boolValue];
+    return [RestServiceManager performRequestWithPath:OpenTeacherService_collect paramDic:paramDic returnType:NSStringFromClass([UserAction class]) delegate:self.delegate];
 }
 
 /**

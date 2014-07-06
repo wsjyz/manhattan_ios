@@ -46,15 +46,17 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self setNavgationItemTitle:@"个人资料"];
-    
-    _personalID = [_commonService currentPersonalID];
-    _user = [_commonService currentLoginUser];
+    [self setNavgationItemTitle:@"个人资料"];   
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
     _name.text = VALUE(_user.userName);
     if (_user.avatar)
     {
-        _faceImg.image = [UIImage imageNamed:[NSURL URLWithString:_user.avatar]];
+        _faceImg.image = [UIImage imageNamed:[NSData dataWithContentsOfURL:[NSURL URLWithString:_user.avatar]]];
     }
     if (_user.sex && [_user.sex isEqualToString:SEX_MALE])
     {

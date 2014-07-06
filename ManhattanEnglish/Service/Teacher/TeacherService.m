@@ -41,7 +41,7 @@
 }
 
 //收藏教师
-- (BOOL)collectWithUserId:(NSString *)userId andTeacherId:(NSString *)teacherId
+- (UserAction *)collectWithUserId:(NSString *)userId andTeacherId:(NSString *)teacherId
 {
     return [_teacherService collectWithUserId:userId andTeacherId:teacherId];
 }

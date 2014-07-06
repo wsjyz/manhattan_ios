@@ -52,6 +52,6 @@
         </view>
     </objects>
     <resources>
-        <image name="teacher_schedule_select.png" width="62" height="60"/>
+        <image name="teacher_schedule_select.png" width="40" height="40"/>
     </resources>
 </document>

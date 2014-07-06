@@ -7,7 +7,11 @@
 //
 
 #import "BaseViewController.h"
+#import "User.h"
 
 @interface PersonalInfoViewController : BaseViewController
+
+@property (nonatomic, retain) User *user;
+@property (nonatomic, assign) PERSONAL_ID personID;
 
 @end

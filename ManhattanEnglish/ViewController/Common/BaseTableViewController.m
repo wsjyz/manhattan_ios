@@ -209,7 +209,7 @@
 
 - (void)doRefresh:(CKRefreshControl *)sender
 {
-    [self refreshData];
+//    [self refreshData];
 }
 
 - (void)refreshDataComplete

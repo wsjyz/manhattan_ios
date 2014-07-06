@@ -126,6 +126,8 @@
 {
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     PersonalInfoViewController *personInfoVC = [storyBoard instantiateViewControllerWithIdentifier:@"personInfo"];
+    personInfoVC.personID = [_commonService currentPersonalID];
+    personInfoVC.user = [_commonService currentLoginUser];
     [self.navigationController pushViewController:personInfoVC animated:YES];
 }
 
@@ -173,10 +175,10 @@
                     target:self
                     action:@selector(showItemPersonDetail)],
       
-      [KxMenuItem menuItem:@"钱包"
-                     image:nil
-                    target:self
-                    action:@selector(showItemMyWallet)],
+//      [KxMenuItem menuItem:@"钱包"
+//                     image:nil
+//                    target:self
+//                    action:@selector(showItemMyWallet)],
       
       [KxMenuItem menuItem:@"日程表"
                      image:nil

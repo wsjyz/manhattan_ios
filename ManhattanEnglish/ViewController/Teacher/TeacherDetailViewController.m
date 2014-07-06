@@ -16,6 +16,7 @@
 #import <TbcLibUI/UIImageView+WebCache.h>
 #import "TeacherService.h"
 #import "CommonService.h"
+#import "UserAction.h"
 
 #define VALUE(a)                        a==nil?@"":a
 
@@ -84,7 +85,7 @@
         cell.name.text = VALUE(user.userName);
         if (user.avatar!= nil && user.avatar.length != 0)
         {
-            cell.headImg.image = [UIImage imageNamed:[NSURL URLWithString:user.avatar]];
+            cell.headImg.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:user.avatar]]];
         }
         if (user.sex && [user.sex isEqualToString:SEX_MALE])
         {
@@ -248,10 +249,10 @@
 //收藏
 - (void)selectCollectBtn
 {
-    BOOL result = [_teacherService collectWithUserId:[_commonService getCurrentUserID] andTeacherId:_teacherDetail.userId];
-    if (result)
+    UserAction *userAction = [_teacherService collectWithUserId:[_commonService getCurrentUserID] andTeacherId:_teacherDetail.userId];
+    if (userAction)
     {
-        
+        [self showErrorInfoWithMessage:@"收藏成功" delegate:nil];
     }
 }
 

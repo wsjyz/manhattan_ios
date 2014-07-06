@@ -9,6 +9,7 @@
 #import "BaseRestService.h"
 #import "Page.h"
 #import "TeacherDetail.h"
+#import "UserAction.h"
 
 @interface OpenTeacherService : BaseRestService
 
@@ -34,7 +35,7 @@
  * @param userId
  * @param teacherId
  */
-- (BOOL)collectWithUserId:(NSString *)userId andTeacherId:(NSString *)teacherId;
+- (UserAction *)collectWithUserId:(NSString *)userId andTeacherId:(NSString *)teacherId;
 
 /**
  * 取消收藏教师

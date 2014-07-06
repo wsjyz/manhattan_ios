@@ -80,6 +80,10 @@
         switch (_teacherType) {
             case Tea_type_all:
             {
+                if (_searchKey == nil)
+                {
+                    _searchKey = @"";
+                }
                 newPage = [_teacherService listPageWithPage:_currentPage andSearchKey:_searchKey];
                 break;
             }
@@ -133,6 +137,10 @@
         switch (_teacherType) {
             case Tea_type_all:
             {
+                if (_searchKey == nil)
+                {
+                    _searchKey = @"";
+                }
                 newPage = [_teacherService listPageWithPage:_currentPage andSearchKey:_searchKey];
                 break;
             }
