@@ -247,6 +247,7 @@
 		B922A5541965CBF6007A0FB3 /* PublishCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B922A5531965CBF6007A0FB3 /* PublishCourseViewController.m */; };
 		B998C87C1967B05900568B0D /* Option.m in Sources */ = {isa = PBXBuildFile; fileRef = B998C87B1967B05900568B0D /* Option.m */; };
 		B9E5166A1967F657000A1864 /* Appointment.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E516691967F657000A1864 /* Appointment.m */; };
+		B9E516711968162A000A1864 /* ContactInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E516701968162A000A1864 /* ContactInfoTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -652,6 +653,8 @@
 		B998C87B1967B05900568B0D /* Option.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Option.m; sourceTree = "<group>"; };
 		B9E516681967F657000A1864 /* Appointment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appointment.h; sourceTree = "<group>"; };
 		B9E516691967F657000A1864 /* Appointment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Appointment.m; sourceTree = "<group>"; };
+		B9E5166F1968162A000A1864 /* ContactInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactInfoTableViewCell.h; sourceTree = "<group>"; };
+		B9E516701968162A000A1864 /* ContactInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactInfoTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -941,6 +944,8 @@
 				2F4AEBC01950AF50009AD63E /* MyAppointViewController.m */,
 				2F68A68319534853006CE404 /* AuditionDetailViewController.h */,
 				2F68A68419534853006CE404 /* AuditionDetailViewController.m */,
+				B9E5166F1968162A000A1864 /* ContactInfoTableViewCell.h */,
+				B9E516701968162A000A1864 /* ContactInfoTableViewCell.m */,
 			);
 			path = Appoint;
 			sourceTree = "<group>";
@@ -1852,6 +1857,7 @@
 				3721C3F9191A853700D63FBE /* TeacherPersonInfoTableViewCell.m in Sources */,
 				370092D419508D2500A6EF8E /* MyCollectTeacherListViewController.m in Sources */,
 				37FEB82A19332EAD00D3E047 /* KalTileView.m in Sources */,
+				B9E516711968162A000A1864 /* ContactInfoTableViewCell.m in Sources */,
 				37E87F041947E8920019E9AC /* Page.m in Sources */,
 				2FAB68AB190A26D40081D6B6 /* AppDelegate.m in Sources */,
 				37CC3F671917D56600023E76 /* AskQuestionViewController.m in Sources */,

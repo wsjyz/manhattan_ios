@@ -13,6 +13,7 @@
 #import "TeacherDetail.h"
 #import "Option.h"
 #import "User.h"
+#import "Appointment.h"
 
 @implementation AppointService (OpenExtension)
 
@@ -48,6 +49,13 @@
     [ReflectionUtil setArrayType:NSStringFromClass([Course class]) forPropName:@"rows" ofClassName:NSStringFromClass([Page class])];
     [ReflectionUtil setArrayType:NSStringFromClass([TeacherDetail class]) forPropName:@"teacherDetailList" ofClassName:NSStringFromClass([Course class])];
     return [RestServiceManager performRequestWithPath:@"/course/getOrderCourses" paramDic:paramDic returnType:NSStringFromClass([Page class]) delegate:self.delegate];
+}
+
+- (Appointment *)addAppointment:(Appointment *)appoint
+{
+    NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                     OPENVALUE(appoint), @"appointment", nil];
+    return [RestServiceManager performRequestWithPath:@"/course/addAppointment" paramDic:paramDic returnType:NSStringFromClass([Appointment class]) delegate:self.delegate];
 }
 
 @end
