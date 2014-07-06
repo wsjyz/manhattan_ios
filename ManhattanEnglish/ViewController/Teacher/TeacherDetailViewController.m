@@ -85,7 +85,7 @@
         cell.name.text = VALUE(user.userName);
         if (user.avatar!= nil && user.avatar.length != 0)
         {
-            cell.headImg.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:user.avatar]]];
+            [cell.headImg setImageWithURL:[NSURL URLWithString:user.avatar] placeholderImage:[UIImage imageNamed:@"personal_head.png"]];
         }
         if (user.sex && [user.sex isEqualToString:SEX_MALE])
         {
@@ -181,7 +181,7 @@
         }
         cell.tutoringWagLabel.text = VALUE(_teacherDetail.tutoringWay);
         cell.studentLevelLabel.text = VALUE(_teacherDetail.studentLevel);
-        cell.classFeesLabel.text = VALUE(_teacherDetail.classFees);
+        cell.classFeesLabel.text = [NSString stringWithFormat:@"%@",@(_teacherDetail.classFees)];
         
         return cell;
     }

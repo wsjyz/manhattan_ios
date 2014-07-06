@@ -30,6 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setNavgationItemTitle:@"更多"];
+    self.navigationItem.leftBarButtonItem = nil;
 }
 
 - (void)didReceiveMemoryWarning
@@ -90,12 +91,19 @@
         case 0:
         {
             AboutViewController *aboutVC = [ViewUtil viewControllerFromNibOfClass:[AboutViewController class]];
+            aboutVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:aboutVC animated:YES];
+            break;
+        }
+        case 1:
+        {
+            //TODO:
             break;
         }
         case 2:
         {
             ContactUsViewController *contactVC = [ViewUtil viewControllerFromNibOfClass:[ContactUsViewController class]];
+            contactVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:contactVC animated:YES];
             break;
         }

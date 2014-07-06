@@ -217,7 +217,7 @@
     
     TeacherDetail *teacher = _resourceArr[indexPath.row];
     cell.name.text = teacher.user.userName;
-    [cell.headImg setImageWithURL:[NSURL URLWithString:teacher.user.avatar] placeholderImage:nil];
+    [cell.headImg setImageWithURL:[NSURL URLWithString:teacher.user.avatar] placeholderImage:[UIImage imageNamed:@"personal_head.png"]];
     if ([teacher.user.sex isEqualToString:SEX_MALE])
     {
         cell.sexImg.image = [UIImage imageNamed:@"personal_boy.png"];

@@ -198,7 +198,8 @@
     
     User *stu = _resourceArr[indexPath.row];
     cell.name.text = VALUE(stu.userName);
-    [cell.headImg setImageWithURL:[NSURL URLWithString:stu.avatar] placeholderImage:nil];
+    [cell.headImg setImageWithURL:[NSURL URLWithString:stu.avatar] placeholderImage:[UIImage imageNamed:@"personal_head.png"]];
+    
     if ([stu.sex isEqualToString:SEX_MALE])
     {
         cell.sexImg.image = [UIImage imageNamed:@"personal_boy.png"];

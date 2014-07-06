@@ -10,6 +10,7 @@
 #import "CommonService.h"
 #import "InfoTableViewCell.h"
 #import "User.h"
+#import <TbcLibUI/UIImageView+WebCache.h>
 
 #define VALUE(value)        value == nil ? @"" : value
 
@@ -56,7 +57,7 @@
     _name.text = VALUE(_user.userName);
     if (_user.avatar)
     {
-        _faceImg.image = [UIImage imageNamed:[NSData dataWithContentsOfURL:[NSURL URLWithString:_user.avatar]]];
+        [_faceImg setImageWithURL:[NSURL URLWithString:_user.avatar] placeholderImage:[UIImage imageNamed:@"personal_head.png"]];
     }
     if (_user.sex && [_user.sex isEqualToString:SEX_MALE])
     {
