@@ -280,9 +280,23 @@
 			remoteGlobalIDString = 2FAB6896190A26D40081D6B6;
 			remoteInfo = ManhattanEnglish;
 		};
-		37D52A6F196E212200CDE24C /* PBXContainerItemProxy */ = {
+		B9B7A1F0196D91720049BCE2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 37D52A6A196E212200CDE24C /* TbcLibCore.xcodeproj */;
+			containerPortal = 37511C7A1969172600719FA3 /* TbcLibUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2F595516172588B8001980D3;
+			remoteInfo = TbcLibUI;
+		};
+		B9B7A1F2196D91720049BCE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37511C7A1969172600719FA3 /* TbcLibUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2F595527172588B9001980D3;
+			remoteInfo = TbcLibUITests;
+		};
+		B9B7A1F8196D91920049BCE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37511C711969171700719FA3 /* TbcLibCore.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2FEA3E6818EABC690073CA51;
 			remoteInfo = TbcLibCore;
@@ -307,20 +321,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 2F595527172588B9001980D3;
 			remoteInfo = TbcLibUITests;
-		};
-		B9B7A1F8196D91920049BCE2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 37511C711969171700719FA3 /* TbcLibCore.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2FEA3E6818EABC690073CA51;
-			remoteInfo = TbcLibCore;
-		};
-		B9B7A1FA196D91920049BCE2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 37511C711969171700719FA3 /* TbcLibCore.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2FEA3E7818EABC690073CA51;
-			remoteInfo = TbcLibCoreTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -536,6 +536,8 @@
 		37348C42190CEA5B007605DA /* GlobalErrorDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalErrorDefine.h; sourceTree = "<group>"; };
 		37348C45190CF10E007605DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37348C49190CF189007605DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		37511C711969171700719FA3 /* TbcLibCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TbcLibCore.xcodeproj; path = ../../../../Repositories/Apple/Project/TbcLib/TbcLibCore/TbcLibCore.xcodeproj; sourceTree = "<group>"; };
+		37511C7A1969172600719FA3 /* TbcLibUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TbcLibUI.xcodeproj; path = ../../../../Repositories/Apple/Project/TbcLib/TbcLibUI/TbcLibUI.xcodeproj; sourceTree = "<group>"; };
 		37511C831969181100719FA3 /* UserAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAction.h; sourceTree = "<group>"; };
 		37511C841969181100719FA3 /* UserAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAction.m; sourceTree = "<group>"; };
 		37511C8D196A3B5700719FA3 /* AlipayRsaLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AlipayRsaLib.a; sourceTree = "<group>"; };
@@ -1949,6 +1951,7 @@
 				37B40CC31931B7C300D90923 /* InitService.m in Sources */,
 				2F4AEBC11950AF50009AD63E /* MyAppointViewController.m in Sources */,
 				370092CC19508B3E00A6EF8E /* CourseSchedule.m in Sources */,
+				B9B7A209196D9E2A0049BCE2 /* CourseCollectionCell.m in Sources */,
 				37511CBC196A406500719FA3 /* SBJsonBase.m in Sources */,
 				371BEE5219167A2D000595D1 /* QuestionViewController.m in Sources */,
 				37AF51D7193893D200853E10 /* NodataBgView.m in Sources */,
@@ -1997,6 +2000,7 @@
 				2F588459194D8923004ACD71 /* AppointSearchCondition.m in Sources */,
 				37FEB82619332EAD00D3E047 /* KalDataSource.m in Sources */,
 				37CC3F751917E4F700023E76 /* TeacherMainCell.m in Sources */,
+				B9B7A202196D97450049BCE2 /* PublishCourseTableViewController.m in Sources */,
 				37511CBE196A406500719FA3 /* SBJsonWriter.m in Sources */,
 				37348C36190CE79E007605DA /* ViewUtil.m in Sources */,
 				2F58AD5C192929D300A03F88 /* AppointConditionTableViewCell.m in Sources */,
