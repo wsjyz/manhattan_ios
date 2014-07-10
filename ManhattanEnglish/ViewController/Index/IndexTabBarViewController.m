@@ -8,6 +8,7 @@
 
 #import "IndexTabBarViewController.h"
 #import "CommonService.h"
+#import "MyCollectTeacherListViewController.h"
 
 @interface IndexTabBarViewController () <UITabBarControllerDelegate>
 
@@ -51,10 +52,23 @@
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
-    
+    if (tabBarController.selectedIndex == 1)
+    {
+        UINavigationController *nav = (UINavigationController *)viewController;
+        MyCollectTeacherListViewController *collectVC = (MyCollectTeacherListViewController *)nav.topViewController;
+        PERSONAL_ID personID = [_commonService currentPersonalID];
+        if (personID == PERSONAL_TEACHER)
+        {
+            collectVC.isCollectTeacher = NO;
+        }
+        else
+        {
+            collectVC.isCollectTeacher = YES;
+        }
+    };
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -63,6 +77,6 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end

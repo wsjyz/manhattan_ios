@@ -15,6 +15,7 @@
 #import "Course.h"
 #import "Option.h"
 #import "Appointment.h"
+#import "PayViewController.h"
 
 @interface AuditionDetailViewController () <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, SelectionViewDelegate>
 
@@ -202,7 +203,7 @@
     NSArray *options = [NSArray array];
     
     if (tag == ConditionTagKcfl) {
-        NSArray *optionValues = [self.teacherDetail.course_category componentsSeparatedByString:@","];
+        NSArray *optionValues = [self.teacherDetail.courseCategory componentsSeparatedByString:@","];
         options = [Option optionsWithSameTextAndValues:optionValues];
     }else if (tag == ConditionTagJxdd){
         NSArray *optionValues = [self.teacherDetail.teachingArea componentsSeparatedByString:@","];
@@ -238,5 +239,7 @@
     
     // 添加记录
 //    [self.appointService addAppointment:appointment];
+    PayViewController *payVC = [[PayViewController alloc] init];
+    [self.navigationController pushViewController:payVC animated:YES];
 }
 @end

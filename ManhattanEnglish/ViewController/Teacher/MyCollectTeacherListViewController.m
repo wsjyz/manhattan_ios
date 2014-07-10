@@ -42,6 +42,7 @@
         _studentInnerView.hidden = YES;
         
         _teacherListTVC = [self.childViewControllers objectAtIndex:0];
+        _teacherListTVC.view.frame = CGRectMake(0, 0, VIEW_WIDTH, VIEW_HEIGHT-BAR_HEIGHT-TAB_BAR_HEIGHT);
         _teacherListTVC.teacherType = Tea_type_Collect;
         [_teacherListTVC willBeginRefreshData];
         [_teacherListTVC refreshData];
@@ -52,6 +53,7 @@
         _studentInnerView.hidden = NO;
         
         _studentListTVC = [self.childViewControllers objectAtIndex:1];
+        _studentListTVC.view.frame = CGRectMake(0, 0, VIEW_WIDTH, VIEW_HEIGHT-BAR_HEIGHT-TAB_BAR_HEIGHT);
         _studentListTVC.stuType = Stu_type_myStu;
         [_studentListTVC willBeginRefreshData];
         [_studentListTVC refreshData];

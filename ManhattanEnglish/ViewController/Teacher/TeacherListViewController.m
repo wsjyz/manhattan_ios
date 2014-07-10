@@ -31,8 +31,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
     [self setNavgationItemTitle:@"名师列表"];
     _listTVC = [self.childViewControllers objectAtIndex:0];
+    _listTVC.view.frame = CGRectMake(0, 0, VIEW_WIDTH, VIEW_HEIGHT-BAR_HEIGHT-44);
     _listTVC.selectTeacher = self.selectTeacher;
     _listTVC.teacherType = Tea_type_all;
     [_listTVC willBeginRefreshData];

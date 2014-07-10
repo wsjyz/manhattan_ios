@@ -19,6 +19,7 @@
 @interface BaseTableViewController : UITableViewController<RestServiceDelegate>
 
 @property (nonatomic, weak) id<BaseTableViewControllerdelegate> baseTableViewDelegate;
+@property (nonatomic, assign) BOOL autoRefreshData;
 
 - (void)initService;
 

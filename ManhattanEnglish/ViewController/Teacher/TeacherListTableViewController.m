@@ -183,8 +183,6 @@
     [super viewDidLoad];
     
     _currentPage = [[Page alloc] init];
-    [self willBeginRefreshData];
-    [self refreshData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -231,7 +229,7 @@
         cell.sexImg.hidden = YES;
     }
     cell.school.text = teacher.finalGraduateSchool;
-    cell.subject.text = teacher.course_category;
+    cell.subject.text = teacher.courseCategory;
     
     return cell;
 }

@@ -100,7 +100,7 @@
             cell.sexImg.hidden = YES;
         }
         cell.school.text = VALUE(_teacherDetail.finalGraduateSchool);
-        cell.subject.text = VALUE(_teacherDetail.course_category);
+        cell.subject.text = VALUE(_teacherDetail.courseCategory);
         
         return cell;
     }

@@ -55,6 +55,7 @@
     }
     
     _quesTVC = [self.childViewControllers objectAtIndex:0];
+    _quesTVC.view.frame = CGRectMake(0, 0, VIEW_WIDTH, VIEW_HEIGHT-BAR_HEIGHT);
     _quesTVC.quesType = self.quesType;
     [_quesTVC willBeginRefreshData];
     [_quesTVC refreshData];
