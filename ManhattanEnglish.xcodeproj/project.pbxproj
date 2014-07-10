@@ -262,6 +262,12 @@
 		B922A5511965CBD0007A0FB3 /* CourseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B922A5491965CBCF007A0FB3 /* CourseTableViewController.m */; };
 		B922A5541965CBF6007A0FB3 /* PublishCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B922A5531965CBF6007A0FB3 /* PublishCourseViewController.m */; };
 		B998C87C1967B05900568B0D /* Option.m in Sources */ = {isa = PBXBuildFile; fileRef = B998C87B1967B05900568B0D /* Option.m */; };
+		B9B7A1FE196D91B40049BCE2 /* libTbcLibCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B7A1F9196D91920049BCE2 /* libTbcLibCore.a */; };
+		B9B7A1FF196D91B40049BCE2 /* libTbcLibUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B7A1F1196D91720049BCE2 /* libTbcLibUI.a */; };
+		B9B7A202196D97450049BCE2 /* PublishCourseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B7A201196D97450049BCE2 /* PublishCourseTableViewController.m */; };
+		B9B7A205196D99FE0049BCE2 /* publish_course_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B7A203196D99FE0049BCE2 /* publish_course_empty.png */; };
+		B9B7A206196D99FE0049BCE2 /* publish_course_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B7A204196D99FE0049BCE2 /* publish_course_selected.png */; };
+		B9B7A209196D9E2A0049BCE2 /* CourseCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B7A208196D9E2A0049BCE2 /* CourseCollectionCell.m */; };
 		B9E5166A1967F657000A1864 /* Appointment.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E516691967F657000A1864 /* Appointment.m */; };
 		B9E516711968162A000A1864 /* ContactInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E516701968162A000A1864 /* ContactInfoTableViewCell.m */; };
 /* End PBXBuildFile section */
@@ -301,6 +307,20 @@
 			proxyType = 2;
 			remoteGlobalIDString = 2F595527172588B9001980D3;
 			remoteInfo = TbcLibUITests;
+		};
+		B9B7A1F8196D91920049BCE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37511C711969171700719FA3 /* TbcLibCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2FEA3E6818EABC690073CA51;
+			remoteInfo = TbcLibCore;
+		};
+		B9B7A1FA196D91920049BCE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37511C711969171700719FA3 /* TbcLibCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2FEA3E7818EABC690073CA51;
+			remoteInfo = TbcLibCoreTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -698,6 +718,12 @@
 		B92AC497195C91DF00601E90 /* CommonUtil+CustomExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CommonUtil+CustomExtension.m"; sourceTree = "<group>"; };
 		B998C87A1967B05900568B0D /* Option.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Option.h; sourceTree = "<group>"; };
 		B998C87B1967B05900568B0D /* Option.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Option.m; sourceTree = "<group>"; };
+		B9B7A200196D97450049BCE2 /* PublishCourseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishCourseTableViewController.h; sourceTree = "<group>"; };
+		B9B7A201196D97450049BCE2 /* PublishCourseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishCourseTableViewController.m; sourceTree = "<group>"; };
+		B9B7A203196D99FE0049BCE2 /* publish_course_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = publish_course_empty.png; sourceTree = "<group>"; };
+		B9B7A204196D99FE0049BCE2 /* publish_course_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = publish_course_selected.png; sourceTree = "<group>"; };
+		B9B7A207196D9E2A0049BCE2 /* CourseCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseCollectionCell.h; sourceTree = "<group>"; };
+		B9B7A208196D9E2A0049BCE2 /* CourseCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseCollectionCell.m; sourceTree = "<group>"; };
 		B9E516681967F657000A1864 /* Appointment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appointment.h; sourceTree = "<group>"; };
 		B9E516691967F657000A1864 /* Appointment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Appointment.m; sourceTree = "<group>"; };
 		B9E5166F1968162A000A1864 /* ContactInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactInfoTableViewCell.h; sourceTree = "<group>"; };
@@ -758,6 +784,8 @@
 		2F2024D1192A778D00272AAB /* GoodCourse */ = {
 			isa = PBXGroup;
 			children = (
+				B9B7A203196D99FE0049BCE2 /* publish_course_empty.png */,
+				B9B7A204196D99FE0049BCE2 /* publish_course_selected.png */,
 				2F58847C194E0426004ACD71 /* good_course_section_bg.png */,
 				2F58845F194DD09F004ACD71 /* good_course_cover_bg.png */,
 				2F31488F192BC38C0021C40B /* good_course_st_btn_n.png */,
@@ -1630,8 +1658,30 @@
 				B922A5491965CBCF007A0FB3 /* CourseTableViewController.m */,
 				B922A5521965CBF6007A0FB3 /* PublishCourseViewController.h */,
 				B922A5531965CBF6007A0FB3 /* PublishCourseViewController.m */,
+				B9B7A200196D97450049BCE2 /* PublishCourseTableViewController.h */,
+				B9B7A201196D97450049BCE2 /* PublishCourseTableViewController.m */,
+				B9B7A207196D9E2A0049BCE2 /* CourseCollectionCell.h */,
+				B9B7A208196D9E2A0049BCE2 /* CourseCollectionCell.m */,
 			);
 			path = Course;
+			sourceTree = "<group>";
+		};
+		B9B7A1EC196D91720049BCE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B9B7A1F1196D91720049BCE2 /* libTbcLibUI.a */,
+				B9B7A1F3196D91720049BCE2 /* TbcLibUITests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B9B7A1F4196D91920049BCE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B9B7A1F9196D91920049BCE2 /* libTbcLibCore.a */,
+				B9B7A1FB196D91920049BCE2 /* TbcLibCoreTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1788,6 +1838,7 @@
 				2F314893192BC38C0021C40B /* good_course_wave_line.png in Resources */,
 				37348C4A190CF1AA007605DA /* Main.storyboard in Resources */,
 				37A6D692190FF44700B7C8B0 /* tx.png in Resources */,
+				B9B7A205196D99FE0049BCE2 /* publish_course_empty.png in Resources */,
 				371BEE5119167A2D000595D1 /* QuesTableViewCell.xib in Resources */,
 				37A6D68D190FF44700B7C8B0 /* ok.png in Resources */,
 				2F58847D194E0426004ACD71 /* good_course_section_bg.png in Resources */,
@@ -1820,6 +1871,7 @@
 				2F6D6A9C1913F8EC0097617E /* index_wyyy.png in Resources */,
 				37A6D690190FF44700B7C8B0 /* register_btn_p.png in Resources */,
 				2F41607B19194DA800156EDB /* nav_back_btn_n.png in Resources */,
+				B9B7A206196D99FE0049BCE2 /* publish_course_selected.png in Resources */,
 				37A6D693190FF44700B7C8B0 /* xz.png in Resources */,
 				2F2024D5192A778D00272AAB /* good_course_bh.png in Resources */,
 				2FBC69DE19153D0E00990DD1 /* appoint_jxdd.png in Resources */,
