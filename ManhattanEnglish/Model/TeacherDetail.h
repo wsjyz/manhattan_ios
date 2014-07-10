@@ -12,7 +12,7 @@
 @interface TeacherDetail : NSObject
 
 @property (nonatomic, strong) NSString *userId;         //教师ID
-@property (nonatomic, strong) NSString *course_category;        //教授科目
+@property (nonatomic, strong) NSString *courseCategory;        //教授科目
 @property (nonatomic, strong) NSString *authentication;         //身份认证
 @property (nonatomic, strong) NSString *creditRate;         //信用等级
 @property (nonatomic, strong) NSString *wechat;         //微信号

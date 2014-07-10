@@ -1384,7 +1384,7 @@
             <objects>
                 <tableViewController id="1nq-1L-PHu" customClass="MyStudentListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="JCq-iF-8Dl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
@@ -1926,32 +1926,33 @@
                         <viewControllerLayoutGuide type="bottom" id="he9-AV-lbL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Cyw-qm-NCc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zYW-PR-Ulo">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="ENP-nC-chf" kind="embed" id="2aa-A1-czB"/>
                                 </connections>
                             </containerView>
-                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZZz-SO-94c">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BxV-2x-Tnr">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="1nq-1L-PHu" kind="embed" id="NHQ-r9-Xuh"/>
+                                    <segue destination="1nq-1L-PHu" kind="embed" id="lFM-2X-I77"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="我的收藏" id="OJN-jJ-pP6"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
                         <outlet property="collectInnerView" destination="zYW-PR-Ulo" id="B8S-cA-xhE"/>
-                        <outlet property="studentInnerView" destination="ZZz-SO-94c" id="XXP-hj-yzv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Feg-fY-8hc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1976,7 +1977,7 @@
             <objects>
                 <tableViewController id="ENP-nC-chf" customClass="TeacherListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="cQb-oW-OJm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
@@ -2001,7 +2002,7 @@
         <image name="index_wdzy.png" width="328" height="125"/>
         <image name="index_wytw.png" width="328" height="274"/>
         <image name="index_wyyy.png" width="328" height="275"/>
-        <image name="logo.png" width="238" height="166"/>
+        <image name="logo.png" width="76" height="25"/>
         <image name="mm.png" width="50" height="50"/>
         <image name="nav_bar_person_btn_n.png" width="50" height="50"/>
         <image name="ok.png" width="40" height="40"/>
@@ -2027,8 +2028,8 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="ktC-ay-g3A"/>
-        <segue reference="FU8-Jh-bhs"/>
         <segue reference="1G1-Ch-Dgc"/>
         <segue reference="CDS-yI-pkY"/>
+        <segue reference="FU8-Jh-bhs"/>
     </inferredMetricsTieBreakers>
 </document>

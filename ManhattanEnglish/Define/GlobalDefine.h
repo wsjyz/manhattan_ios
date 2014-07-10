@@ -40,4 +40,6 @@ typedef enum
 #define ANS_TYPE_ANSWER                 @"ANSWER"
 #define ANS_TYPE_UNANSWER               @"UNANSWER"
 
+#define IMG_SERVICE_URL                 @"http://203.195.131.34:8080/mhd"
+
 #endif
