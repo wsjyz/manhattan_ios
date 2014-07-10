@@ -9,6 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "User.h"
 
+#define TUTORING_WAY_STUDENT_VISIT      @"STUDENT_VISIT"
+#define TUTORING_WAY_TEACHER_VISIT      @"TEACHER_VISIT"
+
+#define STUDENT_LEVEL_JUNIOR            @"JUNIOR"
+#define STUDENT_LEVEL_INTERMEDIATE      @"INTERMEDIATE"
+#define STUDENT_LEVEL_SENIOR            @"SENIOR"
+
 @interface TeacherDetail : NSObject
 
 @property (nonatomic, strong) NSString *userId;         //教师ID

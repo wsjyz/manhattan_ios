@@ -8,8 +8,21 @@
 
 #import "PublishCourseTableViewController.h"
 #import "CourseCollectionCell.h"
+#import "AppointService.h"
+#import "CourseService.h"
+#import "TeacherDetail.h"
+#import "SelectionViewController.h"
+#import "AppointConditionTableViewCell.h"
 
-@interface PublishCourseTableViewController ()
+@interface PublishCourseTableViewController () <SelectionViewDelegate>
+
+@property (strong, nonatomic) CourseService *courseService;
+@property (strong, nonatomic) AppointService *appointService;
+
+@property (assign, nonatomic) ConditionTag currentCondition;
+
+// array with string "0" or "1"
+@property (strong, nonatomic) NSMutableArray *courseSelections;
 
 @end
 
@@ -22,6 +35,19 @@
         // Custom initialization
     }
     return self;
+}
+
+- (void)initService
+{
+    self.appointService = [[AppointService alloc] initWithDelegate:self];
+    self.courseService = [[CourseService alloc] initWithDelegate:self];
+    
+    self.detail = [[TeacherDetail alloc] init];
+    
+    self.courseSelections = [NSMutableArray array];
+    for (int i = 0; i < 21; i++) {
+        [self.courseSelections addObject:@"0"];
+    }
 }
 
 - (void)viewDidLoad
@@ -59,9 +85,16 @@
 {
     CourseCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CollectionCell" forIndexPath:indexPath];
     
-    
-    
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CourseCollectionCell *cell = (CourseCollectionCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    cell.checked = !cell.checked;
+    
+    NSInteger index = indexPath.row * 3 + indexPath.section;
+    self.courseSelections[index] = cell.checked ? @"1" : @"0";
 }
 
 #pragma mark - TextField Delegate
@@ -74,67 +107,63 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    switch (textField.tag) {
-//        case 0:
-//            // TODO: no found prop 联系人
-//            break;
-//        case 1:
-//            self.appointment.address = textField.text;
-//            break;
-//        case 2:
-//            self.appointment.mobile = textField.text;
-//            break;
+    self.detail.classFees = [textField.text floatValue];
+}
+
+#pragma mark - SelectionView Delegate
+
+- (void)completeSelection:(SelectionViewController *)viewController
+{
+    NSString *selectedValueStr = viewController.selectedValueStr;
+    NSString *selectedKeyStr = viewController.selectedKeyStr;
+    
+    switch (self.currentCondition) {
+        case ConditionTagJxdd:
+            self.teachingAreaLabel.text = [selectedKeyStr isEqualToString: @""] ? @"不限": selectedKeyStr;
+            self.detail.teachingArea = selectedValueStr;
+            break;
+        case ConditionTagJxfs:
+            self.tutoringWayLabel.text = [selectedKeyStr isEqualToString: @""] ? @"不限": selectedKeyStr;
+            self.detail.tutoringWay = selectedValueStr;
+            break;
+        case ConditionTagStudentLevel:
+            self.studentLevelLabel.text = [selectedKeyStr isEqualToString: @""] ? @"不限": selectedKeyStr;
+            self.detail.studentLevel = selectedValueStr;
+            break;
+        default:
+            break;
     }
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+#pragma mark - TableView Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    if (indexPath.section == 0 && indexPath.row == 0) {
+        
+        self.currentCondition = ConditionTagJxdd;
+    }else if (indexPath.section == 0 && indexPath.row == 1){
+        
+        self.currentCondition = ConditionTagJxfs;
+    }else if (indexPath.section == 2 && indexPath.row == 0){
+        
+        self.currentCondition = ConditionTagStudentLevel;
+    }else{
+        
+        return;
+    }
     
-    // Configure the cell...
-    
-    return cell;
+    SelectionViewController *selectionViewCon = [ViewUtil viewControllerFromNibOfClass:[SelectionViewController class]];
+    selectionViewCon.delegate = self;;
+    selectionViewCon.contentItems = [self.appointService optionsWithConditionTag:self.currentCondition];
+    [self presentViewController:selectionViewCon animated:YES completion:^{
+        
+        selectionViewCon.selectionTableView.allowsSelection = YES;
+        
+        // 只有授课区域是多选的
+        selectionViewCon.selectionTableView.allowsMultipleSelection = self.currentCondition == ConditionTagJxdd ? YES : NO;
+    } ];
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 /*
 #pragma mark - Navigation
@@ -147,4 +176,16 @@
 }
 */
 
+- (IBAction)commitBtnClick:(id)sender {
+    self.detail.teachingTime = [self.courseSelections componentsJoinedByString:@""];
+    
+    TeacherDetail *detail = [self.courseService postCourse:self.detail];
+    if (detail != nil) {
+        
+        [self.navigationController popViewControllerAnimated:YES];
+    }else{
+        
+        
+    }
+}
 @end

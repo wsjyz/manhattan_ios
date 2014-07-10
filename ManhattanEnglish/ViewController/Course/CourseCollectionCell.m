@@ -19,6 +19,22 @@
     return self;
 }
 
+- (void)setSelected:(BOOL)selected
+{
+    [super setSelected:selected];
+}
+
+- (void)setChecked:(BOOL)checked
+{
+    if (self.checked == checked) {
+        return;
+    }
+    
+    _checked = checked;
+    NSString *imageName = self.checked ? @"publish_course_selected.png" : @"publish_course_empty.png";
+    [self.selectionImageView setImage:[UIImage imageNamed:imageName]];
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

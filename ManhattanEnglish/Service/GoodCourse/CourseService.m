@@ -13,6 +13,13 @@
 
 @implementation CourseService (OpenExtension)
 
+- (TeacherDetail *)postCourse:(TeacherDetail *)detail
+{
+    NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                     OPENVALUE(detail), @"teacherDetail", nil];
+    return [RestServiceManager performRequestWithPath:@"/course/postCourses" paramDic:paramDic returnType:NSStringFromClass([TeacherDetail class]) delegate:self.delegate];
+}
+
 - (Page *)getWorthCourses:(Page *)openPage
 {
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
