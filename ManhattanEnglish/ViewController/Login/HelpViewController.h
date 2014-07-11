@@ -10,6 +10,6 @@
 
 @interface HelpViewController : BaseViewController
 
-- (IBAction)enterApp:(id)sender;
+@property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 
 @end
