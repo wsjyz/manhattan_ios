@@ -63,19 +63,16 @@
         
         if (i == 2)
         {
-            float maxY = height-75;
+            float maxY = height-50;
             if (IPHONE5)
             {
-                maxY = height-95;
+                maxY = height-70;
             }
-            _img = [[UIImageView alloc] initWithFrame:CGRectMake(130, maxY, 59, 60)];
-            [_img setImage:[UIImage imageNamed:IMG_STG_LOGO]];
-            [imageView addSubview:_img];
             
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-            btn.frame = CGRectMake(DEVICE_WIDTH *i + 130, maxY, 59, 60);
-            btn.backgroundColor = [UIColor clearColor];
-            [btn addTarget:self action:@selector(enterAppView) forControlEvents:UIControlEventTouchUpInside];
+            btn.frame = CGRectMake(DEVICE_WIDTH *i + 130, maxY, 91, 36);
+            [btn setBackgroundImage:[UIImage imageNamed:@"enter.png"] forState:UIControlStateNormal];
+            [btn addTarget:self action:@selector(enterApp:) forControlEvents:UIControlEventTouchUpInside];
             [_scrollView addSubview:btn];
         }
     }
