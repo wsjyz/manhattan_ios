@@ -215,6 +215,10 @@
 		37B1779319703393001C209C /* enter.png in Resources */ = {isa = PBXBuildFile; fileRef = 37B1779219703393001C209C /* enter.png */; };
 		37B1779419703577001C209C /* libTbcLibCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B1778F19703236001C209C /* libTbcLibCore.a */; };
 		37B1779519703577001C209C /* libTbcLibUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D52A79196E213100CDE24C /* libTbcLibUI.a */; };
+		37B1779A19703976001C209C /* mht_58.png in Resources */ = {isa = PBXBuildFile; fileRef = 37B1779619703976001C209C /* mht_58.png */; };
+		37B1779B19703976001C209C /* mht_80.png in Resources */ = {isa = PBXBuildFile; fileRef = 37B1779719703976001C209C /* mht_80.png */; };
+		37B1779C19703976001C209C /* mht_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 37B1779819703976001C209C /* mht_120.png */; };
+		37B1779D19703976001C209C /* mht_1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 37B1779919703976001C209C /* mht_1024.png */; };
 		37B40CB019303A0700D90923 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B40CAF19303A0700D90923 /* User.m */; };
 		37B40CC31931B7C300D90923 /* InitService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B40CC21931B7C300D90923 /* InitService.m */; };
 		37B40CCD1931B8B200D90923 /* iVersion.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 37B40CCA1931B8B200D90923 /* iVersion.bundle */; };
@@ -614,6 +618,10 @@
 		37B1778719703236001C209C /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		37B1778819703236001C209C /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		37B1779219703393001C209C /* enter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enter.png; sourceTree = "<group>"; };
+		37B1779619703976001C209C /* mht_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mht_58.png; sourceTree = "<group>"; };
+		37B1779719703976001C209C /* mht_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mht_80.png; sourceTree = "<group>"; };
+		37B1779819703976001C209C /* mht_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mht_120.png; sourceTree = "<group>"; };
+		37B1779919703976001C209C /* mht_1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mht_1024.png; sourceTree = "<group>"; };
 		37B40CAE19303A0700D90923 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		37B40CAF19303A0700D90923 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		37B40CC11931B7C300D90923 /* InitService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitService.h; sourceTree = "<group>"; };
@@ -1381,6 +1389,10 @@
 		37A6D66E190FF44700B7C8B0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				37B1779619703976001C209C /* mht_58.png */,
+				37B1779719703976001C209C /* mht_80.png */,
+				37B1779819703976001C209C /* mht_120.png */,
+				37B1779919703976001C209C /* mht_1024.png */,
 				37A6D66F190FF44700B7C8B0 /* back.png */,
 				37A6D670190FF44700B7C8B0 /* button-ok.png */,
 				37A6D671190FF44700B7C8B0 /* button.png */,
@@ -1801,8 +1813,10 @@
 				37A6D689190FF44700B7C8B0 /* hq.png in Resources */,
 				37A6D683190FF44700B7C8B0 /* back.png in Resources */,
 				37A6D68A190FF44700B7C8B0 /* logo.png in Resources */,
+				37B1779B19703976001C209C /* mht_80.png in Resources */,
 				37B1778919703236001C209C /* 1.png in Resources */,
 				3700928E194F33BB00A6EF8E /* NodataBgView_ipad.xib in Resources */,
+				37B1779A19703976001C209C /* mht_58.png in Resources */,
 				37A6D691190FF44700B7C8B0 /* sj.png in Resources */,
 				2F739CB11910045F00FE2608 /* nav_bar_back_btn_n.png in Resources */,
 				37CC3F761917E4F700023E76 /* TeacherMainCell.xib in Resources */,
@@ -1842,6 +1856,7 @@
 				37A6D6AE190FF45400B7C8B0 /* HelpViewController.xib in Resources */,
 				3721C3E0191A847700D63FBE /* teacher_collect_btn.png in Resources */,
 				3700928B194F33BB00A6EF8E /* CmnLoadMoreView.xib in Resources */,
+				37B1779C19703976001C209C /* mht_120.png in Resources */,
 				37A6D688190FF44700B7C8B0 /* Navigation-Bar_6.png in Resources */,
 				3700928C194F33BB00A6EF8E /* CmnLoadMoreView_ipad.xib in Resources */,
 				2F6D6A981913F8EC0097617E /* index_msjx.png in Resources */,
@@ -1875,6 +1890,7 @@
 				3721C3F0191A84DF00D63FBE /* TeacherScheduleTableViewCell.xib in Resources */,
 				2FDD4EA0193645FF0044671A /* tab_student_n.png in Resources */,
 				2F588460194DD09F004ACD71 /* good_course_cover_bg.png in Resources */,
+				37B1779D19703976001C209C /* mht_1024.png in Resources */,
 				2F6D6A9B1913F8EC0097617E /* index_wytw.png in Resources */,
 				2F600689194B718F0059487A /* SelectionViewController.xib in Resources */,
 				370C49631910A41B00C63063 /* ques_arrow.png in Resources */,
