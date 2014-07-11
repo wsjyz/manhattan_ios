@@ -117,7 +117,7 @@
         cell.score.text = VALUE(_teacherDetail.expertScore);
         cell.commentContent.text = VALUE(_teacherDetail.expertComments);
         cell.area.text = VALUE(_teacherDetail.teachingArea);
-        cell.mode.text = VALUE(_teacherDetail.tutoringWay);
+        cell.mode.text = VALUE(_teacherDetail.tutoringWayText);
         cell.concernNum.text = [NSString stringWithFormat:@"%i",_teacherDetail.focusCount];
         cell.commentNum.text = [NSString stringWithFormat:@"%i",_teacherDetail.commentCount];
         cell.collectNum.text = [NSString stringWithFormat:@"%i",_teacherDetail.collectCount];
@@ -179,8 +179,8 @@
         {
             cell = [ViewUtil viewFromNibOfClass:[TeacherChargeTableViewCell class] owner:self];
         }
-        cell.tutoringWagLabel.text = VALUE(_teacherDetail.tutoringWay);
-        cell.studentLevelLabel.text = VALUE(_teacherDetail.studentLevel);
+        cell.tutoringWagLabel.text = VALUE(_teacherDetail.tutoringWayText);
+        cell.studentLevelLabel.text = VALUE(_teacherDetail.studentLevelText);
         cell.classFeesLabel.text = [NSString stringWithFormat:@"%@",@(_teacherDetail.classFees)];
         
         return cell;

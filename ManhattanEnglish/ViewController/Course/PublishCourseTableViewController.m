@@ -13,6 +13,7 @@
 #import "TeacherDetail.h"
 #import "SelectionViewController.h"
 #import "AppointConditionTableViewCell.h"
+#import <TbcLibCore/StringUtil.h>
 
 @interface PublishCourseTableViewController () <SelectionViewDelegate>
 
@@ -177,15 +178,52 @@
 */
 
 - (IBAction)commitBtnClick:(id)sender {
+    
     self.detail.teachingTime = [self.courseSelections componentsJoinedByString:@""];
+    
+    if ([StringUtil isNullOrEmpty:self.detail.teachingArea]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithMsg:@"请选择授课区域！" buttonsType:AlertViewButtonsTypeOk delegate:nil];
+        [alert showModal];
+        return;
+    }
+    
+    if ([StringUtil isNullOrEmpty:self.detail.tutoringWay]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithMsg:@"请选择授课方式！" buttonsType:AlertViewButtonsTypeOk delegate:nil];
+        [alert showModal];
+        return;
+    }
+    
+    if ([self.detail.teachingTime integerValue] == 0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithMsg:@"请选择授课时间！" buttonsType:AlertViewButtonsTypeOk delegate:nil];
+        [alert showModal];
+        return;
+    }
+    
+    if ([StringUtil isNullOrEmpty:self.detail.studentLevel]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithMsg:@"请选择学员等级！" buttonsType:AlertViewButtonsTypeOk delegate:nil];
+        [alert showModal];
+        return;
+    }
+    
+    if (self.detail.classFees == 0.0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithMsg:@"请填写费用！" buttonsType:AlertViewButtonsTypeOk delegate:nil];
+        [alert showModal];
+        return;
+    }
     
     TeacherDetail *detail = [self.courseService postCourse:self.detail];
     if (detail != nil) {
         
+        UIAlertView *alert = [[UIAlertView alloc] initWithMsg:@"发布课程成功！" buttonsType:AlertViewButtonsTypeOk delegate:nil];
+        [alert showModal];
         [self.navigationController popViewControllerAnimated:YES];
+        return;
+        
     }else{
         
-        
+        UIAlertView *alert = [[UIAlertView alloc] initWithMsg:@"发布课程失败！" buttonsType:AlertViewButtonsTypeOk delegate:nil];
+        [alert showModal];
+        return;
     }
 }
 @end

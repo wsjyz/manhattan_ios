@@ -11,7 +11,7 @@
 @implementation TeacherDetail
 
 //（学生上门STUDENT_VISIT;教师上门：TEACHER_VISIT）
-- (NSString *)tutoringWay
+- (NSString *)tutoringWayText
 {
     if (_tutoringWay != nil && [_tutoringWay isEqualToString:@"STUDENT_VISIT"])
     {
@@ -28,7 +28,7 @@
 }
 
 //初级JUNIOR 中级INTERMEDIATE 高级SENIOR
-- (NSString *)studentLevel
+- (NSString *)studentLevelText
 {
     if (_studentLevel == nil)
     {

@@ -52,4 +52,8 @@
 @property (nonatomic, assign) NSInteger commentCount;
 @property (nonatomic, assign) NSInteger collectCount;
 
+// custom properties
+@property (nonatomic, strong, readonly) NSString *tutoringWayText;
+@property (nonatomic, strong, readonly) NSString *studentLevelText;
+
 @end
