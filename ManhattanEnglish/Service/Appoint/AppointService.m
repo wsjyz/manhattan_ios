@@ -88,6 +88,12 @@
                                      SEX_MALE, @"男",
                                      SEX_FEMALE, @"女",  nil];
         options = [Option optionsWithTextAndValueDic:keyValueDic];
+    }else if (tag == ConditionTagStudentLevel){
+        NSDictionary *keyValueDic = [NSDictionary dictionaryWithObjectsAndKeys:
+                                     STUDENT_LEVEL_JUNIOR, @"初级",
+                                     STUDENT_LEVEL_INTERMEDIATE, @"中级",
+                                     STUDENT_LEVEL_SENIOR, @"高级", nil];
+        options = [Option optionsWithTextAndValueDic:keyValueDic];
     }else{
     }
     return options;

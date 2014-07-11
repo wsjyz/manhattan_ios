@@ -10,4 +10,7 @@
 
 @interface CourseCollectionCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *selectionImageView;
+@property (assign, nonatomic) BOOL checked;
+
 @end

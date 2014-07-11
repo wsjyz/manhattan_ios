@@ -11,6 +11,7 @@
 
 @class Course;
 @class Page;
+@class TeacherDetail;
 
 @interface CourseService : BaseRestService
 
@@ -20,6 +21,8 @@
 @end
 
 @interface CourseService (OpenExtension)
+
+- (TeacherDetail *)postCourse:(TeacherDetail *)detail;
 
 // 获取所有精品课程
 - (Page *)getWorthCourses:(Page *)openPage;

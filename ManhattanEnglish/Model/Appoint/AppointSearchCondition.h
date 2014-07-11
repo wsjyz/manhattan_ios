@@ -14,6 +14,7 @@ typedef enum : NSUInteger {
     ConditionTagJxfs,
     ConditionTagJsxb,
     ConditionTagYyrq,
+    ConditionTagStudentLevel,
 } ConditionTag;
 
 @interface AppointSearchCondition : NSObject
