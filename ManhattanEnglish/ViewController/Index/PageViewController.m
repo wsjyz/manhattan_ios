@@ -30,8 +30,12 @@
     // Do any additional setup after loading the view.
     
     // Create the data model
-    _pageTitles = @[@"Over 200 Tips and Tricks", @"Discover Hidden Features", @"Bookmark Favorite Tip", @"Free Regular Update"];
-    _pageImages = @[@"page1.png", @"page2.png", @"page3.png", @"page4.png"];
+    _pageTitles = @[@""];
+    _pageImages = @[@"page1.png"];
+    
+    if (_pageImages.count <= 1) {
+        
+    }
     
     self.dataSource = self;
     
@@ -98,15 +102,16 @@
     return [self viewControllerAtIndex:index];
 }
 
-- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
-{
-    return [self.pageTitles count];
-}
-
-- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
-{
-    return 0;
-}
+// TODO: hides page control becanse only show one image
+//- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
+//{
+//    return [self.pageTitles count];
+//}
+//
+//- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
+//{
+//    return 0;
+//}
 
 /*
 #pragma mark - Navigation

@@ -23,6 +23,8 @@
 #import "PersonalInfoViewController.h"
 #import "WalletViewController.h"
 #import "IndexTabBarViewController.h"
+#import "TeacherService.h"
+#import "PublishCourseTableViewController.h"
 
 #define MANUAL_SEGUE_LOGIN                  @"login"
 #define MANUAL_SEGUE_GOOD_COURSE            @"goodCourse"
@@ -40,6 +42,7 @@
 @property (strong, nonatomic) CourseService *courseService;
 @property (strong, nonatomic) NewsService *newsService;
 @property (strong, nonatomic) CommonService *commonService;
+@property (strong, nonatomic) TeacherService *teacherService;
 @property (strong, nonatomic) KalViewController *kalController;
 
 @property (strong, nonatomic) User *loginUser;
@@ -104,9 +107,10 @@
 
 - (void)initService
 {
-    self.courseService = [[CourseService alloc] init];
-    self.newsService = [[NewsService alloc] init];
+    self.courseService = [[CourseService alloc] initWithDelegate:self];
+    self.newsService = [[NewsService alloc] initWithDelegate:self];
     self.commonService = [[CommonService alloc] init];
+    self.teacherService = [[TeacherService alloc] initWithDelegate:self];
 }
 
 - (void)showItemCalendar
@@ -302,6 +306,11 @@
     {
         QuestionViewController *quesVC = segue.destinationViewController;
         quesVC.quesType = QuesType_homeWork_Stu;
+    }
+    else if ([segue.identifier isEqualToString:MANUAL_SEGUE_PUBLISH_COURSE])
+    {
+        PublishCourseTableViewController *pubCourseViewCon = segue.destinationViewController;
+        pubCourseViewCon.detail = [self.teacherService getTeacherDetailById:[self.commonService getCurrentUserID]];
     }
     
     // Get the new view controller using [segue destinationViewController].

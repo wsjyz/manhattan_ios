@@ -43,7 +43,9 @@
     self.appointService = [[AppointService alloc] initWithDelegate:self];
     self.courseService = [[CourseService alloc] initWithDelegate:self];
     
-    self.detail = [[TeacherDetail alloc] init];
+    if (self.detail == nil) {
+        self.detail = [[TeacherDetail alloc] init];
+    }
     
     self.courseSelections = [NSMutableArray array];
     for (int i = 0; i < 21; i++) {
