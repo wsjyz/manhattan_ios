@@ -44,4 +44,6 @@
 @property (strong, nonatomic) NSString *resourceId;
 @property (strong, nonatomic) NSString *payment;
 
+@property (strong, nonatomic) NSString *userName;
+
 @end

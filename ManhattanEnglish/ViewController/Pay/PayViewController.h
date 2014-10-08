@@ -7,19 +7,16 @@
 //
 
 #import "BaseViewController.h"
-#import "AlixLibService.h"
+#import "Appointment.h"
 
 @interface Product : NSObject
-{
-    SEL _result;
-}
 
 @end
 
 @interface PayViewController : BaseViewController
 
-@property (nonatomic,assign) SEL result;//这里声明为属性方便在于外部传入。
-
--(void)paymentResult:(NSString *)result;
+@property (strong, nonatomic) Appointment *appointment;
+@property (strong, nonatomic) NSString *subject;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end

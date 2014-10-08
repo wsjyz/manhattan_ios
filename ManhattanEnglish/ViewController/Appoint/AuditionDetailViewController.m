@@ -16,10 +16,12 @@
 #import "Option.h"
 #import "Appointment.h"
 #import "PayViewController.h"
+#import "CommonService.h"
 
 @interface AuditionDetailViewController () <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, SelectionViewDelegate>
 
 @property (strong, nonatomic) AppointService *appointService;
+@property (strong, nonatomic) CommonService *commonService;
 @property (strong, nonatomic) UITableView *tableView;
 @property (assign, nonatomic) ConditionTag currentCondition;
 
@@ -53,6 +55,7 @@
 - (void)initService
 {
     self.appointService = [[AppointService alloc] initWithDelegate:self];
+    self.commonService = [[CommonService alloc] initWithDelegate:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -62,6 +65,9 @@
     NSString *title = self.isAudition ? @"试听" : @"预约";
     [self setNavgationItemTitle:title];
     [self.auditionBtn setTitle:title forState:UIControlStateNormal];
+    
+    //试听课程LISTEN_COURSE;预约课程APPOINTMENT_COURSE
+    self.appointment.resourceType = self.isAudition? @"LISTEN_COURSE":@"APPOINTMENT_COURSE";
 }
 
 - (void)viewDidLoad
@@ -123,7 +129,7 @@
 {
     switch (textField.tag) {
         case 0:
-            // TODO: no found prop 联系人
+            self.appointment.userName = textField.text;
             break;
         case 1:
             self.appointment.address = textField.text;
@@ -235,11 +241,16 @@
     } ];
 }
 
-- (IBAction)confirmBtnClick:(id)sender {
-    
+- (IBAction)confirmBtnClick:(id)sender
+{
+    self.appointment.userId = [_commonService getCurrentUserID];
+    self.appointment.resourceId = self.course.courseId;
+    NSString *subject = self.isAudition ? @"试听" : @"预约";
     // 添加记录
 //    [self.appointService addAppointment:appointment];
-    PayViewController *payVC = [[PayViewController alloc] init];
+    PayViewController *payVC = [ViewUtil viewControllerFromNibOfClass:[PayViewController class]];
+    payVC.appointment = self.appointment;
+    payVC.subject = subject;
     [self.navigationController pushViewController:payVC animated:YES];
 }
 @end

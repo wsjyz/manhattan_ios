@@ -47,6 +47,7 @@
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     AuditionDetailViewController *auditionViewCon = [storyboard instantiateViewControllerWithIdentifier:@"auditionDetail"];
+    auditionViewCon.course = self.course;
     auditionViewCon.isAudition = isAudition;
     auditionViewCon.isTeacher = NO;
     [self.navigationController pushViewController:auditionViewCon animated:YES];

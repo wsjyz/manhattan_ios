@@ -31,9 +31,8 @@
 
 - (NSArray *)getScheduleWithStartTime:(NSDate *)startTime endTime:(NSDate *)endTime userId:(NSString *)userId
 {
-    userId = @"t1";
-    startTime = [CommonUtil dateWithString:@"2014-06-21" withFormatStr:yyyy_MM_dd];
-    endTime = [CommonUtil dateWithString:@"2014-06-26" withFormatStr:yyyy_MM_dd];
+//    startTime = [CommonUtil dateWithString:@"2014-06-21" withFormatStr:yyyy_MM_dd];
+//    endTime = [CommonUtil dateWithString:@"2014-06-26" withFormatStr:yyyy_MM_dd];
     
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                     [CommonUtil stringWithDate:startTime andFormatStr:yyyy_MM_dd], @"startTime",

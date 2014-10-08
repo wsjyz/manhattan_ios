@@ -19,8 +19,6 @@
 
 - (Page *)getOrderCoursesWithPage:(Page *)openPage andUserId:(NSString *)userId
 {
-    userId = @"t1";
-    
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                      OPENVALUE(openPage), @"openPage",
                                      userId, @"userId", nil];
@@ -31,8 +29,6 @@
 
 - (Page *)getListenCoursesWithPage:(Page *)openPage andUserId:(NSString *)userId
 {
-    userId = @"t1";
-    
     NSMutableDictionary *paramDic = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                      OPENVALUE(openPage), @"openPage",
                                      userId, @"userId", nil];
