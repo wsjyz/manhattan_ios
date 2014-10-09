@@ -9,6 +9,7 @@
 #import "MoreViewController.h"
 #import "AboutViewController.h"
 #import "ContactUsViewController.h"
+#import "iVersion.h"
 
 @interface MoreViewController ()
 
@@ -97,7 +98,7 @@
         }
         case 1:
         {
-            //TODO:
+            [[iVersion sharedInstance] checkForNewVersion];
             break;
         }
         case 2:
