@@ -159,6 +159,9 @@
 		37511CAA196A3F8C00719FA3 /* PayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37511CA9196A3F8C00719FA3 /* PayViewController.m */; };
 		37511D68196D3FFE00719FA3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37511D67196D3FFE00719FA3 /* SystemConfiguration.framework */; };
 		37511D6A196D400500719FA3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37511D69196D400500719FA3 /* CFNetwork.framework */; };
+		37811ABA19E96EDA00EF2EAE /* libTbcLibCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37811AAE19E96E6A00EF2EAE /* libTbcLibCore.a */; };
+		37811ABB19E96EDA00EF2EAE /* libTbcLibUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37811AB719E96E7B00EF2EAE /* libTbcLibUI.a */; };
+		37811AC119E973B300EF2EAE /* PayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37811AC019E973B300EF2EAE /* PayViewController.xib */; };
 		37A6D66D190FF43400B7C8B0 /* CommonService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A6D66C190FF43400B7C8B0 /* CommonService.m */; };
 		37A6D683190FF44700B7C8B0 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A6D66F190FF44700B7C8B0 /* back.png */; };
 		37A6D684190FF44700B7C8B0 /* button-ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A6D670190FF44700B7C8B0 /* button-ok.png */; };
@@ -245,8 +248,6 @@
 		37FEB82E19332EAD00D3E047 /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FEB82219332EAD00D3E047 /* NSDateAdditions.m */; };
 		37FEB82F19332EAD00D3E047 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FEB82419332EAD00D3E047 /* UIViewAdditions.m */; };
 		37FEB83619334C0D00D3E047 /* BaseRestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FEB83519334C0D00D3E047 /* BaseRestService.m */; };
-		B90AB392197042D4001A9983 /* libTbcLibCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B90AB3871970422F001A9983 /* libTbcLibCore.a */; };
-		B90AB393197042D4001A9983 /* libTbcLibUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B90AB38F197042B8001A9983 /* libTbcLibUI.a */; };
 		B922A54A1965CBCF007A0FB3 /* CourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B922A53E1965CBCF007A0FB3 /* CourseDetailViewController.m */; };
 		B922A54B1965CBCF007A0FB3 /* CourseFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B922A5401965CBCF007A0FB3 /* CourseFooterView.m */; };
 		B922A54C1965CBCF007A0FB3 /* CourseFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B922A5411965CBCF007A0FB3 /* CourseFooterView.xib */; };
@@ -273,30 +274,30 @@
 			remoteGlobalIDString = 2FAB6896190A26D40081D6B6;
 			remoteInfo = ManhattanEnglish;
 		};
-		B90AB3861970422F001A9983 /* PBXContainerItemProxy */ = {
+		37811AAD19E96E6A00EF2EAE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 37D52A6A196E212200CDE24C /* TbcLibCore.xcodeproj */;
+			containerPortal = 37811AA819E96E6A00EF2EAE /* TbcLibCore.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2FEA3E6818EABC690073CA51;
 			remoteInfo = TbcLibCore;
 		};
-		B90AB3881970422F001A9983 /* PBXContainerItemProxy */ = {
+		37811AAF19E96E6A00EF2EAE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 37D52A6A196E212200CDE24C /* TbcLibCore.xcodeproj */;
+			containerPortal = 37811AA819E96E6A00EF2EAE /* TbcLibCore.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2FEA3E7818EABC690073CA51;
 			remoteInfo = TbcLibCoreTests;
 		};
-		B90AB38E197042B8001A9983 /* PBXContainerItemProxy */ = {
+		37811AB619E96E7B00EF2EAE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 37D52A73196E213000CDE24C /* TbcLibUI.xcodeproj */;
+			containerPortal = 37811AB119E96E7B00EF2EAE /* TbcLibUI.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2F595516172588B8001980D3;
 			remoteInfo = TbcLibUI;
 		};
-		B90AB390197042B8001A9983 /* PBXContainerItemProxy */ = {
+		37811AB819E96E7B00EF2EAE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 37D52A73196E213000CDE24C /* TbcLibUI.xcodeproj */;
+			containerPortal = 37811AB119E96E7B00EF2EAE /* TbcLibUI.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2F595527172588B9001980D3;
 			remoteInfo = TbcLibUITests;
@@ -522,6 +523,9 @@
 		37511CBF196A411600719FA3 /* PartnerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartnerConfig.h; sourceTree = "<group>"; };
 		37511D67196D3FFE00719FA3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		37511D69196D400500719FA3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		37811AA819E96E6A00EF2EAE /* TbcLibCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TbcLibCore.xcodeproj; path = ../../../Desktop/CloudStudyProject/Project/TbcLib/TbcLibCore/TbcLibCore.xcodeproj; sourceTree = "<group>"; };
+		37811AB119E96E7B00EF2EAE /* TbcLibUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TbcLibUI.xcodeproj; path = ../../../Desktop/CloudStudyProject/Project/TbcLib/TbcLibUI/TbcLibUI.xcodeproj; sourceTree = "<group>"; };
+		37811AC019E973B300EF2EAE /* PayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PayViewController.xib; sourceTree = "<group>"; };
 		37A6D66B190FF43400B7C8B0 /* CommonService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonService.h; sourceTree = "<group>"; };
 		37A6D66C190FF43400B7C8B0 /* CommonService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonService.m; sourceTree = "<group>"; };
 		37A6D66F190FF44700B7C8B0 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
@@ -603,8 +607,6 @@
 		37CC3F781917E74800023E76 /* teacher_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacher_arrow.png; sourceTree = "<group>"; };
 		37CC3F791917E74800023E76 /* teacher_boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacher_boy.png; sourceTree = "<group>"; };
 		37CC3F7A1917E74800023E76 /* teacher_girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacher_girl.png; sourceTree = "<group>"; };
-		37D52A6A196E212200CDE24C /* TbcLibCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TbcLibCore.xcodeproj; path = ../../../../Repositories/Apple/Project/TbcLib/TbcLibCore/TbcLibCore.xcodeproj; sourceTree = "<group>"; };
-		37D52A73196E213000CDE24C /* TbcLibUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TbcLibUI.xcodeproj; path = ../../../../Repositories/Apple/Project/TbcLib/TbcLibUI/TbcLibUI.xcodeproj; sourceTree = "<group>"; };
 		37D7837319554B8100239B1E /* OpenHomeworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenHomeworkService.h; sourceTree = "<group>"; };
 		37D7837419554B8100239B1E /* OpenHomeworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenHomeworkService.m; sourceTree = "<group>"; };
 		37D7837619554B9400239B1E /* HomeworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeworkService.h; sourceTree = "<group>"; };
@@ -696,8 +698,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B90AB392197042D4001A9983 /* libTbcLibCore.a in Frameworks */,
-				B90AB393197042D4001A9983 /* libTbcLibUI.a in Frameworks */,
+				37811ABA19E96EDA00EF2EAE /* libTbcLibCore.a in Frameworks */,
+				37811ABB19E96EDA00EF2EAE /* libTbcLibUI.a in Frameworks */,
 				37511D6A196D400500719FA3 /* CFNetwork.framework in Frameworks */,
 				37511D68196D3FFE00719FA3 /* SystemConfiguration.framework in Frameworks */,
 				3726A6611931EBA800E91B36 /* MapKit.framework in Frameworks */,
@@ -1277,8 +1279,27 @@
 				37511CBF196A411600719FA3 /* PartnerConfig.h */,
 				37511CA8196A3F8C00719FA3 /* PayViewController.h */,
 				37511CA9196A3F8C00719FA3 /* PayViewController.m */,
+				37811AC019E973B300EF2EAE /* PayViewController.xib */,
 			);
 			path = Pay;
+			sourceTree = "<group>";
+		};
+		37811AA919E96E6A00EF2EAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37811AAE19E96E6A00EF2EAE /* libTbcLibCore.a */,
+				37811AB019E96E6A00EF2EAE /* TbcLibCoreTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37811AB219E96E7B00EF2EAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37811AB719E96E7B00EF2EAE /* libTbcLibUI.a */,
+				37811AB919E96E7B00EF2EAE /* TbcLibUITests.octest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		37A6D66A190FF43400B7C8B0 /* Common */ = {
@@ -1403,8 +1424,8 @@
 		37B40CB41931B2FB00D90923 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				37D52A73196E213000CDE24C /* TbcLibUI.xcodeproj */,
-				37D52A6A196E212200CDE24C /* TbcLibCore.xcodeproj */,
+				37811AB119E96E7B00EF2EAE /* TbcLibUI.xcodeproj */,
+				37811AA819E96E6A00EF2EAE /* TbcLibCore.xcodeproj */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
@@ -1537,24 +1558,6 @@
 			path = Kal;
 			sourceTree = "<group>";
 		};
-		B90AB3821970422F001A9983 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B90AB3871970422F001A9983 /* libTbcLibCore.a */,
-				B90AB3891970422F001A9983 /* TbcLibCoreTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		B90AB38A197042B8001A9983 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B90AB38F197042B8001A9983 /* libTbcLibUI.a */,
-				B90AB391197042B8001A9983 /* TbcLibUITests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		B922A53C1965CBCF007A0FB3 /* Course */ = {
 			isa = PBXGroup;
 			children = (
@@ -1629,6 +1632,7 @@
 				ORGANIZATIONNAME = 8hinfo;
 				TargetAttributes = {
 					2FAB68B7190A26D40081D6B6 = {
+						DevelopmentTeam = AU3RV742R5;
 						TestTargetID = 2FAB6896190A26D40081D6B6;
 					};
 				};
@@ -1646,12 +1650,12 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = B90AB3821970422F001A9983 /* Products */;
-					ProjectRef = 37D52A6A196E212200CDE24C /* TbcLibCore.xcodeproj */;
+					ProductGroup = 37811AA919E96E6A00EF2EAE /* Products */;
+					ProjectRef = 37811AA819E96E6A00EF2EAE /* TbcLibCore.xcodeproj */;
 				},
 				{
-					ProductGroup = B90AB38A197042B8001A9983 /* Products */;
-					ProjectRef = 37D52A73196E213000CDE24C /* TbcLibUI.xcodeproj */;
+					ProductGroup = 37811AB219E96E7B00EF2EAE /* Products */;
+					ProjectRef = 37811AB119E96E7B00EF2EAE /* TbcLibUI.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1663,32 +1667,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		B90AB3871970422F001A9983 /* libTbcLibCore.a */ = {
+		37811AAE19E96E6A00EF2EAE /* libTbcLibCore.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libTbcLibCore.a;
-			remoteRef = B90AB3861970422F001A9983 /* PBXContainerItemProxy */;
+			remoteRef = 37811AAD19E96E6A00EF2EAE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B90AB3891970422F001A9983 /* TbcLibCoreTests.xctest */ = {
+		37811AB019E96E6A00EF2EAE /* TbcLibCoreTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = TbcLibCoreTests.xctest;
-			remoteRef = B90AB3881970422F001A9983 /* PBXContainerItemProxy */;
+			remoteRef = 37811AAF19E96E6A00EF2EAE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B90AB38F197042B8001A9983 /* libTbcLibUI.a */ = {
+		37811AB719E96E7B00EF2EAE /* libTbcLibUI.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libTbcLibUI.a;
-			remoteRef = B90AB38E197042B8001A9983 /* PBXContainerItemProxy */;
+			remoteRef = 37811AB619E96E7B00EF2EAE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B90AB391197042B8001A9983 /* TbcLibUITests.octest */ = {
+		37811AB919E96E7B00EF2EAE /* TbcLibUITests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = TbcLibUITests.octest;
-			remoteRef = B90AB390197042B8001A9983 /* PBXContainerItemProxy */;
+			remoteRef = 37811AB819E96E7B00EF2EAE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1707,6 +1711,7 @@
 				370C494C1910971F00C63063 /* personal_head.png in Resources */,
 				2FBC69E119153D0E00990DD1 /* appoint_yyrq.png in Resources */,
 				3721C3E3191A847700D63FBE /* teacher_concern.png in Resources */,
+				37811AC119E973B300EF2EAE /* PayViewController.xib in Resources */,
 				2F739CB31910045F00FE2608 /* nav_bar_del_btn_n.png in Resources */,
 				37A6D68C190FF44700B7C8B0 /* no.png in Resources */,
 				370C49511910982200C63063 /* wallet_money.png in Resources */,
@@ -2041,7 +2046,6 @@
 				LIBRARY_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-Objc";
-				PROVISIONING_PROFILE = "0BCF6BA2-383C-477E-910C-A21B66E36E96";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = "armv7 armv7s";
 			};
@@ -2088,6 +2092,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer: tianqi yi (ZZ6TPA5C45)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: tianqi yi (ZZ6TPA5C45)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ManhattanEnglish/ManhattanEnglish-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -2097,14 +2103,7 @@
 				);
 				INFOPLIST_FILE = "ManhattanEnglish/ManhattanEnglish-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/ManhattanEnglish/OtherSource",
-					"$(SRCROOT)/ManhattanEnglish/OtherSource/alipay",
-					"$(SRCROOT)/ManhattanEnglish/OtherSource/alipay/RSA",
-					"$(SRCROOT)/ManhattanEnglish/OtherSource/alipay",
-					"$(SRCROOT)/ManhattanEnglish/Dependencies",
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = (
 					"-Objc",
 					"-all_load",
@@ -2122,6 +2121,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer: tianqi yi (ZZ6TPA5C45)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ManhattanEnglish/ManhattanEnglish-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -2131,14 +2131,7 @@
 				);
 				INFOPLIST_FILE = "ManhattanEnglish/ManhattanEnglish-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/ManhattanEnglish/OtherSource",
-					"$(SRCROOT)/ManhattanEnglish/OtherSource/alipay",
-					"$(SRCROOT)/ManhattanEnglish/OtherSource/alipay/RSA",
-					"$(SRCROOT)/ManhattanEnglish/OtherSource/alipay",
-					"$(SRCROOT)/ManhattanEnglish/Dependencies",
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-Objc",
@@ -2154,6 +2147,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ManhattanEnglish.app/ManhattanEnglish";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -2167,6 +2162,7 @@
 				);
 				INFOPLIST_FILE = "ManhattanEnglishTests/ManhattanEnglishTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -2176,6 +2172,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ManhattanEnglish.app/ManhattanEnglish";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -2185,6 +2183,7 @@
 				GCC_PREFIX_HEADER = "ManhattanEnglish/ManhattanEnglish-Prefix.pch";
 				INFOPLIST_FILE = "ManhattanEnglishTests/ManhattanEnglishTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
