@@ -27,7 +27,6 @@
 		2F53C29819326C6D0099FCD7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F53C29719326C6D0099FCD7 /* Localizable.strings */; };
 		2F588459194D8923004ACD71 /* AppointSearchCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F588458194D8923004ACD71 /* AppointSearchCondition.m */; };
 		2F58845C194D8CB1004ACD71 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58845B194D8CB1004ACD71 /* Course.m */; };
-		2F588460194DD09F004ACD71 /* good_course_cover_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F58845F194DD09F004ACD71 /* good_course_cover_bg.png */; };
 		2F588467194DD7E6004ACD71 /* CourseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F588466194DD7E6004ACD71 /* CourseService.m */; };
 		2F58846A194DDF78004ACD71 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F588469194DDF78004ACD71 /* News.m */; };
 		2F58846E194DE03B004ACD71 /* NewsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58846D194DE03B004ACD71 /* NewsService.m */; };
@@ -211,6 +210,16 @@
 		37B40CC31931B7C300D90923 /* InitService.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B40CC21931B7C300D90923 /* InitService.m */; };
 		37B40CCD1931B8B200D90923 /* iVersion.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 37B40CCA1931B8B200D90923 /* iVersion.bundle */; };
 		37B40CCE1931B8B200D90923 /* iVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B40CCC1931B8B200D90923 /* iVersion.m */; };
+		37BA0CA019F74EF700712965 /* good_course_cover_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37BA0C9F19F74EF700712965 /* good_course_cover_bg.jpg */; };
+		37BA0CAA19F75C0300712965 /* mht_29.png in Resources */ = {isa = PBXBuildFile; fileRef = 37BA0CA119F75C0300712965 /* mht_29.png */; };
+		37BA0CAB19F75C0300712965 /* mht_40.png in Resources */ = {isa = PBXBuildFile; fileRef = 37BA0CA219F75C0300712965 /* mht_40.png */; };
+		37BA0CAC19F75C0300712965 /* mht_50.png in Resources */ = {isa = PBXBuildFile; fileRef = 37BA0CA319F75C0300712965 /* mht_50.png */; };
+		37BA0CAD19F75C0300712965 /* mht_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 37BA0CA419F75C0300712965 /* mht_57.png */; };
+		37BA0CAF19F75C0300712965 /* mht_72.png in Resources */ = {isa = PBXBuildFile; fileRef = 37BA0CA619F75C0300712965 /* mht_72.png */; };
+		37BA0CB019F75C0300712965 /* mht_100.png in Resources */ = {isa = PBXBuildFile; fileRef = 37BA0CA719F75C0300712965 /* mht_100.png */; };
+		37BA0CB119F75C0300712965 /* mht_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 37BA0CA819F75C0300712965 /* mht_114.png */; };
+		37BA0CB219F75C0300712965 /* mht_144.png in Resources */ = {isa = PBXBuildFile; fileRef = 37BA0CA919F75C0300712965 /* mht_144.png */; };
+		37BA0CB419F75C6C00712965 /* mht_180.png in Resources */ = {isa = PBXBuildFile; fileRef = 37BA0CB319F75C6C00712965 /* mht_180.png */; };
 		37CC3F671917D56600023E76 /* AskQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CC3F661917D56600023E76 /* AskQuestionViewController.m */; };
 		37CC3F6C1917E29200023E76 /* ques_btn_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CC3F691917E29200023E76 /* ques_btn_bg.png */; };
 		37CC3F6D1917E29200023E76 /* ques_month.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CC3F6A1917E29200023E76 /* ques_month.png */; };
@@ -335,7 +344,6 @@
 		2F588458194D8923004ACD71 /* AppointSearchCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointSearchCondition.m; sourceTree = "<group>"; };
 		2F58845A194D8CB1004ACD71 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
 		2F58845B194D8CB1004ACD71 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
-		2F58845F194DD09F004ACD71 /* good_course_cover_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = good_course_cover_bg.png; sourceTree = "<group>"; };
 		2F588465194DD7E6004ACD71 /* CourseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseService.h; sourceTree = "<group>"; };
 		2F588466194DD7E6004ACD71 /* CourseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseService.m; sourceTree = "<group>"; };
 		2F588468194DDF78004ACD71 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
@@ -594,6 +602,16 @@
 		37B40CCA1931B8B200D90923 /* iVersion.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iVersion.bundle; sourceTree = "<group>"; };
 		37B40CCB1931B8B200D90923 /* iVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iVersion.h; sourceTree = "<group>"; };
 		37B40CCC1931B8B200D90923 /* iVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iVersion.m; sourceTree = "<group>"; };
+		37BA0C9F19F74EF700712965 /* good_course_cover_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = good_course_cover_bg.jpg; sourceTree = "<group>"; };
+		37BA0CA119F75C0300712965 /* mht_29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mht_29.png; sourceTree = "<group>"; };
+		37BA0CA219F75C0300712965 /* mht_40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mht_40.png; sourceTree = "<group>"; };
+		37BA0CA319F75C0300712965 /* mht_50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mht_50.png; sourceTree = "<group>"; };
+		37BA0CA419F75C0300712965 /* mht_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mht_57.png; sourceTree = "<group>"; };
+		37BA0CA619F75C0300712965 /* mht_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mht_72.png; sourceTree = "<group>"; };
+		37BA0CA719F75C0300712965 /* mht_100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mht_100.png; sourceTree = "<group>"; };
+		37BA0CA819F75C0300712965 /* mht_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mht_114.png; sourceTree = "<group>"; };
+		37BA0CA919F75C0300712965 /* mht_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mht_144.png; sourceTree = "<group>"; };
+		37BA0CB319F75C6C00712965 /* mht_180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mht_180.png; sourceTree = "<group>"; };
 		37CC3F651917D56600023E76 /* AskQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskQuestionViewController.h; sourceTree = "<group>"; };
 		37CC3F661917D56600023E76 /* AskQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskQuestionViewController.m; sourceTree = "<group>"; };
 		37CC3F691917E29200023E76 /* ques_btn_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ques_btn_bg.png; sourceTree = "<group>"; };
@@ -743,10 +761,10 @@
 		2F2024D1192A778D00272AAB /* GoodCourse */ = {
 			isa = PBXGroup;
 			children = (
+				37BA0C9F19F74EF700712965 /* good_course_cover_bg.jpg */,
 				B9B7A203196D99FE0049BCE2 /* publish_course_empty.png */,
 				B9B7A204196D99FE0049BCE2 /* publish_course_selected.png */,
 				2F58847C194E0426004ACD71 /* good_course_section_bg.png */,
-				2F58845F194DD09F004ACD71 /* good_course_cover_bg.png */,
 				2F31488F192BC38C0021C40B /* good_course_st_btn_n.png */,
 				2F314890192BC38C0021C40B /* good_course_wave_line.png */,
 				2F314891192BC38C0021C40B /* good_course_yy_btn_n.png */,
@@ -1318,8 +1336,17 @@
 		37A6D66E190FF44700B7C8B0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				37B1779619703976001C209C /* mht_58.png */,
+				37BA0CB319F75C6C00712965 /* mht_180.png */,
+				37BA0CA119F75C0300712965 /* mht_29.png */,
+				37BA0CA219F75C0300712965 /* mht_40.png */,
+				37BA0CA319F75C0300712965 /* mht_50.png */,
+				37BA0CA419F75C0300712965 /* mht_57.png */,
+				37BA0CA619F75C0300712965 /* mht_72.png */,
+				37BA0CA719F75C0300712965 /* mht_100.png */,
+				37BA0CA819F75C0300712965 /* mht_114.png */,
 				37B1779719703976001C209C /* mht_80.png */,
+				37BA0CA919F75C0300712965 /* mht_144.png */,
+				37B1779619703976001C209C /* mht_58.png */,
 				37B1779819703976001C209C /* mht_120.png */,
 				37B1779919703976001C209C /* mht_1024.png */,
 				37A6D66F190FF44700B7C8B0 /* back.png */,
@@ -1712,9 +1739,12 @@
 				2FBC69E119153D0E00990DD1 /* appoint_yyrq.png in Resources */,
 				3721C3E3191A847700D63FBE /* teacher_concern.png in Resources */,
 				37811AC119E973B300EF2EAE /* PayViewController.xib in Resources */,
+				37BA0CAC19F75C0300712965 /* mht_50.png in Resources */,
+				37BA0CAA19F75C0300712965 /* mht_29.png in Resources */,
 				2F739CB31910045F00FE2608 /* nav_bar_del_btn_n.png in Resources */,
 				37A6D68C190FF44700B7C8B0 /* no.png in Resources */,
 				370C49511910982200C63063 /* wallet_money.png in Resources */,
+				37BA0CAF19F75C0300712965 /* mht_72.png in Resources */,
 				37CC3F7C1917E74800023E76 /* teacher_boy.png in Resources */,
 				B922A54E1965CBCF007A0FB3 /* CourseHeaderView.xib in Resources */,
 				2F739CB41910045F00FE2608 /* nav_bar_person_btn_n.png in Resources */,
@@ -1730,6 +1760,7 @@
 				3700928E194F33BB00A6EF8E /* NodataBgView_ipad.xib in Resources */,
 				37B1779A19703976001C209C /* mht_58.png in Resources */,
 				37A6D691190FF44700B7C8B0 /* sj.png in Resources */,
+				37BA0CAD19F75C0300712965 /* mht_57.png in Resources */,
 				2F739CB11910045F00FE2608 /* nav_bar_back_btn_n.png in Resources */,
 				37CC3F761917E4F700023E76 /* TeacherMainCell.xib in Resources */,
 				37B1779319703393001C209C /* enter.png in Resources */,
@@ -1748,6 +1779,7 @@
 				B9B7A205196D99FE0049BCE2 /* publish_course_empty.png in Resources */,
 				371BEE5119167A2D000595D1 /* QuesTableViewCell.xib in Resources */,
 				37A6D68D190FF44700B7C8B0 /* ok.png in Resources */,
+				37BA0CB419F75C6C00712965 /* mht_180.png in Resources */,
 				2F58847D194E0426004ACD71 /* good_course_section_bg.png in Resources */,
 				371BEE4D19167A2D000595D1 /* QuesDetailTableViewCell.xib in Resources */,
 				2FBC69DF19153D0E00990DD1 /* appoint_jxfs.png in Resources */,
@@ -1775,11 +1807,14 @@
 				37A6D6B4190FF45400B7C8B0 /* ContactUsViewController.xib in Resources */,
 				2FDD4E9F193645FF0044671A /* tab_more_n.png in Resources */,
 				2FDD4E9D193645FF0044671A /* tab_audition_n.png in Resources */,
+				37BA0CB119F75C0300712965 /* mht_114.png in Resources */,
+				37BA0CB219F75C0300712965 /* mht_144.png in Resources */,
 				2F6D6A9C1913F8EC0097617E /* index_wyyy.png in Resources */,
 				37A6D690190FF44700B7C8B0 /* register_btn_p.png in Resources */,
 				2F41607B19194DA800156EDB /* nav_back_btn_n.png in Resources */,
 				B9B7A206196D99FE0049BCE2 /* publish_course_selected.png in Resources */,
 				37A6D693190FF44700B7C8B0 /* xz.png in Resources */,
+				37BA0CB019F75C0300712965 /* mht_100.png in Resources */,
 				2F2024D5192A778D00272AAB /* good_course_bh.png in Resources */,
 				37B1778B19703236001C209C /* 3.png in Resources */,
 				2FBC69DE19153D0E00990DD1 /* appoint_jxdd.png in Resources */,
@@ -1800,7 +1835,6 @@
 				37CC3F6E1917E29200023E76 /* ques_vip.png in Resources */,
 				3721C3F0191A84DF00D63FBE /* TeacherScheduleTableViewCell.xib in Resources */,
 				2FDD4EA0193645FF0044671A /* tab_student_n.png in Resources */,
-				2F588460194DD09F004ACD71 /* good_course_cover_bg.png in Resources */,
 				37B1779D19703976001C209C /* mht_1024.png in Resources */,
 				2F6D6A9B1913F8EC0097617E /* index_wytw.png in Resources */,
 				2F600689194B718F0059487A /* SelectionViewController.xib in Resources */,
@@ -1809,12 +1843,14 @@
 				372DDB38195283D500F3AAEE /* ScheduleView.xib in Resources */,
 				37CC3F6C1917E29200023E76 /* ques_btn_bg.png in Resources */,
 				3721C3E1191A847700D63FBE /* teacher_collect.png in Resources */,
+				37BA0CAB19F75C0300712965 /* mht_40.png in Resources */,
 				37A6D694190FF44700B7C8B0 /* arrow.png in Resources */,
 				2F600692194B7AA60059487A /* SelectionTableViewCell.xib in Resources */,
 				2F2024D7192A778D00272AAB /* good_course_skdd.png in Resources */,
 				3721C3E2191A847700D63FBE /* teacher_comment.png in Resources */,
 				371BEE4F19167A2D000595D1 /* QuesDetailViewController.xib in Resources */,
 				37A6D6B2190FF45400B7C8B0 /* AboutViewController.xib in Resources */,
+				37BA0CA019F74EF700712965 /* good_course_cover_bg.jpg in Resources */,
 				3700928F194F33BB00A6EF8E /* TableFooterView.xib in Resources */,
 				2F739CB51910045F00FE2608 /* nav_bar_red_btn_n.png in Resources */,
 				3721C3E5191A847700D63FBE /* teacher_order_btn.png in Resources */,
@@ -2092,7 +2128,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer: tianqi yi (ZZ6TPA5C45)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: tianqi yi (AU3RV742R5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: tianqi yi (ZZ6TPA5C45)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ManhattanEnglish/ManhattanEnglish-Prefix.pch";
@@ -2109,6 +2145,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4258aaf0-a015-4ad8-93e2-d4b164e114e1";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = /Users/liujiafei/Desktop/Apple/Project/TbcLib/TbcLibCore;
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -2121,7 +2159,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer: tianqi yi (ZZ6TPA5C45)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: tianqi yi (AU3RV742R5)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ManhattanEnglish/ManhattanEnglish-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -2138,6 +2176,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4258aaf0-a015-4ad8-93e2-d4b164e114e1";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = /Users/liujiafei/Desktop/Apple/Project/TbcLib/TbcLibCore;
 				WRAPPER_EXTENSION = app;
 			};

@@ -81,7 +81,7 @@
     
     // Configure the cell...
     Course *course = self.rows[indexPath.row];
-    [cell.courseImageView setImageWithURL:[NSURL URLWithString:course.coursePic] placeholderImage:[UIImage imageNamed:@"good_course_cover_bg.png"]];
+    [cell.courseImageView setImageWithURL:[NSURL URLWithString:course.coursePic] placeholderImage:[UIImage imageNamed:@"good_course_cover_bg.jpg"]];
     cell.courseTitleLabel.text = course.classNo;
     cell.coursePriceLabel.text = [NSString stringWithFormat:@"%0.0f", course.expense];
     cell.coursePlaceLabel.text = course.place;
