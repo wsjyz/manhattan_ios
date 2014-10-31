@@ -757,6 +757,13 @@ static NSString *const iVersionMacAppStoreURLFormat = @"macappstore://itunes.app
                                                withObject:[self localizedStringForKey:@"已经是最新版本"]
                                             waitUntilDone:NO];
                     }
+                }else{
+                    
+                    if (!self.checkFromEnterForeground) {
+                        [self performSelectorOnMainThread:@selector(showErrorView:)
+                                               withObject:[self localizedStringForKey:@"已经是最新版本"]
+                                            waitUntilDone:NO];
+                    }
                 }
                 
                 //release json
