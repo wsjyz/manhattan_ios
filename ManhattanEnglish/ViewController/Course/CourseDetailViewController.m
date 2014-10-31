@@ -92,7 +92,7 @@
     CourseHeaderView *headerView = [ViewUtil viewFromNibOfClass:[CourseHeaderView class] owner:self];
     headerView.delegate = self;
     [headerView.courseImageView setImageWithURL:[NSURL URLWithString:self.course
-                                                 .coursePic] placeholderImage:[UIImage imageNamed:@"good_course_cover_bg.png"]];
+                                                 .coursePic] placeholderImage:[UIImage imageNamed:@"good_course_cover_bg.jpg"]];
     headerView.classNoLabel.text = self.course.classNo;
     headerView.priceLabel.text = [NSString stringWithFormat:@"%0.0f RMB", self.course.expense];
     headerView.subTitleLabel.text = self.course.courseSubtitle;
